@@ -1,0 +1,377 @@
+       MUME players - who plays who (not all of course - mainly pkillers)
+
+ -Rogon, Norsu, Pandion, Wyzz, Grez, Zed, Sarah, Eileen, Posh, Fierce, Azazhel,
+Mato, Bastion, Throg, Dork, Woe, Mylene, Geri - nicelinked (.se), overkiller,
+poisonhora, very careful, #1 warlord, highest level mortal in the game
+ -Ajax, Torment, Achilles, Buliwyf, Brynhilde, Tempest, Hrothgar, Everhate,
+Kesslik, Carniminimmiel - goodlinked (USA), likes to play with p(Rogon),
+sometimes warlord, pretty cynical person, pstealing via summon as Carni
+ -Burb, Caress, Dalamar, Deathwind, Filth, Kovie, Death, Thanquol, Onyx, Mehter,
+Reaper, Fairy, Zevier, Barak, Aalio, Skyfire - nicelinked (.fi), likes to play
+with p(Rogon), sometimes warlord
+  Wow, Nele, Bizarre, Lillian, Kilin, Nigal, Nali, Farion, Naldor, Pinhead,
+Baresark, Jube, Dracolich, Umanidd, Gamak, Tasa, Kylm, Gwira, Bigge, Spark -
+likes to play with p(Rogon), sometimes warlord
+ *[Tomas] Praiodan, Elestir, Tairach, Tharon, Elsurion, Iwain, Dragan,
+Thiondash, Sirael, Korax - nicelinked (.cz), helpful, warlord, labbie of p(Luke)
+ *Chavez, Mammoth, Feriand, Manaja, Jon, Smallfist, Herold, Muhv, Libresse, Alf
+- nicelinked (.ee), berserk (totally non-careful), warlord
+  Diamonium, Naksitrall, Morgulduin, Carak, Dolengur, Gondgurth, Cen, Feagor,
+Saint - nicelinked (.ee), helpful, warlord
+  [Jocke] Fingeror, Macros, Araglas, Radbug, Hugo, Darkun, Sheol, Prey, Liten,
+Blackthorne, Balin, Kulgan - nicelinked (.uu.se), warlord, often #1
+  [Johan] Snick, Magnolia - nicelinked (.uu.se)
+ *Zaber, Butter, Alvedon, Vridush, Leagel - nicelinked (NSL), warlord, often #1
+  [Andreas] Lancelot, Tindomerel, Isolde, Rhodry, Purkmistr, Neverborn, Liart,
+Jaws, Sharan, Snotty, Ulfhild, Lilladde - nicelinked (.cz), #1 warlord in the
+past, pretty much bitter person, now retired from MUME and plays DAOC instead
+ *[Axel] Axel, Mahyr, Dugmok, Girando, Ramiris, Rhombuc, Andris, Dwogin,
+Luvette, Sivanor, Tagrin, Borek, Cruggo, Gadmac, Mugorad, Jheran, Toran,
+Brugan - goodlinked (.de), sometimes warlord
+ *Farin, Arte, Khad, Eldan, Valen, Jimbo, Uland, Chak, Ruul, Ickabod, Serate,
+Patty - sometimes warlord
+  [Petter] Gothmog, Donk, Nain, Labero, Orodreth, Grume, Grul, Ancalimon -
+nicelinked (.kth.se), proud, warlord
+  Ghostly, Grishnak(Shag), Vayu, MouthOfSauron - averagelinked (.uk),
+roleplayer, warlord
+  Namo, Agent - warlord in the past
+  Alkar, Fuor, Smoke, Splat, Khelek, Nari, Scorn, Fearan, Eldrenil, Kesslin,
+Faradoc, Gruuk, Valacar, Maeglor - averagelinked (.ca)
+  Feanor, Maglor, Turgon, Nemil, Faramin, Eluchil, Mrsh, Graugh, Skip, Granite,
+Earnur, Erudhil - nothing special
+  Luke, Mochomurka, Smrtihlav, Smrtak, Kostej, Space, Traverza, Plch,
+Eletherion, Litovel, Tahkr, Lokomotiva - nicelinked (.cz), warlord,
+labbie of p(Praiodan)
+  Bubla, Kuku, Bubu, Elaviel, Faldir, Fero, Huher, Ostravar, Toulen, Cervotoc,
+Dement, Lepra, Bum, Aranka, Tygr - nicelinked (.cz), warlord, often #1
+  Cormac, Algaron, Berin, Zirand, Rodan, Zlababa, Fragir, Beruska - nicelinked
+(.cz)
+  [David] Moonparent, Pheare, Tukanek, Sil, Bijec, Lalok, Nazghul, Rasputin,
+Bonebiter, Clericii - nicelinked (.cz)
+  [Jan] Bah, Bairanax, Beowulf, Dodge, Erebos, Hwoarang, Kozel, Lol, Pretty,
+Ranax, Twog, Twoq - nicelinked (.cz)
+  [Peter] Decoy, Donovan, Dragoth, Jamie, Milena, Shaigan, Leffe - (.se),
+warlord, sometimes #1, does not kill linkless/linkfrozen
+  Lowyn, Elle - averagelinked (USA), warlord
+  Alweon, Bomir, Malak, Rancor - nicelinked, sometimes warlord
+  Drugar, Scrape - (USA), highest level whitie in the game
+  [Ert] Enforcer, Ragface, Wind, Glaran, Stealthy, Insane, Morbid, Sardaukar,
+Fiend, Fear, Innuendo, Bianthor, Elavar, Beastly, Lana, Chazan, Chewer - warlord
+ *Faint, Nushenak, Wenom, Warzur, Thorzor, Ungrim, Imlach, Mess, Sophiajansson,
+Sophia, Wierd, Dreamweaver, Myth, Ithy, Malus, Haldor, Dreth - nicelinked (.se),
+berserk, rarely warlord
+ *[Kaido] Manatark, Belzagar, Grymsh, Ravendark, Soerd, Stormblast, Valdja,
+Agannardu - nicelinked (.ee), sometimes warlord
+  Swork, Elroh, Healer, Hairfoot, Paka, Engelbert, Elden, Ferska, Marko,
+Guglunk, Madcat, Orikas, Nazalbeth, Trazsh, Ugnez - nicelinked (.ee), sometimes
+warlord
+ -Rashnak, Vainamoinen, Tutti - nicelinked (.fi), paranoid anti-evil, helpful
+but proud, warlord in the past
+ -Ginlon, Zorek, Drokk, Wert, Vlas, Salas - nicelinked (.uu.se), warlord in the
+past
+ *Nazgum, Mabel, Anolad, Aragil, Brog, Annesh, Vagdish, Sunaire, Iljrure -
+likes traps, warlord; does not kill linkless/linkfrozen
+ -[Alexander] Fankil, Alcion, Vanimelde, Krossen, Janosh, Verminaard, Ramtir,
+Orcobal, Ermon, Ieras, Toker, Khim, Falathrim, Dwimmer, Lathos, Macke, Kesslar,
+Iorlas, Zigrakh, Qul - nicelinked (NSL), does not kill linkless/linkfrozen
+ -Atlas, Akhorahil, Bambi, Chogall, Danath, Eldarion, Feagwath, Grom, Harowen,
+Ithilagos, Kurdran, Legion, Merimac, Ogyf, Pomfrit, Quin, Rugorn, Shathur,
+Terendul, Uralyon, Vincenzo, Zuljin, Johannes - (.dk), nothing special
+  Bobbie, Elmir, Rhuka, Ainairos, Furfoot, Lothlahn, Bobba, Snooker, Serion,
+Grukh, Dynamit - nicelinked (NSL), bashtrapper, overkiller, warlord
+  Sabadon, Adanedhel, Alhadar, Barlok, Barnes, Celegrim, Chelios, Gereb,
+Gringo, Heather, Morannon, Rimnark, Sikander, Anselmo, Byleist, Cavalera,
+Disembowel, Famas, Glabthrak, Horstats, Imrazor, Karelin, Kilimanjaro,
+OhThePain, Shartomb, Tharl - nicelinked (.lth.se), warlord
+  Drengist, Zigurakhor - #1 warlord in the past
+  Shadrach, Ibrahim, Murghaz - nicelinked (.se), quite rude and vulgar person, but
+expirienced enough to become warlord sometimes
+  Zeroth, Snowy - nicelinked (.ee), warlord
+  Zhagrat, Reno, Elebor - nicelinked (.ee), warlord
+  Lehto, Muck, Mummo, Neziel, Agonor - nicelinked (.fi), warlord
+  Perago, Alfrim, Exiled - nicelinked (.se), sometimes warlord
+  Rza, Lenwe, Nat, Daz - badlinked (.au)
+  Filibert, Core, Manic, Onatah, Dwar, Meriadoc, Calvin, Dakkon, Amarie,
+Curufin, Ingwe, Hukor - roleplayer
+ *Idun, Bluebell, Bumbur, Ciryatan, Elfwyn, Forin, Giralion, Hrive, Korin,
+Luber, Minastir, Minuial, Miriamele, Agarakhor, Burghul, Geirrodr, Gorlach,
+Gulag, Hunchback, Splatter, Siriala - nicelinked (.se)
+ *Draggor, Oceanborn, Pagan, Draconis, Rastik, Falenor, Morticus, Ypsilon,
+Tha, Draggy, Draca, Deemon, Dimmu, Drax, Draccon, Irv, Draglador - sometimes
+warlord, hothead
+  Haazheel, Bohemond, Moandor, Tezcatlipoca, Thalantyr, Greoldreth, Wreth,
+Vidomina, Belemoth, Maegnas, Xaltotun - nicelinked, sometimes warlord (.ee)
+  Simba, Falemir, Khird, Guthol, Taurek, Eggraz - nicelinked (.se), sometimes
+warlord
+ -Alantir, Drenical, Caman, Lerian, Revenan, Eggrat, Grab - nicelinked (.se),
+sometimes warlord
+  Salmar, Ingold, Elendur, Gildur, Troin, Nithr, Tarannon, Finduilas, Gladush,
+Grashnak, Gradash, Hybrid, Nimraphel - nothing special
+  Hoho, Spooky, Cyrano, Dif, Daddy - nicelinked (.se), risky
+ -Deor, Mikala, Shorty, Skitz, Warren, Anner, Ambolt, Iranon, Ehhe - paranoid
+rule-follower
+  [Vigfus] Cur, Roadkill, Pestilence - nothing special
+  Aschit, Oscarmeyer - slowlinked (USA), plays solo-only, thief-only, rarely
+warlord
+  Kenzu, Antar, Ardent, Earand, Kessfare, Lief, Braddock, Shriek, Schmidt,
+Edrahil, Greed - averagelinked (USA), rarely pkills, likes smobbing
+  [Dan] Steele, Tyrion, Throin, Grok, Orf, Grumph, Amdir, Mithrellas, Gilror,
+Ike, Ilgamar, Burok, Sylan, Grishelda, Shrew, Arglebargle, Hrolth, Valastule,
+Rot, Ryu, Acheron - averagelinked (USA), usually warlord
+  Tia, Delicate - nothing special
+  Amandil, Galadon, Durlak, Gundor, Devran, Inziladun, Mosaren, Salta,
+Amantest, Kloker, Vrede - nicelinked (NSL)
+  Siroth, Uldrak, Baldwin, Emroth, Shades, Nowyr, Elumir, Bifur, Belind, Fardin,
+Herman, Nimroth, Shades, Uthalg, Maal - nicelinked (NSL)
+  [Bob] Auriane, Duvel, Meteor, Devastator, Omega, Darq, Chikarhayshi, Xatax,
+Xylo, Mercurius, Equinoxe, Harakiri, Raichu - nicelinked (.nl)
+ *Ling, Indra, Adorable, Magica, Sunflower, Murdress, Remorse, Alicia, Melinda
+- nicelinked (NSL)
+ *[Wojtek] Saeth, Chen, Wong, Fong, Junbao, Tianbao, Ronin, Miko, Hyung, Chang,
+Hwarang, Hercule - nothing special
+ *[Tapio] Wryak, Grythar, Hurar, Kraal, Rukan, Thwag, Tragg, Ughar, Calan,
+Cilya, Dorak, Drayl, Dural, Eral, Trandar, Uhan, Wryth, Agarde, Watar, Broom,
+Hyurk, Muhugar - nicelinked (.fi)
+ *Tram, Aros, Kingpool, Turviniel, Implithura, Sharghl - nothing special
+  [David] David, Deavon, Draaz, Dramon, Drimdul, Gilmas, Millen, Mitch, Mortie,
+Regin, Snowball, Tharam, Trassel, Zerabethulh, Zimar, Ze - nothing special
+ *Elrik, Tommy, Dino, Goldor, Topas, Blizzard, Caldor - nothing special
+  [Jurek] Pilsner,  Butrus, Koza, Lalloree, Prcek, Starobahno, Torham, Dolik,
+Hovado, Khamil, Kurva, Mamut, Mamutice, Monster, Mrsina, Ozon, Tupoun, Nogir,
+Pepa, Misery - first Zaugurz legend
+ -[Jens] Heldo, Elajt, Scaramanga, Grishtar, Cagim, Thedeen, Mestan, Ratark,
+Trasdockan, Lilljempa, Core, Darkwind - nicelinked (MTL), linklesskiller,
+storeporter, pretty much immature person, often warlord
+ -[Martin] Marre, Mumma, Vargas, Gurgel, Azhal, Lillmarre, Jatte, Oggy,
+Octavian, Ugash, Joponen, Squasher, Snigel, Tars - nicelinked (MTL),
+linklesskiller, storeporter, pretty much immature person, often warlord
+  [Ole] Valamir, Khazdul, Globur, Svin, Rasta, Gris, Bullebu, Stampe, Hashtak,
+Fiolas, Jeffbob, Reikor, Riekor, Rotmos - brother of p(Cagim), nicelinked (MTL),
+warlord, often #1
+  [Mans] Thoirin, Tauin, Tvimina, Krubb - nicelinked (MTL)
+  [Silverberg] Tardeer, Bagger, Vral, Wilma, Faelandir, Basta, Sillian, Beremon
+- nicelinked (MTL)
+  [Bjorn] Bjorn, Bogger, Movin, Wacka, Romin, Grytash, Pasta, Calrandir, Jauer,
+Zimrathon, Kassler, Vradul - nicelinked (MTL), rarely warlord
+  [Jakob] Bigger, Breaux, Cidar, Dunlop, Gromk, Jaagern, Ozgun, Zocker, Hasta,
+Shrimp - nicelinked (MTL)
+  [Oscar] Winzy, Glubur - nicelinked (MTL)
+  [Calle] Khozdul, Glabur - nicelinked (MTL)
+  [Johan] Feon, Olorion, Telumehtar, Prosit, Nimir, Mosco, Ilmacil, Dax, Lakh,
+Lakon, Agan, Vandal, Buller - nicelinked (NSL)
+  Venal, Rockfish, Kreil - nothing special
+  Vassago, Nacs, Kurast, Sharmak, Fearless, Zubr, Glaref, Nibble, Alfank,
+Keldorn, Murumutt, Odamees, Polydeukes - nicelinked (.ee), berserk, rarely
+warlord
+  Relim, Oregon, Paque, Miler, Mazza, Razamazar - somethimes warlord
+ -[Jeremiah] Goretongue, Blackfoot, Baphomet, Balthazar, Vili, Gaurog, Ciluras,
+Gaurhir, Dispater - averagelinked (USA)
+  Kakarot, Wes, Stussy - nothing special
+  Daevia, Rain - averagelinked (USA)
+  Squiffy, Granvil, Pickle, Baldy, Snork, Ula, Snark, Gaylord, Quible, Rankin,
+Squidgy, Stylie - nothing special
+  Bounty, Hamfist, Flanker, Cinsovinsh, Shaff, Raze, etc - spammy boy
+  Bulldozer, Duriel, Gorshak, Scythe, Voltron, Zug - nothing special
+  Lothlori, Morthe, Blysk, Thonr, Thorny, Morholth, Thorak, Morholt, Lotheila -
+(.pl)
+  Rayden, Helios, Sisalik - nicelinked (.ee)
+  Aris, Sakuolts, Eher, Cele, Rivet, Caolin, Kiki - (.ee)
+  Basha, Digital, Brogan, Burk, Sabu, Hobit, Sunshine, Aalok, Xile, Domine, Hex
+- nothing special
+  [Raul] Valir, Prist, Azmodan, Tessa, Trinity, Vanir, Unholy - nothing special
+  Almarian, Shimmer, Cherish, Meeka, Fable, Dazzle, Hazel, Bianca, Sindorie,
+Boomer, Sinner, Sai, Kitto - likes portal and hugegrouping
+ *Haista, Woitkah, Rahz, Moloko, Assa, Lammoth, Aglar, Elleth, Malach - nothing
+special
+  Voile, Eldrasil, Lavendel, Khzandros, Meril, Dharazor, Brask, Alizee,
+Zorgmol, Desastre, Gothia, Casque, Brutte, Shagra, Xander, Petrus, Blizzardo,
+Xandahar, Mikke, Suiram - averagelinked (.uk)
+  Moonglum, Lore, Morog, Ugurz, Mulgrim - sometimes warlord
+  Dragor, Celorfilas, Endur, Brash, Rhuarc, Stile, Horgy, Tagrid, Azg, Grakk,
+Ramangth, Snuggles, Runk, Drijian, Hamlas, Frukghash - nothing special
+  Asmandeus, Vecna - nothing special
+  Quillis, Saber, Riordan, Gage, Celedon, Kalus, Rend, Iblis, Rage, Fubar -
+nothing special
+  Healy, Elmo, Sloshed, Hark, Galowyn - nothing special
+ *Naredhel, Puar, Smasher, Kami, Gomen, Mazrim - nothing special
+ -[Aron] Edvard, Hannibal, Cruel, Bamsefar, Drohm, Aegon, Dragg, Ethne,
+Draupner, Ior, Manne, Anaconda, Psycho, Ragnwald, Dracul, Danzig, Norrland,
+Newmie - nothing special
+  Donutello, Occult, Gilcon - nothing special
+  Crysania, Eternal, Udo, Britney, Spears, Mortti, Lammas, Narttu, Koff -
+nothing special
+  [Dario] Rael, Abraxas, Raudo, Niflam - nothing special
+  Ares, Doreth, Bromir, Oguga, Thror, Floi, Drow, Zorgoth - sometimes warlord
+  Toe, Backfire, Lairathim, Magi, Jabba, Goliat, Awesome, Prima, Escape, Joker,
+Kamikaze, Mrwhite - nicelinked (.no)
+  Nighthawk, Ric, Scotty, Buffer, Arn, AlBundy, Etopal, Berg, AnneilBalkassoon,
+Orcbash, Lazy, Bates, Luckless, Llort, Tulkass - roleplayer
+  [Fredde] Fredde, Nazghol, Kasach, Baurk, Kotta, Seek, Glenn, Sistina,
+Bastantor - lilklesskiller, spammer, flamer and pretty much self-proud guy
+ *Aram, Ariakan, Vulgar, Rancid, Marhault, Itallicus, Mazrim - nothing special
+  Reef, Capiche, Soother, Raun, Photon, Taggert - nothing special
+  Nardhal, Andarion, Eale, Eawian, Khandar, Raze, Dalmorg, Doh, Naed, Naghar,
+Lomek, Done - nothing special
+  Echo, Olos, Fearsome, Gelion - averagelinked (USA), plays mostly trolls
+  Marillion, Wroom, Jaron, Garkan, Batar, Troom, Torkild, Eldale, Viljar,
+Kazan, Jeran, Torvald - rather hothead person. Viljar was sauronlisted and now
+realdied.
+  Kazeena, Vorne, Thanis, Kazzey, Jensu, Jarhala, Demsie - nothing special
+  Irogla, Erewiel - nothing special
+  Khamasin, Piow, Vatsayana - nothing special
+  Zeus, Ellara, Clangedin, Kharas, Sehanine, Khelben, Semirhage, Gruumsh,
+Iyachtu, Sharaaz, Baghtru, Rhobe, Rhand - nothing special
+  Nerf, Arkady - nothing special
+  Merlin, Carl, Balder, Oualid, Dryg - nothing special
+  Toin, Kess, Kesstor - nothing special
+  Gattling, Carib - nicelinked (.lth.se)
+  Sloo, Cyclaw, Azylic - nothing special
+  Ausir, Ilmarin, Elirion, Hoeth, Laurelin, Fui, Kardagash, Rodothlim - nothing
+special
+  Deris, Amarant, Grak, Pinion, Thrak, Snicker, Vortex, Ghourne - averagelinked
+(USA)
+  Almarian, Meneldur - nothing special
+  [Fredrik] Bornack, Rackhir, Khawin, Horus, Baalrukh, Lombur - nicelinked (.se)
+  Liliah, Zanetha, Gobbler, Hatred, Khreth, Ochra - nothing special
+ -Hate, Andore, Artigor, Nestha, Iolo - nothing special
+  Feagil, Gabil, Shala, Bashy, Famine, Uzbad, Agannalo, Curufinwe -
+linklesskills sometimes, rarely warlord
+ -Shagrath, Silenoz, Lasombra, Mortis, Ishant - nicelinked (.cz)
+  Jerpa, Arakon - nothing special
+  Chauncey, Plato, Mors, Neo, Sloth, Tim, Forrest, Kessloth, Beogul -
+averagelinked (USA)
+  Temegl, Erkzup, Cootafides, Yagara, Lirathe, Daalil - nothing special
+  Francis, Friso, Ashmash, Alderik, Qwestus, Qwestux, Rik - nothing special
+ -Tear, Shravl, Draghkar, Gilmandir - nicelinked (.se)
+  [Donal] Lochdale, Glendale, Dliador, Arkine, Chudwicki - nothing special
+  Naga, Lina, Amelia, Lowanda, Dombur, Azalyn, Winnie, Feorwyn, Sakura, Nooka,
+Linara, Starsa, Ranna, Rorka, Xelloss, Valgarv, Filia, Valkyrie - nicelinked
+(.be)
+  Spud, Tragikomix, Krkavec, Moby - nicelinked (.cz), doesn't kill linkless/
+linkfrozen
+  [Christian] Mastah, Meliza, Mishrak, Mordak, Naomi, Notorga - nicelinked
+(.se), wimpy
+  Ethar, Molak, Throk, Zroi, Elayne, Galerech - nothing special
+  Djinn, Tiamat, Zygmud, Eladamri - nicelinked (.be)
+  Jones, Pontu, Bok - nicelinked (.ee)
+ -Rebeka, Sofinia, Mrazik, Lefali - nicelinked (.cz)
+  Dorfl, Tasslehoff, Jarlaxle, Zhorgas - nothing special
+  Girithol, Jeakoth, Mogshak - averagelinked (USA)
+  Ytinas, Natash, Rippin, Freight - goodlinked (.nl)
+  Miser, Nuzo, Xagok, Deacon - averagelinked (.ca)
+  Aseff, Beleghir, Singha, Kalkano - averagelinked (USA)
+  Poppis, Spinner, Risp - nicelinked (.fi)
+ -Celo, Dominic, Maverick, S in, Xel - averagelinked (USA)
+  Gloha, Illyas, Rafa, Torq, Gamli, Seethe, Mecra - badlinked (.au)
+ -[Eric] Bishn„k, Galurin, Narf, Rotho, Tora, Trobo, Uriond, Vr„sh -
+averagelinked (USA)
+  [Matt] Bellows, Betty, Blob, Friar, Illusia, Juggles, Kestrel, Melanchre,
+Spiritus - averagelinked (USA)
+  Kogan, Zina, Wurzl, Kviea - goodlinked (.de)
+  Dorolff, Martijn, Reijki, Wobbit  - (.nl)
+  Ainafea, Dafur, Eliwe, Fenir, Halas, Knold, Ranhith, Thoronwe - nicelinked
+(.dk)
+  Beorel, Elenwe, Erowyn, Gauruk, Gimilzor, Glader, Imlis, Qiuram, Ulkaar -
+nicelinked (.se)
+  Krax, Rentera - nothing special
+  Halir, Belzedin, Elemur, Gimlung, Glamduril, Mengaz, Mojo, Rumble, Slobber,
+Theofur, Uber - averagelinked (.ca)
+  Hudson, Bimulo and Sharg - (.fr)
+  Leave, Alfo - linklesskills sometimes
+  Gobakapp, Gena, Turim - linklesskills sometimes
+  Athela, Cymoril, Killdare, Morbet, Mruah, Pontiac, Popeye, Rumptsais -
+nicelinked (.ee)
+  Bodhran, Boot, Cryl, Cylas, Johhaidii, Keno, Kroom, Minos, Monet, Osilin,
+Sabish - nicelinked (.ee)
+  Eloin, Vaim, Lei - nothing special
+  Linar, Waba, Gamram, Hele - (.be)
+  Jadon, Kade, Kaool, Khakis, Nazkuk, Odium, Ukuvul - USA, nicelinked though
+(playing from .ch atm)
+  Guido, Juss, Khuka, Olevipoeg - (.ee)
+  [Simon] Lurken, Arla, Burst - nicelinked (.se), warlord in the past
+  [Robin] Agattax, Asanda, Bramba, Elenril - (.se), labbie of p(Thilax),
+sometimes warlord
+  [Remo] Durcano, Kobold, Nomad, Kocano - (.ee), warlord
+ *[Toivo] Angrenfea, Borgash, Ernst, Khadum, Plancy, Potgins, Tharain - (.ee)
+  [Joey] Vaab, Celt, Fahil, Unoc, Berlal, Nogon, Arnoc - (USA)
+  [Erik] Beltira, Cenedra, Milzok, Miyahk, Moortek, Much, Rulla - (.se)
+  Bearclaw, Bruise, Shadoh, Teejay, Tri - (USA), brother of p(Nagoroth)
+  [Steve] Nagoroth, Langolier, Baradul, Zar - (USA), pretty immature person,
+brother of p(Teejay)
+  [Per] Delfi, Vasa, Uffe, Cotc, Endor, Foad, Kalevala, Mauna, Rendra - (.se)
+  [Daniel] Evandaar, Joan, Razoor, Shaolin, Thezi, Valandar, Anezka - (.se)
+ -[Harry] Ancra, Eidolon, Eirin, Mhur, Naksur, Valeria, Viclona, Zilkis - (.ee)
+  Pumuckl, Eder, Nightwolf, Deedoo - averagelinked
+ -[Tomas] Dizz, Glithraril, Thilax, Valkyria - (.se), labbie of p(Elenril)
+  Elistan, Brumbur, Doomer - (USA)
+  [Adam] Buggar, Drazgan, Durandir, Luingil, Morgil, Nazgoroth, Spiffdark,
+Adama - (.se)
+  Hanr, Bruni, Lote, Arelia - (.ee)
+  [Tanel] Cano, Cerion, Hrym, Marras, Sookoll, Sufur, Telith - (.ee), sometimes
+warlord
+  [Joel] Aiele, Anardil, Eckhart, Enso, Korek, Marroc, Silencio, Vishnak, Vold
+- (.se), sometimes warlord
+-------------------------------------------------------------------------------
+ *  We (*.lv/*.ru/some *.de/some *.ee):
+  [Maxim] Merlyn, Royal, Rakot - nicelinked, plays usually solo, warlord in the
+past
+  [Gray] Gray, Candid, Santana, Corvin, Varvar, Ulairy, Vugluskr, Orkanoid -
+goodlinked, most time plays solo or as leader in group, very careful,
+info-hoarder, helpful but proud, never roleplays
+  [Haity] Haity - doesn't play anymore...
+  [Alex] Moonshade, Estel, Silmarin, Itil, Holg, Ostu, Saemo, San, Astar, Holy,
+Jelly, Hatch, Nuri - nicelinked, risky, have lotsa time to play, warlord,
+sometimes #1
+  [Sandman] Ariala, Centurion, Arhar, Baltimor - goodlinked, close to berserk,
+one who plays more than three years, but still have newbie skill ;)
+  [Dmitry] Morfizm, Kiska, Oiri, Eto, Aew, Lutien, Moci, Johnie -
+average-linked, "game is fun", nothing else special
+  [Dmitry] Porien, Druin, Finadriel, Vasilisa, Azazello, Woland, Kochurma,
+Ennor, Vsevolod - labbie of p(Zmej)/p(Zomb), risky, warlord
+  [Andrjuha] Zomb, Borodjavka, Tanc, Zlo, Stolb, Kazadoe - brother&labbie of
+p(Zmej)
+  [Leha] Zmej, Mephistofel, Teufel, Zopa, Vip, Pahan, Vij, Babai -
+brother&labbie of p(Zomb)
+  [Gleb] Fisben, Glebus, Delandir, Ali, Haisam, Zhuk, Piastr, Ray, Gauldoth,
+Ivanushka - nothing special
+  [Roman] Roman, Mazai, Folko, Blyn, Gazel, Murzilka, Belrun, Haladdin, Bearnas,
+Trori, Plohish, Elrun, Grino, Tervin, Moroz, Rio, Dushegub - nicelinked (.ee),
+#1 warlord in the past
+  [Aleks] Helga, Forve, Koer, Tandada, Molor, Aaz, Nothing, Kunduk, Olmer,
+Padla, Svarog, Bloha - nicelinked (.ee)
+  [Alexander] Omen, Findo, Zeddicus, Scorpio, Zorrak, Falanor, Dell, Teomyr,
+Badur, Elian, Shaitan, Alazar - nicelinked (.ee)
+  [Alex] Cerleg, Perun, Gad - goodlinked (.ee), plays darkies only
+  [Ilona] Lada - nothing special
+  [Yaroslav] Userbius - former p(Tonto), came back after long break
+  [Dmitry] Fearendil - nothing special
+  [Victoria] Kamlakh - nothing special
+  Ibis, Malysh, Khodum - nothing special
+  [Anton] Anton, Fortran, Bian, Lisp, Perl - nothing special
+  Daren, Naroc - moved to .au now
+  Tanelorn - nothing special
+  [Rohik] Rohic, Rohik, Rohick, Roxik - nothing special
+  [Mihail] Rabarbar, Niilit, Baraban, Bogodur - nothing special
+  [Maxim] Sibur, Henduil, Taelo, Mekul - nothing special
+  Avenir - nothing special
+  Boroda, Umnik, Dranj - moved to .ca now
+===============================================================================
+  Grunge, Wucheria, Bootyho, Tzanck, Teeny, Eric, Cufdrup, Burzum, Botesia,
+Tolman, Talson, Sethron, Grunganator, Morphine - hothead. His Ricola was bn in
+whitie skin, was sauronlisted, and now realdied. Tolman sometimes psteals.
+  [Joosep] Beat, Brutux, Grand, Lorduk, Lothar, Radegast, Selde, Smitsy,
+Undolomion - (.ee), warlord, but became kinda mad and started same-side pkill
+(usually kills orcs in Warrens as Grand). Now sundied his main char, gained
+permanent statue though.
+  Bodycast - sameside-pkiller
+  Risca, Jandor, Audi, Zoser, Jerle, Kinson - linklesskiller, sameside pkiller
+  Strine, Rauko, Yanwe, Grang, Frink, Bajun, Skud, Zoone, Korf - cruel moron
+(pstealing via lie/summon), sameside pkiller, kill him on sight.
+  Delegat - pstealer
+  Mukami, Toku, Wacker, Batpoop, Shashakar - psteals as Shashakar
+  Hated - pstealer
+  Firewalker - linklesskiller
+===============================================================================
+  "nothing special" means: do not know anything about this player, just placed
+here names of his/her chars to show that they all are same player
+  * means: have pw to this part of my page, or will receive it on request

@@ -1,0 +1,843 @@
+A 'Lil Playroom - South : playpen
+A Bee-Hive - Up : alveolus
+A Bee-Hive - Down : alveolus
+A Bend in the Corridor - South : manacle
+A Bend in the Road - East : sesame
+A Bend In The Trail - South : stones
+A Break in the Great Hedge - Down : hole
+A Burrow - Down : rug
+A Cavern - Up : stone
+A Circle of Stones - Down : arm
+A Circle of Stones - South : underhill
+A clearing - Up : crevice
+A Concealed Passage - Up : slab
+A Concealed Passage - West : tapestry
+A Concealed Tunnel - North : cinderblock
+A Corridor daubed in Red - East : secret
+A crevice - Up : moss
+A crudely carved tunnel : irondoor
+A dark, hidden cave - North : tunnel
+A Damp Cave - Down : trapdoor
+A Damp Cave - North : boulder
+A Dank Crypt - Up : moss
+A Dark and Damp Cave - West : skull
+A Dark and Smelly Pool - Down : stoneslab
+A dark cellar - North : barrel
+A Dark Grove : trunk
+A Dark Lake - Down : stone
+A Dark Tunnel - North : door
+A Dark Tunnel - South : crack
+A Dark Unknown - East : door
+A Dark Unknown - South : door
+A Dark Vault - Down : stonetrap
+A dead end - Down : stone
+A Dead-End Passage - North : score
+A Deep Hole - North : rock
+A Deep Hole - Up : slab
+A Deep Ravine - North : stones
+A DEEP valley - Up : snowslide
+A Dense Forest - West : crack
+A Deserted Cave - Up : stoneslab
+A Deserted Tunnel - South : wall
+A Dip in the Grass - East : plank
+A Dusty Hallway - North : pinedoor
+A Dusty Path - **** : stalks
+A Dwavern Stable. - East : corral
+A Farm Yard - East : shrubs
+A Field Before the Barn - West : heavystone
+A Flooded Mineshaft - West : rocks
+A Forest Clearing - North : root
+A Forgotten Path - **** : fungi
+A Gloomy Cavern - Down : eggsack
+A Gorge - East : rocks
+A Flooded Basement - West : crack
+A Calm Pool - East : rockwall
+A Grassy Trail - East : bushes
+A Great Hall - South : statuary
+A Guardroom - Up : trapdoor
+A Hall in the Hill - Down : matcorner
+A Hidden Chamber - Up : woodenbeam
+A Hidden Chamber - West : mossybrick
+A Hidden Clearing - Down : slab
+A Hidden Mountain Path : rockslab
+A Hidden Pool - Down : boulder
+A Hidden Pool - South : dry
+A Hidden Trail - North : branches
+A Hide Out - North : table
+A Hillside Cave - North : droppings
+A Hole in the Cave - South : hole
+A Hole in the Riverbank - East : mosswall
+A Hollowed Out Ridge - Up : boulder
+A Huge Tree : thickhedge
+A Large Cairn - Down : cairn
+A Large Junction Chamber - East : ironlock
+A Little Trail Though the Hills - North : rockface
+A Little Trail Through the Hills - North : rock
+A Living Chamber - North : shelf
+A Lonely Hill - South : rock
+A Long Hallway - Up : hiddenladder
+A Long, Low-Roofed Tunnel - Up : slabdoor
+A Long Straight Stretch of the Road - East : thicket
+A Misty Valley - North : slab
+A Modest Temple - North : wall
+A mountain ledge - West : Stonedoor
+A Muddy Cave - North : crust
+A narrow cleft - South : tunnel
+A Narrow Crawlspace - South : rock
+A Narrow Ledge - Down : slide
+A Narrow Passageway - Down : flagstone
+A Narrow Trail in the Misty Mountains : boulder
+A Natural Cavern - Down : crack
+A Natural Crown - Down : stair
+A Natural Ledge - East : rubble
+A Natural Stairway - East : depression
+A partly rocky, partly muddy Path - West : oakendoor
+A Passage Sloping Down - West : wall
+A Passageway - North : panel
+A path along the bean field - Up : beanstalk
+A pool - East : waterhole
+A protected hollow - West : crypt
+A Ridge through the Hills - Down : stone
+A Roaring Waterfall - West : crevice
+A Rocky Outcropping - : bigstone
+A Ruined Ceremonial Chamber - Down : bottom
+A secluded dell - East : covert
+A Secret Chamber - North : picture
+A Secret Garden - Down : cage
+A Secret Passage - Down : force
+A Secret Passage - West : block
+A Secret Winter Store - West : storewall
+A Shallow Basin - South : crust
+A shallow cave - Down : stonetrap
+A Side Room - Down : floor
+A Side Tunnel - South : carving
+A Slimy Resting Place - North : slimynest
+A slimy, messy pig pen - East : barndoor
+A small cave - East : crack
+A Small Cave - North : slab
+A Small Cavern - Down : stone
+A Small Clearing - South : fissures
+A Small Depression : rockslate
+A small earth tunnel - South : earth
+A Small Foxhole - South : roots
+A small glade - **** : branches
+A small house - Down : trapdoor
+A Small Hut - South : bhagwan
+A Small Levee - North : glimmer
+A Small Niche - Down : patch
+A Small Knoll - North : hillside
+A Small Water Cave : passageway
+A small yard - West : brick
+A Stone Archway - South : branch
+A Stone Citadel - Down : flagstone
+A Stone Staircase - Up : stairtop
+A Stone Staircase - West : stonegate
+A Storage Cave - **** : patch
+A Storage Cellar - Up : rottenboard
+A Strange Laboratory - North : secret
+A Strange Rock - East : thorns
+A Strange Tunnel - East : blackslab
+A Strange Tunnel - West : bloodydoor
+A tiny waterfall - Down : weeds
+A Traversing Passage - North : stonewall
+A Tunnel - North : wall
+A Tunnel - East : gate
+A Turning Tunnel - West : corner
+A Twisted Tree - Down : tangle
+A Valley - South : branches
+A Very Cold Place - South : snowdrift
+A Very Dense Thicket : roadway
+A very narrow passage - North : torch
+A water well - **** : gate
+A Well-tended Plain : stalks
+A Wide Roadway - West : wetwall
+A Winding, Sloping Accessway - East : accessway
+A worn trail descending down to a glen - West : wildbush
+A Wrecked Wagon - Down : seat
+Abandoned Cave - East : earthwall
+Abandoned Dwarven Mine - Down : slab
+Abandoned Hobbit Hole - North : drapery
+Abandoned Hovel - West : rock
+Abandoned Hut - Down : floor
+Abandoned Inn - Down : hatch
+Abandoned Tower - Down : board
+Alcove - East : crack
+Alcove - West : coffin
+Alcove of Smugglers - Up : slab
+Along the dry river - Down : debris
+Amon Othar - Down : tombstone
+Among Flowering Shrubs - West : shrubbery
+Among the Hedgerow - South : roottangle
+Among the Rubble : archway
+An Abandoned Cellar - South : cask
+An Abandoned Cellar - Up : hatch
+An Abandoned Cistern - West : wall
+An Ancient Dungeon - Up : rafter
+An Ancient Graveyard - North : marblegate
+An Ancient Tower - Up : hatch
+An Ascending Passage - South : slimynest
+An eagle's eyrie - **** : twigs
+An Empty Passage - Up : moss
+An Empty Passage - East : lichen
+An escape passage - Up : hiddendoor
+An Escape Route - West : irondoor
+An Empty Passage - West : lichen
+An Icy Passage - South : icewall
+An Obscured Trail - West : thornbushes
+An old Armoury - Down : stone
+An old crypt - Down : slab
+An Old Farmhouse - Down : rottenboard
+An Old Guarding Cave - Down : floor
+An Old Mill - Down : trapdoor
+An old Tower - Down : floorboard
+An Underground Cavern - Up : dirt
+An Underground Landing - West : metaldoor
+Ancient Forest - East : brassdoor
+Ancient Woods - Down : roots
+Animal Path - West : shrub
+Antechamber - North : detritus
+Assembly Room - Down : trapdoor
+At a Glacier - **** : ice
+At a Huge Tree - South : barkdoor
+At a Large Decaying Tree - Down : barkdoor
+At a small hut - East : squaredoor
+At A Spring - Down : mudhole
+At an Old Encampment - East : tangledshrubs
+At an old tree - Down : tree
+At the Base of an Old Watchtower : fallenrock
+At the Eaves of a Gloomy Woodland - East : heavystone
+At the Eaves of a Gloomy Woodland - North : tangle
+At the Edge of a Clearing - East : barkdoor
+At the End of the Crevice - West : tangle
+At the Foot of the Scarp - Down : path
+At the Heart of the Woods - East : thinbranches
+At the Ruins of an Old Barn -down : trapdoor
+At the Small Hill - East : rubble
+Autumn's Love-Slave Prison - North : playpen
+Autumn's Love-Slave Prison - Up : cage
+Back Laboratory - West : board
+Back of the cellar - South : curtain
+Back Room - Down : floorboards
+Back Room - West : wall
+Back Tunnel - Up : stonechair
+Barn - Down : soil
+Barn Attic - Up : secrettrap
+Barracks - Down : strawmats
+Barren Hills - South : slab
+Barren plains - Down : drybush
+Base of a Cliff - North : stonecrack
+Base of Low Stairs - **** : panel
+Base of some Stairs - Up : stairwell
+Basement - South : chest
+Before a Portal - North : hiddengrave
+Behind the boulder - East : boulder
+Behind the Planks - West : plank
+Behind the Rotten Hut - South : rearwall
+Below A Cliff - North : crevice
+Below the Drawbridge - North : rubble
+Bend in the Path - East : rock
+Bend in the Narrow Passage - East : secretslab
+Bend in the Slooping Passage : stones
+Bend in the Sloping Passage - West : crag
+Bend in the trail - **** : stones
+Bend in the Wide Tunnel - West : rockdoor
+Bend in the Worn Trail - West : levee
+Beneath the Floorboards - Up : floarboards
+Beneath the Fortress - South : stonewall
+Berry Patch - North : looseplank
+Between two Hulks - South : boards
+Big John's headquarters - Down : trapdoor
+Bleak Hills - Down : plug
+Bleak Plains - Down : boulder
+Bleak Plains - North : portcullis
+Bleak Plains - South : bushytangle
+block Inner Chamber - **** : stone
+Bodyguard's Chamber - **** : trapdoor
+Bottom of a Deep Shaft - East : brickwall
+Bottom of the forest - North : corner
+Bottom of the Well - West : stone
+Brigands Secret Hideout - East : curtain
+Broken Forest : shatteredbranches
+Broken plains - West : tangle
+Bronze Avenue - North : boulder
+Bronze Avenue - North : rock
+Brushwood - **** : thickbush
+Burial Chamber - South : stoneblock
+Burial Chamber - Up : cairn
+Burial Crypt - South : sarcophagus
+Burial Mound - Down : shield
+Burned Hills - Down : coffin
+Burrow - South : burrow
+Burrow through the Rocks : slab
+Bushes - South : bushes
+Bushy grassland - North : largebush
+Bushy Plains - West : thornbushes
+By a Swift Creek - North : hedge
+By the hill - South : leaves
+Cave - East : tendrils
+Cave - Up : stonedoor
+Cave Hollow - West : rocks
+Cave in the Hillside - Down : stonestair
+Cave inside a hill - North : rubble
+Cave of Skulls - Down : giantskull
+Caved-in Tunnel - North : crack
+Cavern in the Grey Mountains - South : stonedoor
+Cavern Under the Cairn - East : cryptwall
+Cellar - East : hiddendoor
+Cellar - West : beerbarrel
+Cellar of the Fallen Inn - North : curtain
+Cellar of the Hall - South : cinderblock
+Ceremonial Hall - East : stairwell
+Chamber of Meditation - East : panel
+Chamber of the Master Assassin - Down : carpet
+Chamber of Zirak-Zigil - Down : trapdoor
+Chambers - North : niche
+Chief's Private Quarters - Down : trapdoor
+Choked Passage - South : detritus
+Closet - North : secretpanel
+Clump of Trees - South : barkdoor
+Collapsed Avenue - West : rockslab
+Collapsed Hall - Down : wastegrate
+Collapsed Junction - East : rubblepile
+Corridor Under The River - Up : riverbank
+Corridor Under The River - West : rockface
+Crawlway along an Avenue - West : rockfall
+Crypt - South : stonedoor
+Cul-de-sac - East : rockdoor
+Cul-de-sac - East : rockdoor
+Damp Cavern - **** : slab
+Damp Passage - North : earthroots
+Damp Passage - South : rockydirt
+Dank Passageway - Up : obsidian
+Dank Passageway - Up : runes
+Dark Cave - East : secret
+Dark Cave - West : sand
+Dark Cellar - South : panel
+Dark Chamber - South : plaque
+Dark corridor - Up : stoneslab
+Dark Dry Cave - Down : crack
+Dark Forest - Down : roots
+Dark Forest - North : branches
+Dark Grove - West : branches
+Dark Road - East : sculpture
+Dark Towering Forest - West : tangle
+Dark Tunnel - North : panel
+Deadend Tunnel - West : brickwall
+Decayed farm house - Down : hiddentrap
+Decaying Grave - Up : soil
+Deep Brush - East : hollybush
+Deep Brush - North : undergrowth
+Deep inside a dark chamber - West : staircase
+Deep Inside the Frozen Cave - South : icicle
+Deep inside the Holly Bushes - South : vegetation
+Deep inside the Holly Bushes - West : underbrush
+Deep inside the mountain - **** : icedoor
+Deep Valley - **** : tunnel
+Deep within the Wild Forest - North : burrow
+Dense forest : rock
+Dense forest : trunk
+Dense Grove - North : branches
+Dense Patch of Holly - West : hollybush
+Dense thicket - East : secret
+Dense Vegetation - East : branches
+Deserted smial - Down : hatch
+Devastation - Down : boulder
+Devastation - North : column
+Devastation - North : gabbroblock
+Devastation - South : fallenpillar
+Devastation - West : stonepile
+Dimly lit cavern - Up : trapdoor
+Dining Hall - East : wall
+Down in the well : wellstone
+Dried Out Lake - North : quarry
+Dry fields - East : rottenwall
+Durin's Chimney - East : cleft
+Durin's Way - North : greydoor
+Durin's Way - South : rubbledoor
+Durin's Way - West : rockslab
+Dusty cellar - Up : trapdoor
+Dwarven Armoury - West : forgeddoor
+Dwarven Tomb - Up : ceiling
+Dying Trees - West : deadbark
+Eagles Watch - Down : wing
+Earth Tunnel - North : earthwall
+Earthy Tunnel - Up : sodmat
+Earthy Tunnel - West : rootdoor
+East of a Small Bridge - Up : cliff
+Echoing Gloom - West : blankpanel
+Edge of a Dark Forest - Down : rock
+Edge of the Forest - West : tunnel
+Edge of the Plains - Down : streambed
+Eerie Intersection - Down : runes
+Elrond's Suite - South : cedarpanel
+Elven Village - Down : boards
+Empty Corridor - Up : hay
+End of a hill - Down : bearshome
+End of a Long, Low-Roofed Tunnel - North : secretwall
+End of Animal Track - Down : foliage
+End of the passage - South : dark
+End of Path - North : rocks
+End Of the Corridor - East : loosestone
+End of the Hidden Tunnel - West : secretslab
+End of the Long Tunnel - **** : wall
+End of the small path : branches
+End of the Trail - West : branches
+End of the tube - South : door
+End of the tube - West : wooden
+End of the Twisting Tunnel - East : crag
+End of Trail - South : boulder
+Entangled Forest - Down : branch
+Entrance of the Cave - South : rock
+Entrance to a Snake Cave - East : snake
+Entrance to a tree village - Down : secret
+Entrance to an Angmar Burial Mound - Down : burialtrap
+Entrance to the Dark Chapel - North : harrow
+Fallen Inn - North : door
+Far Down Pass - South : hills
+Far Downs Pass - South : hills
+Far Downs Scarp Edge - **** : path
+Felak Thule-Ul-Uzbad - The Royal Mausoleum - East : stoneward
+Felak Thule-Ul-Uzbad - The Royal Mausoleum - North : irondoor
+Felak Uzbad-Gabil - The Royal Armoury - West : stonedoor
+Filthy cave - Up : stonetrap
+Flat Clearing in the Hills - South : bushes
+Flooded Basement - South : slime
+Foggy downs - East : shortcut
+Food Storage - North : stonedoor
+Forest hills - West : bushes
+Forest in the Hills - South : vegetation
+Forest of Fornost - **** : rock
+Forest under the Ridge - West : mossydoor
+Foresty Darkness - Up : floortrap
+Forgotten Tunnel - East : crack
+Foul Cave - North : bushes
+Foxhole - South : dirtwall
+Friendship Hall - North : stonepanel
+Frothing Pool in the Glanduin - South : cliffcave
+Gate to the Valley - East : stonegate
+Ghostly Cavern - Up : trap
+Gloomy Valley - South : rocks
+Gloomy Woods - South : shrubs
+Gloomy Woods - West : tangledshrubs
+Gloomy Woods - West : thinbranches
+Gore-filled Pit - West : gorydoor
+Grassy Clearing in the Forest - West : rottentree
+Grassy Field - West : carving
+Grassy Field beside the Glanduin : bushypath
+Grassy Hill - West : azuregate
+Grassy Hilltop - Down : tomb
+Grassy slope : thickbush
+Grave vault - Down : coffin
+Great Hall of the Durghash - West : redeye
+Greenway - Down : boards
+Greenway - East : coffin
+Greenway - North : sarcophagus
+Greenway - South : sarcophagus
+Greenway - West : hills
+Greenway - West : underbrush
+Grey Mountains - North : stonedoor
+Guard Cave - East : stonelatch
+Guarded Passage - West : Steeldoor
+Hall of Jewels - Down : Hatch
+Hall of Jewels - West : Blackdoor
+Hall of Mourning - East : scree
+Hall of the Arcane - Up : niche
+Haudh-en-Morgwaith - Down : darkness
+Heart of the Forest - Down : bark
+Hidden Burrow - East : rootdoor
+Hidden Cave - West : waterhole
+Hidden Cavern - Down : niche
+Hidden Chamber - Up : hatch
+Hidden Crypt Beneath the Moor - Down : coffinlid
+Hidden Crypt Beneath the Moor - West : cryptwall
+Hidden Path - East : levee
+Hidden Path - South : branches
+Hidden Stairs : stonedoor
+Hidden Tunnel - South : rockface
+Hidden Tunnel - Up : secret
+Hidden Winding Stairs - East : rockywall
+High Hill - Down : turf
+Hills - Down : tangledroots
+Hills - South : rubble
+Hole in the ceiling - Up : roots
+Hollin Road - Down : cliff
+Hollow in the Moors - South : slope
+Home of the Giants - South : mural
+Ice Cave - North : icewall
+Ice-Demon's Lair - North : icicle
+Icy Blackness - Up : streamwall
+In a dark forest - **** : bushes
+In a dark forest - **** : tangledbush
+In a dark forest - North : trunk
+In a Dark, Damp Hole - West : earthwall
+In a Decaying Hovel - South : crate
+In a Deep Valley - North : stonetwist
+In a dense forest - Down : grassdoor
+In a fearsome cavern - West : rock
+In a Field - Down : pooldoor
+In a Hobbit Hole - North : door
+In a Hole Beneath the Alcove - Up : rottenvines
+In a large barrel - South : board
+In a Long, Dark Corridor - North : deadend
+In a Thick Forest - East : vegetation
+In a Thick Forest - North : vegetation
+In a Thick Forest - South : vegetation
+In a Thick Forest - West : vegetation
+In a tree - East : tree
+In a valley - East : crevice
+In front of a big cliff - **** : bushes
+In front of a water well. - South : gate
+In the Attic - Down : board
+In the Damp Cellar - Down : floorstone
+In the Dark Cellar - Up : rottenplank
+In the Dark Forest - North : undergrowth
+In the Dark Forest - West : undergrowth
+In The Forest - South : rock
+In the front of a big cliff : bushes
+In the Grave - South : hiddengrave
+In the Hold of an Ancient Wreck - South : plank
+In the Holly Bushes - North : tangle
+In the Holly Bushes - East : tangledbush
+In the Old Tower - Down : flagstone
+In the Outskirts of the Forest : looseplank
+In the Ruined House - Down : hiddenrock
+In the Shadowy Lake - East : stones
+Inner Chamber - North : stoneblock
+Inside a Decaying Building - Down : planks
+Inside a Decaying Tree - North : escape
+Inside a Decaying Tree - Up : barkdoor
+Inside a Decaying Tree - Up : wood
+Inside a large water cave - North : hole
+Inside a Rough Shelter - East : storewall
+Inside a small cave - South : bush
+Inside a small Hobbit Hole - West : workshop
+Inside a Small Stone Building - Down : pegs
+Inside an Ancient Rhudaurian Crypt - Up : fresco
+Inside an old Tower - Up : tower
+Inside the Burial Mound - Down : fresco
+Inside the Burial Mound - Up : shield
+Inside the Cairn - Up : door
+Inside the Dark Well - North : looserocks
+Inside the Fallen Walls - Down : rubble
+Inside the Glacier - **** : ice
+Inside the Great Hall of Doom - South : fangs
+Inside the Old Lodge - Down : hatch
+Inside the Ruined Building - Down : stoneblock
+Inside the Shanty - East : wall
+Inside the Treetrunk - Down : mossytangle
+Inside the Treetrunk - West : mossywall
+Inside the Treetrunk - East : mossdoor
+Inside the waterfall - East : fall
+Inside the waterfall - West : secret
+Kitchen - Down : board
+Knee-deep Mud - Down : trapdoor
+Lair of the Ratheads - Down : garbage
+Large Cave in a Hillside - South : rock
+Large Cavern - North : stalagmite
+Large Hill - **** : ruin
+Large tree - Up : secret
+Light forest bordering the road : path
+Light Woods - South : bushes
+Living Quarters - **** : slab
+Living Room - **** : access
+Long tunnel - North : blackdoor
+Looted Storehouse - South : accesspanel
+Lower Troll Cave - Up : trapdoor
+Main Cave - South : door
+Marble Tunnel - Up : trapdoor
+Marsh - North : fern
+Midgewater Marshes - Down : bush
+Midnight Forest - Down : sodmat
+Mine Office - South : panel
+Mineshaft - Up : ceiling
+Misty cave - West : rocks
+Misty Mountains - Down : crevice
+Misty Mountains - Down : rock
+Moist cave - North : rocks
+Moist cave - Up : rock
+Moist cave - West : moldydoor
+Mossy Cellar - East : loosestone
+Mountain Caves - South : cavedoor
+Muddy Path - West : bushes
+Mustering Hall - **** : pillars
+Musty Cave - Up : rock
+Muddy Cellar - South : moldywall
+Narrow Pass - North : crevices
+Narrow River in the Mountain - North : bushes
+Narrow Tunnel - Up : trapdoor
+Narrow Tunnel - West : tunnel
+Narrow Winding Stair - Up : trapdoor
+Natural Terrace - Down : roots
+Newbury - East : patch
+Northern Guardroom - Down : stonecap
+Obsidian Room - South : statue
+Odd Tunnel - South : door
+Off the Path - North : hugerock
+Old Cellar - East : barrel
+Old Cellar - Up : hatch
+Old East Road - North : scrub
+Old Forest - **** : river
+Old Forest - **** : shortcut
+Old Road - South : ferns
+On a Bridge - Down : plank
+On a Large Hill - Down : rockdoor
+On a plateau - West : door
+On a Runway - **** : fissures
+On a very narrow ledge - **** : rock
+On a Winding Roadway - **** : scrub
+On the Castle Battlements - West : smalldoor
+On the hillock - Down : rocks
+On the top of the hill - Down : hatch
+Orcs' Resting Area - **** : wall
+Ost-In-Edhil's Gate  - Down : cliff
+Ost-In-Edhil's Gate : cliff
+Outside a Woodhall - East : halldoor
+Outskirts of the Forest - South : twigs
+Overlook - North : briar
+Partially Caved-in Tunnel - South : hiddenslab
+Path between the Hills - West : irondoor
+Path in the north part of the Old Forest. - East : tree
+Plains - Down : dirt
+Plains - Down : wood
+Plains - North : ibex
+Prairie - West : hills
+Prison cave - North : redeye
+Quarters - North : desk
+Raised dais - West : sconce
+Ranger Outpost - Down : bed
+Rathead Storeroom - Up : garbage
+Ravine - East : rock
+Research Chamber - East : board
+River Bank - Down : stoneslab
+Road of Narvi - East : dwarfdoor
+Road through the Lower Pass - North : mountainside
+Road of the Smiths - North : densebush
+Road to Fornost - East : secret
+Robbers Haven : hatch
+Rock Face - North : rockdoor
+Rock Face - South : vegetation
+Rockfall - East : fallenstone
+Rockfall - West : boulder
+Rocky Hills - East : boulders
+Rocky passage - West : blackstone
+Rocky Promontory - down : rock
+Roin's Scar - South : seal
+Rolling Hills - North : turf
+Rotten Hut - North : rearwall
+Rotten Room - North : irondoor
+Rotten Treehouse - Down : trapdoor
+Rough Passage - West : panel
+Roughly Carved Tunnel - North : crack
+Rubbish Heap - Down : flagstone
+Ruin on a high hill - Down : trapdoor
+Ruined chapel - Down : bench
+Ruined Home - East : fallenblock
+Ruined Inn - Down : floortrap
+Ruined Inn - Up : trapdoor
+Ruined Inn - West : rottenwall
+Ruined manor - Down : board
+Ruined Smithy - West : stoneblock
+Ruined Tower - **** : stones
+Ruins - Down : hole
+Ruins of a citadel - Down : shrubbery
+Sacristy - Down : secret
+Sagging Shack - Down : board
+Sagging Shack - Up : pentagram
+Sandstone Hill - Down : niche
+Secluded Village : bushypath
+Secret cave - East : secret
+Secret Chamber - **** : oakpanel
+Secret Compartment - Up : board
+Secret escape passage : trapdoor
+Secret escape passage : wall
+Secret path up the Cliff - East : rottentree
+Secret path up the Cliff - South : tangle
+Secret Storage - Down : secretrap
+Servant's Quarters - South : bunk
+Shadowed Path - East : brush
+Shadowed Path - West : brush
+Shaghosh's Chambers - Down : secretstair
+Shortcut - East : boulders
+Sickly Bushes - East : sticks
+Silent Clearing - West : bracken
+Silent tunnel - East : hiddencrack
+Silent tunnel - Up : trapdoor
+Sleeping Area - West : recess
+Sleeping room - South : wooden
+Sloping Hills - South : hillside
+Small Alcove - North : slab
+Small Cave - East : tunnel
+Small Chamber - Down : floorstone
+Small dark river in the forest - East : tree
+Small dirt path - West : passage
+Small Hill - **** : rubble
+Small Hills - East : grasses
+Small Pond Under the Cliff - Up : rustedgrate
+Small Ruin - Down : rottenplank
+Small shrubbery : access
+Smelly Cave - North : warghide
+Smelly Cellar - South : panel
+Smuggler's hiding place - North : secret
+Smugglers hiding place - East : stoneslab
+Smugglers hiding place - Up : escape
+Snake Lair - East : branches
+Stairway to Heaven - North : bhagwan
+Stairway to Heaven - South : arda
+Steep hill path - South : **** 
+Steep Trail - **** : boulders
+Stone Auditorium - Down : stonechair
+Stone Giants Refuge : trapdoor
+Stony Mound - **** : slab
+Stony Path - North : grass
+Storage cave - South : stoneswivel
+Storage Chamber - Down : hay
+Storeroom - South : crack
+Strange Cave - West : rock
+Strange looking Hill - North : gravedoor
+Strange Room - North : wall
+Strange shady place - Down : stones
+Talus Field - Down : stone
+Temple Crypt - East : coffin
+Temple Crypt - North : sarcophagus
+Temple of the Red Eye - East : backwall
+Temple Ruins - Down : altar
+The Abandoned Graveyard - Down : crypt
+The Back of the Snake Cave - West : snake
+The Blue Hand Casino - East : Panel
+The Blue Hand Casino - Up : Hatch
+The Blue Hand Casino - West : Door
+The Body Dump - **** : stonedoor
+The Bottom of a Dwarven Tomb - East : block
+The Broken Hills - South : harrow
+The Burial Chamber - Down : eyes
+The Burial Chamber - North : fangs
+The Burial Crypts - Up : bearskin
+The Cavern - Up : rock
+The cavernous cavern - Up : hatch
+The Cellar - Down : waydown
+The Cemetery - Down : tombstone
+The Chest - Down : board
+The Chief of Thieves's Office - Up : picture
+The Chief's Tent - Down : carpet
+The clearing - Down : sand
+The Commandant's Office - Down : carpet
+The Deep Hole - Up : door
+The Deeps of Moria - Up : shaft
+The downs - South : greywitteredo
+The Empty Basement - East : dirtwall
+The entrance hall - West : wooden
+The Eye of the Vortex - Down : fakedoor
+The Foot of some Winding Stairs - South : rockniche
+The Fork of Two Rivers - **** : crevice
+The Guild of Assassins - Up : satanas
+The Guild of Assassins - West : secret
+The Harbor - Down : porthole
+The Heart of the Forest - Down : moss
+The Heart of the Forest - North : densebrush
+The hidden room - East : door
+The Hidden Room - South : wall
+The Hidden Storeroom - West : seal
+The Hold - Up : porthole
+The Illusionist's House - East : turnback
+The King's Cave - South : greyslab
+The King's Cave - West : secrethoard
+The King's Road - East : frontdoor
+The Kitchen - Down : cellar
+The Large Hall in the Tower - North : cobweb
+The Large Room - East : bloodydoor
+The Large Room - West : blackslab
+The Lockholes - East : firkin
+The Lost Crypt - West : tomb
+The Mine Operations Room - Down : carpet
+The Mines of Khulakal - South : stonypath
+The Obsidian Throne - West : passage
+The Old Cemetery - Down : dolmen
+The old forest - Down : leaves
+The old forest - **** : branches
+The Red Way - **** : reddoor
+The Redhorn Pass - North : looserocks
+The Remains of an Armoury - East : fireplace
+The River Bottom - East : plank
+The Rubble-filled Cellar - Down : stairwell
+The Silent Chamber - East : trapdoor
+The small library - North : shelf
+The Sudden Deadend - **** : dirtfloor
+The Throne-hall - **** : throne
+The Tower Room - North : tapestry
+The Tower's Prison - East : metaldoor
+The Treasury - Up : slab
+The Tunnels - West : firkin
+The ventilation room - Down : barrel
+The vestibule - Down : slab
+The waterfall - North : stream
+The Waterfall - North : alcove
+The wightlords chamber - East : statue
+The Wolf's Gate - Up : passage
+The Writing Room - South : bookcase
+Thick Brush - East : underbrush
+Thick bushes - East : bush
+Thin forest - **** : bushes
+Thin forest - **** : thornybush
+Thinker's Hill - Down : stones
+Thorny bushes - South : undergrowth
+Thorny garden - West : thorns
+Tiny hill - Down : metaldoor
+Tomb of the Dwarven Warriors - North : runes
+Too dark to tell - Up : grille
+Top of the Misty Mountains - North : crease
+Torp's control center II - Down : 
+Torture Chamber - **** : rack
+Tower Hills - Down : cave
+Tracked trail - North : head
+Trail - East : way
+Trail End - **** : boulders
+Trail in the Hills - North : tendrils
+Trail through the Bushes - East : thornbushes
+Treasure Cave - North : door
+Troll Cave - North : hole
+Troll Feasting Hall - West : graniteslab
+Troll Hole - West : garbage
+Troll sleeping room - Up : stoneblock
+Trolls' Lair - **** : wall
+Tusky cave - Down : tunnel
+Tusky cave-in - East : rocks
+Under a Grey Stone Cliff - East : gates?
+Under an Archway - North : hole
+Under the Barn - West : wall
+Under the High Cliffs - **** : rock
+Under the Hills - South : irondoor
+Under the Thick Bushes - East : rockface
+Under the Wagon - Up : seat
+Under the waterfall - North : stalactite
+Underground Cavern - South : stoneblock
+Underground Crypt - West : door
+Underground Tunnel - West : slit
+Underground Square - Up : stonesquare
+Underwater Alcove - Up : crawlspace
+Underwater Cavern - East : crack
+Upon a tall grassy hill - Down : stoneslab
+Vale in the Hithaeglir - East : mine
+Var's Exhibition Chamber - Down : Hatch
+Var's Exhibition Chamber - East : Blackdoor
+Var's Exhibition Chamber - West : Panel
+Vast Plains - East : bush
+Village Circle - Down : boulder
+Walking in the High Hills - Down : grassbed
+Wasteland - South : briar
+Wasteland - Up : branches
+Watchtower - Up : fallenrock
+Watchtower in the Plains - Up : trapdoor
+Waterhole - Down : stream
+Weeping Walls - East : slimycrack
+West of the Small Bridge - Up : cliff
+Western Flank of Weathertop - Down : slab
+Whirlpool - Down : fakedoor
+Whirlpool - South : bough
+Wide road - North : wall
+Winding Trail across the Knoll - South : thorns
+Withered Hill - Down : cairn
+Wood - Down : trap
+Wooden Hut - Down : trapdoor
+Worn Trail - South : scree
+Yavanna's Avenue - Down : crack
+Yavanna's Avenue - East : wall

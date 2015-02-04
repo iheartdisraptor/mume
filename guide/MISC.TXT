@@ -1,0 +1,221 @@
+                               MISCELLANEOUS STUFF
+
+
+          Object         Weight  Value  Other
+
+ Sapphire ring               10 400000  Magic, Bless, Anti-evil, Anti-neutral, Nosell
+                                        Can be affected by any two of following:
+                                        OB +5, DB +5, (Saving Spell -10, Attack Spell +10)
+ Ruby ring                    7  19200  Magic, OB +5
+ Iron ring                   15  10750  Magic, DB +5
+ Copper ring                 10   7500  Magic, Saving Spell -10, Attack Spell +10
+ Banded ring                 20  19200  Magic, can be affected by any of following:
+                                        OB +5, DB +5, (Saving Spell -10, Attack Spell +10), (OB +3, DB +3)
+ Diamond ring                25  14000  Nosummon
+ Jewelled ring                7  12000  Magic, Nosell, Nosummon, diff effects (see quests)
+ Icy ring                     6  10000  Magic, Nosummon, Eff vs fire
+ Azure ring                  10   7100  Treasure
+ Strange golden ring         30   3000  Magic, Norent, avoids your burning in Balrog's room
+ Silver wedding ring          5   2500  Nosummon
+ Unfinished band of gold      5   1500  Treasure;for forging jewelled rings
+ Wooden ring                300   1480  Cursed, randomly teleports you around
+ Engagement ring              6   1750  Treasure
+ Gold ring                    8   1500  Treasure
+ Silver ring                  5   1000  Treasure
+ Small tin ring               4    100  Eff vs disease
+ Ring (Arda)                  2     15  Magic, Nosummon
+
+ Bright red amulet           65  14000  Magic, Anti-evil, Eff vs fire, Saving Spell +10
+ Black amulet               100  12000  Evil magic, Anti-good, Anti-neutral, Nosell, Eff vs light, Saving Spell +10
+ Mithril circlet             10  10000  Magic, Bless, Anti-evil, Anti-neutral, Attack Spell +10
+ Twisted crown               15  10000  Magic, Anti-good, Anti-neutral, Attack Spell +10, Nolocate
+ Necklace                    50   6000  Magic, Anti-evil, Eff vs mental
+ Old length of iron chain    50     50  Magic, Anti-good, Anti-neutral, Eff vs mental, Nolocate
+*Crystal phial                          Glow, Magic, Spellsave -20, Eff vs mental
+ Pale blue stone             50  30000  Magic, Bless, Anti-evil, Anti-neutral, HP/MP regen focus
+
+*Black scroll                20   2500  Magic, Level 15 heal, strength & energy drain
+ Blue scroll                 25  20000  Magic, Nosell, Level 20 heal
+ Purple scroll               10  20000  Magic, Nosell, Level 20 cure blind, sanctuary and poison
+ Azure scroll                25  12000  Magic, Nosell, Level 10 heal
+ Vellum scroll               50   5000  Magic, Level 25 protection from evil & bless;
+                                          restores moves to all members of group
+ Scroll which reads "ysafg"  35   5000  Magic, Level 25 fear
+ Obsidian eye                50   5800  Nosell, Norent, Level 24 blindness, 3 charges
+ Twisted rock fragment       25   2000  Nosell, if used on door - breaks it
+ Black candle                40   2000  Evil magic, Level 14 sleep, 1 charge, Move regen -3, Saving Spell +10
+*Charred staff                          Level ?? magic blast, decay in 5-7 days
+ Small wooden box (paste)    20   1000  Level ?? cure critic, 3 charges
+ White wand                 100   6000  Magic, Level 8 magic missile, 20 charges
+ Small pouch                121      8  All in room expect yourself paralyze for 3-4 secs
+ Fragile parchment           10   2700  Magic, Turns back half damage from both lightnings
+
+ Red ruby                    15 100000  Glow
+ Lantern                    100     85  Light
+ Hooded brass lantern       150     75  Light
+ Candlestick                250    150  Light
+ Torch                       35     10  Light
+ Dark coloured flask of oil 130     16  Oil for lanterns
+
+ Sable pouch                 25   8000  Container (375 units), Magic, Eff vs fire/cold/spell
+ Leather backpack           110    100  Container (4900 units)
+ Large sack                  50     25  Container (2450 units)
+ Leather satchel            210     60  Container (1090 units)
+ Wooden box                 230   1000  Container (210 units)
+ Belt pouch                  30    100  Container (110 units)
+
+ Laced quiver               100     50  Container (250 units), Eff vs fire/acid, arrows quiver
+ Quiver                     200    200  Container (250 units), arrows quiver
+ Bolt-case                  140    250  Container (160 units), crossbow bolt quiver
+ Leather pouch               49     50  Container (145 units), slingstone quiver
+ Moneybag                   125     75  Money/gem container (100 units)
+ Keyring                     30    976  Keys container
+
+ Jewel-encrusted goblet       7  42000  Drink container, 70 water
+ Silver goblet                7   9600  Drink container, 70 water
+ Exquisite wine glass        10   6300  Drink container, 30 water
+ Golden cup                   7   6000  Drink container, 40 water
+ Tincture                    85   1000  Drink container, 100 water
+ Aged silver flask           80   1000  Drink container, 40 water
+ Flagon                     130     85  Drink container, 120 water
+*Large glass jug            150     50  Drink container, 400 water
+ Dented pail                250     30  Drink container, 200 water
+ Large skin                 225     40  Drink container, 240 water
+ Water skin                  55     20  Drink container, 160 water
+ Dark coloured flask        130     16  Drink container, 120 water
+ Cup                         10      7  Drink container, 40 water
+                                        Just for info: 1 drink from thirsty = 50 water
+
+ Ornamented sheath           50    200  Sheath, automending, for one blade only
+ Ornate scabbard            135  50000  Sheath (for blades)
+ Black sheath                50    200  Sheath for Morgul Blade only
+ Weapon sheath               50    200  Sheath (for blades)
+ Leather baldric            150    350  Sheath (for crushing/2H weapons)
+ Sturdy weapon harness       75    200  Sheath (for crushing/2H weapons)
+ Weapon harness              50    150  Sheath (for crushing/2H weapons)
+
+ Canoe                     1600   1000  Boat
+ Light boat of reeds       1600   1000  Boat
+ Raft                      3750    400  Boat
+
+ Delicious bannock           25    400  Food; rumor: never decays
+ Lembas wafer                35     80  Food; Bless, Anti-evil, Anti-neutral
+ Piece of smoked cured meat 106     90  Food
+ Plate of roast mutton      175     52  Food
+
+ Brilliant adamant           10 100000  Treasure; for making crystal phial
+ Fine silver bracelet        25 100000  Treasure
+ Golden necklace             35 100000  Treasure
+ Lustrous green emerald      10  75000  Treasure
+ Faintly glowing stone       10  50000  Treasure; shows if moon is up or no.
+   (Dark stone)
+ Beautiful diamond            3  50000  Treasure
+ Small bracelet              25  50000  Treasure
+ Corberyl                     5  40000  Treasure; for embedding
+ Star sapphire                5  40000  Treasure; for embedding
+ Piece of silvery metal      35  37298  Treasure; lockpicks upgrade in BM
+ Emerald pendant             15  34000  Treasure
+ Golden elven bracelet       25  35000  Treasure
+ Blue crystal (Aramel)       50  30000  Treasure; main component for foci items
+ Jade bracelet               20  30000  Treasure
+ Topaz                        5  18000  Treasure; for making pale blue stone
+ Glittering spearhead        60  15000  Treasure, Magic, Eff vs Spell; for making darkened spear
+ Lustrous opal                7  15000  Treasure; for embedding
+ Bar of gold                115  14000  Treasure
+ Large garnet                10  12250  Treasure
+ Chunk of metal             300  10000  Treasure; for embedding
+ Sword-shaped brooch         10  10000  Treasure
+ Jade amulet                 20   9000  Treasure; quest item
+ Silver cloakpin             30   8000  Treasure
+ Silver bracer               80   7500  Treasure
+ Huge silvery bracer        300   4000  Treasure; for embedding
+ Amethyst                     5   4000  Treasure
+ Small silver pendant        15   3400  Treasure, Norent
+ Nugget of gold              14   2750  Treasure
+ Scrap of silver              1   2300  Treasure
+ Bronze medallion            75   1250  Treasure
+ Bar of iron                200    850  Treasure; for embedding
+ Silver nugget               35    780  Treasure
+*Green brooch                           Treasure
+ Necklace of bones           55    650  Treasure
+ Ornate parchment             1    500  Treasure
+ Long and scaly snakeskin    40    400  Treasure; tanner makes snakeskin belt from it
+ Grotesque necklace          55    350  Treasure
+ Iron brooch                 15    100  Treasure
+ Small daisy-chain           10     20  Treasure
+
+ Silvery elven bracelet      25  15000  Magic, Nosell, Norent, Eff vs mental, decays in 15 mins after used
+ Flask of miruvor            10   5000  2x hp/mp regen, 1.2x manaregen for 2 ticks
+ The Huge Shovel            500   2000  Trolls can dig tunnels with it to ground
+ Silver-leaf brooch          15  10000  Magic, Bless, Anti-evil, Nosell
+ Stone                       25   2000  Nosell; whetstone
+ Set of lockpicks            45   1000  (same stats for strange set)
+ City key                   250  10000  Tharbad gate key; it is rentable
+ Fragrant-smelling bag       50    500  For mixing herblores
+ Crude herbal kit           500    200  For mixing herblores
+ Pan                         20    100  For cooking meat/bannocks/etc
+ Long rope with a hook tied 300     80  Helps with climbing
+ Sturdy rope                300    120  Helps with climbing
+ Golden harp                100  20000  Instrument
+ Hunting horn                35   1700  Instrument
+ Lute                       100   1700  Instrument
+ Shiny flute                 50   1500  Instrument
+ Pair of orkish war-drums   200    450  Instrument
+ Clay pipe                    5    880  14 pipeweed
+ Wooden pipe                 18    545  95 pipeweed
+ Some pipeweed                1    100
+ Small fluid-sack            15   2000  \
+ Grey fluid-sack             20   4500   \
+ Some short, black fur        8    200    | Herblore components
+ Long, sticky bit of flesh    3     50    |
+ Short, moist tail            4    150   /
+ Vial of preserved blood     10     50  /
+ Some alchemical supplies  2000   6300
+ Thick, soft, white fur    1000   2500  Quest item
+ Flask of orkish draught     30   1500  15 hps -> 30 moves, poison non-orcs/non-trolls
+ Wolfskin wristband          20   1500  Rumor: increases chances of saving dt
+ Riding whip                 30    350
+ Pair of tongs               90    150
+ Circlet of golden flowers   30    100
+ Wooden top                  50    100
+ Tarnshed arrowhead           3    100
+ Bloody pair of elf ears     11     75
+ Spoon                       15     35
+ Quill pen                   10     25  To write notes
+ A walking stick             50      2
+ Black talon                 10      1  Quest item
+*Teddy bear                  25      1  Hint: sqeeze it! ;-)
+ Icy heart                  150      1  Quest item
+ Strange white skull        650      0  Nosell; looks as -X attack spell
+ Scalp                        3      0
+ Oaken rod                  100      0  Quest item
+ Colorful Easter egg          2      2  food
+-------------------------------------------------------------------------------
+  Weight - in units: each unit = 10g, 44 units are 1 pound. For weapons is also
+shows minimum STR needed to wield it: for 1H - weight/15, for 2H - weight/22.5.
+  Value - in copper (busc) pennies. The more it is, the more you must pay for
+renting, mending and resizing item (usually, not always).
+  Glow: ruby and phial glow permanently, artifact weapons become lightsource
+only when evil creatures are near.
+  Magic, Evil magic - can not be enchanted.
+  Anti-evil/neutral/good - evil/neutral/good-aligned person can not use this item.
+  Nosell - you can not sell this item in any shop.
+  Wizlight - gives to you ability to see in the dark as orcs/trolls do.
+  Eff vs race/material - for weapon: inflicts more damage for opponents of that
+race/opponent in that type of armour (rumors: 33% more damage).
+  Eff vs spell - can not be dispelled with 'dispel magic' spell.
+  Eff vs fire - less damage from fire spells: fireball, burning hands and dragonfire.
+  Eff vs light - less damage from light spell: colour spray.
+  Eff vs acid - protected from slugs' acid.
+  Eff vs water - takes less moves while swimming.
+  Eff vs cold - for shoes: takes less moves in winter; for other - protects vs flu.
+  Eff vs poison - saves against poisoning.
+  Eff vs mental - saves against mental spells: blindness, sleep, hold, fear, silence, charm.
+  Ineff vs [xxx] - makes less damage to [xxx]/is less protected against [xxx].
+  Negative spellsave - GOOD, decreases damage from all attack spells.
+  Positive spellsave - BAD, increases damage from all attack spells.
+  Attack spell - increases power of your attack spells.
+  Size of container, in units - represents max *weight* which can be carried
+by container (as there are no such item attribute as 'size', and armour/clothes
+size doesn't matter here). Units are usual weight units; one unit equal to
+weight of one MUME coin (gold/silver/copper).
