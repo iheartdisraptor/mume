@@ -92,7 +92,7 @@ disableTrigger(&quot;Set Start MUME Moment (Date Part)&quot;)</script>
             <time>00:00:00.000</time>
             <Timer isActive="yes" isFolder="no" isTempTimer="no" isOffsetTimer="no">
                 <name>Display Time and Date</name>
-                <script>if not clock.options[&quot;display time every hour&quot;] or not clock.options[&quot;display date every day&quot;] then
+                <script>if not clock.options[&quot;display time every hour&quot;] and not clock.options[&quot;display date every day&quot;] then
 	disableTimer(&quot;Display Time and Date&quot;)
 	return
 end
@@ -792,11 +792,11 @@ end</script>
                     <name>display_timer</name>
                     <packageName></packageName>
                     <script>function clock.display_timer(mume_moment)
-	if clock.display_time_every_hour then
+	if clock.options[&quot;display time every hour&quot;] then
 		cecho(clock.display_time(mume_moment, true) .. &quot;\n&quot;)
 	end
 
-	if clock.display_date_every_day and
+	if clock.options[&quot;display date every day&quot;] and
 	   mume_moment.hour == 12 and
 		mume_moment.period == &quot;am&quot; then
 		cecho(clock.display_date(mume_moment, true) .. &quot;\n&quot;)
@@ -837,6 +837,7 @@ Other commands:
 - ntime: Narrate the time.
 - ttime &lt;player&gt;: Tell the time to another player.
 - uclock: Unset the clock.
+- clock help: Show this message.
 - clock option &quot;&lt;name&gt;&quot; &lt;value&gt;: Set the value of an option.
 - clock show colours: Display a list of colours for use with the highlight option.
 
