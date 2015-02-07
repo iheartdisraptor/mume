@@ -92,7 +92,7 @@ disableTrigger(&quot;Set Start MUME Moment (Date Part)&quot;)</script>
             <time>00:00:00.000</time>
             <Timer isActive="yes" isFolder="no" isTempTimer="no" isOffsetTimer="no">
                 <name>Display Time and Date</name>
-                <script>if not clock.options[&quot;display time every hour&quot;] and not clock.options[&quot;display date every day&quot;] then
+                <script>if not clock.options.show_time and not clock.options.show_date then
 	disableTimer(&quot;Display Time and Date&quot;)
 	return
 end
@@ -198,20 +198,47 @@ disableTimer(&quot;Display Time and Date&quot;)</script>
             </Alias>
             <Alias isActive="yes" isFolder="no">
                 <name>clock help</name>
-                <script>echo(clock.readme)</script>
+                <script>echo(clock.help)</script>
                 <command></command>
                 <packageName></packageName>
                 <regex>^ *clock help *$</regex>
             </Alias>
             <Alias isActive="yes" isFolder="no">
-                <name>clock option &quot;&lt;name&gt;&quot; &lt;value&gt;</name>
-                <script>local name = string.trim(matches[2])
-local value = string.trim(matches[3])
+                <name>clock show time</name>
+                <script>clock.option.show_time = not clock.option.show_time
 
-clock.set_option(name, value)</script>
+if clock.option.show_time then
+	echo(&quot;Time will dispay every MUME hour.\n&quot;)
+else
+	echo(&quot;Time will NOT dispay every MUME hour.\n&quot;)
+end</script>
                 <command></command>
                 <packageName></packageName>
-                <regex>^ *clock +option +&quot;(.+)&quot; +(.+)$</regex>
+                <regex>^ *clock *show *time *$</regex>
+            </Alias>
+            <Alias isActive="yes" isFolder="no">
+                <name>clock show date</name>
+                <script>clock.option.show_date = not clock.option.show_date
+
+if clock.option.show_date then
+	echo(&quot;Date will dispay every MUME hour.\n&quot;)
+else
+	echo(&quot;Date will NOT dispay every MUME hour.\n&quot;)
+end</script>
+                <command></command>
+                <packageName></packageName>
+                <regex>^ *clock *show *date *$</regex>
+            </Alias>
+            <Alias isActive="yes" isFolder="no">
+                <name>clock set highlight &lt;colour&gt;</name>
+                <script>local colour = string.trim(matches[2])
+
+clock.options.highlight = colour
+
+echo(&quot;Set highlight colour to &quot; .. clock.options.highlight .. &quot;.\n&quot;)</script>
+                <command></command>
+                <packageName></packageName>
+                <regex>^ *clock *set *highlight +(.+)$</regex>
             </Alias>
             <Alias isActive="yes" isFolder="no">
                 <name>clock show colours</name>
@@ -228,7 +255,7 @@ echo(&quot;Colours must be wrapped by the symbols '&lt;' and '&gt;'!\n&quot;)</s
         <ScriptGroup isActive="yes" isFolder="yes">
             <name>Clock</name>
             <packageName></packageName>
-            <script>clock = clock or {}</script>
+            <script>clock = clock or { options = initialize_clock() }</script>
             <eventHandlerList/>
             <ScriptGroup isActive="yes" isFolder="yes">
                 <name>Time</name>
@@ -739,7 +766,7 @@ end</script>
 	local highlight = &quot;&quot;
 	local grey = &quot;&quot;
 	if use_color then
-		highlight = clock.options[&quot;highlight&quot;]
+		highlight = clock.get_highlight()
 		grey = &quot;&lt;grey&gt;&quot;
 	end
 
@@ -773,7 +800,7 @@ end</script>
 	local highlight = &quot;&quot;
 	local grey = &quot;&quot;
 	if use_color then
-		highlight = clock.options[&quot;highlight&quot;]
+		highlight = clock.get_highlight()
 		grey = &quot;&lt;grey&gt;&quot;
 	end
 
@@ -792,11 +819,11 @@ end</script>
                     <name>display_timer</name>
                     <packageName></packageName>
                     <script>function clock.display_timer(mume_moment)
-	if clock.options[&quot;display time every hour&quot;] then
+	if clock.options.show_time then
 		cecho(clock.display_time(mume_moment, true) .. &quot;\n&quot;)
 	end
 
-	if clock.options[&quot;display date every day&quot;] and
+	if clock.options.show_date and
 	   mume_moment.hour == 12 and
 		mume_moment.period == &quot;am&quot; then
 		cecho(clock.display_date(mume_moment, true) .. &quot;\n&quot;)
@@ -817,64 +844,46 @@ end</script>
 end</script>
                     <eventHandlerList/>
                 </Script>
+                <Script isActive="yes" isFolder="no">
+                    <name>get_highlight</name>
+                    <packageName></packageName>
+                    <script>function clock.get_highlight()
+	return &quot;&lt;&quot; .. clock.options.highlight .. &quot;&gt;&quot;
+end</script>
+                    <eventHandlerList/>
+                </Script>
             </ScriptGroup>
             <Script isActive="yes" isFolder="no">
                 <name>README</name>
                 <packageName></packageName>
-                <script>clock.readme = [[
+                <script>clock.help = [[
 Clock: Advanced MUME Time
-Author: p(Octavia)
+Author: Octavia
 Version: 1.0
-Date: 2015-2-5
+Changelog
+- 1.1, 2015-2-7
+  - Improved the way options are set.
+- 1.0, 2015-2-3
+  - Initial release.
 
 This package tracks the MUME time as well as the MUME date, allowing it to report, in addition to the current time, the dawn and dusk times, the real time to dawn and dusk, the date, and the season. In addition, the clock will optionally let you know every time a minute has passed and keep you informed as to the date and season every 24 minutes.
 
 To use this package, simply look at any clock in game. You can then check the time with either 'cc' (check clock) or 'ct' (check time). You may change these aliases as needed in Script Editor &gt; Aliases &gt; Clock.
 
-Other commands:
-- cd: Check the date and season.
-- stime: Say the time out loud.
-- ntime: Narrate the time.
-- ttime &lt;player&gt;: Tell the time to another player.
-- uclock: Unset the clock.
-- clock help: Show this message.
-- clock option &quot;&lt;name&gt;&quot; &lt;value&gt;: Set the value of an option.
-- clock show colours: Display a list of colours for use with the highlight option.
-
-There also various options to be set:
-- display time every hour (on/off): Whether to display the time every MUME hour (real minute).
-- display date every day (on/off): Whether to display the date every MUME day (24 real minutes).
-- highlight (color): Change the highlight color when displaying time and date information. Use &quot;clock show colours&quot; to show a list of colours.
+The commands are as follows:
+- clock help : Show this message.
+- cc : Check clock.
+- ct : Check time. Same as check clock.
+- cd : Check the date and season.
+- stime : Say the time out loud.
+- ntime : Narrate the time.
+- ttime &lt;player&gt; : Tell the time to another player.
+- uclock : Unset the clock.
+- clock show time : Toggle whether to display the time every MUME hour (1 minute).
+- clock show date : Toggle whether to display the date every MUME day (24 minutes).
+- clock set highlight : Set the highlight color for data. Use &quot;grey&quot; for no highlight.
+- clock show colours : Display a list of colours for use with the highlight option.
 ]]</script>
-                <eventHandlerList/>
-            </Script>
-            <Script isActive="yes" isFolder="no">
-                <name>Options</name>
-                <packageName></packageName>
-                <script>clock.options = {}
-
-clock.options[&quot;display time every hour&quot;] = true
-clock.options[&quot;display date every day&quot;] = true
-clock.options[&quot;highlight&quot;] = &quot;&lt;cyan&gt;&quot;
-
-function clock.set_option(name, value)
-	if value == &quot;on&quot; then
-		value = true
-	elseif value == &quot;off&quot; then
-		value = false
-	elseif value == &quot;true&quot; then
-		value = true
-	elseif value == &quot;false&quot; then
-		value = false
-	end
-
-	if clock.options[name] ~= nil then
-		clock.options[name] = value
-		echo(&quot;Option set.\n&quot;)
-	else
-		echo(&quot;Invalid option.\n&quot;)
-	end
-end</script>
                 <eventHandlerList/>
             </Script>
             <Script isActive="yes" isFolder="no">
@@ -893,6 +902,20 @@ clock.minutes_per_hour = 60
 clock.minutes_per_year = clock.days_per_year * clock.hours_per_day * clock.minutes_per_hour
 clock.minutes_per_month = clock.days_per_month * clock.hours_per_day * clock.minutes_per_hour
 clock.minutes_per_day = clock.hours_per_day * clock.minutes_per_hour</script>
+                <eventHandlerList/>
+            </Script>
+            <Script isActive="yes" isFolder="no">
+                <name>initialize_clock</name>
+                <packageName></packageName>
+                <script>function initialize_clock()
+	local options = {}
+
+	options.show_time = true
+	options.show_date = true
+	options.highlight = &quot;cyan&quot;
+
+	return options
+end</script>
                 <eventHandlerList/>
             </Script>
         </ScriptGroup>

@@ -1,0 +1,466 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE MudletPackage>
+<MudletPackage version="1.0">
+    <TriggerPackage>
+        <TriggerGroup isActive="yes" isFolder="yes" isTempTrigger="no" isMultiline="no" isPerlSlashGOption="no" isColorizerTrigger="no" isFilterTrigger="no" isSoundTrigger="no" isColorTrigger="no" isColorTriggerFg="no" isColorTriggerBg="no">
+            <name>Edit</name>
+            <script></script>
+            <triggerType>0</triggerType>
+            <conditonLineDelta>0</conditonLineDelta>
+            <mStayOpen>0</mStayOpen>
+            <mCommand></mCommand>
+            <packageName></packageName>
+            <mFgColor>#ff0000</mFgColor>
+            <mBgColor>#ffff00</mBgColor>
+            <mSoundFile></mSoundFile>
+            <colorTriggerFgColor>#000000</colorTriggerFgColor>
+            <colorTriggerBgColor>#000000</colorTriggerBgColor>
+            <regexCodeList/>
+            <regexCodePropertyList/>
+            <Trigger isActive="yes" isFolder="no" isTempTrigger="no" isMultiline="no" isPerlSlashGOption="no" isColorizerTrigger="no" isFilterTrigger="no" isSoundTrigger="no" isColorTrigger="no" isColorTriggerFg="no" isColorTriggerBg="no">
+                <name>Detect Line Editor</name>
+                <script>edit.editing = true
+
+-- Build the filename out of the date and description
+edit.filename = &quot;edit-&quot; .. getTime(true, &quot;yyyy.MM.dd.HH.mm.ss&quot;) .. &quot;-&quot; .. edit.description .. &quot;.txt&quot;
+
+-- Fix filename
+edit.filename = string.gsub(edit.filename, &quot;:&quot;, &quot;-&quot;)
+
+-- Build the full path to the text file
+edit.filename_fullpath = edit.options.folder .. &quot;/&quot; .. edit.filename
+
+-- Put the old text into the file
+local file = io.open(edit.filename_fullpath, &quot;w&quot;)
+io.output(file)
+for index, line in ipairs(edit.lines) do
+	io.write(line .. &quot;\n&quot;)
+end
+io.close(file)
+
+echo(&quot;\nEditing local file &quot; .. edit.filename .. &quot;.\n&quot;)
+echo(&quot;Mudlet will send MUME your text when you finish editing.\n&quot;)
+
+-- Run the local editor program and open the file 
+local command = &quot;\&quot;&quot; .. edit.options.editor .. &quot;\&quot; \&quot;&quot; .. edit.filename_fullpath .. &quot;\&quot;&quot;
+edit.process = spawn(display, command)
+enableTimer(&quot;Edit: Check Process Closed&quot;)</script>
+                <triggerType>0</triggerType>
+                <conditonLineDelta>0</conditonLineDelta>
+                <mStayOpen>0</mStayOpen>
+                <mCommand></mCommand>
+                <packageName></packageName>
+                <mFgColor>#ff0000</mFgColor>
+                <mBgColor>#ffff00</mBgColor>
+                <mSoundFile></mSoundFile>
+                <colorTriggerFgColor>#000000</colorTriggerFgColor>
+                <colorTriggerBgColor>#000000</colorTriggerBgColor>
+                <regexCodeList>
+                    <string>==&gt;</string>
+                </regexCodeList>
+                <regexCodePropertyList>
+                    <integer>3</integer>
+                </regexCodePropertyList>
+            </Trigger>
+            <Trigger isActive="yes" isFolder="no" isTempTrigger="no" isMultiline="no" isPerlSlashGOption="no" isColorizerTrigger="no" isFilterTrigger="no" isSoundTrigger="no" isColorTrigger="no" isColorTriggerFg="no" isColorTriggerBg="no">
+                <name>Detect Old Text</name>
+                <script>enableTrigger(&quot;Edit: Capture Line&quot;)
+
+-- Two lines above the &quot;---&quot; line is the description
+edit.description = getLines(getLineNumber() - 2, getLineNumber() - 1)[1]</script>
+                <triggerType>0</triggerType>
+                <conditonLineDelta>99</conditonLineDelta>
+                <mStayOpen>0</mStayOpen>
+                <mCommand></mCommand>
+                <packageName></packageName>
+                <mFgColor>#ff0000</mFgColor>
+                <mBgColor>#ffff00</mBgColor>
+                <mSoundFile></mSoundFile>
+                <colorTriggerFgColor>#000000</colorTriggerFgColor>
+                <colorTriggerBgColor>#000000</colorTriggerBgColor>
+                <regexCodeList>
+                    <string>-------------------------------------------------------------------------------</string>
+                </regexCodeList>
+                <regexCodePropertyList>
+                    <integer>3</integer>
+                </regexCodePropertyList>
+            </Trigger>
+            <Trigger isActive="yes" isFolder="no" isTempTrigger="no" isMultiline="no" isPerlSlashGOption="no" isColorizerTrigger="no" isFilterTrigger="no" isSoundTrigger="no" isColorTrigger="no" isColorTriggerFg="no" isColorTriggerBg="no">
+                <name>Detect End of Old Text</name>
+                <script>disableTrigger(&quot;Edit: Capture Line&quot;)</script>
+                <triggerType>0</triggerType>
+                <conditonLineDelta>0</conditonLineDelta>
+                <mStayOpen>0</mStayOpen>
+                <mCommand></mCommand>
+                <packageName></packageName>
+                <mFgColor>#ff0000</mFgColor>
+                <mBgColor>#ffff00</mBgColor>
+                <mSoundFile></mSoundFile>
+                <colorTriggerFgColor>#000000</colorTriggerFgColor>
+                <colorTriggerBgColor>#000000</colorTriggerBgColor>
+                <regexCodeList>
+                    <string>==&gt;</string>
+                </regexCodeList>
+                <regexCodePropertyList>
+                    <integer>3</integer>
+                </regexCodePropertyList>
+            </Trigger>
+            <Trigger isActive="no" isFolder="no" isTempTrigger="no" isMultiline="no" isPerlSlashGOption="no" isColorizerTrigger="no" isFilterTrigger="no" isSoundTrigger="no" isColorTrigger="no" isColorTriggerFg="no" isColorTriggerBg="no">
+                <name>Edit: Capture Line</name>
+                <script>-- Capture the old text (stuff between &quot;---&quot; and &quot;==&gt;&quot;)
+if line ~= &quot;==&gt;&quot; and line ~= &quot;-------------------------------------------------------------------------------&quot; then
+	table.insert(edit.lines, matches[1])
+end</script>
+                <triggerType>0</triggerType>
+                <conditonLineDelta>0</conditonLineDelta>
+                <mStayOpen>0</mStayOpen>
+                <mCommand></mCommand>
+                <packageName></packageName>
+                <mFgColor>#ff0000</mFgColor>
+                <mBgColor>#ffff00</mBgColor>
+                <mSoundFile></mSoundFile>
+                <colorTriggerFgColor>#000000</colorTriggerFgColor>
+                <colorTriggerBgColor>#000000</colorTriggerBgColor>
+                <regexCodeList>
+                    <string>(.+)</string>
+                    <string>^$</string>
+                </regexCodeList>
+                <regexCodePropertyList>
+                    <integer>1</integer>
+                    <integer>1</integer>
+                </regexCodePropertyList>
+            </Trigger>
+        </TriggerGroup>
+    </TriggerPackage>
+    <TimerPackage>
+        <TimerGroup isActive="yes" isFolder="yes" isTempTimer="no" isOffsetTimer="no">
+            <name>Edit</name>
+            <script></script>
+            <command></command>
+            <packageName></packageName>
+            <time>00:00:05.000</time>
+            <Timer isActive="no" isFolder="no" isTempTimer="no" isOffsetTimer="no">
+                <name>Edit: Check Process Closed</name>
+                <script>-- When the editor closes...
+if not edit.process.isRunning() then
+	echo(&quot;Deleting old message.\n&quot;)
+	for index, line in ipairs(edit.lines) do
+		send(&quot;%d&quot;)
+	end
+
+	local lines = {}
+	for line in io.lines(edit.filename_fullpath) do
+		table.insert(lines, line)
+	end
+	if edit.options.enable_wrap then
+		lines = edit.wrap(lines)
+	end
+
+	echo(&quot;Sending new message.\n&quot;)
+	for index, line in ipairs(lines) do
+		if line == &quot;&quot; then
+			send(&quot;\n&quot;)
+		else
+			send(line)
+		end
+	end
+
+	-- Close the line editor
+	send(&quot;%e&quot;)
+
+	-- Clear the old message
+	edit.lines = {}
+
+	disableTimer(&quot;Edit: Check Process Closed&quot;)
+	
+	edit.editing = false
+end</script>
+                <command></command>
+                <packageName></packageName>
+                <time>00:00:01.000</time>
+            </Timer>
+        </TimerGroup>
+    </TimerPackage>
+    <AliasPackage>
+        <AliasGroup isActive="yes" isFolder="yes">
+            <name>Edit</name>
+            <script></script>
+            <command></command>
+            <packageName></packageName>
+            <regex></regex>
+            <Alias isActive="yes" isFolder="no">
+                <name>edit help</name>
+                <script>echo(edit.help)</script>
+                <command></command>
+                <packageName></packageName>
+                <regex>^ *edit *help *$</regex>
+            </Alias>
+            <Alias isActive="yes" isFolder="no">
+                <name>edit set editor</name>
+                <script>edit.set_editor()</script>
+                <command></command>
+                <packageName></packageName>
+                <regex>^ *edit *set *editor *$</regex>
+            </Alias>
+            <Alias isActive="yes" isFolder="no">
+                <name>edit set folder</name>
+                <script>edit.set_folder()</script>
+                <command></command>
+                <packageName></packageName>
+                <regex>^ *edit *set *folder *$</regex>
+            </Alias>
+            <Alias isActive="yes" isFolder="no">
+                <name>edit set wrap length &lt;number&gt;</name>
+                <script>edit.wrap_length = matches[2]
+echo(&quot;Ok.\n&quot;)</script>
+                <command></command>
+                <packageName></packageName>
+                <regex>^ *edit *set *wrap *length +(.+)$</regex>
+            </Alias>
+            <Alias isActive="yes" isFolder="no">
+                <name>edit set wrap on</name>
+                <script>edit.enable_wrap = true
+echo(&quot;Word wrap enabled.\n&quot;)
+</script>
+                <command></command>
+                <packageName></packageName>
+                <regex>^ *edit *set *wrap *on *$</regex>
+            </Alias>
+            <Alias isActive="yes" isFolder="no">
+                <name>edit set wrap off</name>
+                <script>edit.enable_wrap = false
+echo(&quot;Word wrap disabled.\n&quot;)
+</script>
+                <command></command>
+                <packageName></packageName>
+                <regex>^ *edit *set *wrap *off *$</regex>
+            </Alias>
+        </AliasGroup>
+    </AliasPackage>
+    <ActionPackage/>
+    <ScriptPackage>
+        <ScriptGroup isActive="yes" isFolder="yes">
+            <name>Edit</name>
+            <packageName></packageName>
+            <script>edit = edit or { options = initialize_edit() }
+
+edit.lines = {}</script>
+            <eventHandlerList/>
+            <ScriptGroup isActive="yes" isFolder="yes">
+                <name>Word Wrap</name>
+                <packageName></packageName>
+                <script></script>
+                <eventHandlerList/>
+                <Script isActive="yes" isFolder="no">
+                    <name>wrap</name>
+                    <packageName></packageName>
+                    <script>function edit.wrap(lines)
+	-- Split the lines into paragraphs
+	local paragraphs = edit.make_paragraphs(lines)
+	local result = {}
+
+	-- For each paragraph
+	for index, paragraph in ipairs(paragraphs) do
+		if edit.line_is_exempt(paragraph[1]) then
+			table.insert(result, paragraph[1])
+		else
+			-- Read each word into a table
+			local words = edit.word_split(paragraph)
+
+			-- While there is a word that hasn't been processed
+			local current_line = words[1]
+			local current_length = string.len(words[1])
+			for index, word in ipairs(words) do
+				if index ~= 1 then
+					-- If adding the word to the current line won't exceed the wrap length
+					local length = string.len(word) + 1
+					if current_length + length &lt; edit.options.wrap_length then
+						-- Add the word to the current line
+						current_line = current_line .. &quot; &quot; .. word
+
+						-- Increment the character count
+						current_length = current_length + length
+					else
+						-- Go to the next line
+						local value = string.trim(current_line)
+						table.insert(result, value)
+
+						-- Reset the character count
+						current_line = word
+						current_length = length
+					end
+				end
+			end
+			local value = string.trim(current_line)
+			table.insert(result, value)
+		end
+	end
+
+	return result
+end</script>
+                    <eventHandlerList/>
+                </Script>
+                <Script isActive="yes" isFolder="no">
+                    <name>make_paragraphs</name>
+                    <packageName></packageName>
+                    <script>function edit.make_paragraphs(lines)
+	local paragraphs = {}
+	local paragraph = {}
+
+	for index, line in ipairs(lines) do
+		if edit.line_is_exempt(line) then
+			if table.size(paragraph) ~= 0 then
+				-- Finish the current paragraph
+				table.insert(paragraphs, paragraph)
+				paragraph = {}
+			end
+
+			-- Output the line as its own paragraph
+			table.insert(paragraphs, { line })
+		else
+			-- Add the line to the current paragraph
+			table.insert(paragraph, line)
+		end
+	end
+
+	-- Finish the current paragraph
+	if table.size(paragraph) ~= 0 then
+		table.insert(paragraphs, paragraph)
+	end
+
+	return paragraphs
+end</script>
+                    <eventHandlerList/>
+                </Script>
+                <Script isActive="yes" isFolder="no">
+                    <name>line_is_exempt</name>
+                    <packageName></packageName>
+                    <script>function edit.line_is_exempt(line)
+	local start_index, end_index = string.find(line, &quot; &quot;)
+
+	if line == &quot;&quot; or start_index == 1 or edit.begins_with_nonletter(line) then
+		return true
+	end
+
+	return false
+end</script>
+                    <eventHandlerList/>
+                </Script>
+                <Script isActive="yes" isFolder="no">
+                    <name>word_split</name>
+                    <packageName></packageName>
+                    <script>function edit.word_split(paragraph)
+	local result = {}
+	for index, line in ipairs(paragraph) do
+		local words = string.split(line, &quot; &quot;)
+		for index, word in ipairs(words) do
+			table.insert(result, word)
+		end
+	end
+	return result
+end</script>
+                    <eventHandlerList/>
+                </Script>
+                <Script isActive="yes" isFolder="no">
+                    <name>begins_with_nonletter</name>
+                    <packageName></packageName>
+                    <script>function edit.begins_with_nonletter(line)
+	local char = string.byte(line)
+	return (char &lt; 65 or char &gt; 90) and (char &lt; 97 or char &gt; 122)
+end</script>
+                    <eventHandlerList/>
+                </Script>
+            </ScriptGroup>
+            <Script isActive="yes" isFolder="no">
+                <name>README</name>
+                <packageName></packageName>
+                <script>edit.help = [[
+Edit: Local Editing for Mudlet
+Author: Octavia
+Version: 1.1
+Changelog
+- 1.1, 2015-2-7
+  - Added optional word wrap feature.
+  - Added file dialogs.
+  - Added help message.
+- 1.0, 2015-2-3
+  - Initial release.
+
+This package enables local editing, the ability to use an editor on your computer rather than the remote line editor offered by MUME. To use this, you need set the editor (it defaults to Notepad!) using &quot;edit set editor&quot;. You can also set the folder into which files are saved with &quot;edit set folder&quot;. This defaults to your Mudlet home directory (usually a folder in your user home directory).
+
+This package also supports automatic word wrap by paragraph. Paragraphs should be separated by a blank line. Lines beginning with a nonletter will not be wordwrapped.
+
+The commands are as follows:
+- edit help : Show this message.
+- edit set editor : Set the text editing program to use.
+- edit set folder : Set the folder into which files will be saved.
+- edit set wrap on : Enable word wrap.
+- edit set wrap off : Disable word wrap.
+- edit set wrap length &lt;number&gt; : Set the length of a line in word wrap. Defaults to 79, the MUME standard.
+]]</script>
+                <eventHandlerList/>
+            </Script>
+            <Script isActive="yes" isFolder="no">
+                <name>initialize_edit</name>
+                <packageName></packageName>
+                <script>function initialize_edit()
+	local options = {}
+
+	options.editor = [[C:/Windows/notepad.exe]]
+
+	options.folder = getMudletHomeDir()
+
+	options.enable_wrap = true
+
+	options.wrap_length = 79
+
+	return options
+end</script>
+                <eventHandlerList/>
+            </Script>
+            <Script isActive="yes" isFolder="no">
+                <name>set_editor</name>
+                <packageName></packageName>
+                <script>function edit.set_editor()
+	echo(&quot;Current editor: &quot; .. edit.editor .. &quot;\n&quot;)
+	local message = &quot;Select text editor (*.exe):\n&quot;
+
+	echo(message)
+
+	local new_editor = invokeFileDialog(true, message)
+
+	if new_editor ~= &quot;&quot; then
+		edit.editor = new_editor
+		echo(&quot;Editor set to \&quot;&quot; .. edit.editor .. &quot;\&quot;.\n&quot;)
+	else
+		echo(&quot;Operation cancelled.\n&quot;)
+	end
+
+end</script>
+                <eventHandlerList/>
+            </Script>
+            <Script isActive="yes" isFolder="no">
+                <name>set_folder</name>
+                <packageName></packageName>
+                <script>function edit.set_folder()
+	echo(&quot;Current folder: &quot; .. edit.folder .. &quot;\n&quot;)
+	local message = &quot;Select folder:\n&quot;
+
+	echo(message)
+
+	local new_folder = invokeFileDialog(false, message)
+
+	if new_editor ~= &quot;&quot; then
+		edit.folder = new_folder
+		echo(&quot;Editor set to \&quot;&quot; .. edit.folder .. &quot;\&quot;.\n&quot;)
+	else
+		echo(&quot;Operation cancelled.\n&quot;)
+	end
+
+end</script>
+                <eventHandlerList/>
+            </Script>
+        </ScriptGroup>
+    </ScriptPackage>
+    <KeyPackage/>
+</MudletPackage>

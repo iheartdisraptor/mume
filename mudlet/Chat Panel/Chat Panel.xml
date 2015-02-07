@@ -1,0 +1,443 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE MudletPackage>
+<MudletPackage version="1.0">
+    <TriggerPackage>
+        <TriggerGroup isActive="yes" isFolder="yes" isTempTrigger="no" isMultiline="no" isPerlSlashGOption="no" isColorizerTrigger="no" isFilterTrigger="no" isSoundTrigger="no" isColorTrigger="no" isColorTriggerFg="no" isColorTriggerBg="no">
+            <name>Chat Panel</name>
+            <script></script>
+            <triggerType>0</triggerType>
+            <conditonLineDelta>0</conditonLineDelta>
+            <mStayOpen>0</mStayOpen>
+            <mCommand></mCommand>
+            <packageName></packageName>
+            <mFgColor>#ff0000</mFgColor>
+            <mBgColor>#ffff00</mBgColor>
+            <mSoundFile></mSoundFile>
+            <colorTriggerFgColor>#000000</colorTriggerFgColor>
+            <colorTriggerBgColor>#000000</colorTriggerBgColor>
+            <regexCodeList/>
+            <regexCodePropertyList/>
+            <Trigger isActive="yes" isFolder="no" isTempTrigger="no" isMultiline="no" isPerlSlashGOption="no" isColorizerTrigger="no" isFilterTrigger="no" isSoundTrigger="no" isColorTrigger="no" isColorTriggerFg="no" isColorTriggerBg="no">
+                <name>say</name>
+                <script>chat_panel.send_to_panel(&quot;say&quot;, matches[1])
+
+local color = chat_panel.options.colours[&quot;say&quot;]
+chat_panel.send_to_panel(&quot;all&quot;, matches[1], color)</script>
+                <triggerType>0</triggerType>
+                <conditonLineDelta>0</conditonLineDelta>
+                <mStayOpen>0</mStayOpen>
+                <mCommand></mCommand>
+                <packageName></packageName>
+                <mFgColor>#ff0000</mFgColor>
+                <mBgColor>#ffff00</mBgColor>
+                <mSoundFile></mSoundFile>
+                <colorTriggerFgColor>#000000</colorTriggerFgColor>
+                <colorTriggerBgColor>#000000</colorTriggerBgColor>
+                <regexCodeList>
+                    <string>^(.+) says '(.+)'$</string>
+                </regexCodeList>
+                <regexCodePropertyList>
+                    <integer>1</integer>
+                </regexCodePropertyList>
+            </Trigger>
+            <Trigger isActive="yes" isFolder="no" isTempTrigger="no" isMultiline="no" isPerlSlashGOption="no" isColorizerTrigger="no" isFilterTrigger="no" isSoundTrigger="no" isColorTrigger="no" isColorTriggerFg="no" isColorTriggerBg="no">
+                <name>yell</name>
+                <script>chat_panel.send_to_panel(&quot;yell&quot;, matches[1])
+
+local color = chat_panel.options.colours[&quot;yell&quot;]
+chat_panel.send_to_panel(&quot;all&quot;, matches[1], color)</script>
+                <triggerType>0</triggerType>
+                <conditonLineDelta>0</conditonLineDelta>
+                <mStayOpen>0</mStayOpen>
+                <mCommand></mCommand>
+                <packageName></packageName>
+                <mFgColor>#ff0000</mFgColor>
+                <mBgColor>#ffff00</mBgColor>
+                <mSoundFile></mSoundFile>
+                <colorTriggerFgColor>#000000</colorTriggerFgColor>
+                <colorTriggerBgColor>#000000</colorTriggerBgColor>
+                <regexCodeList>
+                    <string>^(.+) yells '(.+)'$</string>
+                </regexCodeList>
+                <regexCodePropertyList>
+                    <integer>1</integer>
+                </regexCodePropertyList>
+            </Trigger>
+            <Trigger isActive="yes" isFolder="no" isTempTrigger="no" isMultiline="no" isPerlSlashGOption="no" isColorizerTrigger="no" isFilterTrigger="no" isSoundTrigger="no" isColorTrigger="no" isColorTriggerFg="no" isColorTriggerBg="no">
+                <name>tell</name>
+                <script>chat_panel.send_to_panel(&quot;tell&quot;, matches[1])
+
+local color = chat_panel.options.colours[&quot;tell&quot;]
+chat_panel.send_to_panel(&quot;all&quot;, matches[1], color)</script>
+                <triggerType>0</triggerType>
+                <conditonLineDelta>0</conditonLineDelta>
+                <mStayOpen>0</mStayOpen>
+                <mCommand></mCommand>
+                <packageName></packageName>
+                <mFgColor>#ff0000</mFgColor>
+                <mBgColor>#ffff00</mBgColor>
+                <mSoundFile></mSoundFile>
+                <colorTriggerFgColor>#000000</colorTriggerFgColor>
+                <colorTriggerBgColor>#000000</colorTriggerBgColor>
+                <regexCodeList>
+                    <string>^(.+) tells you '(.+)'$</string>
+                    <string>^(.+) tells the group '(.+)'$</string>
+                </regexCodeList>
+                <regexCodePropertyList>
+                    <integer>1</integer>
+                    <integer>1</integer>
+                </regexCodePropertyList>
+            </Trigger>
+            <Trigger isActive="yes" isFolder="no" isTempTrigger="no" isMultiline="no" isPerlSlashGOption="no" isColorizerTrigger="no" isFilterTrigger="no" isSoundTrigger="no" isColorTrigger="no" isColorTriggerFg="no" isColorTriggerBg="no">
+                <name>narrate</name>
+                <script>chat_panel.send_to_panel(&quot;narrate&quot;, matches[1])
+
+local color = chat_panel.options.colours[&quot;narrate&quot;]
+chat_panel.send_to_panel(&quot;all&quot;, matches[1], color)</script>
+                <triggerType>0</triggerType>
+                <conditonLineDelta>0</conditonLineDelta>
+                <mStayOpen>0</mStayOpen>
+                <mCommand></mCommand>
+                <packageName></packageName>
+                <mFgColor>#ff0000</mFgColor>
+                <mBgColor>#ffff00</mBgColor>
+                <mSoundFile></mSoundFile>
+                <colorTriggerFgColor>#000000</colorTriggerFgColor>
+                <colorTriggerBgColor>#000000</colorTriggerBgColor>
+                <regexCodeList>
+                    <string>^(.+) narrates '(.+)'$</string>
+                </regexCodeList>
+                <regexCodePropertyList>
+                    <integer>1</integer>
+                </regexCodePropertyList>
+            </Trigger>
+            <Trigger isActive="yes" isFolder="no" isTempTrigger="no" isMultiline="no" isPerlSlashGOption="no" isColorizerTrigger="no" isFilterTrigger="no" isSoundTrigger="no" isColorTrigger="no" isColorTriggerFg="no" isColorTriggerBg="no">
+                <name>sing</name>
+                <script>chat_panel.send_to_panel(&quot;sing&quot;, matches[1])
+
+local color = chat_panel.panels[&quot;sing&quot;].color
+chat_panel.send_to_panel(&quot;all&quot;, matches[1], color)</script>
+                <triggerType>0</triggerType>
+                <conditonLineDelta>0</conditonLineDelta>
+                <mStayOpen>0</mStayOpen>
+                <mCommand></mCommand>
+                <packageName></packageName>
+                <mFgColor>#ff0000</mFgColor>
+                <mBgColor>#ffff00</mBgColor>
+                <mSoundFile></mSoundFile>
+                <colorTriggerFgColor>#000000</colorTriggerFgColor>
+                <colorTriggerBgColor>#000000</colorTriggerBgColor>
+                <regexCodeList>
+                    <string>^(.+) sings '(.+)'$</string>
+                </regexCodeList>
+                <regexCodePropertyList>
+                    <integer>1</integer>
+                </regexCodePropertyList>
+            </Trigger>
+            <Trigger isActive="yes" isFolder="no" isTempTrigger="no" isMultiline="no" isPerlSlashGOption="no" isColorizerTrigger="no" isFilterTrigger="no" isSoundTrigger="no" isColorTrigger="no" isColorTriggerFg="no" isColorTriggerBg="no">
+                <name>pray</name>
+                <script>chat_panel.send_to_panel(&quot;pray&quot;, matches[1])
+
+local color = chat_panel.options.colours[&quot;pray&quot;]
+chat_panel.send_to_panel(&quot;all&quot;, matches[1], color)</script>
+                <triggerType>0</triggerType>
+                <conditonLineDelta>0</conditonLineDelta>
+                <mStayOpen>0</mStayOpen>
+                <mCommand></mCommand>
+                <packageName></packageName>
+                <mFgColor>#ff0000</mFgColor>
+                <mBgColor>#ffff00</mBgColor>
+                <mSoundFile></mSoundFile>
+                <colorTriggerFgColor>#000000</colorTriggerFgColor>
+                <colorTriggerBgColor>#000000</colorTriggerBgColor>
+                <regexCodeList>
+                    <string>^(.+) prays '(.+)'$</string>
+                    <string>^(.+) prays to (.+) '(.+)'$</string>
+                    <string>^(.+) prays to you '(.+)'$</string>
+                </regexCodeList>
+                <regexCodePropertyList>
+                    <integer>1</integer>
+                    <integer>1</integer>
+                    <integer>1</integer>
+                </regexCodePropertyList>
+            </Trigger>
+            <Trigger isActive="yes" isFolder="no" isTempTrigger="no" isMultiline="no" isPerlSlashGOption="no" isColorizerTrigger="no" isFilterTrigger="no" isSoundTrigger="no" isColorTrigger="no" isColorTriggerFg="no" isColorTriggerBg="no">
+                <name>shout</name>
+                <script>chat_panel.send_to_panel(&quot;shout&quot;, matches[1])
+
+local color = chat_panel.options.colours[&quot;shout&quot;]
+chat_panel.send_to_panel(&quot;all&quot;, matches[1], color)</script>
+                <triggerType>0</triggerType>
+                <conditonLineDelta>0</conditonLineDelta>
+                <mStayOpen>0</mStayOpen>
+                <mCommand></mCommand>
+                <packageName></packageName>
+                <mFgColor>#ff0000</mFgColor>
+                <mBgColor>#ffff00</mBgColor>
+                <mSoundFile></mSoundFile>
+                <colorTriggerFgColor>#000000</colorTriggerFgColor>
+                <colorTriggerBgColor>#000000</colorTriggerBgColor>
+                <regexCodeList>
+                    <string>^(.+) shouts '(.+)'$</string>
+                </regexCodeList>
+                <regexCodePropertyList>
+                    <integer>1</integer>
+                </regexCodePropertyList>
+            </Trigger>
+        </TriggerGroup>
+    </TriggerPackage>
+    <TimerPackage/>
+    <AliasPackage>
+        <AliasGroup isActive="yes" isFolder="yes">
+            <name>Chat Panel</name>
+            <script></script>
+            <command></command>
+            <packageName></packageName>
+            <regex></regex>
+            <Alias isActive="yes" isFolder="no">
+                <name>chat toggle &lt;channel&gt;</name>
+                <script>local target = string.trim(matches[2])
+
+echo(&quot;target = &quot; .. target .. &quot;\n&quot;)
+chat_panel.toggle_panel(target)
+chat_panel.last_chat_panel = target</script>
+                <command></command>
+                <packageName></packageName>
+                <regex>^chat toggle +(.+)$</regex>
+            </Alias>
+            <Alias isActive="yes" isFolder="no">
+                <name>chat hide</name>
+                <script>if chat_panel.last_chat_panel then
+	chat_panel.toggle_panel(chat_panel.last_chat_panel)
+else
+	chat_panel.hide_all_panels()
+end</script>
+                <command></command>
+                <packageName></packageName>
+                <regex>^ *chat *hide *$</regex>
+            </Alias>
+            <Alias isActive="yes" isFolder="no">
+                <name>chat panel help</name>
+                <script>echo(chat_panel.help)</script>
+                <command></command>
+                <packageName></packageName>
+                <regex>^ *chat *panel *help *$</regex>
+            </Alias>
+            <Alias isActive="yes" isFolder="no">
+                <name>chat panel set height &lt;number&gt;</name>
+                <script>local value = string.trim(matches[2])
+
+chat_panel.options.height = value
+
+for name, panel in pairs(chat_panel.panels) do
+	local main_width, main_height = getMainWindowSize()
+	resizeWindow(panel.handle, main_width, chat_panel.options.height)
+
+	if panel.visible then
+		local height = chat_panel.options.height + chat_panel.options.border
+		setBorderTop(height)
+	end
+end
+</script>
+                <command></command>
+                <packageName></packageName>
+                <regex>^ *chat *panel *set *height +(.+)$</regex>
+            </Alias>
+            <Alias isActive="yes" isFolder="no">
+                <name>chat panel set border &lt;number&gt;</name>
+                <script>local value = string.trim(matches[2])
+
+chat_panel.options.border = value
+
+for name, panel in pairs(chat_panel.panels) do
+	local main_width, main_height = getMainWindowSize()
+	resizeWindow(panel.handle, main_width, chat_panel.options.height)
+
+	if panel.visible then
+		local height = chat_panel.options.height + chat_panel.options.border
+		setBorderTop(height)
+	end
+end
+</script>
+                <command></command>
+                <packageName></packageName>
+                <regex>^ *chat *panel *set *border +(.+)$</regex>
+            </Alias>
+        </AliasGroup>
+    </AliasPackage>
+    <ActionPackage/>
+    <ScriptPackage>
+        <ScriptGroup isActive="yes" isFolder="yes">
+            <name>Chat Panel</name>
+            <packageName></packageName>
+            <script>function create_chat_panel(name, height)
+	local panel = {}
+	panel.name = name
+	panel.handle = &quot;chat_panel.&quot; .. name
+	panel.visible = false
+
+	local main_width, main_height = getMainWindowSize()
+
+	createMiniConsole(panel.handle, 0, 0, 0, 0)
+	moveWindow(panel.handle, 0, 0)
+	resizeWindow(panel.handle, main_width, height)
+	setBackgroundColor(panel.handle, 0, 0, 0, 255)
+	setMiniConsoleFontSize(panel.handle, 8)
+	setWindowWrap(panel.handle, 120)
+	setTextFormat(panel.handle, 0, 0, 0, 127, 127, 127, 0, 0, 0)
+
+	clearUserWindow(panel.handle)
+	echo(panel.handle, &quot;Recent (&quot; .. panel.name .. &quot;):\n&quot;)
+
+	hideWindow(panel.handle)
+
+	return panel
+end
+
+function initialize_chat_panel()
+	local chat_panel = {}
+
+	chat_panel.options = {
+		height = 100,
+		border = 3,
+		colours = {
+			[&quot;say&quot;] = &quot;cyan&quot;,
+			[&quot;yell&quot;] = &quot;magenta&quot;,
+			[&quot;tell&quot;] = &quot;green&quot;,
+			[&quot;narrate&quot;] = &quot;yellow&quot;,
+			[&quot;sing&quot;] = &quot;yellow&quot;,
+			[&quot;pray&quot;] = &quot;cyan&quot;,
+			[&quot;shout&quot;] = &quot;red&quot;,
+		},
+	}
+
+	chat_panel.panels = {
+		[&quot;say&quot;] = create_chat_panel(&quot;say&quot;, chat_panel.options.height),
+		[&quot;yell&quot;] = create_chat_panel(&quot;yell&quot;, chat_panel.options.height),
+		[&quot;tell&quot;] = create_chat_panel(&quot;tell&quot;, chat_panel.options.height),
+		[&quot;narrate&quot;] = create_chat_panel(&quot;narrate&quot;, chat_panel.options.height),
+		[&quot;sing&quot;] = create_chat_panel(&quot;sing&quot;, chat_panel.options.height),
+		[&quot;pray&quot;] = create_chat_panel(&quot;pray&quot;, chat_panel.options.height),
+		[&quot;shout&quot;] = create_chat_panel(&quot;shout&quot;, chat_panel.options.height),
+		[&quot;all&quot;] = create_chat_panel(&quot;all&quot;, chat_panel.options.height),
+	}
+
+	return chat_panel
+end
+
+chat_panel = chat_panel or initialize_chat_panel()
+</script>
+            <eventHandlerList/>
+            <ScriptGroup isActive="yes" isFolder="yes">
+                <name>Panel</name>
+                <packageName></packageName>
+                <script></script>
+                <eventHandlerList/>
+                <Script isActive="yes" isFolder="no">
+                    <name>toggle_panel</name>
+                    <packageName></packageName>
+                    <script>function chat_panel.toggle_panel(name)
+	local panel = chat_panel.panels[name]
+	panel.visible = not panel.visible
+
+		echo(&quot;but!\n&quot;)
+	if panel.visible then
+		echo(&quot;here!\n&quot;)
+		--TODO: Better fix?
+		chat_panel.hide_all_panels()
+		panel.visible = true
+
+		local height = chat_panel.options.height + chat_panel.options.border
+		setBorderTop(height)
+		setBorderColor(127, 127, 127)
+
+		showWindow(panel.handle)
+	else
+		chat_panel.hide_all_panels()
+	end
+end</script>
+                    <eventHandlerList/>
+                </Script>
+                <Script isActive="yes" isFolder="no">
+                    <name>create_panel</name>
+                    <packageName></packageName>
+                    <script>function chat_panel.create_panel(name, color)
+	local panel = {}
+	panel.name = name
+	panel.handle = &quot;chat_panel.&quot; .. name
+	panel.color = color
+	panel.visible = false
+
+	local main_width, main_height = getMainWindowSize();
+
+	createMiniConsole(panel.handle, 0, 0, 0, 0)
+	moveWindow(panel.handle, 0, 0)
+	resizeWindow(panel.handle, main_width, chat_panel.options.height)
+	setBackgroundColor(panel.handle, 0, 0, 0, 255)
+	setMiniConsoleFontSize(panel.handle, 8)
+	setWindowWrap(panel.handle, 120)
+	setTextFormat(panel.handle, 0, 0, 0, 127, 127, 127, 0, 0, 0)
+
+	clearUserWindow(panel.handle)
+	echo(panel.handle, &quot;Recent (&quot; .. panel.name .. &quot;):\n&quot;)
+
+	hideWindow(panel.handle)
+
+	return panel
+end</script>
+                    <eventHandlerList/>
+                </Script>
+                <Script isActive="yes" isFolder="no">
+                    <name>hide_all_panels</name>
+                    <packageName></packageName>
+                    <script>function chat_panel.hide_all_panels()
+	for name, panel in pairs(chat_panel.panels) do
+		hideWindow(panel.handle)
+		panel.visible = false
+	end
+
+	setBorderTop(0)
+end</script>
+                    <eventHandlerList/>
+                </Script>
+                <Script isActive="yes" isFolder="no">
+                    <name>send_to_panel</name>
+                    <packageName></packageName>
+                    <script>function chat_panel.send_to_panel(name, text, color)
+	local panel = chat_panel.panels[name]
+
+	if not color then
+		color = chat_panel.options.colours[panel.name]
+	end
+
+	cecho(panel.handle, &quot;&lt;&quot; .. color .. &quot;&gt;&quot; .. text .. &quot;\n&quot;)
+end</script>
+                    <eventHandlerList/>
+                </Script>
+            </ScriptGroup>
+            <Script isActive="yes" isFolder="no">
+                <name>README</name>
+                <packageName></packageName>
+                <script>chat_panel.help = [[
+Chat Panel
+Author: Octavia
+Version: 1.0
+Changelog
+- 1.0, 2015-2-7
+  - Initial release.
+
+This package allows you to place a separate panel above the main window that shows just communication from various channels.
+
+The commands are as follows:
+- chat panel help : Shows this message.
+- chat panel toggle &lt;channel&gt; : Toggle the panel for specific communication channel. &lt;channel&gt; may be say, yell, tell, narrate, sing, shout, or all.
+- chat panel hide : Hides the chat panel.
+- chat panel set height &lt;number&gt; : Sets the height of the panel in pixels.
+- chat panel set border &lt;number&gt; : Set the width of the border in pixels.
+]]</script>
+                <eventHandlerList/>
+            </Script>
+        </ScriptGroup>
+    </ScriptPackage>
+    <KeyPackage/>
+</MudletPackage>
