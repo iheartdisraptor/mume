@@ -1,0 +1,2272 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE MudletPackage>
+<MudletPackage version="1.0">
+    <TriggerPackage>
+        <TriggerGroup isActive="yes" isFolder="yes" isTempTrigger="no" isMultiline="no" isPerlSlashGOption="no" isColorizerTrigger="no" isFilterTrigger="no" isSoundTrigger="no" isColorTrigger="no" isColorTriggerFg="no" isColorTriggerBg="no">
+            <name>MUME</name>
+            <script></script>
+            <triggerType>0</triggerType>
+            <conditonLineDelta>0</conditonLineDelta>
+            <mStayOpen>0</mStayOpen>
+            <mCommand></mCommand>
+            <packageName>current</packageName>
+            <mFgColor>#ff0000</mFgColor>
+            <mBgColor>#ffff00</mBgColor>
+            <mSoundFile></mSoundFile>
+            <colorTriggerFgColor>#000000</colorTriggerFgColor>
+            <colorTriggerBgColor>#000000</colorTriggerBgColor>
+            <regexCodeList/>
+            <regexCodePropertyList/>
+            <TriggerGroup isActive="yes" isFolder="yes" isTempTrigger="no" isMultiline="no" isPerlSlashGOption="no" isColorizerTrigger="no" isFilterTrigger="no" isSoundTrigger="no" isColorTrigger="no" isColorTriggerFg="no" isColorTriggerBg="no">
+                <name>Spell Timer</name>
+                <script></script>
+                <triggerType>0</triggerType>
+                <conditonLineDelta>0</conditonLineDelta>
+                <mStayOpen>0</mStayOpen>
+                <mCommand></mCommand>
+                <packageName></packageName>
+                <mFgColor>#ff0000</mFgColor>
+                <mBgColor>#ffff00</mBgColor>
+                <mSoundFile></mSoundFile>
+                <colorTriggerFgColor>#000000</colorTriggerFgColor>
+                <colorTriggerBgColor>#000000</colorTriggerBgColor>
+                <regexCodeList/>
+                <regexCodePropertyList/>
+                <Trigger isActive="yes" isFolder="no" isTempTrigger="no" isMultiline="no" isPerlSlashGOption="no" isColorizerTrigger="no" isFilterTrigger="no" isSoundTrigger="no" isColorTrigger="no" isColorTriggerFg="no" isColorTriggerBg="no">
+                    <name>night vision : Your eyes tingle.</name>
+                    <script>local night_vision = spell_timer.get_timer(&quot;night_vision&quot;)
+
+night_vision.last_elapsed_time = night_vision.elapsed_time
+night_vision.start_time = time.get_time()
+</script>
+                    <triggerType>0</triggerType>
+                    <conditonLineDelta>0</conditonLineDelta>
+                    <mStayOpen>0</mStayOpen>
+                    <mCommand></mCommand>
+                    <packageName></packageName>
+                    <mFgColor>#ff0000</mFgColor>
+                    <mBgColor>#ffff00</mBgColor>
+                    <mSoundFile></mSoundFile>
+                    <colorTriggerFgColor>#000000</colorTriggerFgColor>
+                    <colorTriggerBgColor>#000000</colorTriggerBgColor>
+                    <regexCodeList>
+                        <string>^Your eyes tingle.$</string>
+                    </regexCodeList>
+                    <regexCodePropertyList>
+                        <integer>1</integer>
+                    </regexCodePropertyList>
+                </Trigger>
+                <Trigger isActive="yes" isFolder="no" isTempTrigger="no" isMultiline="no" isPerlSlashGOption="no" isColorizerTrigger="no" isFilterTrigger="no" isSoundTrigger="no" isColorTrigger="no" isColorTriggerFg="no" isColorTriggerBg="no">
+                    <name>night vision : Your night vision is refreshed.</name>
+                    <script>local night_vision = spell_timer.get_timer(&quot;night_vision&quot;)
+
+night_vision.last_elapsed_time = night_vision.elapsed_time
+night_vision.start_time = time.get_time()
+</script>
+                    <triggerType>0</triggerType>
+                    <conditonLineDelta>0</conditonLineDelta>
+                    <mStayOpen>0</mStayOpen>
+                    <mCommand></mCommand>
+                    <packageName></packageName>
+                    <mFgColor>#ff0000</mFgColor>
+                    <mBgColor>#ffff00</mBgColor>
+                    <mSoundFile></mSoundFile>
+                    <colorTriggerFgColor>#000000</colorTriggerFgColor>
+                    <colorTriggerBgColor>#000000</colorTriggerBgColor>
+                    <regexCodeList>
+                        <string>^Your night vision is refreshed.$</string>
+                    </regexCodeList>
+                    <regexCodePropertyList>
+                        <integer>1</integer>
+                    </regexCodePropertyList>
+                </Trigger>
+                <Trigger isActive="yes" isFolder="no" isTempTrigger="no" isMultiline="no" isPerlSlashGOption="no" isColorizerTrigger="no" isFilterTrigger="no" isSoundTrigger="no" isColorTrigger="no" isColorTriggerFg="no" isColorTriggerBg="no">
+                    <name>night vision : Your vision blurs.</name>
+                    <script>local night_vision = spell_timer.get_timer(&quot;night_vision&quot;)
+
+night_vision.stop_time = time.get_time()
+night_vision.elapsed_time = night_vision.stop_time - night_vision.start_time
+
+local time = time.convert_seconds_to_hms(night_vision.elapsed_time)
+echo(&quot;\nThe spell lasted &quot; .. time .. &quot;.\n&quot;)
+</script>
+                    <triggerType>0</triggerType>
+                    <conditonLineDelta>0</conditonLineDelta>
+                    <mStayOpen>0</mStayOpen>
+                    <mCommand></mCommand>
+                    <packageName></packageName>
+                    <mFgColor>#ff0000</mFgColor>
+                    <mBgColor>#ffff00</mBgColor>
+                    <mSoundFile></mSoundFile>
+                    <colorTriggerFgColor>#000000</colorTriggerFgColor>
+                    <colorTriggerBgColor>#000000</colorTriggerBgColor>
+                    <regexCodeList>
+                        <string>^Your vision blurs.$</string>
+                    </regexCodeList>
+                    <regexCodePropertyList>
+                        <integer>1</integer>
+                    </regexCodePropertyList>
+                </Trigger>
+                <Trigger isActive="yes" isFolder="no" isTempTrigger="no" isMultiline="no" isPerlSlashGOption="no" isColorizerTrigger="no" isFilterTrigger="no" isSoundTrigger="no" isColorTrigger="no" isColorTriggerFg="no" isColorTriggerBg="no">
+                    <name>night vision : - night vision</name>
+                    <script>local night_vision = spell_timer.get_timer(&quot;night_vision&quot;)
+
+night_vision.elapsed_time = time.get_time() - night_vision.start_time
+
+local time_str = time.convert_seconds_to_hms(night_vision.elapsed_time)
+
+local append = &quot;&quot;
+if night_vision.last_elapsed_time ~= 0 then
+	local percent = math.floor(night_vision.elapsed_time / night_vision.last_elapsed_time * 100)
+	local time_to_go = time.convert_seconds_to_hms(night_vision.last_elapsed_time - night_vision.elapsed_time)
+	append = &quot;&lt;grey&gt;/&lt;&quot; .. spell_timer.colour .. &quot;&gt;&quot; .. time_to_go .. &quot;&lt;grey&gt;/&lt;&quot; .. spell_timer.colour .. &quot;&gt;&quot; .. percent .. &quot;%&lt;grey&gt;&quot;
+end
+
+selectString(matches[1], 1)
+replace(&quot;&quot;)
+cinsertText(matches[1] .. &quot; (&lt;&quot; .. spell_timer.colour .. &quot;&gt;&quot; .. time_str .. append .. &quot;&lt;grey&gt;)&quot;)
+</script>
+                    <triggerType>0</triggerType>
+                    <conditonLineDelta>0</conditonLineDelta>
+                    <mStayOpen>0</mStayOpen>
+                    <mCommand></mCommand>
+                    <packageName></packageName>
+                    <mFgColor>#ff0000</mFgColor>
+                    <mBgColor>#ffff00</mBgColor>
+                    <mSoundFile></mSoundFile>
+                    <colorTriggerFgColor>#000000</colorTriggerFgColor>
+                    <colorTriggerBgColor>#000000</colorTriggerBgColor>
+                    <regexCodeList>
+                        <string>^- night vision$</string>
+                    </regexCodeList>
+                    <regexCodePropertyList>
+                        <integer>1</integer>
+                    </regexCodePropertyList>
+                </Trigger>
+                <Trigger isActive="yes" isFolder="no" isTempTrigger="no" isMultiline="no" isPerlSlashGOption="no" isColorizerTrigger="no" isFilterTrigger="no" isSoundTrigger="no" isColorTrigger="no" isColorTriggerFg="no" isColorTriggerBg="no">
+                    <name>shield : You feel protected.</name>
+                    <script>local shield = spell_timer.get_timer(&quot;shield&quot;)
+
+shield.last_elapsed_time = shield.elapsed_time
+shield.start_time = time.get_time()
+</script>
+                    <triggerType>0</triggerType>
+                    <conditonLineDelta>0</conditonLineDelta>
+                    <mStayOpen>0</mStayOpen>
+                    <mCommand></mCommand>
+                    <packageName></packageName>
+                    <mFgColor>#ff0000</mFgColor>
+                    <mBgColor>#ffff00</mBgColor>
+                    <mSoundFile></mSoundFile>
+                    <colorTriggerFgColor>#000000</colorTriggerFgColor>
+                    <colorTriggerBgColor>#000000</colorTriggerBgColor>
+                    <regexCodeList>
+                        <string>^You feel protected.$</string>
+                    </regexCodeList>
+                    <regexCodePropertyList>
+                        <integer>1</integer>
+                    </regexCodePropertyList>
+                </Trigger>
+                <Trigger isActive="yes" isFolder="no" isTempTrigger="no" isMultiline="no" isPerlSlashGOption="no" isColorizerTrigger="no" isFilterTrigger="no" isSoundTrigger="no" isColorTrigger="no" isColorTriggerFg="no" isColorTriggerBg="no">
+                    <name>shield : Your protection is revitalized.</name>
+                    <script>local shield = spell_timer.get_timer(&quot;shield&quot;)
+
+shield.last_elapsed_time = shield.elapsed_time
+shield.start_time = time.get_time()
+</script>
+                    <triggerType>0</triggerType>
+                    <conditonLineDelta>0</conditonLineDelta>
+                    <mStayOpen>0</mStayOpen>
+                    <mCommand></mCommand>
+                    <packageName></packageName>
+                    <mFgColor>#ff0000</mFgColor>
+                    <mBgColor>#ffff00</mBgColor>
+                    <mSoundFile></mSoundFile>
+                    <colorTriggerFgColor>#000000</colorTriggerFgColor>
+                    <colorTriggerBgColor>#000000</colorTriggerBgColor>
+                    <regexCodeList>
+                        <string>^Your protection is revitalized.$</string>
+                    </regexCodeList>
+                    <regexCodePropertyList>
+                        <integer>1</integer>
+                    </regexCodePropertyList>
+                </Trigger>
+                <Trigger isActive="yes" isFolder="no" isTempTrigger="no" isMultiline="no" isPerlSlashGOption="no" isColorizerTrigger="no" isFilterTrigger="no" isSoundTrigger="no" isColorTrigger="no" isColorTriggerFg="no" isColorTriggerBg="no">
+                    <name>shield : Your magical shield wears off.</name>
+                    <script>local shield = spell_timer.get_timer(&quot;shield&quot;)
+
+shield.stop_time = time.get_time()
+shield.elapsed_time = shield.stop_time - shield.start_time
+
+local time = time.convert_seconds_to_hms(shield.elapsed_time)
+echo(&quot;\nThe spell lasted &quot; .. time .. &quot;.\n&quot;)
+</script>
+                    <triggerType>0</triggerType>
+                    <conditonLineDelta>0</conditonLineDelta>
+                    <mStayOpen>0</mStayOpen>
+                    <mCommand></mCommand>
+                    <packageName></packageName>
+                    <mFgColor>#ff0000</mFgColor>
+                    <mBgColor>#ffff00</mBgColor>
+                    <mSoundFile></mSoundFile>
+                    <colorTriggerFgColor>#000000</colorTriggerFgColor>
+                    <colorTriggerBgColor>#000000</colorTriggerBgColor>
+                    <regexCodeList>
+                        <string>^Your magical shield wears off.$</string>
+                    </regexCodeList>
+                    <regexCodePropertyList>
+                        <integer>1</integer>
+                    </regexCodePropertyList>
+                </Trigger>
+                <Trigger isActive="yes" isFolder="no" isTempTrigger="no" isMultiline="no" isPerlSlashGOption="no" isColorizerTrigger="no" isFilterTrigger="no" isSoundTrigger="no" isColorTrigger="no" isColorTriggerFg="no" isColorTriggerBg="no">
+                    <name>shield : - shield</name>
+                    <script>local shield = spell_timer.get_timer(&quot;shield&quot;)
+
+shield.elapsed_time = time.get_time() - shield.start_time
+
+local time_str = time.convert_seconds_to_hms(shield.elapsed_time)
+
+local append = &quot;&quot;
+if shield.last_elapsed_time ~= 0 then
+	local percent = math.floor(shield.elapsed_time / shield.last_elapsed_time * 100)
+	local time_to_go = time.convert_seconds_to_hms(shield.last_elapsed_time - shield.elapsed_time)
+	append = &quot;&lt;grey&gt;/&lt;&quot; .. spell_timer.colour .. &quot;&gt;&quot; .. time_to_go .. &quot;&lt;grey&gt;/&lt;&quot; .. spell_timer.colour .. &quot;&gt;&quot; .. percent .. &quot;%&lt;grey&gt;&quot;
+end
+
+selectString(matches[1], 1)
+replace(&quot;&quot;)
+cinsertText(matches[1] .. &quot; (&lt;&quot; .. spell_timer.colour .. &quot;&gt;&quot; .. time_str .. append .. &quot;&lt;grey&gt;)&quot;)
+</script>
+                    <triggerType>0</triggerType>
+                    <conditonLineDelta>0</conditonLineDelta>
+                    <mStayOpen>0</mStayOpen>
+                    <mCommand></mCommand>
+                    <packageName></packageName>
+                    <mFgColor>#ff0000</mFgColor>
+                    <mBgColor>#ffff00</mBgColor>
+                    <mSoundFile></mSoundFile>
+                    <colorTriggerFgColor>#000000</colorTriggerFgColor>
+                    <colorTriggerBgColor>#000000</colorTriggerBgColor>
+                    <regexCodeList>
+                        <string>^- shield$</string>
+                    </regexCodeList>
+                    <regexCodePropertyList>
+                        <integer>1</integer>
+                    </regexCodePropertyList>
+                </Trigger>
+                <Trigger isActive="yes" isFolder="no" isTempTrigger="no" isMultiline="no" isPerlSlashGOption="no" isColorizerTrigger="no" isFilterTrigger="no" isSoundTrigger="no" isColorTrigger="no" isColorTriggerFg="no" isColorTriggerBg="no">
+                    <name>detect evil : You feel aware of all that is foul and evil.</name>
+                    <script>local detect_evil = spell_timer.get_timer(&quot;detect_evil&quot;)
+
+detect_evil.last_elapsed_time = detect_evil.elapsed_time
+detect_evil.start_time = time.get_time()
+</script>
+                    <triggerType>0</triggerType>
+                    <conditonLineDelta>0</conditonLineDelta>
+                    <mStayOpen>0</mStayOpen>
+                    <mCommand></mCommand>
+                    <packageName></packageName>
+                    <mFgColor>#ff0000</mFgColor>
+                    <mBgColor>#ffff00</mBgColor>
+                    <mSoundFile></mSoundFile>
+                    <colorTriggerFgColor>#000000</colorTriggerFgColor>
+                    <colorTriggerBgColor>#000000</colorTriggerBgColor>
+                    <regexCodeList>
+                        <string>^You feel aware of all that is foul and evil.$</string>
+                    </regexCodeList>
+                    <regexCodePropertyList>
+                        <integer>1</integer>
+                    </regexCodePropertyList>
+                </Trigger>
+                <Trigger isActive="yes" isFolder="no" isTempTrigger="no" isMultiline="no" isPerlSlashGOption="no" isColorizerTrigger="no" isFilterTrigger="no" isSoundTrigger="no" isColorTrigger="no" isColorTriggerFg="no" isColorTriggerBg="no">
+                    <name>detect evil : Your awareness of evil is refreshed.</name>
+                    <script>local detect_evil = spell_timer.get_timer(&quot;detect_evil&quot;)
+
+detect_evil.last_elapsed_time = detect_evil.elapsed_time
+detect_evil.start_time = time.get_time()
+</script>
+                    <triggerType>0</triggerType>
+                    <conditonLineDelta>0</conditonLineDelta>
+                    <mStayOpen>0</mStayOpen>
+                    <mCommand></mCommand>
+                    <packageName></packageName>
+                    <mFgColor>#ff0000</mFgColor>
+                    <mBgColor>#ffff00</mBgColor>
+                    <mSoundFile></mSoundFile>
+                    <colorTriggerFgColor>#000000</colorTriggerFgColor>
+                    <colorTriggerBgColor>#000000</colorTriggerBgColor>
+                    <regexCodeList>
+                        <string>^Your awareness of evil is refreshed.$</string>
+                    </regexCodeList>
+                    <regexCodePropertyList>
+                        <integer>1</integer>
+                    </regexCodePropertyList>
+                </Trigger>
+                <Trigger isActive="yes" isFolder="no" isTempTrigger="no" isMultiline="no" isPerlSlashGOption="no" isColorizerTrigger="no" isFilterTrigger="no" isSoundTrigger="no" isColorTrigger="no" isColorTriggerFg="no" isColorTriggerBg="no">
+                    <name>detect evil : You sense the red in your vision disappear.</name>
+                    <script>local detect_evil = spell_timer.get_timer(&quot;detect_evil&quot;)
+
+detect_evil.stop_time = time.get_time()
+detect_evil.elapsed_time = detect_evil.stop_time - detect_evil.start_time
+
+local time = time.convert_seconds_to_hms(detect_evil.elapsed_time)
+echo(&quot;\nThe spell lasted &quot; .. time .. &quot;.\n&quot;)
+</script>
+                    <triggerType>0</triggerType>
+                    <conditonLineDelta>0</conditonLineDelta>
+                    <mStayOpen>0</mStayOpen>
+                    <mCommand></mCommand>
+                    <packageName></packageName>
+                    <mFgColor>#ff0000</mFgColor>
+                    <mBgColor>#ffff00</mBgColor>
+                    <mSoundFile></mSoundFile>
+                    <colorTriggerFgColor>#000000</colorTriggerFgColor>
+                    <colorTriggerBgColor>#000000</colorTriggerBgColor>
+                    <regexCodeList>
+                        <string>^You sense the red in your vision disappear.$</string>
+                    </regexCodeList>
+                    <regexCodePropertyList>
+                        <integer>1</integer>
+                    </regexCodePropertyList>
+                </Trigger>
+                <Trigger isActive="yes" isFolder="no" isTempTrigger="no" isMultiline="no" isPerlSlashGOption="no" isColorizerTrigger="no" isFilterTrigger="no" isSoundTrigger="no" isColorTrigger="no" isColorTriggerFg="no" isColorTriggerBg="no">
+                    <name>detect evil : - detect evil</name>
+                    <script>local detect_evil = spell_timer.get_timer(&quot;detect_evil&quot;)
+
+detect_evil.elapsed_time = time.get_time() - detect_evil.start_time
+
+local time_str = time.convert_seconds_to_hms(detect_evil.elapsed_time)
+
+local append = &quot;&quot;
+if detect_evil.last_elapsed_time ~= 0 then
+	local percent = math.floor(detect_evil.elapsed_time / detect_evil.last_elapsed_time * 100)
+	local time_to_go = time.convert_seconds_to_hms(detect_evil.last_elapsed_time - detect_evil.elapsed_time)
+	append = &quot;&lt;grey&gt;/&lt;&quot; .. spell_timer.colour .. &quot;&gt;&quot; .. time_to_go .. &quot;&lt;grey&gt;/&lt;&quot; .. spell_timer.colour .. &quot;&gt;&quot; .. percent .. &quot;%&lt;grey&gt;&quot;
+end
+
+selectString(matches[1], 1)
+replace(&quot;&quot;)
+cinsertText(matches[1] .. &quot; (&lt;&quot; .. spell_timer.colour .. &quot;&gt;&quot; .. time_str .. append .. &quot;&lt;grey&gt;)&quot;)
+</script>
+                    <triggerType>0</triggerType>
+                    <conditonLineDelta>0</conditonLineDelta>
+                    <mStayOpen>0</mStayOpen>
+                    <mCommand></mCommand>
+                    <packageName></packageName>
+                    <mFgColor>#ff0000</mFgColor>
+                    <mBgColor>#ffff00</mBgColor>
+                    <mSoundFile></mSoundFile>
+                    <colorTriggerFgColor>#000000</colorTriggerFgColor>
+                    <colorTriggerBgColor>#000000</colorTriggerBgColor>
+                    <regexCodeList>
+                        <string>^- detect evil$</string>
+                    </regexCodeList>
+                    <regexCodePropertyList>
+                        <integer>1</integer>
+                    </regexCodePropertyList>
+                </Trigger>
+                <Trigger isActive="yes" isFolder="no" isTempTrigger="no" isMultiline="no" isPerlSlashGOption="no" isColorizerTrigger="no" isFilterTrigger="no" isSoundTrigger="no" isColorTrigger="no" isColorTriggerFg="no" isColorTriggerBg="no">
+                    <name>battleglory : Hearing the horn blow, you feel your urge to battle increase!</name>
+                    <script>local battleglory = spell_timer.get_timer(&quot;battleglory&quot;)
+
+battleglory.last_elapsed_time = battleglory.elapsed_time
+battleglory.start_time = time.get_time()
+</script>
+                    <triggerType>0</triggerType>
+                    <conditonLineDelta>0</conditonLineDelta>
+                    <mStayOpen>0</mStayOpen>
+                    <mCommand></mCommand>
+                    <packageName></packageName>
+                    <mFgColor>#ff0000</mFgColor>
+                    <mBgColor>#ffff00</mBgColor>
+                    <mSoundFile></mSoundFile>
+                    <colorTriggerFgColor>#000000</colorTriggerFgColor>
+                    <colorTriggerBgColor>#000000</colorTriggerBgColor>
+                    <regexCodeList>
+                        <string>^Hearing the horn blow, you feel your urge to battle increase!$</string>
+                    </regexCodeList>
+                    <regexCodePropertyList>
+                        <integer>1</integer>
+                    </regexCodePropertyList>
+                </Trigger>
+                <Trigger isActive="yes" isFolder="no" isTempTrigger="no" isMultiline="no" isPerlSlashGOption="no" isColorizerTrigger="no" isFilterTrigger="no" isSoundTrigger="no" isColorTrigger="no" isColorTriggerFg="no" isColorTriggerBg="no">
+                    <name>battleglory : You feel your newfound strength leaving you again.</name>
+                    <script>local battleglory = spell_timer.get_timer(&quot;battleglory&quot;)
+
+battleglory.stop_time = time.get_time()
+battleglory.elapsed_time = battleglory.stop_time - battleglory.start_time
+
+local time = time.convert_seconds_to_hms(battleglory.elapsed_time)
+echo(&quot;\nThe spell lasted &quot; .. time .. &quot;.\n&quot;)
+</script>
+                    <triggerType>0</triggerType>
+                    <conditonLineDelta>0</conditonLineDelta>
+                    <mStayOpen>0</mStayOpen>
+                    <mCommand></mCommand>
+                    <packageName></packageName>
+                    <mFgColor>#ff0000</mFgColor>
+                    <mBgColor>#ffff00</mBgColor>
+                    <mSoundFile></mSoundFile>
+                    <colorTriggerFgColor>#000000</colorTriggerFgColor>
+                    <colorTriggerBgColor>#000000</colorTriggerBgColor>
+                    <regexCodeList>
+                        <string>^You feel your newfound strength leaving you again.$</string>
+                    </regexCodeList>
+                    <regexCodePropertyList>
+                        <integer>1</integer>
+                    </regexCodePropertyList>
+                </Trigger>
+                <Trigger isActive="yes" isFolder="no" isTempTrigger="no" isMultiline="no" isPerlSlashGOption="no" isColorizerTrigger="no" isFilterTrigger="no" isSoundTrigger="no" isColorTrigger="no" isColorTriggerFg="no" isColorTriggerBg="no">
+                    <name>battleglory : - battleglory</name>
+                    <script>local battleglory = spell_timer.get_timer(&quot;battleglory&quot;)
+
+battleglory.elapsed_time = time.get_time() - battleglory.start_time
+
+local time_str = time.convert_seconds_to_hms(battleglory.elapsed_time)
+
+local append = &quot;&quot;
+if battleglory.last_elapsed_time ~= 0 then
+	local percent = math.floor(battleglory.elapsed_time / battleglory.last_elapsed_time * 100)
+	local time_to_go = time.convert_seconds_to_hms(battleglory.last_elapsed_time - battleglory.elapsed_time)
+	append = &quot;&lt;grey&gt;/&lt;&quot; .. spell_timer.colour .. &quot;&gt;&quot; .. time_to_go .. &quot;&lt;grey&gt;/&lt;&quot; .. spell_timer.colour .. &quot;&gt;&quot; .. percent .. &quot;%&lt;grey&gt;&quot;
+end
+
+selectString(matches[1], 1)
+replace(&quot;&quot;)
+cinsertText(matches[1] .. &quot; (&lt;&quot; .. spell_timer.colour .. &quot;&gt;&quot; .. time_str .. append .. &quot;&lt;grey&gt;)&quot;)
+</script>
+                    <triggerType>0</triggerType>
+                    <conditonLineDelta>0</conditonLineDelta>
+                    <mStayOpen>0</mStayOpen>
+                    <mCommand></mCommand>
+                    <packageName></packageName>
+                    <mFgColor>#ff0000</mFgColor>
+                    <mBgColor>#ffff00</mBgColor>
+                    <mSoundFile></mSoundFile>
+                    <colorTriggerFgColor>#000000</colorTriggerFgColor>
+                    <colorTriggerBgColor>#000000</colorTriggerBgColor>
+                    <regexCodeList>
+                        <string>^- battleglory$</string>
+                    </regexCodeList>
+                    <regexCodePropertyList>
+                        <integer>1</integer>
+                    </regexCodePropertyList>
+                </Trigger>
+                <Trigger isActive="yes" isFolder="no" isTempTrigger="no" isMultiline="no" isPerlSlashGOption="no" isColorizerTrigger="no" isFilterTrigger="no" isSoundTrigger="no" isColorTrigger="no" isColorTriggerFg="no" isColorTriggerBg="no">
+                    <name>shroud : You are surrounded by a misty shroud.</name>
+                    <script>local shroud = spell_timer.get_timer(&quot;shroud&quot;)
+
+shroud.last_elapsed_time = shroud.elapsed_time
+shroud.start_time = time.get_time()
+</script>
+                    <triggerType>0</triggerType>
+                    <conditonLineDelta>0</conditonLineDelta>
+                    <mStayOpen>0</mStayOpen>
+                    <mCommand></mCommand>
+                    <packageName></packageName>
+                    <mFgColor>#ff0000</mFgColor>
+                    <mBgColor>#ffff00</mBgColor>
+                    <mSoundFile></mSoundFile>
+                    <colorTriggerFgColor>#000000</colorTriggerFgColor>
+                    <colorTriggerBgColor>#000000</colorTriggerBgColor>
+                    <regexCodeList>
+                        <string>^You are surrounded by a misty shroud.$</string>
+                    </regexCodeList>
+                    <regexCodePropertyList>
+                        <integer>1</integer>
+                    </regexCodePropertyList>
+                </Trigger>
+                <Trigger isActive="yes" isFolder="no" isTempTrigger="no" isMultiline="no" isPerlSlashGOption="no" isColorizerTrigger="no" isFilterTrigger="no" isSoundTrigger="no" isColorTrigger="no" isColorTriggerFg="no" isColorTriggerBg="no">
+                    <name>shroud : Your misty shroud is renewed.</name>
+                    <script>local shroud = spell_timer.get_timer(&quot;shroud&quot;)
+
+shroud.last_elapsed_time = shroud.elapsed_time
+shroud.start_time = time.get_time()
+</script>
+                    <triggerType>0</triggerType>
+                    <conditonLineDelta>0</conditonLineDelta>
+                    <mStayOpen>0</mStayOpen>
+                    <mCommand></mCommand>
+                    <packageName></packageName>
+                    <mFgColor>#ff0000</mFgColor>
+                    <mBgColor>#ffff00</mBgColor>
+                    <mSoundFile></mSoundFile>
+                    <colorTriggerFgColor>#000000</colorTriggerFgColor>
+                    <colorTriggerBgColor>#000000</colorTriggerBgColor>
+                    <regexCodeList>
+                        <string>^Your misty shroud is renewed.$</string>
+                    </regexCodeList>
+                    <regexCodePropertyList>
+                        <integer>1</integer>
+                    </regexCodePropertyList>
+                </Trigger>
+                <Trigger isActive="yes" isFolder="no" isTempTrigger="no" isMultiline="no" isPerlSlashGOption="no" isColorizerTrigger="no" isFilterTrigger="no" isSoundTrigger="no" isColorTrigger="no" isColorTriggerFg="no" isColorTriggerBg="no">
+                    <name>shroud : You feel yourself exposed.</name>
+                    <script>local shroud = spell_timer.get_timer(&quot;shroud&quot;)
+
+shroud.stop_time = time.get_time()
+shroud.elapsed_time = shroud.stop_time - shroud.start_time
+
+local time = time.convert_seconds_to_hms(shroud.elapsed_time)
+echo(&quot;\nThe spell lasted &quot; .. time .. &quot;.\n&quot;)
+</script>
+                    <triggerType>0</triggerType>
+                    <conditonLineDelta>0</conditonLineDelta>
+                    <mStayOpen>0</mStayOpen>
+                    <mCommand></mCommand>
+                    <packageName></packageName>
+                    <mFgColor>#ff0000</mFgColor>
+                    <mBgColor>#ffff00</mBgColor>
+                    <mSoundFile></mSoundFile>
+                    <colorTriggerFgColor>#000000</colorTriggerFgColor>
+                    <colorTriggerBgColor>#000000</colorTriggerBgColor>
+                    <regexCodeList>
+                        <string>^You feel yourself exposed.$</string>
+                    </regexCodeList>
+                    <regexCodePropertyList>
+                        <integer>1</integer>
+                    </regexCodePropertyList>
+                </Trigger>
+                <Trigger isActive="yes" isFolder="no" isTempTrigger="no" isMultiline="no" isPerlSlashGOption="no" isColorizerTrigger="no" isFilterTrigger="no" isSoundTrigger="no" isColorTrigger="no" isColorTriggerFg="no" isColorTriggerBg="no">
+                    <name>shroud : - shroud</name>
+                    <script>local shroud = spell_timer.get_timer(&quot;shroud&quot;)
+
+shroud.elapsed_time = time.get_time() - shroud.start_time
+
+local time_str = time.convert_seconds_to_hms(shroud.elapsed_time)
+
+local append = &quot;&quot;
+if shroud.last_elapsed_time ~= 0 then
+	local percent = math.floor(shroud.elapsed_time / shroud.last_elapsed_time * 100)
+	local time_to_go = time.convert_seconds_to_hms(shroud.last_elapsed_time - shroud.elapsed_time)
+	append = &quot;&lt;grey&gt;/&lt;&quot; .. spell_timer.colour .. &quot;&gt;&quot; .. time_to_go .. &quot;&lt;grey&gt;/&lt;&quot; .. spell_timer.colour .. &quot;&gt;&quot; .. percent .. &quot;%&lt;grey&gt;&quot;
+end
+
+selectString(matches[1], 1)
+replace(&quot;&quot;)
+cinsertText(matches[1] .. &quot; (&lt;&quot; .. spell_timer.colour .. &quot;&gt;&quot; .. time_str .. append .. &quot;&lt;grey&gt;)&quot;)
+</script>
+                    <triggerType>0</triggerType>
+                    <conditonLineDelta>0</conditonLineDelta>
+                    <mStayOpen>0</mStayOpen>
+                    <mCommand></mCommand>
+                    <packageName></packageName>
+                    <mFgColor>#ff0000</mFgColor>
+                    <mBgColor>#ffff00</mBgColor>
+                    <mSoundFile></mSoundFile>
+                    <colorTriggerFgColor>#000000</colorTriggerFgColor>
+                    <colorTriggerBgColor>#000000</colorTriggerBgColor>
+                    <regexCodeList>
+                        <string>^- shroud$</string>
+                    </regexCodeList>
+                    <regexCodePropertyList>
+                        <integer>1</integer>
+                    </regexCodePropertyList>
+                </Trigger>
+                <Trigger isActive="yes" isFolder="no" isTempTrigger="no" isMultiline="no" isPerlSlashGOption="no" isColorizerTrigger="no" isFilterTrigger="no" isSoundTrigger="no" isColorTrigger="no" isColorTriggerFg="no" isColorTriggerBg="no">
+                    <name>breath of briskness : An energy begins to flow within your legs as your body becomes lighter.</name>
+                    <script>local breath_of_briskness = spell_timer.get_timer(&quot;breath_of_briskness&quot;)
+
+breath_of_briskness.last_elapsed_time = breath_of_briskness.elapsed_time
+breath_of_briskness.start_time = time.get_time()
+</script>
+                    <triggerType>0</triggerType>
+                    <conditonLineDelta>0</conditonLineDelta>
+                    <mStayOpen>0</mStayOpen>
+                    <mCommand></mCommand>
+                    <packageName></packageName>
+                    <mFgColor>#ff0000</mFgColor>
+                    <mBgColor>#ffff00</mBgColor>
+                    <mSoundFile></mSoundFile>
+                    <colorTriggerFgColor>#000000</colorTriggerFgColor>
+                    <colorTriggerBgColor>#000000</colorTriggerBgColor>
+                    <regexCodeList>
+                        <string>^An energy begins to flow within your legs as your body becomes lighter.$</string>
+                    </regexCodeList>
+                    <regexCodePropertyList>
+                        <integer>1</integer>
+                    </regexCodePropertyList>
+                </Trigger>
+                <Trigger isActive="yes" isFolder="no" isTempTrigger="no" isMultiline="no" isPerlSlashGOption="no" isColorizerTrigger="no" isFilterTrigger="no" isSoundTrigger="no" isColorTrigger="no" isColorTriggerFg="no" isColorTriggerBg="no">
+                    <name>breath of briskness : The energy in your legs is refreshed.</name>
+                    <script>local breath_of_briskness = spell_timer.get_timer(&quot;breath_of_briskness&quot;)
+
+breath_of_briskness.last_elapsed_time = breath_of_briskness.elapsed_time
+breath_of_briskness.start_time = time.get_time()
+</script>
+                    <triggerType>0</triggerType>
+                    <conditonLineDelta>0</conditonLineDelta>
+                    <mStayOpen>0</mStayOpen>
+                    <mCommand></mCommand>
+                    <packageName></packageName>
+                    <mFgColor>#ff0000</mFgColor>
+                    <mBgColor>#ffff00</mBgColor>
+                    <mSoundFile></mSoundFile>
+                    <colorTriggerFgColor>#000000</colorTriggerFgColor>
+                    <colorTriggerBgColor>#000000</colorTriggerBgColor>
+                    <regexCodeList>
+                        <string>^The energy in your legs is refreshed.$</string>
+                    </regexCodeList>
+                    <regexCodePropertyList>
+                        <integer>1</integer>
+                    </regexCodePropertyList>
+                </Trigger>
+                <Trigger isActive="yes" isFolder="no" isTempTrigger="no" isMultiline="no" isPerlSlashGOption="no" isColorizerTrigger="no" isFilterTrigger="no" isSoundTrigger="no" isColorTrigger="no" isColorTriggerFg="no" isColorTriggerBg="no">
+                    <name>breath of briskness : Your legs feel heavier.</name>
+                    <script>local breath_of_briskness = spell_timer.get_timer(&quot;breath_of_briskness&quot;)
+
+breath_of_briskness.stop_time = time.get_time()
+breath_of_briskness.elapsed_time = breath_of_briskness.stop_time - breath_of_briskness.start_time
+
+local time = time.convert_seconds_to_hms(breath_of_briskness.elapsed_time)
+echo(&quot;\nThe spell lasted &quot; .. time .. &quot;.\n&quot;)
+</script>
+                    <triggerType>0</triggerType>
+                    <conditonLineDelta>0</conditonLineDelta>
+                    <mStayOpen>0</mStayOpen>
+                    <mCommand></mCommand>
+                    <packageName></packageName>
+                    <mFgColor>#ff0000</mFgColor>
+                    <mBgColor>#ffff00</mBgColor>
+                    <mSoundFile></mSoundFile>
+                    <colorTriggerFgColor>#000000</colorTriggerFgColor>
+                    <colorTriggerBgColor>#000000</colorTriggerBgColor>
+                    <regexCodeList>
+                        <string>^Your legs feel heavier.$</string>
+                    </regexCodeList>
+                    <regexCodePropertyList>
+                        <integer>1</integer>
+                    </regexCodePropertyList>
+                </Trigger>
+                <Trigger isActive="yes" isFolder="no" isTempTrigger="no" isMultiline="no" isPerlSlashGOption="no" isColorizerTrigger="no" isFilterTrigger="no" isSoundTrigger="no" isColorTrigger="no" isColorTriggerFg="no" isColorTriggerBg="no">
+                    <name>breath of briskness : - breath of briskness</name>
+                    <script>local breath_of_briskness = spell_timer.get_timer(&quot;breath_of_briskness&quot;)
+
+breath_of_briskness.elapsed_time = time.get_time() - breath_of_briskness.start_time
+
+local time_str = time.convert_seconds_to_hms(breath_of_briskness.elapsed_time)
+
+local append = &quot;&quot;
+if breath_of_briskness.last_elapsed_time ~= 0 then
+	local percent = math.floor(breath_of_briskness.elapsed_time / breath_of_briskness.last_elapsed_time * 100)
+	local time_to_go = time.convert_seconds_to_hms(breath_of_briskness.last_elapsed_time - breath_of_briskness.elapsed_time)
+	append = &quot;&lt;grey&gt;/&lt;&quot; .. spell_timer.colour .. &quot;&gt;&quot; .. time_to_go .. &quot;&lt;grey&gt;/&lt;&quot; .. spell_timer.colour .. &quot;&gt;&quot; .. percent .. &quot;%&lt;grey&gt;&quot;
+end
+
+selectString(matches[1], 1)
+replace(&quot;&quot;)
+cinsertText(matches[1] .. &quot; (&lt;&quot; .. spell_timer.colour .. &quot;&gt;&quot; .. time_str .. append .. &quot;&lt;grey&gt;)&quot;)
+</script>
+                    <triggerType>0</triggerType>
+                    <conditonLineDelta>0</conditonLineDelta>
+                    <mStayOpen>0</mStayOpen>
+                    <mCommand></mCommand>
+                    <packageName></packageName>
+                    <mFgColor>#ff0000</mFgColor>
+                    <mBgColor>#ffff00</mBgColor>
+                    <mSoundFile></mSoundFile>
+                    <colorTriggerFgColor>#000000</colorTriggerFgColor>
+                    <colorTriggerBgColor>#000000</colorTriggerBgColor>
+                    <regexCodeList>
+                        <string>^- breath of briskness$</string>
+                    </regexCodeList>
+                    <regexCodePropertyList>
+                        <integer>1</integer>
+                    </regexCodePropertyList>
+                </Trigger>
+                <Trigger isActive="yes" isFolder="no" isTempTrigger="no" isMultiline="no" isPerlSlashGOption="no" isColorizerTrigger="no" isFilterTrigger="no" isSoundTrigger="no" isColorTrigger="no" isColorTriggerFg="no" isColorTriggerBg="no">
+                    <name>depression : Alas, you realize that yet again the mighty knowledge of drowned N�menor has been lost... Despair settles on you.</name>
+                    <script>local depression = spell_timer.get_timer(&quot;depression&quot;)
+
+depression.last_elapsed_time = depression.elapsed_time
+depression.start_time = time.get_time()
+</script>
+                    <triggerType>0</triggerType>
+                    <conditonLineDelta>0</conditonLineDelta>
+                    <mStayOpen>0</mStayOpen>
+                    <mCommand></mCommand>
+                    <packageName></packageName>
+                    <mFgColor>#ff0000</mFgColor>
+                    <mBgColor>#ffff00</mBgColor>
+                    <mSoundFile></mSoundFile>
+                    <colorTriggerFgColor>#000000</colorTriggerFgColor>
+                    <colorTriggerBgColor>#000000</colorTriggerBgColor>
+                    <regexCodeList>
+                        <string>^Alas, you realize that yet again the mighty knowledge of drowned N�menor has been lost... Despair settles on you.$</string>
+                    </regexCodeList>
+                    <regexCodePropertyList>
+                        <integer>1</integer>
+                    </regexCodePropertyList>
+                </Trigger>
+                <Trigger isActive="yes" isFolder="no" isTempTrigger="no" isMultiline="no" isPerlSlashGOption="no" isColorizerTrigger="no" isFilterTrigger="no" isSoundTrigger="no" isColorTrigger="no" isColorTriggerFg="no" isColorTriggerBg="no">
+                    <name>depression : Your heart feels lighter.</name>
+                    <script>local depression = spell_timer.get_timer(&quot;depression&quot;)
+
+depression.stop_time = time.get_time()
+depression.elapsed_time = depression.stop_time - depression.start_time
+
+local time = time.convert_seconds_to_hms(depression.elapsed_time)
+echo(&quot;\nThe spell lasted &quot; .. time .. &quot;.\n&quot;)
+</script>
+                    <triggerType>0</triggerType>
+                    <conditonLineDelta>0</conditonLineDelta>
+                    <mStayOpen>0</mStayOpen>
+                    <mCommand></mCommand>
+                    <packageName></packageName>
+                    <mFgColor>#ff0000</mFgColor>
+                    <mBgColor>#ffff00</mBgColor>
+                    <mSoundFile></mSoundFile>
+                    <colorTriggerFgColor>#000000</colorTriggerFgColor>
+                    <colorTriggerBgColor>#000000</colorTriggerBgColor>
+                    <regexCodeList>
+                        <string>^Your heart feels lighter.$</string>
+                    </regexCodeList>
+                    <regexCodePropertyList>
+                        <integer>1</integer>
+                    </regexCodePropertyList>
+                </Trigger>
+                <Trigger isActive="yes" isFolder="no" isTempTrigger="no" isMultiline="no" isPerlSlashGOption="no" isColorizerTrigger="no" isFilterTrigger="no" isSoundTrigger="no" isColorTrigger="no" isColorTriggerFg="no" isColorTriggerBg="no">
+                    <name>depression : - depression</name>
+                    <script>local depression = spell_timer.get_timer(&quot;depression&quot;)
+
+depression.elapsed_time = time.get_time() - depression.start_time
+
+local time_str = time.convert_seconds_to_hms(depression.elapsed_time)
+
+local append = &quot;&quot;
+if depression.last_elapsed_time ~= 0 then
+	local percent = math.floor(depression.elapsed_time / depression.last_elapsed_time * 100)
+	local time_to_go = time.convert_seconds_to_hms(depression.last_elapsed_time - depression.elapsed_time)
+	append = &quot;&lt;grey&gt;/&lt;&quot; .. spell_timer.colour .. &quot;&gt;&quot; .. time_to_go .. &quot;&lt;grey&gt;/&lt;&quot; .. spell_timer.colour .. &quot;&gt;&quot; .. percent .. &quot;%&lt;grey&gt;&quot;
+end
+
+selectString(matches[1], 1)
+replace(&quot;&quot;)
+cinsertText(matches[1] .. &quot; (&lt;&quot; .. spell_timer.colour .. &quot;&gt;&quot; .. time_str .. append .. &quot;&lt;grey&gt;)&quot;)
+</script>
+                    <triggerType>0</triggerType>
+                    <conditonLineDelta>0</conditonLineDelta>
+                    <mStayOpen>0</mStayOpen>
+                    <mCommand></mCommand>
+                    <packageName></packageName>
+                    <mFgColor>#ff0000</mFgColor>
+                    <mBgColor>#ffff00</mBgColor>
+                    <mSoundFile></mSoundFile>
+                    <colorTriggerFgColor>#000000</colorTriggerFgColor>
+                    <colorTriggerBgColor>#000000</colorTriggerBgColor>
+                    <regexCodeList>
+                        <string>^- depression$</string>
+                    </regexCodeList>
+                    <regexCodePropertyList>
+                        <integer>1</integer>
+                    </regexCodePropertyList>
+                </Trigger>
+                <Trigger isActive="yes" isFolder="no" isTempTrigger="no" isMultiline="no" isPerlSlashGOption="no" isColorizerTrigger="no" isFilterTrigger="no" isSoundTrigger="no" isColorTrigger="no" isColorTriggerFg="no" isColorTriggerBg="no">
+                    <name>armour : A blue transparent wall slowly appears around you.</name>
+                    <script>local armour = spell_timer.get_timer(&quot;armour&quot;)
+
+armour.last_elapsed_time = armour.elapsed_time
+armour.start_time = time.get_time()
+</script>
+                    <triggerType>0</triggerType>
+                    <conditonLineDelta>0</conditonLineDelta>
+                    <mStayOpen>0</mStayOpen>
+                    <mCommand></mCommand>
+                    <packageName></packageName>
+                    <mFgColor>#ff0000</mFgColor>
+                    <mBgColor>#ffff00</mBgColor>
+                    <mSoundFile></mSoundFile>
+                    <colorTriggerFgColor>#000000</colorTriggerFgColor>
+                    <colorTriggerBgColor>#000000</colorTriggerBgColor>
+                    <regexCodeList>
+                        <string>^A blue transparent wall slowly appears around you.$</string>
+                    </regexCodeList>
+                    <regexCodePropertyList>
+                        <integer>1</integer>
+                    </regexCodePropertyList>
+                </Trigger>
+                <Trigger isActive="yes" isFolder="no" isTempTrigger="no" isMultiline="no" isPerlSlashGOption="no" isColorizerTrigger="no" isFilterTrigger="no" isSoundTrigger="no" isColorTrigger="no" isColorTriggerFg="no" isColorTriggerBg="no">
+                    <name>armour : Your magic armour is revitalised.</name>
+                    <script>local armour = spell_timer.get_timer(&quot;armour&quot;)
+
+armour.last_elapsed_time = armour.elapsed_time
+armour.start_time = time.get_time()
+</script>
+                    <triggerType>0</triggerType>
+                    <conditonLineDelta>0</conditonLineDelta>
+                    <mStayOpen>0</mStayOpen>
+                    <mCommand></mCommand>
+                    <packageName></packageName>
+                    <mFgColor>#ff0000</mFgColor>
+                    <mBgColor>#ffff00</mBgColor>
+                    <mSoundFile></mSoundFile>
+                    <colorTriggerFgColor>#000000</colorTriggerFgColor>
+                    <colorTriggerBgColor>#000000</colorTriggerBgColor>
+                    <regexCodeList>
+                        <string>^Your magic armour is revitalised.$</string>
+                    </regexCodeList>
+                    <regexCodePropertyList>
+                        <integer>1</integer>
+                    </regexCodePropertyList>
+                </Trigger>
+                <Trigger isActive="yes" isFolder="no" isTempTrigger="no" isMultiline="no" isPerlSlashGOption="no" isColorizerTrigger="no" isFilterTrigger="no" isSoundTrigger="no" isColorTrigger="no" isColorTriggerFg="no" isColorTriggerBg="no">
+                    <name>armour : You feel less protected.</name>
+                    <script>local armour = spell_timer.get_timer(&quot;armour&quot;)
+
+armour.stop_time = time.get_time()
+armour.elapsed_time = armour.stop_time - armour.start_time
+
+local time = time.convert_seconds_to_hms(armour.elapsed_time)
+echo(&quot;\nThe spell lasted &quot; .. time .. &quot;.\n&quot;)
+</script>
+                    <triggerType>0</triggerType>
+                    <conditonLineDelta>0</conditonLineDelta>
+                    <mStayOpen>0</mStayOpen>
+                    <mCommand></mCommand>
+                    <packageName></packageName>
+                    <mFgColor>#ff0000</mFgColor>
+                    <mBgColor>#ffff00</mBgColor>
+                    <mSoundFile></mSoundFile>
+                    <colorTriggerFgColor>#000000</colorTriggerFgColor>
+                    <colorTriggerBgColor>#000000</colorTriggerBgColor>
+                    <regexCodeList>
+                        <string>^You feel less protected.$</string>
+                    </regexCodeList>
+                    <regexCodePropertyList>
+                        <integer>1</integer>
+                    </regexCodePropertyList>
+                </Trigger>
+                <Trigger isActive="yes" isFolder="no" isTempTrigger="no" isMultiline="no" isPerlSlashGOption="no" isColorizerTrigger="no" isFilterTrigger="no" isSoundTrigger="no" isColorTrigger="no" isColorTriggerFg="no" isColorTriggerBg="no">
+                    <name>armour : - armour</name>
+                    <script>local armour = spell_timer.get_timer(&quot;armour&quot;)
+
+armour.elapsed_time = time.get_time() - armour.start_time
+
+local time_str = time.convert_seconds_to_hms(armour.elapsed_time)
+
+local append = &quot;&quot;
+if armour.last_elapsed_time ~= 0 then
+	local percent = math.floor(armour.elapsed_time / armour.last_elapsed_time * 100)
+	local time_to_go = time.convert_seconds_to_hms(armour.last_elapsed_time - armour.elapsed_time)
+	append = &quot;&lt;grey&gt;/&lt;&quot; .. spell_timer.colour .. &quot;&gt;&quot; .. time_to_go .. &quot;&lt;grey&gt;/&lt;&quot; .. spell_timer.colour .. &quot;&gt;&quot; .. percent .. &quot;%&lt;grey&gt;&quot;
+end
+
+selectString(matches[1], 1)
+replace(&quot;&quot;)
+cinsertText(matches[1] .. &quot; (&lt;&quot; .. spell_timer.colour .. &quot;&gt;&quot; .. time_str .. append .. &quot;&lt;grey&gt;)&quot;)
+</script>
+                    <triggerType>0</triggerType>
+                    <conditonLineDelta>0</conditonLineDelta>
+                    <mStayOpen>0</mStayOpen>
+                    <mCommand></mCommand>
+                    <packageName></packageName>
+                    <mFgColor>#ff0000</mFgColor>
+                    <mBgColor>#ffff00</mBgColor>
+                    <mSoundFile></mSoundFile>
+                    <colorTriggerFgColor>#000000</colorTriggerFgColor>
+                    <colorTriggerBgColor>#000000</colorTriggerBgColor>
+                    <regexCodeList>
+                        <string>^- armour$</string>
+                    </regexCodeList>
+                    <regexCodePropertyList>
+                        <integer>1</integer>
+                    </regexCodePropertyList>
+                </Trigger>
+                <Trigger isActive="yes" isFolder="no" isTempTrigger="no" isMultiline="no" isPerlSlashGOption="no" isColorizerTrigger="no" isFilterTrigger="no" isSoundTrigger="no" isColorTrigger="no" isColorTriggerFg="no" isColorTriggerBg="no">
+                    <name>strength : You feel stronger.</name>
+                    <script>local strength = spell_timer.get_timer(&quot;strength&quot;)
+
+strength.last_elapsed_time = strength.elapsed_time
+strength.start_time = time.get_time()
+</script>
+                    <triggerType>0</triggerType>
+                    <conditonLineDelta>0</conditonLineDelta>
+                    <mStayOpen>0</mStayOpen>
+                    <mCommand></mCommand>
+                    <packageName></packageName>
+                    <mFgColor>#ff0000</mFgColor>
+                    <mBgColor>#ffff00</mBgColor>
+                    <mSoundFile></mSoundFile>
+                    <colorTriggerFgColor>#000000</colorTriggerFgColor>
+                    <colorTriggerBgColor>#000000</colorTriggerBgColor>
+                    <regexCodeList>
+                        <string>^You feel stronger.$</string>
+                    </regexCodeList>
+                    <regexCodePropertyList>
+                        <integer>1</integer>
+                    </regexCodePropertyList>
+                </Trigger>
+                <Trigger isActive="yes" isFolder="no" isTempTrigger="no" isMultiline="no" isPerlSlashGOption="no" isColorizerTrigger="no" isFilterTrigger="no" isSoundTrigger="no" isColorTrigger="no" isColorTriggerFg="no" isColorTriggerBg="no">
+                    <name>strength : The duration of the strength spell has been improved.</name>
+                    <script>local strength = spell_timer.get_timer(&quot;strength&quot;)
+
+strength.last_elapsed_time = strength.elapsed_time
+strength.start_time = time.get_time()
+</script>
+                    <triggerType>0</triggerType>
+                    <conditonLineDelta>0</conditonLineDelta>
+                    <mStayOpen>0</mStayOpen>
+                    <mCommand></mCommand>
+                    <packageName></packageName>
+                    <mFgColor>#ff0000</mFgColor>
+                    <mBgColor>#ffff00</mBgColor>
+                    <mSoundFile></mSoundFile>
+                    <colorTriggerFgColor>#000000</colorTriggerFgColor>
+                    <colorTriggerBgColor>#000000</colorTriggerBgColor>
+                    <regexCodeList>
+                        <string>^The duration of the strength spell has been improved.$</string>
+                    </regexCodeList>
+                    <regexCodePropertyList>
+                        <integer>1</integer>
+                    </regexCodePropertyList>
+                </Trigger>
+                <Trigger isActive="yes" isFolder="no" isTempTrigger="no" isMultiline="no" isPerlSlashGOption="no" isColorizerTrigger="no" isFilterTrigger="no" isSoundTrigger="no" isColorTrigger="no" isColorTriggerFg="no" isColorTriggerBg="no">
+                    <name>strength : You feel weaker.</name>
+                    <script>local strength = spell_timer.get_timer(&quot;strength&quot;)
+
+strength.stop_time = time.get_time()
+strength.elapsed_time = strength.stop_time - strength.start_time
+
+local time = time.convert_seconds_to_hms(strength.elapsed_time)
+echo(&quot;\nThe spell lasted &quot; .. time .. &quot;.\n&quot;)
+</script>
+                    <triggerType>0</triggerType>
+                    <conditonLineDelta>0</conditonLineDelta>
+                    <mStayOpen>0</mStayOpen>
+                    <mCommand></mCommand>
+                    <packageName></packageName>
+                    <mFgColor>#ff0000</mFgColor>
+                    <mBgColor>#ffff00</mBgColor>
+                    <mSoundFile></mSoundFile>
+                    <colorTriggerFgColor>#000000</colorTriggerFgColor>
+                    <colorTriggerBgColor>#000000</colorTriggerBgColor>
+                    <regexCodeList>
+                        <string>^You feel weaker.$</string>
+                    </regexCodeList>
+                    <regexCodePropertyList>
+                        <integer>1</integer>
+                    </regexCodePropertyList>
+                </Trigger>
+                <Trigger isActive="yes" isFolder="no" isTempTrigger="no" isMultiline="no" isPerlSlashGOption="no" isColorizerTrigger="no" isFilterTrigger="no" isSoundTrigger="no" isColorTrigger="no" isColorTriggerFg="no" isColorTriggerBg="no">
+                    <name>strength : - strength</name>
+                    <script>local strength = spell_timer.get_timer(&quot;strength&quot;)
+
+strength.elapsed_time = time.get_time() - strength.start_time
+
+local time_str = time.convert_seconds_to_hms(strength.elapsed_time)
+
+local append = &quot;&quot;
+if strength.last_elapsed_time ~= 0 then
+	local percent = math.floor(strength.elapsed_time / strength.last_elapsed_time * 100)
+	local time_to_go = time.convert_seconds_to_hms(strength.last_elapsed_time - strength.elapsed_time)
+	append = &quot;&lt;grey&gt;/&lt;&quot; .. spell_timer.colour .. &quot;&gt;&quot; .. time_to_go .. &quot;&lt;grey&gt;/&lt;&quot; .. spell_timer.colour .. &quot;&gt;&quot; .. percent .. &quot;%&lt;grey&gt;&quot;
+end
+
+selectString(matches[1], 1)
+replace(&quot;&quot;)
+cinsertText(matches[1] .. &quot; (&lt;&quot; .. spell_timer.colour .. &quot;&gt;&quot; .. time_str .. append .. &quot;&lt;grey&gt;)&quot;)
+</script>
+                    <triggerType>0</triggerType>
+                    <conditonLineDelta>0</conditonLineDelta>
+                    <mStayOpen>0</mStayOpen>
+                    <mCommand></mCommand>
+                    <packageName></packageName>
+                    <mFgColor>#ff0000</mFgColor>
+                    <mBgColor>#ffff00</mBgColor>
+                    <mSoundFile></mSoundFile>
+                    <colorTriggerFgColor>#000000</colorTriggerFgColor>
+                    <colorTriggerBgColor>#000000</colorTriggerBgColor>
+                    <regexCodeList>
+                        <string>^- strength$</string>
+                    </regexCodeList>
+                    <regexCodePropertyList>
+                        <integer>1</integer>
+                    </regexCodePropertyList>
+                </Trigger>
+                <Trigger isActive="yes" isFolder="no" isTempTrigger="no" isMultiline="no" isPerlSlashGOption="no" isColorizerTrigger="no" isFilterTrigger="no" isSoundTrigger="no" isColorTrigger="no" isColorTriggerFg="no" isColorTriggerBg="no">
+                    <name>haggardness : You feel a sudden flash of dizziness causing you to pause before getting your directional bearings back.</name>
+                    <script>local haggardness = spell_timer.get_timer(&quot;haggardness&quot;)
+
+haggardness.last_elapsed_time = haggardness.elapsed_time
+haggardness.start_time = time.get_time()
+</script>
+                    <triggerType>0</triggerType>
+                    <conditonLineDelta>0</conditonLineDelta>
+                    <mStayOpen>0</mStayOpen>
+                    <mCommand></mCommand>
+                    <packageName></packageName>
+                    <mFgColor>#ff0000</mFgColor>
+                    <mBgColor>#ffff00</mBgColor>
+                    <mSoundFile></mSoundFile>
+                    <colorTriggerFgColor>#000000</colorTriggerFgColor>
+                    <colorTriggerBgColor>#000000</colorTriggerBgColor>
+                    <regexCodeList>
+                        <string>^You feel a sudden flash of dizziness causing you to pause before getting your directional bearings back.$</string>
+                    </regexCodeList>
+                    <regexCodePropertyList>
+                        <integer>1</integer>
+                    </regexCodePropertyList>
+                </Trigger>
+                <Trigger isActive="yes" isFolder="no" isTempTrigger="no" isMultiline="no" isPerlSlashGOption="no" isColorizerTrigger="no" isFilterTrigger="no" isSoundTrigger="no" isColorTrigger="no" isColorTriggerFg="no" isColorTriggerBg="no">
+                    <name>haggardness : You feel steadier now.</name>
+                    <script>local haggardness = spell_timer.get_timer(&quot;haggardness&quot;)
+
+haggardness.stop_time = time.get_time()
+haggardness.elapsed_time = haggardness.stop_time - haggardness.start_time
+
+local time = time.convert_seconds_to_hms(haggardness.elapsed_time)
+echo(&quot;\nThe spell lasted &quot; .. time .. &quot;.\n&quot;)
+</script>
+                    <triggerType>0</triggerType>
+                    <conditonLineDelta>0</conditonLineDelta>
+                    <mStayOpen>0</mStayOpen>
+                    <mCommand></mCommand>
+                    <packageName></packageName>
+                    <mFgColor>#ff0000</mFgColor>
+                    <mBgColor>#ffff00</mBgColor>
+                    <mSoundFile></mSoundFile>
+                    <colorTriggerFgColor>#000000</colorTriggerFgColor>
+                    <colorTriggerBgColor>#000000</colorTriggerBgColor>
+                    <regexCodeList>
+                        <string>^You feel steadier now.$</string>
+                    </regexCodeList>
+                    <regexCodePropertyList>
+                        <integer>1</integer>
+                    </regexCodePropertyList>
+                </Trigger>
+                <Trigger isActive="yes" isFolder="no" isTempTrigger="no" isMultiline="no" isPerlSlashGOption="no" isColorizerTrigger="no" isFilterTrigger="no" isSoundTrigger="no" isColorTrigger="no" isColorTriggerFg="no" isColorTriggerBg="no">
+                    <name>haggardness : - haggardness</name>
+                    <script>local haggardness = spell_timer.get_timer(&quot;haggardness&quot;)
+
+haggardness.elapsed_time = time.get_time() - haggardness.start_time
+
+local time_str = time.convert_seconds_to_hms(haggardness.elapsed_time)
+
+local append = &quot;&quot;
+if haggardness.last_elapsed_time ~= 0 then
+	local percent = math.floor(haggardness.elapsed_time / haggardness.last_elapsed_time * 100)
+	local time_to_go = time.convert_seconds_to_hms(haggardness.last_elapsed_time - haggardness.elapsed_time)
+	append = &quot;&lt;grey&gt;/&lt;&quot; .. spell_timer.colour .. &quot;&gt;&quot; .. time_to_go .. &quot;&lt;grey&gt;/&lt;&quot; .. spell_timer.colour .. &quot;&gt;&quot; .. percent .. &quot;%&lt;grey&gt;&quot;
+end
+
+selectString(matches[1], 1)
+replace(&quot;&quot;)
+cinsertText(matches[1] .. &quot; (&lt;&quot; .. spell_timer.colour .. &quot;&gt;&quot; .. time_str .. append .. &quot;&lt;grey&gt;)&quot;)
+</script>
+                    <triggerType>0</triggerType>
+                    <conditonLineDelta>0</conditonLineDelta>
+                    <mStayOpen>0</mStayOpen>
+                    <mCommand></mCommand>
+                    <packageName></packageName>
+                    <mFgColor>#ff0000</mFgColor>
+                    <mBgColor>#ffff00</mBgColor>
+                    <mSoundFile></mSoundFile>
+                    <colorTriggerFgColor>#000000</colorTriggerFgColor>
+                    <colorTriggerBgColor>#000000</colorTriggerBgColor>
+                    <regexCodeList>
+                        <string>^- haggardness$</string>
+                    </regexCodeList>
+                    <regexCodePropertyList>
+                        <integer>1</integer>
+                    </regexCodePropertyList>
+                </Trigger>
+                <Trigger isActive="yes" isFolder="no" isTempTrigger="no" isMultiline="no" isPerlSlashGOption="no" isColorizerTrigger="no" isFilterTrigger="no" isSoundTrigger="no" isColorTrigger="no" isColorTriggerFg="no" isColorTriggerBg="no">
+                    <name>sanctuary : You start glowing.</name>
+                    <script>local sanctuary = spell_timer.get_timer(&quot;sanctuary&quot;)
+
+sanctuary.last_elapsed_time = sanctuary.elapsed_time
+sanctuary.start_time = time.get_time()
+</script>
+                    <triggerType>0</triggerType>
+                    <conditonLineDelta>0</conditonLineDelta>
+                    <mStayOpen>0</mStayOpen>
+                    <mCommand></mCommand>
+                    <packageName></packageName>
+                    <mFgColor>#ff0000</mFgColor>
+                    <mBgColor>#ffff00</mBgColor>
+                    <mSoundFile></mSoundFile>
+                    <colorTriggerFgColor>#000000</colorTriggerFgColor>
+                    <colorTriggerBgColor>#000000</colorTriggerBgColor>
+                    <regexCodeList>
+                        <string>^You start glowing.$</string>
+                    </regexCodeList>
+                    <regexCodePropertyList>
+                        <integer>1</integer>
+                    </regexCodePropertyList>
+                </Trigger>
+                <Trigger isActive="yes" isFolder="no" isTempTrigger="no" isMultiline="no" isPerlSlashGOption="no" isColorizerTrigger="no" isFilterTrigger="no" isSoundTrigger="no" isColorTrigger="no" isColorTriggerFg="no" isColorTriggerBg="no">
+                    <name>sanctuary : Your aura glows more intensely.</name>
+                    <script>local sanctuary = spell_timer.get_timer(&quot;sanctuary&quot;)
+
+sanctuary.last_elapsed_time = sanctuary.elapsed_time
+sanctuary.start_time = time.get_time()
+</script>
+                    <triggerType>0</triggerType>
+                    <conditonLineDelta>0</conditonLineDelta>
+                    <mStayOpen>0</mStayOpen>
+                    <mCommand></mCommand>
+                    <packageName></packageName>
+                    <mFgColor>#ff0000</mFgColor>
+                    <mBgColor>#ffff00</mBgColor>
+                    <mSoundFile></mSoundFile>
+                    <colorTriggerFgColor>#000000</colorTriggerFgColor>
+                    <colorTriggerBgColor>#000000</colorTriggerBgColor>
+                    <regexCodeList>
+                        <string>^Your aura glows more intensely.$</string>
+                    </regexCodeList>
+                    <regexCodePropertyList>
+                        <integer>1</integer>
+                    </regexCodePropertyList>
+                </Trigger>
+                <Trigger isActive="yes" isFolder="no" isTempTrigger="no" isMultiline="no" isPerlSlashGOption="no" isColorizerTrigger="no" isFilterTrigger="no" isSoundTrigger="no" isColorTrigger="no" isColorTriggerFg="no" isColorTriggerBg="no">
+                    <name>sanctuary : The white aura around your body fades.</name>
+                    <script>local sanctuary = spell_timer.get_timer(&quot;sanctuary&quot;)
+
+sanctuary.stop_time = time.get_time()
+sanctuary.elapsed_time = sanctuary.stop_time - sanctuary.start_time
+
+local time = time.convert_seconds_to_hms(sanctuary.elapsed_time)
+echo(&quot;\nThe spell lasted &quot; .. time .. &quot;.\n&quot;)
+</script>
+                    <triggerType>0</triggerType>
+                    <conditonLineDelta>0</conditonLineDelta>
+                    <mStayOpen>0</mStayOpen>
+                    <mCommand></mCommand>
+                    <packageName></packageName>
+                    <mFgColor>#ff0000</mFgColor>
+                    <mBgColor>#ffff00</mBgColor>
+                    <mSoundFile></mSoundFile>
+                    <colorTriggerFgColor>#000000</colorTriggerFgColor>
+                    <colorTriggerBgColor>#000000</colorTriggerBgColor>
+                    <regexCodeList>
+                        <string>^The white aura around your body fades.$</string>
+                    </regexCodeList>
+                    <regexCodePropertyList>
+                        <integer>1</integer>
+                    </regexCodePropertyList>
+                </Trigger>
+                <Trigger isActive="yes" isFolder="no" isTempTrigger="no" isMultiline="no" isPerlSlashGOption="no" isColorizerTrigger="no" isFilterTrigger="no" isSoundTrigger="no" isColorTrigger="no" isColorTriggerFg="no" isColorTriggerBg="no">
+                    <name>sanctuary : - sanctuary</name>
+                    <script>local sanctuary = spell_timer.get_timer(&quot;sanctuary&quot;)
+
+sanctuary.elapsed_time = time.get_time() - sanctuary.start_time
+
+local time_str = time.convert_seconds_to_hms(sanctuary.elapsed_time)
+
+local append = &quot;&quot;
+if sanctuary.last_elapsed_time ~= 0 then
+	local percent = math.floor(sanctuary.elapsed_time / sanctuary.last_elapsed_time * 100)
+	local time_to_go = time.convert_seconds_to_hms(sanctuary.last_elapsed_time - sanctuary.elapsed_time)
+	append = &quot;&lt;grey&gt;/&lt;&quot; .. spell_timer.colour .. &quot;&gt;&quot; .. time_to_go .. &quot;&lt;grey&gt;/&lt;&quot; .. spell_timer.colour .. &quot;&gt;&quot; .. percent .. &quot;%&lt;grey&gt;&quot;
+end
+
+selectString(matches[1], 1)
+replace(&quot;&quot;)
+cinsertText(matches[1] .. &quot; (&lt;&quot; .. spell_timer.colour .. &quot;&gt;&quot; .. time_str .. append .. &quot;&lt;grey&gt;)&quot;)
+</script>
+                    <triggerType>0</triggerType>
+                    <conditonLineDelta>0</conditonLineDelta>
+                    <mStayOpen>0</mStayOpen>
+                    <mCommand></mCommand>
+                    <packageName></packageName>
+                    <mFgColor>#ff0000</mFgColor>
+                    <mBgColor>#ffff00</mBgColor>
+                    <mSoundFile></mSoundFile>
+                    <colorTriggerFgColor>#000000</colorTriggerFgColor>
+                    <colorTriggerBgColor>#000000</colorTriggerBgColor>
+                    <regexCodeList>
+                        <string>^- sanctuary$</string>
+                    </regexCodeList>
+                    <regexCodePropertyList>
+                        <integer>1</integer>
+                    </regexCodePropertyList>
+                </Trigger>
+                <Trigger isActive="yes" isFolder="no" isTempTrigger="no" isMultiline="no" isPerlSlashGOption="no" isColorizerTrigger="no" isFilterTrigger="no" isSoundTrigger="no" isColorTrigger="no" isColorTriggerFg="no" isColorTriggerBg="no">
+                    <name>blindness : You have been blinded!</name>
+                    <script>local blindness = spell_timer.get_timer(&quot;blindness&quot;)
+
+blindness.last_elapsed_time = blindness.elapsed_time
+blindness.start_time = time.get_time()
+</script>
+                    <triggerType>0</triggerType>
+                    <conditonLineDelta>0</conditonLineDelta>
+                    <mStayOpen>0</mStayOpen>
+                    <mCommand></mCommand>
+                    <packageName></packageName>
+                    <mFgColor>#ff0000</mFgColor>
+                    <mBgColor>#ffff00</mBgColor>
+                    <mSoundFile></mSoundFile>
+                    <colorTriggerFgColor>#000000</colorTriggerFgColor>
+                    <colorTriggerBgColor>#000000</colorTriggerBgColor>
+                    <regexCodeList>
+                        <string>^You have been blinded!$</string>
+                    </regexCodeList>
+                    <regexCodePropertyList>
+                        <integer>1</integer>
+                    </regexCodePropertyList>
+                </Trigger>
+                <Trigger isActive="yes" isFolder="no" isTempTrigger="no" isMultiline="no" isPerlSlashGOption="no" isColorizerTrigger="no" isFilterTrigger="no" isSoundTrigger="no" isColorTrigger="no" isColorTriggerFg="no" isColorTriggerBg="no">
+                    <name>blindness : You feel a cloak of blindness dissolve.</name>
+                    <script>local blindness = spell_timer.get_timer(&quot;blindness&quot;)
+
+blindness.stop_time = time.get_time()
+blindness.elapsed_time = blindness.stop_time - blindness.start_time
+
+local time = time.convert_seconds_to_hms(blindness.elapsed_time)
+echo(&quot;\nThe spell lasted &quot; .. time .. &quot;.\n&quot;)
+</script>
+                    <triggerType>0</triggerType>
+                    <conditonLineDelta>0</conditonLineDelta>
+                    <mStayOpen>0</mStayOpen>
+                    <mCommand></mCommand>
+                    <packageName></packageName>
+                    <mFgColor>#ff0000</mFgColor>
+                    <mBgColor>#ffff00</mBgColor>
+                    <mSoundFile></mSoundFile>
+                    <colorTriggerFgColor>#000000</colorTriggerFgColor>
+                    <colorTriggerBgColor>#000000</colorTriggerBgColor>
+                    <regexCodeList>
+                        <string>^You feel a cloak of blindness dissolve.$</string>
+                    </regexCodeList>
+                    <regexCodePropertyList>
+                        <integer>1</integer>
+                    </regexCodePropertyList>
+                </Trigger>
+                <Trigger isActive="yes" isFolder="no" isTempTrigger="no" isMultiline="no" isPerlSlashGOption="no" isColorizerTrigger="no" isFilterTrigger="no" isSoundTrigger="no" isColorTrigger="no" isColorTriggerFg="no" isColorTriggerBg="no">
+                    <name>blindness : - blindness</name>
+                    <script>local blindness = spell_timer.get_timer(&quot;blindness&quot;)
+
+blindness.elapsed_time = time.get_time() - blindness.start_time
+
+local time_str = time.convert_seconds_to_hms(blindness.elapsed_time)
+
+local append = &quot;&quot;
+if blindness.last_elapsed_time ~= 0 then
+	local percent = math.floor(blindness.elapsed_time / blindness.last_elapsed_time * 100)
+	local time_to_go = time.convert_seconds_to_hms(blindness.last_elapsed_time - blindness.elapsed_time)
+	append = &quot;&lt;grey&gt;/&lt;&quot; .. spell_timer.colour .. &quot;&gt;&quot; .. time_to_go .. &quot;&lt;grey&gt;/&lt;&quot; .. spell_timer.colour .. &quot;&gt;&quot; .. percent .. &quot;%&lt;grey&gt;&quot;
+end
+
+selectString(matches[1], 1)
+replace(&quot;&quot;)
+cinsertText(matches[1] .. &quot; (&lt;&quot; .. spell_timer.colour .. &quot;&gt;&quot; .. time_str .. append .. &quot;&lt;grey&gt;)&quot;)
+</script>
+                    <triggerType>0</triggerType>
+                    <conditonLineDelta>0</conditonLineDelta>
+                    <mStayOpen>0</mStayOpen>
+                    <mCommand></mCommand>
+                    <packageName></packageName>
+                    <mFgColor>#ff0000</mFgColor>
+                    <mBgColor>#ffff00</mBgColor>
+                    <mSoundFile></mSoundFile>
+                    <colorTriggerFgColor>#000000</colorTriggerFgColor>
+                    <colorTriggerBgColor>#000000</colorTriggerBgColor>
+                    <regexCodeList>
+                        <string>^- blindness$</string>
+                    </regexCodeList>
+                    <regexCodePropertyList>
+                        <integer>1</integer>
+                    </regexCodePropertyList>
+                </Trigger>
+                <Trigger isActive="yes" isFolder="no" isTempTrigger="no" isMultiline="no" isPerlSlashGOption="no" isColorizerTrigger="no" isFilterTrigger="no" isSoundTrigger="no" isColorTrigger="no" isColorTriggerFg="no" isColorTriggerBg="no">
+                    <name>lethargy : You feel a sudden loss of energy as the power that once mingled with your own has now vanished.</name>
+                    <script>local lethargy = spell_timer.get_timer(&quot;lethargy&quot;)
+
+lethargy.last_elapsed_time = lethargy.elapsed_time
+lethargy.start_time = time.get_time()
+</script>
+                    <triggerType>0</triggerType>
+                    <conditonLineDelta>0</conditonLineDelta>
+                    <mStayOpen>0</mStayOpen>
+                    <mCommand></mCommand>
+                    <packageName></packageName>
+                    <mFgColor>#ff0000</mFgColor>
+                    <mBgColor>#ffff00</mBgColor>
+                    <mSoundFile></mSoundFile>
+                    <colorTriggerFgColor>#000000</colorTriggerFgColor>
+                    <colorTriggerBgColor>#000000</colorTriggerBgColor>
+                    <regexCodeList>
+                        <string>^You feel a sudden loss of energy as the power that once mingled with your own has now vanished.$</string>
+                    </regexCodeList>
+                    <regexCodePropertyList>
+                        <integer>1</integer>
+                    </regexCodePropertyList>
+                </Trigger>
+                <Trigger isActive="yes" isFolder="no" isTempTrigger="no" isMultiline="no" isPerlSlashGOption="no" isColorizerTrigger="no" isFilterTrigger="no" isSoundTrigger="no" isColorTrigger="no" isColorTriggerFg="no" isColorTriggerBg="no">
+                    <name>lethargy : You feel your magic energy coming back to you.</name>
+                    <script>local lethargy = spell_timer.get_timer(&quot;lethargy&quot;)
+
+lethargy.stop_time = time.get_time()
+lethargy.elapsed_time = lethargy.stop_time - lethargy.start_time
+
+local time = time.convert_seconds_to_hms(lethargy.elapsed_time)
+echo(&quot;\nThe spell lasted &quot; .. time .. &quot;.\n&quot;)
+</script>
+                    <triggerType>0</triggerType>
+                    <conditonLineDelta>0</conditonLineDelta>
+                    <mStayOpen>0</mStayOpen>
+                    <mCommand></mCommand>
+                    <packageName></packageName>
+                    <mFgColor>#ff0000</mFgColor>
+                    <mBgColor>#ffff00</mBgColor>
+                    <mSoundFile></mSoundFile>
+                    <colorTriggerFgColor>#000000</colorTriggerFgColor>
+                    <colorTriggerBgColor>#000000</colorTriggerBgColor>
+                    <regexCodeList>
+                        <string>^You feel your magic energy coming back to you.$</string>
+                    </regexCodeList>
+                    <regexCodePropertyList>
+                        <integer>1</integer>
+                    </regexCodePropertyList>
+                </Trigger>
+                <Trigger isActive="yes" isFolder="no" isTempTrigger="no" isMultiline="no" isPerlSlashGOption="no" isColorizerTrigger="no" isFilterTrigger="no" isSoundTrigger="no" isColorTrigger="no" isColorTriggerFg="no" isColorTriggerBg="no">
+                    <name>lethargy : - lethargy</name>
+                    <script>local lethargy = spell_timer.get_timer(&quot;lethargy&quot;)
+
+lethargy.elapsed_time = time.get_time() - lethargy.start_time
+
+local time_str = time.convert_seconds_to_hms(lethargy.elapsed_time)
+
+local append = &quot;&quot;
+if lethargy.last_elapsed_time ~= 0 then
+	local percent = math.floor(lethargy.elapsed_time / lethargy.last_elapsed_time * 100)
+	local time_to_go = time.convert_seconds_to_hms(lethargy.last_elapsed_time - lethargy.elapsed_time)
+	append = &quot;&lt;grey&gt;/&lt;&quot; .. spell_timer.colour .. &quot;&gt;&quot; .. time_to_go .. &quot;&lt;grey&gt;/&lt;&quot; .. spell_timer.colour .. &quot;&gt;&quot; .. percent .. &quot;%&lt;grey&gt;&quot;
+end
+
+selectString(matches[1], 1)
+replace(&quot;&quot;)
+cinsertText(matches[1] .. &quot; (&lt;&quot; .. spell_timer.colour .. &quot;&gt;&quot; .. time_str .. append .. &quot;&lt;grey&gt;)&quot;)
+</script>
+                    <triggerType>0</triggerType>
+                    <conditonLineDelta>0</conditonLineDelta>
+                    <mStayOpen>0</mStayOpen>
+                    <mCommand></mCommand>
+                    <packageName></packageName>
+                    <mFgColor>#ff0000</mFgColor>
+                    <mBgColor>#ffff00</mBgColor>
+                    <mSoundFile></mSoundFile>
+                    <colorTriggerFgColor>#000000</colorTriggerFgColor>
+                    <colorTriggerBgColor>#000000</colorTriggerBgColor>
+                    <regexCodeList>
+                        <string>^- lethargy$</string>
+                    </regexCodeList>
+                    <regexCodePropertyList>
+                        <integer>1</integer>
+                    </regexCodePropertyList>
+                </Trigger>
+                <Trigger isActive="yes" isFolder="no" isTempTrigger="no" isMultiline="no" isPerlSlashGOption="no" isColorizerTrigger="no" isFilterTrigger="no" isSoundTrigger="no" isColorTrigger="no" isColorTriggerFg="no" isColorTriggerBg="no">
+                    <name>sense life : You feel your awareness improve.</name>
+                    <script>local sense_life = spell_timer.get_timer(&quot;sense_life&quot;)
+
+sense_life.last_elapsed_time = sense_life.elapsed_time
+sense_life.start_time = time.get_time()
+</script>
+                    <triggerType>0</triggerType>
+                    <conditonLineDelta>0</conditonLineDelta>
+                    <mStayOpen>0</mStayOpen>
+                    <mCommand></mCommand>
+                    <packageName></packageName>
+                    <mFgColor>#ff0000</mFgColor>
+                    <mBgColor>#ffff00</mBgColor>
+                    <mSoundFile></mSoundFile>
+                    <colorTriggerFgColor>#000000</colorTriggerFgColor>
+                    <colorTriggerBgColor>#000000</colorTriggerBgColor>
+                    <regexCodeList>
+                        <string>^You feel your awareness improve.$</string>
+                    </regexCodeList>
+                    <regexCodePropertyList>
+                        <integer>1</integer>
+                    </regexCodePropertyList>
+                </Trigger>
+                <Trigger isActive="yes" isFolder="no" isTempTrigger="no" isMultiline="no" isPerlSlashGOption="no" isColorizerTrigger="no" isFilterTrigger="no" isSoundTrigger="no" isColorTrigger="no" isColorTriggerFg="no" isColorTriggerBg="no">
+                    <name>sense life : Your awareness is refreshed.</name>
+                    <script>local sense_life = spell_timer.get_timer(&quot;sense_life&quot;)
+
+sense_life.last_elapsed_time = sense_life.elapsed_time
+sense_life.start_time = time.get_time()
+</script>
+                    <triggerType>0</triggerType>
+                    <conditonLineDelta>0</conditonLineDelta>
+                    <mStayOpen>0</mStayOpen>
+                    <mCommand></mCommand>
+                    <packageName></packageName>
+                    <mFgColor>#ff0000</mFgColor>
+                    <mBgColor>#ffff00</mBgColor>
+                    <mSoundFile></mSoundFile>
+                    <colorTriggerFgColor>#000000</colorTriggerFgColor>
+                    <colorTriggerBgColor>#000000</colorTriggerBgColor>
+                    <regexCodeList>
+                        <string>^Your awareness is refreshed.$</string>
+                    </regexCodeList>
+                    <regexCodePropertyList>
+                        <integer>1</integer>
+                    </regexCodePropertyList>
+                </Trigger>
+                <Trigger isActive="yes" isFolder="no" isTempTrigger="no" isMultiline="no" isPerlSlashGOption="no" isColorizerTrigger="no" isFilterTrigger="no" isSoundTrigger="no" isColorTrigger="no" isColorTriggerFg="no" isColorTriggerBg="no">
+                    <name>sense life : You feel less aware of your surroundings.</name>
+                    <script>local sense_life = spell_timer.get_timer(&quot;sense_life&quot;)
+
+sense_life.stop_time = time.get_time()
+sense_life.elapsed_time = sense_life.stop_time - sense_life.start_time
+
+local time = time.convert_seconds_to_hms(sense_life.elapsed_time)
+echo(&quot;\nThe spell lasted &quot; .. time .. &quot;.\n&quot;)
+</script>
+                    <triggerType>0</triggerType>
+                    <conditonLineDelta>0</conditonLineDelta>
+                    <mStayOpen>0</mStayOpen>
+                    <mCommand></mCommand>
+                    <packageName></packageName>
+                    <mFgColor>#ff0000</mFgColor>
+                    <mBgColor>#ffff00</mBgColor>
+                    <mSoundFile></mSoundFile>
+                    <colorTriggerFgColor>#000000</colorTriggerFgColor>
+                    <colorTriggerBgColor>#000000</colorTriggerBgColor>
+                    <regexCodeList>
+                        <string>^You feel less aware of your surroundings.$</string>
+                    </regexCodeList>
+                    <regexCodePropertyList>
+                        <integer>1</integer>
+                    </regexCodePropertyList>
+                </Trigger>
+                <Trigger isActive="yes" isFolder="no" isTempTrigger="no" isMultiline="no" isPerlSlashGOption="no" isColorizerTrigger="no" isFilterTrigger="no" isSoundTrigger="no" isColorTrigger="no" isColorTriggerFg="no" isColorTriggerBg="no">
+                    <name>sense life : - sense life</name>
+                    <script>local sense_life = spell_timer.get_timer(&quot;sense_life&quot;)
+
+sense_life.elapsed_time = time.get_time() - sense_life.start_time
+
+local time_str = time.convert_seconds_to_hms(sense_life.elapsed_time)
+
+local append = &quot;&quot;
+if sense_life.last_elapsed_time ~= 0 then
+	local percent = math.floor(sense_life.elapsed_time / sense_life.last_elapsed_time * 100)
+	local time_to_go = time.convert_seconds_to_hms(sense_life.last_elapsed_time - sense_life.elapsed_time)
+	append = &quot;&lt;grey&gt;/&lt;&quot; .. spell_timer.colour .. &quot;&gt;&quot; .. time_to_go .. &quot;&lt;grey&gt;/&lt;&quot; .. spell_timer.colour .. &quot;&gt;&quot; .. percent .. &quot;%&lt;grey&gt;&quot;
+end
+
+selectString(matches[1], 1)
+replace(&quot;&quot;)
+cinsertText(matches[1] .. &quot; (&lt;&quot; .. spell_timer.colour .. &quot;&gt;&quot; .. time_str .. append .. &quot;&lt;grey&gt;)&quot;)
+</script>
+                    <triggerType>0</triggerType>
+                    <conditonLineDelta>0</conditonLineDelta>
+                    <mStayOpen>0</mStayOpen>
+                    <mCommand></mCommand>
+                    <packageName></packageName>
+                    <mFgColor>#ff0000</mFgColor>
+                    <mBgColor>#ffff00</mBgColor>
+                    <mSoundFile></mSoundFile>
+                    <colorTriggerFgColor>#000000</colorTriggerFgColor>
+                    <colorTriggerBgColor>#000000</colorTriggerBgColor>
+                    <regexCodeList>
+                        <string>^- sense life$</string>
+                    </regexCodeList>
+                    <regexCodePropertyList>
+                        <integer>1</integer>
+                    </regexCodePropertyList>
+                </Trigger>
+                <Trigger isActive="yes" isFolder="no" isTempTrigger="no" isMultiline="no" isPerlSlashGOption="no" isColorizerTrigger="no" isFilterTrigger="no" isSoundTrigger="no" isColorTrigger="no" isColorTriggerFg="no" isColorTriggerBg="no">
+                    <name>tiredness : You feel your muscles relax and your pulse slow as the strength that welled within you subsides.</name>
+                    <script>local tiredness = spell_timer.get_timer(&quot;tiredness&quot;)
+
+tiredness.last_elapsed_time = tiredness.elapsed_time
+tiredness.start_time = time.get_time()
+</script>
+                    <triggerType>0</triggerType>
+                    <conditonLineDelta>0</conditonLineDelta>
+                    <mStayOpen>0</mStayOpen>
+                    <mCommand></mCommand>
+                    <packageName></packageName>
+                    <mFgColor>#ff0000</mFgColor>
+                    <mBgColor>#ffff00</mBgColor>
+                    <mSoundFile></mSoundFile>
+                    <colorTriggerFgColor>#000000</colorTriggerFgColor>
+                    <colorTriggerBgColor>#000000</colorTriggerBgColor>
+                    <regexCodeList>
+                        <string>^You feel your muscles relax and your pulse slow as the strength that welled within you subsides.$</string>
+                    </regexCodeList>
+                    <regexCodePropertyList>
+                        <integer>1</integer>
+                    </regexCodePropertyList>
+                </Trigger>
+                <Trigger isActive="yes" isFolder="no" isTempTrigger="no" isMultiline="no" isPerlSlashGOption="no" isColorizerTrigger="no" isFilterTrigger="no" isSoundTrigger="no" isColorTrigger="no" isColorTriggerFg="no" isColorTriggerBg="no">
+                    <name>tiredness : You feel your muscles regain some of their former energy.</name>
+                    <script>local tiredness = spell_timer.get_timer(&quot;tiredness&quot;)
+
+tiredness.stop_time = time.get_time()
+tiredness.elapsed_time = tiredness.stop_time - tiredness.start_time
+
+local time = time.convert_seconds_to_hms(tiredness.elapsed_time)
+echo(&quot;\nThe spell lasted &quot; .. time .. &quot;.\n&quot;)
+</script>
+                    <triggerType>0</triggerType>
+                    <conditonLineDelta>0</conditonLineDelta>
+                    <mStayOpen>0</mStayOpen>
+                    <mCommand></mCommand>
+                    <packageName></packageName>
+                    <mFgColor>#ff0000</mFgColor>
+                    <mBgColor>#ffff00</mBgColor>
+                    <mSoundFile></mSoundFile>
+                    <colorTriggerFgColor>#000000</colorTriggerFgColor>
+                    <colorTriggerBgColor>#000000</colorTriggerBgColor>
+                    <regexCodeList>
+                        <string>^You feel your muscles regain some of their former energy.$</string>
+                    </regexCodeList>
+                    <regexCodePropertyList>
+                        <integer>1</integer>
+                    </regexCodePropertyList>
+                </Trigger>
+                <Trigger isActive="yes" isFolder="no" isTempTrigger="no" isMultiline="no" isPerlSlashGOption="no" isColorizerTrigger="no" isFilterTrigger="no" isSoundTrigger="no" isColorTrigger="no" isColorTriggerFg="no" isColorTriggerBg="no">
+                    <name>tiredness : - tiredness</name>
+                    <script>local tiredness = spell_timer.get_timer(&quot;tiredness&quot;)
+
+tiredness.elapsed_time = time.get_time() - tiredness.start_time
+
+local time_str = time.convert_seconds_to_hms(tiredness.elapsed_time)
+
+local append = &quot;&quot;
+if tiredness.last_elapsed_time ~= 0 then
+	local percent = math.floor(tiredness.elapsed_time / tiredness.last_elapsed_time * 100)
+	local time_to_go = time.convert_seconds_to_hms(tiredness.last_elapsed_time - tiredness.elapsed_time)
+	append = &quot;&lt;grey&gt;/&lt;&quot; .. spell_timer.colour .. &quot;&gt;&quot; .. time_to_go .. &quot;&lt;grey&gt;/&lt;&quot; .. spell_timer.colour .. &quot;&gt;&quot; .. percent .. &quot;%&lt;grey&gt;&quot;
+end
+
+selectString(matches[1], 1)
+replace(&quot;&quot;)
+cinsertText(matches[1] .. &quot; (&lt;&quot; .. spell_timer.colour .. &quot;&gt;&quot; .. time_str .. append .. &quot;&lt;grey&gt;)&quot;)
+</script>
+                    <triggerType>0</triggerType>
+                    <conditonLineDelta>0</conditonLineDelta>
+                    <mStayOpen>0</mStayOpen>
+                    <mCommand></mCommand>
+                    <packageName></packageName>
+                    <mFgColor>#ff0000</mFgColor>
+                    <mBgColor>#ffff00</mBgColor>
+                    <mSoundFile></mSoundFile>
+                    <colorTriggerFgColor>#000000</colorTriggerFgColor>
+                    <colorTriggerBgColor>#000000</colorTriggerBgColor>
+                    <regexCodeList>
+                        <string>^- tiredness$</string>
+                    </regexCodeList>
+                    <regexCodePropertyList>
+                        <integer>1</integer>
+                    </regexCodePropertyList>
+                </Trigger>
+                <Trigger isActive="yes" isFolder="no" isTempTrigger="no" isMultiline="no" isPerlSlashGOption="no" isColorizerTrigger="no" isFilterTrigger="no" isSoundTrigger="no" isColorTrigger="no" isColorTriggerFg="no" isColorTriggerBg="no">
+                    <name>detect magic : You become sensitive of magical auras.</name>
+                    <script>local detect_magic = spell_timer.get_timer(&quot;detect_magic&quot;)
+
+detect_magic.last_elapsed_time = detect_magic.elapsed_time
+detect_magic.start_time = time.get_time()
+</script>
+                    <triggerType>0</triggerType>
+                    <conditonLineDelta>0</conditonLineDelta>
+                    <mStayOpen>0</mStayOpen>
+                    <mCommand></mCommand>
+                    <packageName></packageName>
+                    <mFgColor>#ff0000</mFgColor>
+                    <mBgColor>#ffff00</mBgColor>
+                    <mSoundFile></mSoundFile>
+                    <colorTriggerFgColor>#000000</colorTriggerFgColor>
+                    <colorTriggerBgColor>#000000</colorTriggerBgColor>
+                    <regexCodeList>
+                        <string>^You become sensitive of magical auras.$</string>
+                    </regexCodeList>
+                    <regexCodePropertyList>
+                        <integer>1</integer>
+                    </regexCodePropertyList>
+                </Trigger>
+                <Trigger isActive="yes" isFolder="no" isTempTrigger="no" isMultiline="no" isPerlSlashGOption="no" isColorizerTrigger="no" isFilterTrigger="no" isSoundTrigger="no" isColorTrigger="no" isColorTriggerFg="no" isColorTriggerBg="no">
+                    <name>detect magic : Your awareness of magical auras is renewed.</name>
+                    <script>local detect_magic = spell_timer.get_timer(&quot;detect_magic&quot;)
+
+detect_magic.last_elapsed_time = detect_magic.elapsed_time
+detect_magic.start_time = time.get_time()
+</script>
+                    <triggerType>0</triggerType>
+                    <conditonLineDelta>0</conditonLineDelta>
+                    <mStayOpen>0</mStayOpen>
+                    <mCommand></mCommand>
+                    <packageName></packageName>
+                    <mFgColor>#ff0000</mFgColor>
+                    <mBgColor>#ffff00</mBgColor>
+                    <mSoundFile></mSoundFile>
+                    <colorTriggerFgColor>#000000</colorTriggerFgColor>
+                    <colorTriggerBgColor>#000000</colorTriggerBgColor>
+                    <regexCodeList>
+                        <string>^Your awareness of magical auras is renewed.$</string>
+                    </regexCodeList>
+                    <regexCodePropertyList>
+                        <integer>1</integer>
+                    </regexCodePropertyList>
+                </Trigger>
+                <Trigger isActive="yes" isFolder="no" isTempTrigger="no" isMultiline="no" isPerlSlashGOption="no" isColorizerTrigger="no" isFilterTrigger="no" isSoundTrigger="no" isColorTrigger="no" isColorTriggerFg="no" isColorTriggerBg="no">
+                    <name>detect magic : Your perception of magical auras wears off.</name>
+                    <script>local detect_magic = spell_timer.get_timer(&quot;detect_magic&quot;)
+
+detect_magic.stop_time = time.get_time()
+detect_magic.elapsed_time = detect_magic.stop_time - detect_magic.start_time
+
+local time = time.convert_seconds_to_hms(detect_magic.elapsed_time)
+echo(&quot;\nThe spell lasted &quot; .. time .. &quot;.\n&quot;)
+</script>
+                    <triggerType>0</triggerType>
+                    <conditonLineDelta>0</conditonLineDelta>
+                    <mStayOpen>0</mStayOpen>
+                    <mCommand></mCommand>
+                    <packageName></packageName>
+                    <mFgColor>#ff0000</mFgColor>
+                    <mBgColor>#ffff00</mBgColor>
+                    <mSoundFile></mSoundFile>
+                    <colorTriggerFgColor>#000000</colorTriggerFgColor>
+                    <colorTriggerBgColor>#000000</colorTriggerBgColor>
+                    <regexCodeList>
+                        <string>^Your perception of magical auras wears off.$</string>
+                    </regexCodeList>
+                    <regexCodePropertyList>
+                        <integer>1</integer>
+                    </regexCodePropertyList>
+                </Trigger>
+                <Trigger isActive="yes" isFolder="no" isTempTrigger="no" isMultiline="no" isPerlSlashGOption="no" isColorizerTrigger="no" isFilterTrigger="no" isSoundTrigger="no" isColorTrigger="no" isColorTriggerFg="no" isColorTriggerBg="no">
+                    <name>detect magic : - detect magic</name>
+                    <script>local detect_magic = spell_timer.get_timer(&quot;detect_magic&quot;)
+
+detect_magic.elapsed_time = time.get_time() - detect_magic.start_time
+
+local time_str = time.convert_seconds_to_hms(detect_magic.elapsed_time)
+
+local append = &quot;&quot;
+if detect_magic.last_elapsed_time ~= 0 then
+	local percent = math.floor(detect_magic.elapsed_time / detect_magic.last_elapsed_time * 100)
+	local time_to_go = time.convert_seconds_to_hms(detect_magic.last_elapsed_time - detect_magic.elapsed_time)
+	append = &quot;&lt;grey&gt;/&lt;&quot; .. spell_timer.colour .. &quot;&gt;&quot; .. time_to_go .. &quot;&lt;grey&gt;/&lt;&quot; .. spell_timer.colour .. &quot;&gt;&quot; .. percent .. &quot;%&lt;grey&gt;&quot;
+end
+
+selectString(matches[1], 1)
+replace(&quot;&quot;)
+cinsertText(matches[1] .. &quot; (&lt;&quot; .. spell_timer.colour .. &quot;&gt;&quot; .. time_str .. append .. &quot;&lt;grey&gt;)&quot;)
+</script>
+                    <triggerType>0</triggerType>
+                    <conditonLineDelta>0</conditonLineDelta>
+                    <mStayOpen>0</mStayOpen>
+                    <mCommand></mCommand>
+                    <packageName></packageName>
+                    <mFgColor>#ff0000</mFgColor>
+                    <mBgColor>#ffff00</mBgColor>
+                    <mSoundFile></mSoundFile>
+                    <colorTriggerFgColor>#000000</colorTriggerFgColor>
+                    <colorTriggerBgColor>#000000</colorTriggerBgColor>
+                    <regexCodeList>
+                        <string>^- detect magic$</string>
+                    </regexCodeList>
+                    <regexCodePropertyList>
+                        <integer>1</integer>
+                    </regexCodePropertyList>
+                </Trigger>
+                <Trigger isActive="yes" isFolder="no" isTempTrigger="no" isMultiline="no" isPerlSlashGOption="no" isColorizerTrigger="no" isFilterTrigger="no" isSoundTrigger="no" isColorTrigger="no" isColorTriggerFg="no" isColorTriggerBg="no">
+                    <name>bless : You begin to feel the light of Aman shine upon you.</name>
+                    <script>local bless = spell_timer.get_timer(&quot;bless&quot;)
+
+bless.last_elapsed_time = bless.elapsed_time
+bless.start_time = time.get_time()
+</script>
+                    <triggerType>0</triggerType>
+                    <conditonLineDelta>0</conditonLineDelta>
+                    <mStayOpen>0</mStayOpen>
+                    <mCommand></mCommand>
+                    <packageName></packageName>
+                    <mFgColor>#ff0000</mFgColor>
+                    <mBgColor>#ffff00</mBgColor>
+                    <mSoundFile></mSoundFile>
+                    <colorTriggerFgColor>#000000</colorTriggerFgColor>
+                    <colorTriggerBgColor>#000000</colorTriggerBgColor>
+                    <regexCodeList>
+                        <string>^You begin to feel the light of Aman shine upon you.$</string>
+                    </regexCodeList>
+                    <regexCodePropertyList>
+                        <integer>1</integer>
+                    </regexCodePropertyList>
+                </Trigger>
+                <Trigger isActive="yes" isFolder="no" isTempTrigger="no" isMultiline="no" isPerlSlashGOption="no" isColorizerTrigger="no" isFilterTrigger="no" isSoundTrigger="no" isColorTrigger="no" isColorTriggerFg="no" isColorTriggerBg="no">
+                    <name>bless : You feel a renewed light shine upon you.</name>
+                    <script>local bless = spell_timer.get_timer(&quot;bless&quot;)
+
+bless.last_elapsed_time = bless.elapsed_time
+bless.start_time = time.get_time()
+</script>
+                    <triggerType>0</triggerType>
+                    <conditonLineDelta>0</conditonLineDelta>
+                    <mStayOpen>0</mStayOpen>
+                    <mCommand></mCommand>
+                    <packageName></packageName>
+                    <mFgColor>#ff0000</mFgColor>
+                    <mBgColor>#ffff00</mBgColor>
+                    <mSoundFile></mSoundFile>
+                    <colorTriggerFgColor>#000000</colorTriggerFgColor>
+                    <colorTriggerBgColor>#000000</colorTriggerBgColor>
+                    <regexCodeList>
+                        <string>^You feel a renewed light shine upon you.$</string>
+                    </regexCodeList>
+                    <regexCodePropertyList>
+                        <integer>1</integer>
+                    </regexCodePropertyList>
+                </Trigger>
+                <Trigger isActive="yes" isFolder="no" isTempTrigger="no" isMultiline="no" isPerlSlashGOption="no" isColorizerTrigger="no" isFilterTrigger="no" isSoundTrigger="no" isColorTrigger="no" isColorTriggerFg="no" isColorTriggerBg="no">
+                    <name>bless : The light of Aman fades away from you.</name>
+                    <script>local bless = spell_timer.get_timer(&quot;bless&quot;)
+
+bless.stop_time = time.get_time()
+bless.elapsed_time = bless.stop_time - bless.start_time
+
+local time = time.convert_seconds_to_hms(bless.elapsed_time)
+echo(&quot;\nThe spell lasted &quot; .. time .. &quot;.\n&quot;)
+</script>
+                    <triggerType>0</triggerType>
+                    <conditonLineDelta>0</conditonLineDelta>
+                    <mStayOpen>0</mStayOpen>
+                    <mCommand></mCommand>
+                    <packageName></packageName>
+                    <mFgColor>#ff0000</mFgColor>
+                    <mBgColor>#ffff00</mBgColor>
+                    <mSoundFile></mSoundFile>
+                    <colorTriggerFgColor>#000000</colorTriggerFgColor>
+                    <colorTriggerBgColor>#000000</colorTriggerBgColor>
+                    <regexCodeList>
+                        <string>^The light of Aman fades away from you.$</string>
+                    </regexCodeList>
+                    <regexCodePropertyList>
+                        <integer>1</integer>
+                    </regexCodePropertyList>
+                </Trigger>
+                <Trigger isActive="yes" isFolder="no" isTempTrigger="no" isMultiline="no" isPerlSlashGOption="no" isColorizerTrigger="no" isFilterTrigger="no" isSoundTrigger="no" isColorTrigger="no" isColorTriggerFg="no" isColorTriggerBg="no">
+                    <name>bless : - bless</name>
+                    <script>local bless = spell_timer.get_timer(&quot;bless&quot;)
+
+bless.elapsed_time = time.get_time() - bless.start_time
+
+local time_str = time.convert_seconds_to_hms(bless.elapsed_time)
+
+local append = &quot;&quot;
+if bless.last_elapsed_time ~= 0 then
+	local percent = math.floor(bless.elapsed_time / bless.last_elapsed_time * 100)
+	local time_to_go = time.convert_seconds_to_hms(bless.last_elapsed_time - bless.elapsed_time)
+	append = &quot;&lt;grey&gt;/&lt;&quot; .. spell_timer.colour .. &quot;&gt;&quot; .. time_to_go .. &quot;&lt;grey&gt;/&lt;&quot; .. spell_timer.colour .. &quot;&gt;&quot; .. percent .. &quot;%&lt;grey&gt;&quot;
+end
+
+selectString(matches[1], 1)
+replace(&quot;&quot;)
+cinsertText(matches[1] .. &quot; (&lt;&quot; .. spell_timer.colour .. &quot;&gt;&quot; .. time_str .. append .. &quot;&lt;grey&gt;)&quot;)
+</script>
+                    <triggerType>0</triggerType>
+                    <conditonLineDelta>0</conditonLineDelta>
+                    <mStayOpen>0</mStayOpen>
+                    <mCommand></mCommand>
+                    <packageName></packageName>
+                    <mFgColor>#ff0000</mFgColor>
+                    <mBgColor>#ffff00</mBgColor>
+                    <mSoundFile></mSoundFile>
+                    <colorTriggerFgColor>#000000</colorTriggerFgColor>
+                    <colorTriggerBgColor>#000000</colorTriggerBgColor>
+                    <regexCodeList>
+                        <string>^- bless$</string>
+                    </regexCodeList>
+                    <regexCodePropertyList>
+                        <integer>1</integer>
+                    </regexCodePropertyList>
+                </Trigger>
+                <Trigger isActive="yes" isFolder="no" isTempTrigger="no" isMultiline="no" isPerlSlashGOption="no" isColorizerTrigger="no" isFilterTrigger="no" isSoundTrigger="no" isColorTrigger="no" isColorTriggerFg="no" isColorTriggerBg="no">
+                    <name>protection from evil : You have a righteous feeling!</name>
+                    <script>local protection_from_evil = spell_timer.get_timer(&quot;protection_from_evil&quot;)
+
+protection_from_evil.last_elapsed_time = protection_from_evil.elapsed_time
+protection_from_evil.start_time = time.get_time()
+</script>
+                    <triggerType>0</triggerType>
+                    <conditonLineDelta>0</conditonLineDelta>
+                    <mStayOpen>0</mStayOpen>
+                    <mCommand></mCommand>
+                    <packageName></packageName>
+                    <mFgColor>#ff0000</mFgColor>
+                    <mBgColor>#ffff00</mBgColor>
+                    <mSoundFile></mSoundFile>
+                    <colorTriggerFgColor>#000000</colorTriggerFgColor>
+                    <colorTriggerBgColor>#000000</colorTriggerBgColor>
+                    <regexCodeList>
+                        <string>^You have a righteous feeling!$</string>
+                    </regexCodeList>
+                    <regexCodePropertyList>
+                        <integer>1</integer>
+                    </regexCodePropertyList>
+                </Trigger>
+                <Trigger isActive="yes" isFolder="no" isTempTrigger="no" isMultiline="no" isPerlSlashGOption="no" isColorizerTrigger="no" isFilterTrigger="no" isSoundTrigger="no" isColorTrigger="no" isColorTriggerFg="no" isColorTriggerBg="no">
+                    <name>protection from evil : You feel a renewed righteousness.</name>
+                    <script>local protection_from_evil = spell_timer.get_timer(&quot;protection_from_evil&quot;)
+
+protection_from_evil.last_elapsed_time = protection_from_evil.elapsed_time
+protection_from_evil.start_time = time.get_time()
+</script>
+                    <triggerType>0</triggerType>
+                    <conditonLineDelta>0</conditonLineDelta>
+                    <mStayOpen>0</mStayOpen>
+                    <mCommand></mCommand>
+                    <packageName></packageName>
+                    <mFgColor>#ff0000</mFgColor>
+                    <mBgColor>#ffff00</mBgColor>
+                    <mSoundFile></mSoundFile>
+                    <colorTriggerFgColor>#000000</colorTriggerFgColor>
+                    <colorTriggerBgColor>#000000</colorTriggerBgColor>
+                    <regexCodeList>
+                        <string>^You feel a renewed righteousness.$</string>
+                    </regexCodeList>
+                    <regexCodePropertyList>
+                        <integer>1</integer>
+                    </regexCodePropertyList>
+                </Trigger>
+                <Trigger isActive="yes" isFolder="no" isTempTrigger="no" isMultiline="no" isPerlSlashGOption="no" isColorizerTrigger="no" isFilterTrigger="no" isSoundTrigger="no" isColorTrigger="no" isColorTriggerFg="no" isColorTriggerBg="no">
+                    <name>protection from evil : You feel less righteous.</name>
+                    <script>local protection_from_evil = spell_timer.get_timer(&quot;protection_from_evil&quot;)
+
+protection_from_evil.stop_time = time.get_time()
+protection_from_evil.elapsed_time = protection_from_evil.stop_time - protection_from_evil.start_time
+
+local time = time.convert_seconds_to_hms(protection_from_evil.elapsed_time)
+echo(&quot;\nThe spell lasted &quot; .. time .. &quot;.\n&quot;)
+</script>
+                    <triggerType>0</triggerType>
+                    <conditonLineDelta>0</conditonLineDelta>
+                    <mStayOpen>0</mStayOpen>
+                    <mCommand></mCommand>
+                    <packageName></packageName>
+                    <mFgColor>#ff0000</mFgColor>
+                    <mBgColor>#ffff00</mBgColor>
+                    <mSoundFile></mSoundFile>
+                    <colorTriggerFgColor>#000000</colorTriggerFgColor>
+                    <colorTriggerBgColor>#000000</colorTriggerBgColor>
+                    <regexCodeList>
+                        <string>^You feel less righteous.$</string>
+                    </regexCodeList>
+                    <regexCodePropertyList>
+                        <integer>1</integer>
+                    </regexCodePropertyList>
+                </Trigger>
+                <Trigger isActive="yes" isFolder="no" isTempTrigger="no" isMultiline="no" isPerlSlashGOption="no" isColorizerTrigger="no" isFilterTrigger="no" isSoundTrigger="no" isColorTrigger="no" isColorTriggerFg="no" isColorTriggerBg="no">
+                    <name>protection from evil : - protection from evil</name>
+                    <script>local protection_from_evil = spell_timer.get_timer(&quot;protection_from_evil&quot;)
+
+protection_from_evil.elapsed_time = time.get_time() - protection_from_evil.start_time
+
+local time_str = time.convert_seconds_to_hms(protection_from_evil.elapsed_time)
+
+local append = &quot;&quot;
+if protection_from_evil.last_elapsed_time ~= 0 then
+	local percent = math.floor(protection_from_evil.elapsed_time / protection_from_evil.last_elapsed_time * 100)
+	local time_to_go = time.convert_seconds_to_hms(protection_from_evil.last_elapsed_time - protection_from_evil.elapsed_time)
+	append = &quot;&lt;grey&gt;/&lt;&quot; .. spell_timer.colour .. &quot;&gt;&quot; .. time_to_go .. &quot;&lt;grey&gt;/&lt;&quot; .. spell_timer.colour .. &quot;&gt;&quot; .. percent .. &quot;%&lt;grey&gt;&quot;
+end
+
+selectString(matches[1], 1)
+replace(&quot;&quot;)
+cinsertText(matches[1] .. &quot; (&lt;&quot; .. spell_timer.colour .. &quot;&gt;&quot; .. time_str .. append .. &quot;&lt;grey&gt;)&quot;)
+</script>
+                    <triggerType>0</triggerType>
+                    <conditonLineDelta>0</conditonLineDelta>
+                    <mStayOpen>0</mStayOpen>
+                    <mCommand></mCommand>
+                    <packageName></packageName>
+                    <mFgColor>#ff0000</mFgColor>
+                    <mBgColor>#ffff00</mBgColor>
+                    <mSoundFile></mSoundFile>
+                    <colorTriggerFgColor>#000000</colorTriggerFgColor>
+                    <colorTriggerBgColor>#000000</colorTriggerBgColor>
+                    <regexCodeList>
+                        <string>^- protection from evil$</string>
+                    </regexCodeList>
+                    <regexCodePropertyList>
+                        <integer>1</integer>
+                    </regexCodePropertyList>
+                </Trigger>
+            </TriggerGroup>
+        </TriggerGroup>
+    </TriggerPackage>
+    <TimerPackage/>
+    <AliasPackage>
+        <AliasGroup isActive="yes" isFolder="yes">
+            <name>MUME</name>
+            <script></script>
+            <command></command>
+            <packageName>current</packageName>
+            <regex></regex>
+            <AliasGroup isActive="yes" isFolder="yes">
+                <name>Spell Timer</name>
+                <script></script>
+                <command></command>
+                <packageName></packageName>
+                <regex></regex>
+                <Alias isActive="yes" isFolder="no">
+                    <name>spell timer help</name>
+                    <script>echo(spell_timer.help)</script>
+                    <command></command>
+                    <packageName></packageName>
+                    <regex>^ *spell *timer *help *$</regex>
+                </Alias>
+                <Alias isActive="yes" isFolder="no">
+                    <name>spell timer make triggers</name>
+                    <script>spell_timer.make_triggers()</script>
+                    <command></command>
+                    <packageName></packageName>
+                    <regex>^ *spell *timer *make *triggers *$</regex>
+                </Alias>
+            </AliasGroup>
+        </AliasGroup>
+    </AliasPackage>
+    <ActionPackage/>
+    <ScriptPackage>
+        <ScriptGroup isActive="yes" isFolder="yes">
+            <name>MUME</name>
+            <packageName>current</packageName>
+            <script></script>
+            <eventHandlerList/>
+            <ScriptGroup isActive="yes" isFolder="yes">
+                <name>Spell Timer</name>
+                <packageName></packageName>
+                <script>function initialize_spell_timer()
+	local spell_timer = {}
+	spell_timer.timers = {}
+	return spell_timer
+end
+
+spell_timer = spell_timer or initialize_spell_timer()
+
+spell_timer.group = &quot;Spell Timer&quot;
+
+spell_timer.colour = &quot;cyan&quot;</script>
+                <eventHandlerList/>
+                <Script isActive="yes" isFolder="no">
+                    <name>README</name>
+                    <packageName></packageName>
+                    <script>spell_timer.help = [[
+Spell Timer
+Author: Octavia
+Thanks: nstockton for most of the spell messages
+Version: 1.0
+Changelog:
+- 1.0, 2015-2-11
+  - Initial release.
+
+This package tracks the duration of various status effects from spells. When you use stat, the package will display for each spell effect, the time since the spell was cast or refreshed. If the spell ends, that time is remembered and stat will then show the time remaining and percent complete of the spell if it is cast again.
+
+The commands are as follows:
+- spell timer help : Show this message.
+- spell timer make triggers : Recreates the triggers under Spell Timer. This should not be necessary to use.
+
+Dependencies (included):
+- Time
+]]</script>
+                    <eventHandlerList/>
+                </Script>
+                <Script isActive="yes" isFolder="no">
+                    <name>spells</name>
+                    <packageName></packageName>
+                    <script>spell_timer.spells = {
+	[&quot;armour&quot;] = {
+		name = &quot;armour&quot;,
+		start = &quot;A blue transparent wall slowly appears around you.&quot;,
+		refresh = &quot;Your magic armour is revitalised.&quot;,
+		stop = &quot;You feel less protected.&quot;,
+	},
+	[&quot;bless&quot;] = {
+		name = &quot;bless&quot;,
+		start = &quot;You begin to feel the light of Aman shine upon you.&quot;,
+		refresh = &quot;You feel a renewed light shine upon you.&quot;,
+		stop = &quot;The light of Aman fades away from you.&quot;,
+	},
+	[&quot;shield&quot;] = {
+		name = &quot;shield&quot;,
+		start = &quot;You feel protected.&quot;,
+		refresh = &quot;Your protection is revitalized.&quot;,
+		stop = &quot;Your magical shield wears off.&quot;,
+	},
+	[&quot;strength&quot;] = {
+		name = &quot;strength&quot;,
+		start = &quot;You feel stronger.&quot;,
+		refresh = &quot;The duration of the strength spell has been improved.&quot;,
+		stop = &quot;You feel weaker.&quot;,
+	},
+	[&quot;shroud&quot;] = {
+		name = &quot;shroud&quot;,
+		start = &quot;You are surrounded by a misty shroud.&quot;,
+		refresh = &quot;Your misty shroud is renewed.&quot;,
+		stop = &quot;You feel yourself exposed.&quot;,
+	},
+	[&quot;sense life&quot;] = {
+		name = &quot;sense_life&quot;,
+		start = &quot;You feel your awareness improve.&quot;,
+		refresh = &quot;Your awareness is refreshed.&quot;,
+		stop = &quot;You feel less aware of your surroundings.&quot;,
+	},
+	[&quot;breath of briskness&quot;] = {
+		name = &quot;breath_of_briskness&quot;,
+		start = &quot;An energy begins to flow within your legs as your body becomes lighter.&quot;,
+		refresh = &quot;The energy in your legs is refreshed.&quot;,
+		stop = &quot;Your legs feel heavier.&quot;,
+	},
+	[&quot;sanctuary&quot;] = {
+		name = &quot;sanctuary&quot;,
+		start = &quot;You start glowing.&quot;,
+		refresh = &quot;Your aura glows more intensely.&quot;,
+		stop = &quot;The white aura around your body fades.&quot;,
+	},
+	[&quot;protection from evil&quot;] = {
+		name = &quot;protection_from_evil&quot;,
+		start = &quot;You have a righteous feeling!&quot;,
+		refresh = &quot;You feel a renewed righteousness.&quot;,
+		stop = &quot;You feel less righteous.&quot;,
+	},
+	[&quot;detect evil&quot;] = {
+		name = &quot;detect_evil&quot;,
+		start = &quot;You feel aware of all that is foul and evil.&quot;,
+		refresh = &quot;Your awareness of evil is refreshed.&quot;,
+		stop = &quot;You sense the red in your vision disappear.&quot;,
+	},
+	[&quot;detect magic&quot;] = {
+		name = &quot;detect_magic&quot;,
+		start = &quot;You become sensitive of magical auras.&quot;,
+		refresh = &quot;Your awareness of magical auras is renewed.&quot;,
+		stop = &quot;Your perception of magical auras wears off.&quot;,
+	},
+	[&quot;night vision&quot;] = {
+		name = &quot;night_vision&quot;,
+		start = &quot;Your eyes tingle.&quot;,
+		refresh = &quot;Your night vision is refreshed.&quot;,
+		stop = &quot;Your vision blurs.&quot;,
+	},
+	[&quot;tiredness&quot;] = {
+		name = &quot;tiredness&quot;,
+		start = &quot;You feel your muscles relax and your pulse slow as the strength that welled within you subsides.&quot;,
+		refresh = &quot;&quot;,
+		stop = &quot;You feel your muscles regain some of their former energy.&quot;,
+	},
+	[&quot;haggardness&quot;] = {
+		name = &quot;haggardness&quot;,
+		start = &quot;You feel a sudden flash of dizziness causing you to pause before getting your directional bearings back.&quot;,
+		refresh = &quot;&quot;,
+		stop = &quot;You feel steadier now.&quot;,
+	},
+	[&quot;lethargy&quot;] = {
+		name = &quot;lethargy&quot;,
+		start = &quot;You feel a sudden loss of energy as the power that once mingled with your own has now vanished.&quot;,
+		refresh = &quot;&quot;,
+		stop = &quot;You feel your magic energy coming back to you.&quot;,
+	},
+	[&quot;blindness&quot;] = {
+		name = &quot;blindness&quot;,
+		start = &quot;You have been blinded!&quot;,
+		refresh = &quot;&quot;,
+		stop = &quot;You feel a cloak of blindness dissolve.&quot;,
+	},
+	[&quot;battleglory&quot;] = {
+		name = &quot;battleglory&quot;,
+		start = &quot;Hearing the horn blow, you feel your urge to battle increase!&quot;,
+		refresh = &quot;&quot;,
+		stop = &quot;You feel your newfound strength leaving you again.&quot;,
+	},
+	[&quot;depression&quot;] = {
+		name = &quot;depression&quot;,
+		start = &quot;Alas, you realize that yet again the mighty knowledge of drowned Númenor has been lost... Despair settles on you.&quot;,
+		refresh = &quot;&quot;,
+		stop = &quot;Your heart feels lighter.&quot;,
+	},
+}</script>
+                    <eventHandlerList/>
+                </Script>
+                <Script isActive="yes" isFolder="no">
+                    <name>make_triggers</name>
+                    <packageName></packageName>
+                    <script>function spell_timer.make_triggers()
+	local code
+
+	-- For each spell
+	for name, spell in pairs(spell_timer.spells) do
+		-- Create the trigger to start timer
+		code = spell_timer.get_trigger_start_code(spell)
+		spell_timer.make_trigger(name, spell.start, code)
+
+		-- Create the trigger to refresh timer
+		if spell.refresh ~= &quot;&quot; then
+			code = spell_timer.get_trigger_start_code(spell)
+			spell_timer.make_trigger(name, spell.refresh, code)
+		end
+
+		-- Create the trigger to stop timer
+		code = spell_timer.get_trigger_stop_code(spell)
+		spell_timer.make_trigger(name, spell.stop, code)
+
+		-- Create the trigger to show timer (status)
+		code = spell_timer.get_trigger_show_code(spell)
+		local show = &quot;- &quot; .. name
+		spell_timer.make_trigger(name, show, code)
+	end
+end</script>
+                    <eventHandlerList/>
+                </Script>
+                <Script isActive="yes" isFolder="no">
+                    <name>make_trigger</name>
+                    <packageName></packageName>
+                    <script>function spell_timer.make_trigger(name, text, code)
+	local name = name .. &quot; : &quot; .. text
+	local parent = spell_timer.group
+	local regex = &quot;^&quot; .. text .. &quot;$&quot;
+
+	if exists(name, &quot;trigger&quot;) == 0 then
+		permRegexTrigger(name, parent, { regex }, code)
+	else
+		echo(&quot;Spell Timer: Error: Already exists: &quot; .. name .. &quot;.\n&quot;)
+	end
+end</script>
+                    <eventHandlerList/>
+                </Script>
+                <Script isActive="yes" isFolder="no">
+                    <name>get_trigger_start_code</name>
+                    <packageName></packageName>
+                    <script>function spell_timer.get_trigger_start_code(spell)
+	local code = [[
+local &lt;NAME&gt; = spell_timer.get_timer(&quot;&lt;NAME&gt;&quot;)
+
+&lt;NAME&gt;.last_elapsed_time = &lt;NAME&gt;.elapsed_time
+&lt;NAME&gt;.start_time = time.get_time()
+]]
+	code = string.gsub(code, &quot;&lt;NAME&gt;&quot;, spell.name)
+	return code
+end</script>
+                    <eventHandlerList/>
+                </Script>
+                <Script isActive="yes" isFolder="no">
+                    <name>get_trigger_stop_code</name>
+                    <packageName></packageName>
+                    <script>function spell_timer.get_trigger_stop_code(spell)
+	local code = [[
+local &lt;NAME&gt; = spell_timer.get_timer(&quot;&lt;NAME&gt;&quot;)
+
+&lt;NAME&gt;.stop_time = time.get_time()
+&lt;NAME&gt;.elapsed_time = &lt;NAME&gt;.stop_time - &lt;NAME&gt;.start_time
+
+local time = time.convert_seconds_to_hms(&lt;NAME&gt;.elapsed_time)
+echo(&quot;\nThe spell lasted &quot; .. time .. &quot;.\n&quot;)
+]]
+	code = string.gsub(code, &quot;&lt;NAME&gt;&quot;, spell.name)
+	return code
+end</script>
+                    <eventHandlerList/>
+                </Script>
+                <Script isActive="yes" isFolder="no">
+                    <name>get_trigger_show_code</name>
+                    <packageName></packageName>
+                    <script>function spell_timer.get_trigger_show_code(spell)
+	local code = [[
+local &lt;NAME&gt; = spell_timer.get_timer(&quot;&lt;NAME&gt;&quot;)
+
+&lt;NAME&gt;.elapsed_time = time.get_time() - &lt;NAME&gt;.start_time
+
+local time_str = time.convert_seconds_to_hms(&lt;NAME&gt;.elapsed_time)
+
+local append = &quot;&quot;
+if &lt;NAME&gt;.last_elapsed_time ~= 0 then
+	local percent = math.floor(&lt;NAME&gt;.elapsed_time / &lt;NAME&gt;.last_elapsed_time * 100)
+	local time_to_go = time.convert_seconds_to_hms(&lt;NAME&gt;.last_elapsed_time - &lt;NAME&gt;.elapsed_time)
+	append = &quot;&lt;grey&gt;/&lt;&quot; .. spell_timer.colour .. &quot;&gt;&quot; .. time_to_go .. &quot;&lt;grey&gt;/&lt;&quot; .. spell_timer.colour .. &quot;&gt;&quot; .. percent .. &quot;%&lt;grey&gt;&quot;
+end
+
+selectString(matches[1], 1)
+replace(&quot;&quot;)
+cinsertText(matches[1] .. &quot; (&lt;&quot; .. spell_timer.colour .. &quot;&gt;&quot; .. time_str .. append .. &quot;&lt;grey&gt;)&quot;)
+]]
+	code = string.gsub(code, &quot;&lt;NAME&gt;&quot;, spell.name)
+	return code
+end</script>
+                    <eventHandlerList/>
+                </Script>
+                <Script isActive="yes" isFolder="no">
+                    <name>get_timer</name>
+                    <packageName></packageName>
+                    <script>function spell_timer.get_timer(name)
+	if not spell_timer.timers[name] then
+		local timer = {}
+		timer.start_time = 0
+		timer.stop_time = 0
+		timer.elapsed_time = 0
+		timer.last_elapsed_time = 0
+
+		spell_timer.timers[name] = timer
+	end
+
+	return spell_timer.timers[name]
+end</script>
+                    <eventHandlerList/>
+                </Script>
+                <Script isActive="yes" isFolder="no">
+                    <name>truncate</name>
+                    <packageName></packageName>
+                    <script>function spell_timer.truncate(exact)
+	return tonumber(string.format(&quot;%.3f&quot;, exact))
+end</script>
+                    <eventHandlerList/>
+                </Script>
+            </ScriptGroup>
+            <ScriptGroup isActive="yes" isFolder="yes">
+                <name>Time</name>
+                <packageName></packageName>
+                <script>time = time or {}</script>
+                <eventHandlerList/>
+                <Script isActive="yes" isFolder="no">
+                    <name>get_time</name>
+                    <packageName></packageName>
+                    <script>function time.get_time()
+	local current_time_as_string = getTime(true)
+
+	return datetime:parse(current_time_as_string, &quot;%Y.%m.%d %H:%M:%S&quot;, true)
+end</script>
+                    <eventHandlerList/>
+                </Script>
+                <Script isActive="yes" isFolder="no">
+                    <name>convert_seconds_to_hms</name>
+                    <packageName></packageName>
+                    <script>function time.convert_seconds_to_hms(time_as_seconds)
+	-- Hours part
+	local hours = math.floor(time_as_seconds / 3600)
+
+	-- Minutes part
+	local time_wo_hours = time_as_seconds - hours * 3600
+	local minutes = math.floor(time_wo_hours / 60)
+
+	-- Seconds part
+	local seconds = time_wo_hours - minutes * 60
+
+	-- Buid result
+	local result = &quot;&quot;
+
+	if hours ~= 0 then
+		result = result .. hours .. &quot;h&quot;
+	end
+
+	if minutes ~= 0 then
+		result = result .. minutes .. &quot;m&quot;
+	end
+
+	if seconds ~= 0 then
+		result = result .. seconds .. &quot;s&quot;
+	end
+
+	if result == &quot;&quot; then
+		result = &quot;now&quot;
+	end
+
+	return result
+end</script>
+                    <eventHandlerList/>
+                </Script>
+            </ScriptGroup>
+        </ScriptGroup>
+    </ScriptPackage>
+    <KeyPackage/>
+</MudletPackage>
