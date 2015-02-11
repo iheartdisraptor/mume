@@ -36,7 +36,6 @@
                     <name>night vision : Your eyes tingle.</name>
                     <script>local night_vision = spell_timer.get_timer(&quot;night_vision&quot;)
 
-night_vision.last_elapsed_time = night_vision.elapsed_time
 night_vision.start_time = time.get_time()
 </script>
                     <triggerType>0</triggerType>
@@ -60,7 +59,6 @@ night_vision.start_time = time.get_time()
                     <name>night vision : Your night vision is refreshed.</name>
                     <script>local night_vision = spell_timer.get_timer(&quot;night_vision&quot;)
 
-night_vision.last_elapsed_time = night_vision.elapsed_time
 night_vision.start_time = time.get_time()
 </script>
                     <triggerType>0</triggerType>
@@ -85,6 +83,7 @@ night_vision.start_time = time.get_time()
                     <script>local night_vision = spell_timer.get_timer(&quot;night_vision&quot;)
 
 night_vision.stop_time = time.get_time()
+night_vision.last_elapsed_time = night_vision.elapsed_time
 night_vision.elapsed_time = night_vision.stop_time - night_vision.start_time
 
 local time = time.convert_seconds_to_hms(night_vision.elapsed_time)
@@ -110,6 +109,10 @@ echo(&quot;\nThe spell lasted &quot; .. time .. &quot;.\n&quot;)
                 <Trigger isActive="yes" isFolder="no" isTempTrigger="no" isMultiline="no" isPerlSlashGOption="no" isColorizerTrigger="no" isFilterTrigger="no" isSoundTrigger="no" isColorTrigger="no" isColorTriggerFg="no" isColorTriggerBg="no">
                     <name>night vision : - night vision</name>
                     <script>local night_vision = spell_timer.get_timer(&quot;night_vision&quot;)
+
+if night_vision.start_time == 0 then
+	night_vision.start_time = time.get_time()
+end
 
 night_vision.elapsed_time = time.get_time() - night_vision.start_time
 
@@ -147,7 +150,6 @@ cinsertText(matches[1] .. &quot; (&lt;&quot; .. spell_timer.colour .. &quot;&gt;
                     <name>shield : You feel protected.</name>
                     <script>local shield = spell_timer.get_timer(&quot;shield&quot;)
 
-shield.last_elapsed_time = shield.elapsed_time
 shield.start_time = time.get_time()
 </script>
                     <triggerType>0</triggerType>
@@ -171,7 +173,6 @@ shield.start_time = time.get_time()
                     <name>shield : Your protection is revitalized.</name>
                     <script>local shield = spell_timer.get_timer(&quot;shield&quot;)
 
-shield.last_elapsed_time = shield.elapsed_time
 shield.start_time = time.get_time()
 </script>
                     <triggerType>0</triggerType>
@@ -196,6 +197,7 @@ shield.start_time = time.get_time()
                     <script>local shield = spell_timer.get_timer(&quot;shield&quot;)
 
 shield.stop_time = time.get_time()
+shield.last_elapsed_time = shield.elapsed_time
 shield.elapsed_time = shield.stop_time - shield.start_time
 
 local time = time.convert_seconds_to_hms(shield.elapsed_time)
@@ -221,6 +223,10 @@ echo(&quot;\nThe spell lasted &quot; .. time .. &quot;.\n&quot;)
                 <Trigger isActive="yes" isFolder="no" isTempTrigger="no" isMultiline="no" isPerlSlashGOption="no" isColorizerTrigger="no" isFilterTrigger="no" isSoundTrigger="no" isColorTrigger="no" isColorTriggerFg="no" isColorTriggerBg="no">
                     <name>shield : - shield</name>
                     <script>local shield = spell_timer.get_timer(&quot;shield&quot;)
+
+if shield.start_time == 0 then
+	shield.start_time = time.get_time()
+end
 
 shield.elapsed_time = time.get_time() - shield.start_time
 
@@ -258,7 +264,6 @@ cinsertText(matches[1] .. &quot; (&lt;&quot; .. spell_timer.colour .. &quot;&gt;
                     <name>detect evil : You feel aware of all that is foul and evil.</name>
                     <script>local detect_evil = spell_timer.get_timer(&quot;detect_evil&quot;)
 
-detect_evil.last_elapsed_time = detect_evil.elapsed_time
 detect_evil.start_time = time.get_time()
 </script>
                     <triggerType>0</triggerType>
@@ -282,7 +287,6 @@ detect_evil.start_time = time.get_time()
                     <name>detect evil : Your awareness of evil is refreshed.</name>
                     <script>local detect_evil = spell_timer.get_timer(&quot;detect_evil&quot;)
 
-detect_evil.last_elapsed_time = detect_evil.elapsed_time
 detect_evil.start_time = time.get_time()
 </script>
                     <triggerType>0</triggerType>
@@ -307,6 +311,7 @@ detect_evil.start_time = time.get_time()
                     <script>local detect_evil = spell_timer.get_timer(&quot;detect_evil&quot;)
 
 detect_evil.stop_time = time.get_time()
+detect_evil.last_elapsed_time = detect_evil.elapsed_time
 detect_evil.elapsed_time = detect_evil.stop_time - detect_evil.start_time
 
 local time = time.convert_seconds_to_hms(detect_evil.elapsed_time)
@@ -332,6 +337,10 @@ echo(&quot;\nThe spell lasted &quot; .. time .. &quot;.\n&quot;)
                 <Trigger isActive="yes" isFolder="no" isTempTrigger="no" isMultiline="no" isPerlSlashGOption="no" isColorizerTrigger="no" isFilterTrigger="no" isSoundTrigger="no" isColorTrigger="no" isColorTriggerFg="no" isColorTriggerBg="no">
                     <name>detect evil : - detect evil</name>
                     <script>local detect_evil = spell_timer.get_timer(&quot;detect_evil&quot;)
+
+if detect_evil.start_time == 0 then
+	detect_evil.start_time = time.get_time()
+end
 
 detect_evil.elapsed_time = time.get_time() - detect_evil.start_time
 
@@ -369,7 +378,6 @@ cinsertText(matches[1] .. &quot; (&lt;&quot; .. spell_timer.colour .. &quot;&gt;
                     <name>battleglory : Hearing the horn blow, you feel your urge to battle increase!</name>
                     <script>local battleglory = spell_timer.get_timer(&quot;battleglory&quot;)
 
-battleglory.last_elapsed_time = battleglory.elapsed_time
 battleglory.start_time = time.get_time()
 </script>
                     <triggerType>0</triggerType>
@@ -394,6 +402,7 @@ battleglory.start_time = time.get_time()
                     <script>local battleglory = spell_timer.get_timer(&quot;battleglory&quot;)
 
 battleglory.stop_time = time.get_time()
+battleglory.last_elapsed_time = battleglory.elapsed_time
 battleglory.elapsed_time = battleglory.stop_time - battleglory.start_time
 
 local time = time.convert_seconds_to_hms(battleglory.elapsed_time)
@@ -419,6 +428,10 @@ echo(&quot;\nThe spell lasted &quot; .. time .. &quot;.\n&quot;)
                 <Trigger isActive="yes" isFolder="no" isTempTrigger="no" isMultiline="no" isPerlSlashGOption="no" isColorizerTrigger="no" isFilterTrigger="no" isSoundTrigger="no" isColorTrigger="no" isColorTriggerFg="no" isColorTriggerBg="no">
                     <name>battleglory : - battleglory</name>
                     <script>local battleglory = spell_timer.get_timer(&quot;battleglory&quot;)
+
+if battleglory.start_time == 0 then
+	battleglory.start_time = time.get_time()
+end
 
 battleglory.elapsed_time = time.get_time() - battleglory.start_time
 
@@ -456,7 +469,6 @@ cinsertText(matches[1] .. &quot; (&lt;&quot; .. spell_timer.colour .. &quot;&gt;
                     <name>shroud : You are surrounded by a misty shroud.</name>
                     <script>local shroud = spell_timer.get_timer(&quot;shroud&quot;)
 
-shroud.last_elapsed_time = shroud.elapsed_time
 shroud.start_time = time.get_time()
 </script>
                     <triggerType>0</triggerType>
@@ -480,7 +492,6 @@ shroud.start_time = time.get_time()
                     <name>shroud : Your misty shroud is renewed.</name>
                     <script>local shroud = spell_timer.get_timer(&quot;shroud&quot;)
 
-shroud.last_elapsed_time = shroud.elapsed_time
 shroud.start_time = time.get_time()
 </script>
                     <triggerType>0</triggerType>
@@ -505,6 +516,7 @@ shroud.start_time = time.get_time()
                     <script>local shroud = spell_timer.get_timer(&quot;shroud&quot;)
 
 shroud.stop_time = time.get_time()
+shroud.last_elapsed_time = shroud.elapsed_time
 shroud.elapsed_time = shroud.stop_time - shroud.start_time
 
 local time = time.convert_seconds_to_hms(shroud.elapsed_time)
@@ -530,6 +542,10 @@ echo(&quot;\nThe spell lasted &quot; .. time .. &quot;.\n&quot;)
                 <Trigger isActive="yes" isFolder="no" isTempTrigger="no" isMultiline="no" isPerlSlashGOption="no" isColorizerTrigger="no" isFilterTrigger="no" isSoundTrigger="no" isColorTrigger="no" isColorTriggerFg="no" isColorTriggerBg="no">
                     <name>shroud : - shroud</name>
                     <script>local shroud = spell_timer.get_timer(&quot;shroud&quot;)
+
+if shroud.start_time == 0 then
+	shroud.start_time = time.get_time()
+end
 
 shroud.elapsed_time = time.get_time() - shroud.start_time
 
@@ -567,7 +583,6 @@ cinsertText(matches[1] .. &quot; (&lt;&quot; .. spell_timer.colour .. &quot;&gt;
                     <name>breath of briskness : An energy begins to flow within your legs as your body becomes lighter.</name>
                     <script>local breath_of_briskness = spell_timer.get_timer(&quot;breath_of_briskness&quot;)
 
-breath_of_briskness.last_elapsed_time = breath_of_briskness.elapsed_time
 breath_of_briskness.start_time = time.get_time()
 </script>
                     <triggerType>0</triggerType>
@@ -591,7 +606,6 @@ breath_of_briskness.start_time = time.get_time()
                     <name>breath of briskness : The energy in your legs is refreshed.</name>
                     <script>local breath_of_briskness = spell_timer.get_timer(&quot;breath_of_briskness&quot;)
 
-breath_of_briskness.last_elapsed_time = breath_of_briskness.elapsed_time
 breath_of_briskness.start_time = time.get_time()
 </script>
                     <triggerType>0</triggerType>
@@ -616,6 +630,7 @@ breath_of_briskness.start_time = time.get_time()
                     <script>local breath_of_briskness = spell_timer.get_timer(&quot;breath_of_briskness&quot;)
 
 breath_of_briskness.stop_time = time.get_time()
+breath_of_briskness.last_elapsed_time = breath_of_briskness.elapsed_time
 breath_of_briskness.elapsed_time = breath_of_briskness.stop_time - breath_of_briskness.start_time
 
 local time = time.convert_seconds_to_hms(breath_of_briskness.elapsed_time)
@@ -641,6 +656,10 @@ echo(&quot;\nThe spell lasted &quot; .. time .. &quot;.\n&quot;)
                 <Trigger isActive="yes" isFolder="no" isTempTrigger="no" isMultiline="no" isPerlSlashGOption="no" isColorizerTrigger="no" isFilterTrigger="no" isSoundTrigger="no" isColorTrigger="no" isColorTriggerFg="no" isColorTriggerBg="no">
                     <name>breath of briskness : - breath of briskness</name>
                     <script>local breath_of_briskness = spell_timer.get_timer(&quot;breath_of_briskness&quot;)
+
+if breath_of_briskness.start_time == 0 then
+	breath_of_briskness.start_time = time.get_time()
+end
 
 breath_of_briskness.elapsed_time = time.get_time() - breath_of_briskness.start_time
 
@@ -678,7 +697,6 @@ cinsertText(matches[1] .. &quot; (&lt;&quot; .. spell_timer.colour .. &quot;&gt;
                     <name>depression : Alas, you realize that yet again the mighty knowledge of drowned N�menor has been lost... Despair settles on you.</name>
                     <script>local depression = spell_timer.get_timer(&quot;depression&quot;)
 
-depression.last_elapsed_time = depression.elapsed_time
 depression.start_time = time.get_time()
 </script>
                     <triggerType>0</triggerType>
@@ -703,6 +721,7 @@ depression.start_time = time.get_time()
                     <script>local depression = spell_timer.get_timer(&quot;depression&quot;)
 
 depression.stop_time = time.get_time()
+depression.last_elapsed_time = depression.elapsed_time
 depression.elapsed_time = depression.stop_time - depression.start_time
 
 local time = time.convert_seconds_to_hms(depression.elapsed_time)
@@ -728,6 +747,10 @@ echo(&quot;\nThe spell lasted &quot; .. time .. &quot;.\n&quot;)
                 <Trigger isActive="yes" isFolder="no" isTempTrigger="no" isMultiline="no" isPerlSlashGOption="no" isColorizerTrigger="no" isFilterTrigger="no" isSoundTrigger="no" isColorTrigger="no" isColorTriggerFg="no" isColorTriggerBg="no">
                     <name>depression : - depression</name>
                     <script>local depression = spell_timer.get_timer(&quot;depression&quot;)
+
+if depression.start_time == 0 then
+	depression.start_time = time.get_time()
+end
 
 depression.elapsed_time = time.get_time() - depression.start_time
 
@@ -765,7 +788,6 @@ cinsertText(matches[1] .. &quot; (&lt;&quot; .. spell_timer.colour .. &quot;&gt;
                     <name>armour : A blue transparent wall slowly appears around you.</name>
                     <script>local armour = spell_timer.get_timer(&quot;armour&quot;)
 
-armour.last_elapsed_time = armour.elapsed_time
 armour.start_time = time.get_time()
 </script>
                     <triggerType>0</triggerType>
@@ -789,7 +811,6 @@ armour.start_time = time.get_time()
                     <name>armour : Your magic armour is revitalised.</name>
                     <script>local armour = spell_timer.get_timer(&quot;armour&quot;)
 
-armour.last_elapsed_time = armour.elapsed_time
 armour.start_time = time.get_time()
 </script>
                     <triggerType>0</triggerType>
@@ -814,6 +835,7 @@ armour.start_time = time.get_time()
                     <script>local armour = spell_timer.get_timer(&quot;armour&quot;)
 
 armour.stop_time = time.get_time()
+armour.last_elapsed_time = armour.elapsed_time
 armour.elapsed_time = armour.stop_time - armour.start_time
 
 local time = time.convert_seconds_to_hms(armour.elapsed_time)
@@ -839,6 +861,10 @@ echo(&quot;\nThe spell lasted &quot; .. time .. &quot;.\n&quot;)
                 <Trigger isActive="yes" isFolder="no" isTempTrigger="no" isMultiline="no" isPerlSlashGOption="no" isColorizerTrigger="no" isFilterTrigger="no" isSoundTrigger="no" isColorTrigger="no" isColorTriggerFg="no" isColorTriggerBg="no">
                     <name>armour : - armour</name>
                     <script>local armour = spell_timer.get_timer(&quot;armour&quot;)
+
+if armour.start_time == 0 then
+	armour.start_time = time.get_time()
+end
 
 armour.elapsed_time = time.get_time() - armour.start_time
 
@@ -876,7 +902,6 @@ cinsertText(matches[1] .. &quot; (&lt;&quot; .. spell_timer.colour .. &quot;&gt;
                     <name>strength : You feel stronger.</name>
                     <script>local strength = spell_timer.get_timer(&quot;strength&quot;)
 
-strength.last_elapsed_time = strength.elapsed_time
 strength.start_time = time.get_time()
 </script>
                     <triggerType>0</triggerType>
@@ -900,7 +925,6 @@ strength.start_time = time.get_time()
                     <name>strength : The duration of the strength spell has been improved.</name>
                     <script>local strength = spell_timer.get_timer(&quot;strength&quot;)
 
-strength.last_elapsed_time = strength.elapsed_time
 strength.start_time = time.get_time()
 </script>
                     <triggerType>0</triggerType>
@@ -925,6 +949,7 @@ strength.start_time = time.get_time()
                     <script>local strength = spell_timer.get_timer(&quot;strength&quot;)
 
 strength.stop_time = time.get_time()
+strength.last_elapsed_time = strength.elapsed_time
 strength.elapsed_time = strength.stop_time - strength.start_time
 
 local time = time.convert_seconds_to_hms(strength.elapsed_time)
@@ -950,6 +975,10 @@ echo(&quot;\nThe spell lasted &quot; .. time .. &quot;.\n&quot;)
                 <Trigger isActive="yes" isFolder="no" isTempTrigger="no" isMultiline="no" isPerlSlashGOption="no" isColorizerTrigger="no" isFilterTrigger="no" isSoundTrigger="no" isColorTrigger="no" isColorTriggerFg="no" isColorTriggerBg="no">
                     <name>strength : - strength</name>
                     <script>local strength = spell_timer.get_timer(&quot;strength&quot;)
+
+if strength.start_time == 0 then
+	strength.start_time = time.get_time()
+end
 
 strength.elapsed_time = time.get_time() - strength.start_time
 
@@ -987,7 +1016,6 @@ cinsertText(matches[1] .. &quot; (&lt;&quot; .. spell_timer.colour .. &quot;&gt;
                     <name>haggardness : You feel a sudden flash of dizziness causing you to pause before getting your directional bearings back.</name>
                     <script>local haggardness = spell_timer.get_timer(&quot;haggardness&quot;)
 
-haggardness.last_elapsed_time = haggardness.elapsed_time
 haggardness.start_time = time.get_time()
 </script>
                     <triggerType>0</triggerType>
@@ -1012,6 +1040,7 @@ haggardness.start_time = time.get_time()
                     <script>local haggardness = spell_timer.get_timer(&quot;haggardness&quot;)
 
 haggardness.stop_time = time.get_time()
+haggardness.last_elapsed_time = haggardness.elapsed_time
 haggardness.elapsed_time = haggardness.stop_time - haggardness.start_time
 
 local time = time.convert_seconds_to_hms(haggardness.elapsed_time)
@@ -1037,6 +1066,10 @@ echo(&quot;\nThe spell lasted &quot; .. time .. &quot;.\n&quot;)
                 <Trigger isActive="yes" isFolder="no" isTempTrigger="no" isMultiline="no" isPerlSlashGOption="no" isColorizerTrigger="no" isFilterTrigger="no" isSoundTrigger="no" isColorTrigger="no" isColorTriggerFg="no" isColorTriggerBg="no">
                     <name>haggardness : - haggardness</name>
                     <script>local haggardness = spell_timer.get_timer(&quot;haggardness&quot;)
+
+if haggardness.start_time == 0 then
+	haggardness.start_time = time.get_time()
+end
 
 haggardness.elapsed_time = time.get_time() - haggardness.start_time
 
@@ -1074,7 +1107,6 @@ cinsertText(matches[1] .. &quot; (&lt;&quot; .. spell_timer.colour .. &quot;&gt;
                     <name>sanctuary : You start glowing.</name>
                     <script>local sanctuary = spell_timer.get_timer(&quot;sanctuary&quot;)
 
-sanctuary.last_elapsed_time = sanctuary.elapsed_time
 sanctuary.start_time = time.get_time()
 </script>
                     <triggerType>0</triggerType>
@@ -1098,7 +1130,6 @@ sanctuary.start_time = time.get_time()
                     <name>sanctuary : Your aura glows more intensely.</name>
                     <script>local sanctuary = spell_timer.get_timer(&quot;sanctuary&quot;)
 
-sanctuary.last_elapsed_time = sanctuary.elapsed_time
 sanctuary.start_time = time.get_time()
 </script>
                     <triggerType>0</triggerType>
@@ -1123,6 +1154,7 @@ sanctuary.start_time = time.get_time()
                     <script>local sanctuary = spell_timer.get_timer(&quot;sanctuary&quot;)
 
 sanctuary.stop_time = time.get_time()
+sanctuary.last_elapsed_time = sanctuary.elapsed_time
 sanctuary.elapsed_time = sanctuary.stop_time - sanctuary.start_time
 
 local time = time.convert_seconds_to_hms(sanctuary.elapsed_time)
@@ -1148,6 +1180,10 @@ echo(&quot;\nThe spell lasted &quot; .. time .. &quot;.\n&quot;)
                 <Trigger isActive="yes" isFolder="no" isTempTrigger="no" isMultiline="no" isPerlSlashGOption="no" isColorizerTrigger="no" isFilterTrigger="no" isSoundTrigger="no" isColorTrigger="no" isColorTriggerFg="no" isColorTriggerBg="no">
                     <name>sanctuary : - sanctuary</name>
                     <script>local sanctuary = spell_timer.get_timer(&quot;sanctuary&quot;)
+
+if sanctuary.start_time == 0 then
+	sanctuary.start_time = time.get_time()
+end
 
 sanctuary.elapsed_time = time.get_time() - sanctuary.start_time
 
@@ -1185,7 +1221,6 @@ cinsertText(matches[1] .. &quot; (&lt;&quot; .. spell_timer.colour .. &quot;&gt;
                     <name>blindness : You have been blinded!</name>
                     <script>local blindness = spell_timer.get_timer(&quot;blindness&quot;)
 
-blindness.last_elapsed_time = blindness.elapsed_time
 blindness.start_time = time.get_time()
 </script>
                     <triggerType>0</triggerType>
@@ -1210,6 +1245,7 @@ blindness.start_time = time.get_time()
                     <script>local blindness = spell_timer.get_timer(&quot;blindness&quot;)
 
 blindness.stop_time = time.get_time()
+blindness.last_elapsed_time = blindness.elapsed_time
 blindness.elapsed_time = blindness.stop_time - blindness.start_time
 
 local time = time.convert_seconds_to_hms(blindness.elapsed_time)
@@ -1235,6 +1271,10 @@ echo(&quot;\nThe spell lasted &quot; .. time .. &quot;.\n&quot;)
                 <Trigger isActive="yes" isFolder="no" isTempTrigger="no" isMultiline="no" isPerlSlashGOption="no" isColorizerTrigger="no" isFilterTrigger="no" isSoundTrigger="no" isColorTrigger="no" isColorTriggerFg="no" isColorTriggerBg="no">
                     <name>blindness : - blindness</name>
                     <script>local blindness = spell_timer.get_timer(&quot;blindness&quot;)
+
+if blindness.start_time == 0 then
+	blindness.start_time = time.get_time()
+end
 
 blindness.elapsed_time = time.get_time() - blindness.start_time
 
@@ -1272,7 +1312,6 @@ cinsertText(matches[1] .. &quot; (&lt;&quot; .. spell_timer.colour .. &quot;&gt;
                     <name>lethargy : You feel a sudden loss of energy as the power that once mingled with your own has now vanished.</name>
                     <script>local lethargy = spell_timer.get_timer(&quot;lethargy&quot;)
 
-lethargy.last_elapsed_time = lethargy.elapsed_time
 lethargy.start_time = time.get_time()
 </script>
                     <triggerType>0</triggerType>
@@ -1297,6 +1336,7 @@ lethargy.start_time = time.get_time()
                     <script>local lethargy = spell_timer.get_timer(&quot;lethargy&quot;)
 
 lethargy.stop_time = time.get_time()
+lethargy.last_elapsed_time = lethargy.elapsed_time
 lethargy.elapsed_time = lethargy.stop_time - lethargy.start_time
 
 local time = time.convert_seconds_to_hms(lethargy.elapsed_time)
@@ -1322,6 +1362,10 @@ echo(&quot;\nThe spell lasted &quot; .. time .. &quot;.\n&quot;)
                 <Trigger isActive="yes" isFolder="no" isTempTrigger="no" isMultiline="no" isPerlSlashGOption="no" isColorizerTrigger="no" isFilterTrigger="no" isSoundTrigger="no" isColorTrigger="no" isColorTriggerFg="no" isColorTriggerBg="no">
                     <name>lethargy : - lethargy</name>
                     <script>local lethargy = spell_timer.get_timer(&quot;lethargy&quot;)
+
+if lethargy.start_time == 0 then
+	lethargy.start_time = time.get_time()
+end
 
 lethargy.elapsed_time = time.get_time() - lethargy.start_time
 
@@ -1359,7 +1403,6 @@ cinsertText(matches[1] .. &quot; (&lt;&quot; .. spell_timer.colour .. &quot;&gt;
                     <name>sense life : You feel your awareness improve.</name>
                     <script>local sense_life = spell_timer.get_timer(&quot;sense_life&quot;)
 
-sense_life.last_elapsed_time = sense_life.elapsed_time
 sense_life.start_time = time.get_time()
 </script>
                     <triggerType>0</triggerType>
@@ -1383,7 +1426,6 @@ sense_life.start_time = time.get_time()
                     <name>sense life : Your awareness is refreshed.</name>
                     <script>local sense_life = spell_timer.get_timer(&quot;sense_life&quot;)
 
-sense_life.last_elapsed_time = sense_life.elapsed_time
 sense_life.start_time = time.get_time()
 </script>
                     <triggerType>0</triggerType>
@@ -1408,6 +1450,7 @@ sense_life.start_time = time.get_time()
                     <script>local sense_life = spell_timer.get_timer(&quot;sense_life&quot;)
 
 sense_life.stop_time = time.get_time()
+sense_life.last_elapsed_time = sense_life.elapsed_time
 sense_life.elapsed_time = sense_life.stop_time - sense_life.start_time
 
 local time = time.convert_seconds_to_hms(sense_life.elapsed_time)
@@ -1433,6 +1476,10 @@ echo(&quot;\nThe spell lasted &quot; .. time .. &quot;.\n&quot;)
                 <Trigger isActive="yes" isFolder="no" isTempTrigger="no" isMultiline="no" isPerlSlashGOption="no" isColorizerTrigger="no" isFilterTrigger="no" isSoundTrigger="no" isColorTrigger="no" isColorTriggerFg="no" isColorTriggerBg="no">
                     <name>sense life : - sense life</name>
                     <script>local sense_life = spell_timer.get_timer(&quot;sense_life&quot;)
+
+if sense_life.start_time == 0 then
+	sense_life.start_time = time.get_time()
+end
 
 sense_life.elapsed_time = time.get_time() - sense_life.start_time
 
@@ -1470,7 +1517,6 @@ cinsertText(matches[1] .. &quot; (&lt;&quot; .. spell_timer.colour .. &quot;&gt;
                     <name>tiredness : You feel your muscles relax and your pulse slow as the strength that welled within you subsides.</name>
                     <script>local tiredness = spell_timer.get_timer(&quot;tiredness&quot;)
 
-tiredness.last_elapsed_time = tiredness.elapsed_time
 tiredness.start_time = time.get_time()
 </script>
                     <triggerType>0</triggerType>
@@ -1495,6 +1541,7 @@ tiredness.start_time = time.get_time()
                     <script>local tiredness = spell_timer.get_timer(&quot;tiredness&quot;)
 
 tiredness.stop_time = time.get_time()
+tiredness.last_elapsed_time = tiredness.elapsed_time
 tiredness.elapsed_time = tiredness.stop_time - tiredness.start_time
 
 local time = time.convert_seconds_to_hms(tiredness.elapsed_time)
@@ -1520,6 +1567,10 @@ echo(&quot;\nThe spell lasted &quot; .. time .. &quot;.\n&quot;)
                 <Trigger isActive="yes" isFolder="no" isTempTrigger="no" isMultiline="no" isPerlSlashGOption="no" isColorizerTrigger="no" isFilterTrigger="no" isSoundTrigger="no" isColorTrigger="no" isColorTriggerFg="no" isColorTriggerBg="no">
                     <name>tiredness : - tiredness</name>
                     <script>local tiredness = spell_timer.get_timer(&quot;tiredness&quot;)
+
+if tiredness.start_time == 0 then
+	tiredness.start_time = time.get_time()
+end
 
 tiredness.elapsed_time = time.get_time() - tiredness.start_time
 
@@ -1557,7 +1608,6 @@ cinsertText(matches[1] .. &quot; (&lt;&quot; .. spell_timer.colour .. &quot;&gt;
                     <name>detect magic : You become sensitive of magical auras.</name>
                     <script>local detect_magic = spell_timer.get_timer(&quot;detect_magic&quot;)
 
-detect_magic.last_elapsed_time = detect_magic.elapsed_time
 detect_magic.start_time = time.get_time()
 </script>
                     <triggerType>0</triggerType>
@@ -1581,7 +1631,6 @@ detect_magic.start_time = time.get_time()
                     <name>detect magic : Your awareness of magical auras is renewed.</name>
                     <script>local detect_magic = spell_timer.get_timer(&quot;detect_magic&quot;)
 
-detect_magic.last_elapsed_time = detect_magic.elapsed_time
 detect_magic.start_time = time.get_time()
 </script>
                     <triggerType>0</triggerType>
@@ -1606,6 +1655,7 @@ detect_magic.start_time = time.get_time()
                     <script>local detect_magic = spell_timer.get_timer(&quot;detect_magic&quot;)
 
 detect_magic.stop_time = time.get_time()
+detect_magic.last_elapsed_time = detect_magic.elapsed_time
 detect_magic.elapsed_time = detect_magic.stop_time - detect_magic.start_time
 
 local time = time.convert_seconds_to_hms(detect_magic.elapsed_time)
@@ -1631,6 +1681,10 @@ echo(&quot;\nThe spell lasted &quot; .. time .. &quot;.\n&quot;)
                 <Trigger isActive="yes" isFolder="no" isTempTrigger="no" isMultiline="no" isPerlSlashGOption="no" isColorizerTrigger="no" isFilterTrigger="no" isSoundTrigger="no" isColorTrigger="no" isColorTriggerFg="no" isColorTriggerBg="no">
                     <name>detect magic : - detect magic</name>
                     <script>local detect_magic = spell_timer.get_timer(&quot;detect_magic&quot;)
+
+if detect_magic.start_time == 0 then
+	detect_magic.start_time = time.get_time()
+end
 
 detect_magic.elapsed_time = time.get_time() - detect_magic.start_time
 
@@ -1668,7 +1722,6 @@ cinsertText(matches[1] .. &quot; (&lt;&quot; .. spell_timer.colour .. &quot;&gt;
                     <name>bless : You begin to feel the light of Aman shine upon you.</name>
                     <script>local bless = spell_timer.get_timer(&quot;bless&quot;)
 
-bless.last_elapsed_time = bless.elapsed_time
 bless.start_time = time.get_time()
 </script>
                     <triggerType>0</triggerType>
@@ -1692,7 +1745,6 @@ bless.start_time = time.get_time()
                     <name>bless : You feel a renewed light shine upon you.</name>
                     <script>local bless = spell_timer.get_timer(&quot;bless&quot;)
 
-bless.last_elapsed_time = bless.elapsed_time
 bless.start_time = time.get_time()
 </script>
                     <triggerType>0</triggerType>
@@ -1717,6 +1769,7 @@ bless.start_time = time.get_time()
                     <script>local bless = spell_timer.get_timer(&quot;bless&quot;)
 
 bless.stop_time = time.get_time()
+bless.last_elapsed_time = bless.elapsed_time
 bless.elapsed_time = bless.stop_time - bless.start_time
 
 local time = time.convert_seconds_to_hms(bless.elapsed_time)
@@ -1742,6 +1795,10 @@ echo(&quot;\nThe spell lasted &quot; .. time .. &quot;.\n&quot;)
                 <Trigger isActive="yes" isFolder="no" isTempTrigger="no" isMultiline="no" isPerlSlashGOption="no" isColorizerTrigger="no" isFilterTrigger="no" isSoundTrigger="no" isColorTrigger="no" isColorTriggerFg="no" isColorTriggerBg="no">
                     <name>bless : - bless</name>
                     <script>local bless = spell_timer.get_timer(&quot;bless&quot;)
+
+if bless.start_time == 0 then
+	bless.start_time = time.get_time()
+end
 
 bless.elapsed_time = time.get_time() - bless.start_time
 
@@ -1779,7 +1836,6 @@ cinsertText(matches[1] .. &quot; (&lt;&quot; .. spell_timer.colour .. &quot;&gt;
                     <name>protection from evil : You have a righteous feeling!</name>
                     <script>local protection_from_evil = spell_timer.get_timer(&quot;protection_from_evil&quot;)
 
-protection_from_evil.last_elapsed_time = protection_from_evil.elapsed_time
 protection_from_evil.start_time = time.get_time()
 </script>
                     <triggerType>0</triggerType>
@@ -1803,7 +1859,6 @@ protection_from_evil.start_time = time.get_time()
                     <name>protection from evil : You feel a renewed righteousness.</name>
                     <script>local protection_from_evil = spell_timer.get_timer(&quot;protection_from_evil&quot;)
 
-protection_from_evil.last_elapsed_time = protection_from_evil.elapsed_time
 protection_from_evil.start_time = time.get_time()
 </script>
                     <triggerType>0</triggerType>
@@ -1828,6 +1883,7 @@ protection_from_evil.start_time = time.get_time()
                     <script>local protection_from_evil = spell_timer.get_timer(&quot;protection_from_evil&quot;)
 
 protection_from_evil.stop_time = time.get_time()
+protection_from_evil.last_elapsed_time = protection_from_evil.elapsed_time
 protection_from_evil.elapsed_time = protection_from_evil.stop_time - protection_from_evil.start_time
 
 local time = time.convert_seconds_to_hms(protection_from_evil.elapsed_time)
@@ -1853,6 +1909,10 @@ echo(&quot;\nThe spell lasted &quot; .. time .. &quot;.\n&quot;)
                 <Trigger isActive="yes" isFolder="no" isTempTrigger="no" isMultiline="no" isPerlSlashGOption="no" isColorizerTrigger="no" isFilterTrigger="no" isSoundTrigger="no" isColorTrigger="no" isColorTriggerFg="no" isColorTriggerBg="no">
                     <name>protection from evil : - protection from evil</name>
                     <script>local protection_from_evil = spell_timer.get_timer(&quot;protection_from_evil&quot;)
+
+if protection_from_evil.start_time == 0 then
+	protection_from_evil.start_time = time.get_time()
+end
 
 protection_from_evil.elapsed_time = time.get_time() - protection_from_evil.start_time
 
@@ -2133,7 +2193,6 @@ end</script>
 	local code = [[
 local &lt;NAME&gt; = spell_timer.get_timer(&quot;&lt;NAME&gt;&quot;)
 
-&lt;NAME&gt;.last_elapsed_time = &lt;NAME&gt;.elapsed_time
 &lt;NAME&gt;.start_time = time.get_time()
 ]]
 	code = string.gsub(code, &quot;&lt;NAME&gt;&quot;, spell.name)
@@ -2149,6 +2208,7 @@ end</script>
 local &lt;NAME&gt; = spell_timer.get_timer(&quot;&lt;NAME&gt;&quot;)
 
 &lt;NAME&gt;.stop_time = time.get_time()
+&lt;NAME&gt;.last_elapsed_time = &lt;NAME&gt;.elapsed_time
 &lt;NAME&gt;.elapsed_time = &lt;NAME&gt;.stop_time - &lt;NAME&gt;.start_time
 
 local time = time.convert_seconds_to_hms(&lt;NAME&gt;.elapsed_time)
@@ -2165,6 +2225,10 @@ end</script>
                     <script>function spell_timer.get_trigger_show_code(spell)
 	local code = [[
 local &lt;NAME&gt; = spell_timer.get_timer(&quot;&lt;NAME&gt;&quot;)
+
+if &lt;NAME&gt;.start_time == 0 then
+	&lt;NAME&gt;.start_time = time.get_time()
+end
 
 &lt;NAME&gt;.elapsed_time = time.get_time() - &lt;NAME&gt;.start_time
 
