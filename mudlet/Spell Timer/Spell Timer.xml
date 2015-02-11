@@ -119,6 +119,9 @@ night_vision.elapsed_time = time.get_time() - night_vision.start_time
 local time_str = time.convert_seconds_to_hms(night_vision.elapsed_time)
 
 local append = &quot;&quot;
+if night_vision.last_elapsed_time == nil then
+	night_vision.last_elapsed_time = 0
+end
 if night_vision.last_elapsed_time ~= 0 then
 	local percent = math.floor(night_vision.elapsed_time / night_vision.last_elapsed_time * 100)
 	local time_to_go = time.convert_seconds_to_hms(night_vision.last_elapsed_time - night_vision.elapsed_time)
@@ -233,6 +236,9 @@ shield.elapsed_time = time.get_time() - shield.start_time
 local time_str = time.convert_seconds_to_hms(shield.elapsed_time)
 
 local append = &quot;&quot;
+if shield.last_elapsed_time == nil then
+	shield.last_elapsed_time = 0
+end
 if shield.last_elapsed_time ~= 0 then
 	local percent = math.floor(shield.elapsed_time / shield.last_elapsed_time * 100)
 	local time_to_go = time.convert_seconds_to_hms(shield.last_elapsed_time - shield.elapsed_time)
@@ -347,6 +353,9 @@ detect_evil.elapsed_time = time.get_time() - detect_evil.start_time
 local time_str = time.convert_seconds_to_hms(detect_evil.elapsed_time)
 
 local append = &quot;&quot;
+if detect_evil.last_elapsed_time == nil then
+	detect_evil.last_elapsed_time = 0
+end
 if detect_evil.last_elapsed_time ~= 0 then
 	local percent = math.floor(detect_evil.elapsed_time / detect_evil.last_elapsed_time * 100)
 	local time_to_go = time.convert_seconds_to_hms(detect_evil.last_elapsed_time - detect_evil.elapsed_time)
@@ -438,6 +447,9 @@ battleglory.elapsed_time = time.get_time() - battleglory.start_time
 local time_str = time.convert_seconds_to_hms(battleglory.elapsed_time)
 
 local append = &quot;&quot;
+if battleglory.last_elapsed_time == nil then
+	battleglory.last_elapsed_time = 0
+end
 if battleglory.last_elapsed_time ~= 0 then
 	local percent = math.floor(battleglory.elapsed_time / battleglory.last_elapsed_time * 100)
 	local time_to_go = time.convert_seconds_to_hms(battleglory.last_elapsed_time - battleglory.elapsed_time)
@@ -552,6 +564,9 @@ shroud.elapsed_time = time.get_time() - shroud.start_time
 local time_str = time.convert_seconds_to_hms(shroud.elapsed_time)
 
 local append = &quot;&quot;
+if shroud.last_elapsed_time == nil then
+	shroud.last_elapsed_time = 0
+end
 if shroud.last_elapsed_time ~= 0 then
 	local percent = math.floor(shroud.elapsed_time / shroud.last_elapsed_time * 100)
 	local time_to_go = time.convert_seconds_to_hms(shroud.last_elapsed_time - shroud.elapsed_time)
@@ -666,6 +681,9 @@ breath_of_briskness.elapsed_time = time.get_time() - breath_of_briskness.start_t
 local time_str = time.convert_seconds_to_hms(breath_of_briskness.elapsed_time)
 
 local append = &quot;&quot;
+if breath_of_briskness.last_elapsed_time == nil then
+	breath_of_briskness.last_elapsed_time = 0
+end
 if breath_of_briskness.last_elapsed_time ~= 0 then
 	local percent = math.floor(breath_of_briskness.elapsed_time / breath_of_briskness.last_elapsed_time * 100)
 	local time_to_go = time.convert_seconds_to_hms(breath_of_briskness.last_elapsed_time - breath_of_briskness.elapsed_time)
@@ -757,6 +775,9 @@ depression.elapsed_time = time.get_time() - depression.start_time
 local time_str = time.convert_seconds_to_hms(depression.elapsed_time)
 
 local append = &quot;&quot;
+if depression.last_elapsed_time == nil then
+	depression.last_elapsed_time = 0
+end
 if depression.last_elapsed_time ~= 0 then
 	local percent = math.floor(depression.elapsed_time / depression.last_elapsed_time * 100)
 	local time_to_go = time.convert_seconds_to_hms(depression.last_elapsed_time - depression.elapsed_time)
@@ -871,6 +892,9 @@ armour.elapsed_time = time.get_time() - armour.start_time
 local time_str = time.convert_seconds_to_hms(armour.elapsed_time)
 
 local append = &quot;&quot;
+if armour.last_elapsed_time == nil then
+	armour.last_elapsed_time = 0
+end
 if armour.last_elapsed_time ~= 0 then
 	local percent = math.floor(armour.elapsed_time / armour.last_elapsed_time * 100)
 	local time_to_go = time.convert_seconds_to_hms(armour.last_elapsed_time - armour.elapsed_time)
@@ -893,6 +917,123 @@ cinsertText(matches[1] .. &quot; (&lt;&quot; .. spell_timer.colour .. &quot;&gt;
                     <colorTriggerBgColor>#000000</colorTriggerBgColor>
                     <regexCodeList>
                         <string>^- armour$</string>
+                    </regexCodeList>
+                    <regexCodePropertyList>
+                        <integer>1</integer>
+                    </regexCodePropertyList>
+                </Trigger>
+                <Trigger isActive="yes" isFolder="no" isTempTrigger="no" isMultiline="no" isPerlSlashGOption="no" isColorizerTrigger="no" isFilterTrigger="no" isSoundTrigger="no" isColorTrigger="no" isColorTriggerFg="no" isColorTriggerBg="no">
+                    <name>detect invisibility : Your eyes tingle.</name>
+                    <script>local detect_invisibility = spell_timer.get_timer(&quot;detect_invisibility&quot;)
+
+detect_invisibility.start_time = time.get_time()
+</script>
+                    <triggerType>0</triggerType>
+                    <conditonLineDelta>0</conditonLineDelta>
+                    <mStayOpen>0</mStayOpen>
+                    <mCommand></mCommand>
+                    <packageName></packageName>
+                    <mFgColor>#ff0000</mFgColor>
+                    <mBgColor>#ffff00</mBgColor>
+                    <mSoundFile></mSoundFile>
+                    <colorTriggerFgColor>#000000</colorTriggerFgColor>
+                    <colorTriggerBgColor>#000000</colorTriggerBgColor>
+                    <regexCodeList>
+                        <string>^Your eyes tingle.$</string>
+                    </regexCodeList>
+                    <regexCodePropertyList>
+                        <integer>1</integer>
+                    </regexCodePropertyList>
+                </Trigger>
+                <Trigger isActive="yes" isFolder="no" isTempTrigger="no" isMultiline="no" isPerlSlashGOption="no" isColorizerTrigger="no" isFilterTrigger="no" isSoundTrigger="no" isColorTrigger="no" isColorTriggerFg="no" isColorTriggerBg="no">
+                    <name>detect invisibility : Your detect invisible is refreshed.</name>
+                    <script>local detect_invisibility = spell_timer.get_timer(&quot;detect_invisibility&quot;)
+
+detect_invisibility.start_time = time.get_time()
+</script>
+                    <triggerType>0</triggerType>
+                    <conditonLineDelta>0</conditonLineDelta>
+                    <mStayOpen>0</mStayOpen>
+                    <mCommand></mCommand>
+                    <packageName></packageName>
+                    <mFgColor>#ff0000</mFgColor>
+                    <mBgColor>#ffff00</mBgColor>
+                    <mSoundFile></mSoundFile>
+                    <colorTriggerFgColor>#000000</colorTriggerFgColor>
+                    <colorTriggerBgColor>#000000</colorTriggerBgColor>
+                    <regexCodeList>
+                        <string>^Your detect invisible is refreshed.$</string>
+                    </regexCodeList>
+                    <regexCodePropertyList>
+                        <integer>1</integer>
+                    </regexCodePropertyList>
+                </Trigger>
+                <Trigger isActive="yes" isFolder="no" isTempTrigger="no" isMultiline="no" isPerlSlashGOption="no" isColorizerTrigger="no" isFilterTrigger="no" isSoundTrigger="no" isColorTrigger="no" isColorTriggerFg="no" isColorTriggerBg="no">
+                    <name>detect invisibility : The detect invisible wears off.</name>
+                    <script>local detect_invisibility = spell_timer.get_timer(&quot;detect_invisibility&quot;)
+
+detect_invisibility.stop_time = time.get_time()
+detect_invisibility.last_elapsed_time = detect_invisibility.elapsed_time
+detect_invisibility.elapsed_time = detect_invisibility.stop_time - detect_invisibility.start_time
+
+local time = time.convert_seconds_to_hms(detect_invisibility.elapsed_time)
+echo(&quot;\nThe spell lasted &quot; .. time .. &quot;.\n&quot;)
+</script>
+                    <triggerType>0</triggerType>
+                    <conditonLineDelta>0</conditonLineDelta>
+                    <mStayOpen>0</mStayOpen>
+                    <mCommand></mCommand>
+                    <packageName></packageName>
+                    <mFgColor>#ff0000</mFgColor>
+                    <mBgColor>#ffff00</mBgColor>
+                    <mSoundFile></mSoundFile>
+                    <colorTriggerFgColor>#000000</colorTriggerFgColor>
+                    <colorTriggerBgColor>#000000</colorTriggerBgColor>
+                    <regexCodeList>
+                        <string>^The detect invisible wears off.$</string>
+                    </regexCodeList>
+                    <regexCodePropertyList>
+                        <integer>1</integer>
+                    </regexCodePropertyList>
+                </Trigger>
+                <Trigger isActive="yes" isFolder="no" isTempTrigger="no" isMultiline="no" isPerlSlashGOption="no" isColorizerTrigger="no" isFilterTrigger="no" isSoundTrigger="no" isColorTrigger="no" isColorTriggerFg="no" isColorTriggerBg="no">
+                    <name>detect invisibility : - detect invisibility</name>
+                    <script>local detect_invisibility = spell_timer.get_timer(&quot;detect_invisibility&quot;)
+
+if detect_invisibility.start_time == 0 then
+	detect_invisibility.start_time = time.get_time()
+end
+
+detect_invisibility.elapsed_time = time.get_time() - detect_invisibility.start_time
+
+local time_str = time.convert_seconds_to_hms(detect_invisibility.elapsed_time)
+
+local append = &quot;&quot;
+if detect_invisibility.last_elapsed_time == nil then
+	detect_invisibility.last_elapsed_time = 0
+end
+if detect_invisibility.last_elapsed_time ~= 0 then
+	local percent = math.floor(detect_invisibility.elapsed_time / detect_invisibility.last_elapsed_time * 100)
+	local time_to_go = time.convert_seconds_to_hms(detect_invisibility.last_elapsed_time - detect_invisibility.elapsed_time)
+	append = &quot;&lt;grey&gt;/&lt;&quot; .. spell_timer.colour .. &quot;&gt;&quot; .. time_to_go .. &quot;&lt;grey&gt;/&lt;&quot; .. spell_timer.colour .. &quot;&gt;&quot; .. percent .. &quot;%&lt;grey&gt;&quot;
+end
+
+selectString(matches[1], 1)
+replace(&quot;&quot;)
+cinsertText(matches[1] .. &quot; (&lt;&quot; .. spell_timer.colour .. &quot;&gt;&quot; .. time_str .. append .. &quot;&lt;grey&gt;)&quot;)
+</script>
+                    <triggerType>0</triggerType>
+                    <conditonLineDelta>0</conditonLineDelta>
+                    <mStayOpen>0</mStayOpen>
+                    <mCommand></mCommand>
+                    <packageName></packageName>
+                    <mFgColor>#ff0000</mFgColor>
+                    <mBgColor>#ffff00</mBgColor>
+                    <mSoundFile></mSoundFile>
+                    <colorTriggerFgColor>#000000</colorTriggerFgColor>
+                    <colorTriggerBgColor>#000000</colorTriggerBgColor>
+                    <regexCodeList>
+                        <string>^- detect invisibility$</string>
                     </regexCodeList>
                     <regexCodePropertyList>
                         <integer>1</integer>
@@ -985,6 +1126,9 @@ strength.elapsed_time = time.get_time() - strength.start_time
 local time_str = time.convert_seconds_to_hms(strength.elapsed_time)
 
 local append = &quot;&quot;
+if strength.last_elapsed_time == nil then
+	strength.last_elapsed_time = 0
+end
 if strength.last_elapsed_time ~= 0 then
 	local percent = math.floor(strength.elapsed_time / strength.last_elapsed_time * 100)
 	local time_to_go = time.convert_seconds_to_hms(strength.last_elapsed_time - strength.elapsed_time)
@@ -1076,6 +1220,9 @@ haggardness.elapsed_time = time.get_time() - haggardness.start_time
 local time_str = time.convert_seconds_to_hms(haggardness.elapsed_time)
 
 local append = &quot;&quot;
+if haggardness.last_elapsed_time == nil then
+	haggardness.last_elapsed_time = 0
+end
 if haggardness.last_elapsed_time ~= 0 then
 	local percent = math.floor(haggardness.elapsed_time / haggardness.last_elapsed_time * 100)
 	local time_to_go = time.convert_seconds_to_hms(haggardness.last_elapsed_time - haggardness.elapsed_time)
@@ -1190,6 +1337,9 @@ sanctuary.elapsed_time = time.get_time() - sanctuary.start_time
 local time_str = time.convert_seconds_to_hms(sanctuary.elapsed_time)
 
 local append = &quot;&quot;
+if sanctuary.last_elapsed_time == nil then
+	sanctuary.last_elapsed_time = 0
+end
 if sanctuary.last_elapsed_time ~= 0 then
 	local percent = math.floor(sanctuary.elapsed_time / sanctuary.last_elapsed_time * 100)
 	local time_to_go = time.convert_seconds_to_hms(sanctuary.last_elapsed_time - sanctuary.elapsed_time)
@@ -1281,6 +1431,9 @@ blindness.elapsed_time = time.get_time() - blindness.start_time
 local time_str = time.convert_seconds_to_hms(blindness.elapsed_time)
 
 local append = &quot;&quot;
+if blindness.last_elapsed_time == nil then
+	blindness.last_elapsed_time = 0
+end
 if blindness.last_elapsed_time ~= 0 then
 	local percent = math.floor(blindness.elapsed_time / blindness.last_elapsed_time * 100)
 	local time_to_go = time.convert_seconds_to_hms(blindness.last_elapsed_time - blindness.elapsed_time)
@@ -1372,6 +1525,9 @@ lethargy.elapsed_time = time.get_time() - lethargy.start_time
 local time_str = time.convert_seconds_to_hms(lethargy.elapsed_time)
 
 local append = &quot;&quot;
+if lethargy.last_elapsed_time == nil then
+	lethargy.last_elapsed_time = 0
+end
 if lethargy.last_elapsed_time ~= 0 then
 	local percent = math.floor(lethargy.elapsed_time / lethargy.last_elapsed_time * 100)
 	local time_to_go = time.convert_seconds_to_hms(lethargy.last_elapsed_time - lethargy.elapsed_time)
@@ -1486,6 +1642,9 @@ sense_life.elapsed_time = time.get_time() - sense_life.start_time
 local time_str = time.convert_seconds_to_hms(sense_life.elapsed_time)
 
 local append = &quot;&quot;
+if sense_life.last_elapsed_time == nil then
+	sense_life.last_elapsed_time = 0
+end
 if sense_life.last_elapsed_time ~= 0 then
 	local percent = math.floor(sense_life.elapsed_time / sense_life.last_elapsed_time * 100)
 	local time_to_go = time.convert_seconds_to_hms(sense_life.last_elapsed_time - sense_life.elapsed_time)
@@ -1577,6 +1736,9 @@ tiredness.elapsed_time = time.get_time() - tiredness.start_time
 local time_str = time.convert_seconds_to_hms(tiredness.elapsed_time)
 
 local append = &quot;&quot;
+if tiredness.last_elapsed_time == nil then
+	tiredness.last_elapsed_time = 0
+end
 if tiredness.last_elapsed_time ~= 0 then
 	local percent = math.floor(tiredness.elapsed_time / tiredness.last_elapsed_time * 100)
 	local time_to_go = time.convert_seconds_to_hms(tiredness.last_elapsed_time - tiredness.elapsed_time)
@@ -1691,6 +1853,9 @@ detect_magic.elapsed_time = time.get_time() - detect_magic.start_time
 local time_str = time.convert_seconds_to_hms(detect_magic.elapsed_time)
 
 local append = &quot;&quot;
+if detect_magic.last_elapsed_time == nil then
+	detect_magic.last_elapsed_time = 0
+end
 if detect_magic.last_elapsed_time ~= 0 then
 	local percent = math.floor(detect_magic.elapsed_time / detect_magic.last_elapsed_time * 100)
 	local time_to_go = time.convert_seconds_to_hms(detect_magic.last_elapsed_time - detect_magic.elapsed_time)
@@ -1805,6 +1970,9 @@ bless.elapsed_time = time.get_time() - bless.start_time
 local time_str = time.convert_seconds_to_hms(bless.elapsed_time)
 
 local append = &quot;&quot;
+if bless.last_elapsed_time == nil then
+	bless.last_elapsed_time = 0
+end
 if bless.last_elapsed_time ~= 0 then
 	local percent = math.floor(bless.elapsed_time / bless.last_elapsed_time * 100)
 	local time_to_go = time.convert_seconds_to_hms(bless.last_elapsed_time - bless.elapsed_time)
@@ -1919,6 +2087,9 @@ protection_from_evil.elapsed_time = time.get_time() - protection_from_evil.start
 local time_str = time.convert_seconds_to_hms(protection_from_evil.elapsed_time)
 
 local append = &quot;&quot;
+if protection_from_evil.last_elapsed_time == nil then
+	protection_from_evil.last_elapsed_time = 0
+end
 if protection_from_evil.last_elapsed_time ~= 0 then
 	local percent = math.floor(protection_from_evil.elapsed_time / protection_from_evil.last_elapsed_time * 100)
 	local time_to_go = time.convert_seconds_to_hms(protection_from_evil.last_elapsed_time - protection_from_evil.elapsed_time)
@@ -2008,7 +2179,9 @@ spell_timer.colour = &quot;cyan&quot;</script>
                     <script>spell_timer.help = [[
 Spell Timer
 Author: Octavia
-Thanks: nstockton for most of the spell messages
+Thanks:
+- nstockton for most of the spell messages
+- p(Cahal) for testing
 Version: 1.0
 Changelog:
 - 1.0, 2015-2-11
@@ -2137,6 +2310,12 @@ Dependencies (included):
 		refresh = &quot;&quot;,
 		stop = &quot;Your heart feels lighter.&quot;,
 	},
+	[&quot;detect invisibility&quot;] = {
+		name = &quot;detect_invisibility&quot;,
+		start = &quot;Your eyes tingle.&quot;,
+		refresh = &quot;Your detect invisible is refreshed.&quot;,
+		stop = &quot;The detect invisible wears off.&quot;,
+	},
 }</script>
                     <eventHandlerList/>
                 </Script>
@@ -2235,6 +2414,9 @@ end
 local time_str = time.convert_seconds_to_hms(&lt;NAME&gt;.elapsed_time)
 
 local append = &quot;&quot;
+if &lt;NAME&gt;.last_elapsed_time == nil then
+	&lt;NAME&gt;.last_elapsed_time = 0
+end
 if &lt;NAME&gt;.last_elapsed_time ~= 0 then
 	local percent = math.floor(&lt;NAME&gt;.elapsed_time / &lt;NAME&gt;.last_elapsed_time * 100)
 	local time_to_go = time.convert_seconds_to_hms(&lt;NAME&gt;.last_elapsed_time - &lt;NAME&gt;.elapsed_time)
