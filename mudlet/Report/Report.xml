@@ -1,0 +1,306 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE MudletPackage>
+<MudletPackage version="1.0">
+    <TriggerPackage>
+        <TriggerGroup isActive="yes" isFolder="yes" isTempTrigger="no" isMultiline="no" isPerlSlashGOption="no" isColorizerTrigger="no" isFilterTrigger="no" isSoundTrigger="no" isColorTrigger="no" isColorTriggerFg="no" isColorTriggerBg="no">
+            <name>MUME</name>
+            <script></script>
+            <triggerType>0</triggerType>
+            <conditonLineDelta>0</conditonLineDelta>
+            <mStayOpen>0</mStayOpen>
+            <mCommand></mCommand>
+            <packageName>current</packageName>
+            <mFgColor>#ff0000</mFgColor>
+            <mBgColor>#ffff00</mBgColor>
+            <mSoundFile></mSoundFile>
+            <colorTriggerFgColor>#000000</colorTriggerFgColor>
+            <colorTriggerBgColor>#000000</colorTriggerBgColor>
+            <regexCodeList/>
+            <regexCodePropertyList/>
+            <TriggerGroup isActive="yes" isFolder="yes" isTempTrigger="no" isMultiline="no" isPerlSlashGOption="no" isColorizerTrigger="no" isFilterTrigger="no" isSoundTrigger="no" isColorTrigger="no" isColorTriggerFg="no" isColorTriggerBg="no">
+                <name>Report</name>
+                <script></script>
+                <triggerType>0</triggerType>
+                <conditonLineDelta>0</conditonLineDelta>
+                <mStayOpen>0</mStayOpen>
+                <mCommand></mCommand>
+                <packageName></packageName>
+                <mFgColor>#ff0000</mFgColor>
+                <mBgColor>#ffff00</mBgColor>
+                <mSoundFile></mSoundFile>
+                <colorTriggerFgColor>#000000</colorTriggerFgColor>
+                <colorTriggerBgColor>#000000</colorTriggerBgColor>
+                <regexCodeList/>
+                <regexCodePropertyList/>
+                <Trigger isActive="no" isFolder="no" isTempTrigger="no" isMultiline="no" isPerlSlashGOption="no" isColorizerTrigger="no" isFilterTrigger="no" isSoundTrigger="no" isColorTrigger="no" isColorTriggerFg="no" isColorTriggerBg="no">
+                    <name>Report Score</name>
+                    <script>send(&quot;emote has &quot; .. matches[1])
+disableTrigger(&quot;Report Score&quot;)</script>
+                    <triggerType>0</triggerType>
+                    <conditonLineDelta>0</conditonLineDelta>
+                    <mStayOpen>0</mStayOpen>
+                    <mCommand></mCommand>
+                    <packageName></packageName>
+                    <mFgColor>#ff0000</mFgColor>
+                    <mBgColor>#ffff00</mBgColor>
+                    <mSoundFile></mSoundFile>
+                    <colorTriggerFgColor>#000000</colorTriggerFgColor>
+                    <colorTriggerBgColor>#000000</colorTriggerBgColor>
+                    <regexCodeList>
+                        <string>^(.+) hits, (.+) mana, and (.+) moves\.$</string>
+                    </regexCodeList>
+                    <regexCodePropertyList>
+                        <integer>1</integer>
+                    </regexCodePropertyList>
+                </Trigger>
+                <Trigger isActive="no" isFolder="no" isTempTrigger="no" isMultiline="no" isPerlSlashGOption="no" isColorizerTrigger="no" isFilterTrigger="no" isSoundTrigger="no" isColorTrigger="no" isColorTriggerFg="no" isColorTriggerBg="no">
+                    <name>Report Hits</name>
+                    <script>send(&quot;emote has &quot; .. matches[2] .. &quot; hits.&quot;)
+disableTrigger(&quot;Report Hits&quot;)</script>
+                    <triggerType>0</triggerType>
+                    <conditonLineDelta>0</conditonLineDelta>
+                    <mStayOpen>0</mStayOpen>
+                    <mCommand></mCommand>
+                    <packageName></packageName>
+                    <mFgColor>#ff0000</mFgColor>
+                    <mBgColor>#ffff00</mBgColor>
+                    <mSoundFile></mSoundFile>
+                    <colorTriggerFgColor>#000000</colorTriggerFgColor>
+                    <colorTriggerBgColor>#000000</colorTriggerBgColor>
+                    <regexCodeList>
+                        <string>^(.+) hits, (.+) mana, and (.+) moves\.$</string>
+                    </regexCodeList>
+                    <regexCodePropertyList>
+                        <integer>1</integer>
+                    </regexCodePropertyList>
+                </Trigger>
+                <Trigger isActive="no" isFolder="no" isTempTrigger="no" isMultiline="no" isPerlSlashGOption="no" isColorizerTrigger="no" isFilterTrigger="no" isSoundTrigger="no" isColorTrigger="no" isColorTriggerFg="no" isColorTriggerBg="no">
+                    <name>Report Mana</name>
+                    <script>send(&quot;emote has &quot; .. matches[3] .. &quot; mana.&quot;)
+disableTrigger(&quot;Report Mana&quot;)</script>
+                    <triggerType>0</triggerType>
+                    <conditonLineDelta>0</conditonLineDelta>
+                    <mStayOpen>0</mStayOpen>
+                    <mCommand></mCommand>
+                    <packageName></packageName>
+                    <mFgColor>#ff0000</mFgColor>
+                    <mBgColor>#ffff00</mBgColor>
+                    <mSoundFile></mSoundFile>
+                    <colorTriggerFgColor>#000000</colorTriggerFgColor>
+                    <colorTriggerBgColor>#000000</colorTriggerBgColor>
+                    <regexCodeList>
+                        <string>^(.+) hits, (.+) mana, and (.+) moves\.$</string>
+                    </regexCodeList>
+                    <regexCodePropertyList>
+                        <integer>1</integer>
+                    </regexCodePropertyList>
+                </Trigger>
+                <Trigger isActive="no" isFolder="no" isTempTrigger="no" isMultiline="no" isPerlSlashGOption="no" isColorizerTrigger="no" isFilterTrigger="no" isSoundTrigger="no" isColorTrigger="no" isColorTriggerFg="no" isColorTriggerBg="no">
+                    <name>Report Moves</name>
+                    <script>send(&quot;emote has &quot; .. matches[4] .. &quot; moves.&quot;)
+disableTrigger(&quot;Report Moves&quot;)</script>
+                    <triggerType>0</triggerType>
+                    <conditonLineDelta>0</conditonLineDelta>
+                    <mStayOpen>0</mStayOpen>
+                    <mCommand></mCommand>
+                    <packageName></packageName>
+                    <mFgColor>#ff0000</mFgColor>
+                    <mBgColor>#ffff00</mBgColor>
+                    <mSoundFile></mSoundFile>
+                    <colorTriggerFgColor>#000000</colorTriggerFgColor>
+                    <colorTriggerBgColor>#000000</colorTriggerBgColor>
+                    <regexCodeList>
+                        <string>^(.+) hits, (.+) mana, and (.+) moves\.$</string>
+                    </regexCodeList>
+                    <regexCodePropertyList>
+                        <integer>1</integer>
+                    </regexCodePropertyList>
+                </Trigger>
+                <Trigger isActive="no" isFolder="no" isTempTrigger="no" isMultiline="no" isPerlSlashGOption="no" isColorizerTrigger="no" isFilterTrigger="no" isSoundTrigger="no" isColorTrigger="no" isColorTriggerFg="no" isColorTriggerBg="no">
+                    <name>Report Hits and Mana</name>
+                    <script>send(&quot;emote has &quot; .. matches[2] .. &quot; hits, and &quot; .. matches[3] .. &quot; mana.&quot;)
+disableTrigger(&quot;Report Hits and Mana&quot;)</script>
+                    <triggerType>0</triggerType>
+                    <conditonLineDelta>0</conditonLineDelta>
+                    <mStayOpen>0</mStayOpen>
+                    <mCommand></mCommand>
+                    <packageName></packageName>
+                    <mFgColor>#ff0000</mFgColor>
+                    <mBgColor>#ffff00</mBgColor>
+                    <mSoundFile></mSoundFile>
+                    <colorTriggerFgColor>#000000</colorTriggerFgColor>
+                    <colorTriggerBgColor>#000000</colorTriggerBgColor>
+                    <regexCodeList>
+                        <string>^(.+) hits, (.+) mana, and (.+) moves\.$</string>
+                    </regexCodeList>
+                    <regexCodePropertyList>
+                        <integer>1</integer>
+                    </regexCodePropertyList>
+                </Trigger>
+                <Trigger isActive="no" isFolder="no" isTempTrigger="no" isMultiline="no" isPerlSlashGOption="no" isColorizerTrigger="no" isFilterTrigger="no" isSoundTrigger="no" isColorTrigger="no" isColorTriggerFg="no" isColorTriggerBg="no">
+                    <name>Report Hits and Moves</name>
+                    <script>send(&quot;emote has &quot; .. matches[2] .. &quot; hits, and &quot; .. matches[4] .. &quot; moves.&quot;)
+disableTrigger(&quot;Report Hits and Moves&quot;)</script>
+                    <triggerType>0</triggerType>
+                    <conditonLineDelta>0</conditonLineDelta>
+                    <mStayOpen>0</mStayOpen>
+                    <mCommand></mCommand>
+                    <packageName></packageName>
+                    <mFgColor>#ff0000</mFgColor>
+                    <mBgColor>#ffff00</mBgColor>
+                    <mSoundFile></mSoundFile>
+                    <colorTriggerFgColor>#000000</colorTriggerFgColor>
+                    <colorTriggerBgColor>#000000</colorTriggerBgColor>
+                    <regexCodeList>
+                        <string>^(.+) hits, (.+) mana, and (.+) moves\.$</string>
+                    </regexCodeList>
+                    <regexCodePropertyList>
+                        <integer>1</integer>
+                    </regexCodePropertyList>
+                </Trigger>
+                <Trigger isActive="no" isFolder="no" isTempTrigger="no" isMultiline="no" isPerlSlashGOption="no" isColorizerTrigger="no" isFilterTrigger="no" isSoundTrigger="no" isColorTrigger="no" isColorTriggerFg="no" isColorTriggerBg="no">
+                    <name>Report XP/TP</name>
+                    <script>send(&quot;emote needs &quot; .. matches[2] .. &quot; xp and &quot; .. matches[3] .. &quot; tp to next level.&quot;)
+disableTrigger(&quot;Report XP/TP&quot;)</script>
+                    <triggerType>0</triggerType>
+                    <conditonLineDelta>0</conditonLineDelta>
+                    <mStayOpen>0</mStayOpen>
+                    <mCommand></mCommand>
+                    <packageName></packageName>
+                    <mFgColor>#ff0000</mFgColor>
+                    <mBgColor>#ffff00</mBgColor>
+                    <mSoundFile></mSoundFile>
+                    <colorTriggerFgColor>#000000</colorTriggerFgColor>
+                    <colorTriggerBgColor>#000000</colorTriggerBgColor>
+                    <regexCodeList>
+                        <string>^Needed: (.+) xp, (.+) tp.</string>
+                    </regexCodeList>
+                    <regexCodePropertyList>
+                        <integer>1</integer>
+                    </regexCodePropertyList>
+                </Trigger>
+            </TriggerGroup>
+        </TriggerGroup>
+    </TriggerPackage>
+    <TimerPackage/>
+    <AliasPackage>
+        <AliasGroup isActive="yes" isFolder="yes">
+            <name>MUME</name>
+            <script></script>
+            <command></command>
+            <packageName>current</packageName>
+            <regex></regex>
+            <AliasGroup isActive="yes" isFolder="yes">
+                <name>Report</name>
+                <script></script>
+                <command></command>
+                <packageName></packageName>
+                <regex></regex>
+                <Alias isActive="yes" isFolder="no">
+                    <name>report score (rs)</name>
+                    <script>enableTrigger(&quot;Report Score&quot;)
+send(&quot;score&quot;, false)</script>
+                    <command></command>
+                    <packageName></packageName>
+                    <regex>^ *rs *$</regex>
+                </Alias>
+                <Alias isActive="yes" isFolder="no">
+                    <name>report hits (rh)</name>
+                    <script>enableTrigger(&quot;Report Hits&quot;)
+send(&quot;score&quot;, false)</script>
+                    <command></command>
+                    <packageName></packageName>
+                    <regex>^ *rh *$</regex>
+                </Alias>
+                <Alias isActive="yes" isFolder="no">
+                    <name>report mana (rm)</name>
+                    <script>enableTrigger(&quot;Report Mana&quot;)
+send(&quot;score&quot;, false)</script>
+                    <command></command>
+                    <packageName></packageName>
+                    <regex>^ *rm *$</regex>
+                </Alias>
+                <Alias isActive="yes" isFolder="no">
+                    <name>report moves (rmo)</name>
+                    <script>enableTrigger(&quot;Report Moves&quot;)
+send(&quot;score&quot;, false)</script>
+                    <command></command>
+                    <packageName></packageName>
+                    <regex>^ *rmo *$</regex>
+                </Alias>
+                <Alias isActive="yes" isFolder="no">
+                    <name>report hits and mana (rhm)</name>
+                    <script>enableTrigger(&quot;Report Hits and Mana&quot;)
+send(&quot;score&quot;, false)</script>
+                    <command></command>
+                    <packageName></packageName>
+                    <regex>^ *rhm *$</regex>
+                </Alias>
+                <Alias isActive="yes" isFolder="no">
+                    <name>report hits and moves (rhmo)</name>
+                    <script>enableTrigger(&quot;Report Hits and Moves&quot;)
+send(&quot;score&quot;, false)</script>
+                    <command></command>
+                    <packageName></packageName>
+                    <regex>^ *rhmo *$</regex>
+                </Alias>
+                <Alias isActive="yes" isFolder="no">
+                    <name>report xp/tp (rxp)</name>
+                    <script>enableTrigger(&quot;Report XP/TP&quot;)
+send(&quot;info Needed: %(%X%) xp, %(%T%) tp.&quot;, false)</script>
+                    <command></command>
+                    <packageName></packageName>
+                    <regex>^ *rxp *$</regex>
+                </Alias>
+                <Alias isActive="yes" isFolder="no">
+                    <name>report help</name>
+                    <script>echo(report.help)</script>
+                    <command></command>
+                    <packageName></packageName>
+                    <regex>^ *report *help *$</regex>
+                </Alias>
+            </AliasGroup>
+        </AliasGroup>
+    </AliasPackage>
+    <ActionPackage/>
+    <ScriptPackage>
+        <ScriptGroup isActive="yes" isFolder="yes">
+            <name>MUME</name>
+            <packageName>current</packageName>
+            <script></script>
+            <eventHandlerList/>
+            <ScriptGroup isActive="yes" isFolder="yes">
+                <name>Report</name>
+                <packageName></packageName>
+                <script>report = report or {}</script>
+                <eventHandlerList/>
+                <Script isActive="yes" isFolder="no">
+                    <name>README</name>
+                    <packageName></packageName>
+                    <script>report.help = [[
+Report
+Author: Octavia
+Version: 1.0
+Changelog:
+- 1.0, 2015-2-10
+  - Initial release.
+
+This package contains aliases that allow you to report (say) various information about yourself: your hits, moves, mana, and xp/tp needed to level.
+
+The commands are as follows:
+report help - Show this message.
+rs - Report hits, mana, and moves.
+rh - Report hits.
+rm - Report mana.
+rmo - Report moves.
+rhm - Report hits and mana.
+rhmo - Report hits and moves.
+rxp - Report xp and tp needed to level.
+]]</script>
+                    <eventHandlerList/>
+                </Script>
+            </ScriptGroup>
+        </ScriptGroup>
+    </ScriptPackage>
+    <KeyPackage/>
+</MudletPackage>

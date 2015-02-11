@@ -1,0 +1,1612 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE MudletPackage>
+<MudletPackage version="1.0">
+    <TriggerPackage>
+        <TriggerGroup isActive="yes" isFolder="yes" isTempTrigger="no" isMultiline="no" isPerlSlashGOption="no" isColorizerTrigger="no" isFilterTrigger="no" isSoundTrigger="no" isColorTrigger="no" isColorTriggerFg="no" isColorTriggerBg="no">
+            <name>MUME</name>
+            <script></script>
+            <triggerType>0</triggerType>
+            <conditonLineDelta>0</conditonLineDelta>
+            <mStayOpen>0</mStayOpen>
+            <mCommand></mCommand>
+            <packageName>current</packageName>
+            <mFgColor>#ff0000</mFgColor>
+            <mBgColor>#ffff00</mBgColor>
+            <mSoundFile></mSoundFile>
+            <colorTriggerFgColor>#000000</colorTriggerFgColor>
+            <colorTriggerBgColor>#000000</colorTriggerBgColor>
+            <regexCodeList/>
+            <regexCodePropertyList/>
+            <TriggerGroup isActive="yes" isFolder="yes" isTempTrigger="no" isMultiline="no" isPerlSlashGOption="no" isColorizerTrigger="no" isFilterTrigger="no" isSoundTrigger="no" isColorTrigger="no" isColorTriggerFg="no" isColorTriggerBg="no">
+                <name>Direction Markers</name>
+                <script></script>
+                <triggerType>0</triggerType>
+                <conditonLineDelta>0</conditonLineDelta>
+                <mStayOpen>0</mStayOpen>
+                <mCommand></mCommand>
+                <packageName></packageName>
+                <mFgColor>#ff0000</mFgColor>
+                <mBgColor>#ffff00</mBgColor>
+                <mSoundFile></mSoundFile>
+                <colorTriggerFgColor>#000000</colorTriggerFgColor>
+                <colorTriggerBgColor>#000000</colorTriggerBgColor>
+                <regexCodeList/>
+                <regexCodePropertyList/>
+                <Trigger isActive="yes" isFolder="no" isTempTrigger="no" isMultiline="no" isPerlSlashGOption="no" isColorizerTrigger="no" isFilterTrigger="no" isSoundTrigger="no" isColorTrigger="no" isColorTriggerFg="no" isColorTriggerBg="no">
+                    <name>leaves north</name>
+                    <script>local line = matches[1]
+local direction = &quot;north&quot;
+local label = direction_markers.make_label(&quot;leave&quot;, direction)
+local line_color = direction_markers.line_colors[&quot;leave&quot;]
+selectString(line, 1)
+replace(&quot;&quot;)
+cinsertText(line_color .. matches[2] .. &quot; leaves &quot; .. label .. &quot;.&quot; .. &quot;&lt;grey&gt;&quot;)</script>
+                    <triggerType>0</triggerType>
+                    <conditonLineDelta>0</conditonLineDelta>
+                    <mStayOpen>0</mStayOpen>
+                    <mCommand></mCommand>
+                    <packageName></packageName>
+                    <mFgColor>#ff0000</mFgColor>
+                    <mBgColor>#ffff00</mBgColor>
+                    <mSoundFile></mSoundFile>
+                    <colorTriggerFgColor>#000000</colorTriggerFgColor>
+                    <colorTriggerBgColor>#000000</colorTriggerBgColor>
+                    <regexCodeList>
+                        <string>^(.+) leaves north\.$</string>
+                    </regexCodeList>
+                    <regexCodePropertyList>
+                        <integer>1</integer>
+                    </regexCodePropertyList>
+                </Trigger>
+                <Trigger isActive="yes" isFolder="no" isTempTrigger="no" isMultiline="no" isPerlSlashGOption="no" isColorizerTrigger="no" isFilterTrigger="no" isSoundTrigger="no" isColorTrigger="no" isColorTriggerFg="no" isColorTriggerBg="no">
+                    <name>leaves south</name>
+                    <script>local line = matches[1]
+local direction = &quot;south&quot;
+local label = direction_markers.make_label(&quot;leave&quot;, direction)
+local line_color = direction_markers.line_colors[&quot;leave&quot;]
+selectString(line, 1)
+replace(&quot;&quot;)
+cinsertText(line_color .. matches[2] .. &quot; leaves &quot; .. label .. &quot;.&quot; .. &quot;&lt;grey&gt;&quot;)</script>
+                    <triggerType>0</triggerType>
+                    <conditonLineDelta>0</conditonLineDelta>
+                    <mStayOpen>0</mStayOpen>
+                    <mCommand></mCommand>
+                    <packageName></packageName>
+                    <mFgColor>#ff0000</mFgColor>
+                    <mBgColor>#ffff00</mBgColor>
+                    <mSoundFile></mSoundFile>
+                    <colorTriggerFgColor>#000000</colorTriggerFgColor>
+                    <colorTriggerBgColor>#000000</colorTriggerBgColor>
+                    <regexCodeList>
+                        <string>^(.+) leaves south\.$</string>
+                    </regexCodeList>
+                    <regexCodePropertyList>
+                        <integer>1</integer>
+                    </regexCodePropertyList>
+                </Trigger>
+                <Trigger isActive="yes" isFolder="no" isTempTrigger="no" isMultiline="no" isPerlSlashGOption="no" isColorizerTrigger="no" isFilterTrigger="no" isSoundTrigger="no" isColorTrigger="no" isColorTriggerFg="no" isColorTriggerBg="no">
+                    <name>leaves east</name>
+                    <script>local line = matches[1]
+local direction = &quot;east&quot;
+local label = direction_markers.make_label(&quot;leave&quot;, direction)
+local line_color = direction_markers.line_colors[&quot;leave&quot;]
+selectString(line, 1)
+replace(&quot;&quot;)
+cinsertText(line_color .. matches[2] .. &quot; leaves &quot; .. label .. &quot;.&quot; .. &quot;&lt;grey&gt;&quot;)</script>
+                    <triggerType>0</triggerType>
+                    <conditonLineDelta>0</conditonLineDelta>
+                    <mStayOpen>0</mStayOpen>
+                    <mCommand></mCommand>
+                    <packageName></packageName>
+                    <mFgColor>#ff0000</mFgColor>
+                    <mBgColor>#ffff00</mBgColor>
+                    <mSoundFile></mSoundFile>
+                    <colorTriggerFgColor>#000000</colorTriggerFgColor>
+                    <colorTriggerBgColor>#000000</colorTriggerBgColor>
+                    <regexCodeList>
+                        <string>^(.+) leaves east\.$</string>
+                    </regexCodeList>
+                    <regexCodePropertyList>
+                        <integer>1</integer>
+                    </regexCodePropertyList>
+                </Trigger>
+                <Trigger isActive="yes" isFolder="no" isTempTrigger="no" isMultiline="no" isPerlSlashGOption="no" isColorizerTrigger="no" isFilterTrigger="no" isSoundTrigger="no" isColorTrigger="no" isColorTriggerFg="no" isColorTriggerBg="no">
+                    <name>leaves west</name>
+                    <script>local line = matches[1]
+local direction = &quot;west&quot;
+local label = direction_markers.make_label(&quot;leave&quot;, direction)
+local line_color = direction_markers.line_colors[&quot;leave&quot;]
+selectString(line, 1)
+replace(&quot;&quot;)
+cinsertText(line_color .. matches[2] .. &quot; leaves &quot; .. label .. &quot;.&quot; .. &quot;&lt;grey&gt;&quot;)</script>
+                    <triggerType>0</triggerType>
+                    <conditonLineDelta>0</conditonLineDelta>
+                    <mStayOpen>0</mStayOpen>
+                    <mCommand></mCommand>
+                    <packageName></packageName>
+                    <mFgColor>#ff0000</mFgColor>
+                    <mBgColor>#ffff00</mBgColor>
+                    <mSoundFile></mSoundFile>
+                    <colorTriggerFgColor>#000000</colorTriggerFgColor>
+                    <colorTriggerBgColor>#000000</colorTriggerBgColor>
+                    <regexCodeList>
+                        <string>^(.+) leaves west\.$</string>
+                    </regexCodeList>
+                    <regexCodePropertyList>
+                        <integer>1</integer>
+                    </regexCodePropertyList>
+                </Trigger>
+                <Trigger isActive="yes" isFolder="no" isTempTrigger="no" isMultiline="no" isPerlSlashGOption="no" isColorizerTrigger="no" isFilterTrigger="no" isSoundTrigger="no" isColorTrigger="no" isColorTriggerFg="no" isColorTriggerBg="no">
+                    <name>leaves up</name>
+                    <script>local line = matches[1]
+local direction = &quot;up&quot;
+local label = direction_markers.make_label(&quot;leave&quot;, direction)
+local line_color = direction_markers.line_colors[&quot;leave&quot;]
+selectString(line, 1)
+replace(&quot;&quot;)
+cinsertText(line_color .. matches[2] .. &quot; leaves &quot; .. label .. &quot;.&quot; .. &quot;&lt;grey&gt;&quot;)</script>
+                    <triggerType>0</triggerType>
+                    <conditonLineDelta>0</conditonLineDelta>
+                    <mStayOpen>0</mStayOpen>
+                    <mCommand></mCommand>
+                    <packageName></packageName>
+                    <mFgColor>#ff0000</mFgColor>
+                    <mBgColor>#ffff00</mBgColor>
+                    <mSoundFile></mSoundFile>
+                    <colorTriggerFgColor>#000000</colorTriggerFgColor>
+                    <colorTriggerBgColor>#000000</colorTriggerBgColor>
+                    <regexCodeList>
+                        <string>^(.+) leaves up\.$</string>
+                    </regexCodeList>
+                    <regexCodePropertyList>
+                        <integer>1</integer>
+                    </regexCodePropertyList>
+                </Trigger>
+                <Trigger isActive="yes" isFolder="no" isTempTrigger="no" isMultiline="no" isPerlSlashGOption="no" isColorizerTrigger="no" isFilterTrigger="no" isSoundTrigger="no" isColorTrigger="no" isColorTriggerFg="no" isColorTriggerBg="no">
+                    <name>leaves down</name>
+                    <script>local line = matches[1]
+local direction = &quot;down&quot;
+local label = direction_markers.make_label(&quot;leave&quot;, direction)
+local line_color = direction_markers.line_colors[&quot;leave&quot;]
+selectString(line, 1)
+replace(&quot;&quot;)
+cinsertText(line_color .. matches[2] .. &quot; leaves &quot; .. label .. &quot;.&quot; .. &quot;&lt;grey&gt;&quot;)</script>
+                    <triggerType>0</triggerType>
+                    <conditonLineDelta>0</conditonLineDelta>
+                    <mStayOpen>0</mStayOpen>
+                    <mCommand></mCommand>
+                    <packageName></packageName>
+                    <mFgColor>#ff0000</mFgColor>
+                    <mBgColor>#ffff00</mBgColor>
+                    <mSoundFile></mSoundFile>
+                    <colorTriggerFgColor>#000000</colorTriggerFgColor>
+                    <colorTriggerBgColor>#000000</colorTriggerBgColor>
+                    <regexCodeList>
+                        <string>^(.+) leaves down\.$</string>
+                    </regexCodeList>
+                    <regexCodePropertyList>
+                        <integer>1</integer>
+                    </regexCodePropertyList>
+                </Trigger>
+                <Trigger isActive="yes" isFolder="no" isTempTrigger="no" isMultiline="no" isPerlSlashGOption="no" isColorizerTrigger="no" isFilterTrigger="no" isSoundTrigger="no" isColorTrigger="no" isColorTriggerFg="no" isColorTriggerBg="no">
+                    <name>leaves north riding</name>
+                    <script>local line = matches[1]
+local direction = &quot;north&quot;
+local label = direction_markers.make_label(&quot;leave&quot;, direction)
+local line_color = direction_markers.line_colors[&quot;leave&quot;]
+selectString(line, 1)
+replace(&quot;&quot;)
+cinsertText(line_color .. matches[2] .. &quot; leaves &quot; .. label .. &quot; riding &quot; .. matches[3] .. &quot;.&quot; .. &quot;&lt;grey&gt;&quot;)</script>
+                    <triggerType>0</triggerType>
+                    <conditonLineDelta>0</conditonLineDelta>
+                    <mStayOpen>0</mStayOpen>
+                    <mCommand></mCommand>
+                    <packageName></packageName>
+                    <mFgColor>#ff0000</mFgColor>
+                    <mBgColor>#ffff00</mBgColor>
+                    <mSoundFile></mSoundFile>
+                    <colorTriggerFgColor>#000000</colorTriggerFgColor>
+                    <colorTriggerBgColor>#000000</colorTriggerBgColor>
+                    <regexCodeList>
+                        <string>^(.+) leaves north riding (.+)\.$</string>
+                    </regexCodeList>
+                    <regexCodePropertyList>
+                        <integer>1</integer>
+                    </regexCodePropertyList>
+                </Trigger>
+                <Trigger isActive="yes" isFolder="no" isTempTrigger="no" isMultiline="no" isPerlSlashGOption="no" isColorizerTrigger="no" isFilterTrigger="no" isSoundTrigger="no" isColorTrigger="no" isColorTriggerFg="no" isColorTriggerBg="no">
+                    <name>leaves south riding</name>
+                    <script>local line = matches[1]
+local direction = &quot;south&quot;
+local label = direction_markers.make_label(&quot;leave&quot;, direction)
+local line_color = direction_markers.line_colors[&quot;leave&quot;]
+selectString(line, 1)
+replace(&quot;&quot;)
+cinsertText(line_color .. matches[2] .. &quot; leaves &quot; .. label .. &quot; riding &quot; .. matches[3] .. &quot;.&quot; .. &quot;&lt;grey&gt;&quot;)</script>
+                    <triggerType>0</triggerType>
+                    <conditonLineDelta>0</conditonLineDelta>
+                    <mStayOpen>0</mStayOpen>
+                    <mCommand></mCommand>
+                    <packageName></packageName>
+                    <mFgColor>#ff0000</mFgColor>
+                    <mBgColor>#ffff00</mBgColor>
+                    <mSoundFile></mSoundFile>
+                    <colorTriggerFgColor>#000000</colorTriggerFgColor>
+                    <colorTriggerBgColor>#000000</colorTriggerBgColor>
+                    <regexCodeList>
+                        <string>^(.+) leaves south riding (.+)\.$</string>
+                    </regexCodeList>
+                    <regexCodePropertyList>
+                        <integer>1</integer>
+                    </regexCodePropertyList>
+                </Trigger>
+                <Trigger isActive="yes" isFolder="no" isTempTrigger="no" isMultiline="no" isPerlSlashGOption="no" isColorizerTrigger="no" isFilterTrigger="no" isSoundTrigger="no" isColorTrigger="no" isColorTriggerFg="no" isColorTriggerBg="no">
+                    <name>leaves east riding</name>
+                    <script>local line = matches[1]
+local direction = &quot;east&quot;
+local label = direction_markers.make_label(&quot;leave&quot;, direction)
+local line_color = direction_markers.line_colors[&quot;leave&quot;]
+selectString(line, 1)
+replace(&quot;&quot;)
+cinsertText(line_color .. matches[2] .. &quot; leaves &quot; .. label .. &quot; riding &quot; .. matches[3] .. &quot;.&quot; .. &quot;&lt;grey&gt;&quot;)</script>
+                    <triggerType>0</triggerType>
+                    <conditonLineDelta>0</conditonLineDelta>
+                    <mStayOpen>0</mStayOpen>
+                    <mCommand></mCommand>
+                    <packageName></packageName>
+                    <mFgColor>#ff0000</mFgColor>
+                    <mBgColor>#ffff00</mBgColor>
+                    <mSoundFile></mSoundFile>
+                    <colorTriggerFgColor>#000000</colorTriggerFgColor>
+                    <colorTriggerBgColor>#000000</colorTriggerBgColor>
+                    <regexCodeList>
+                        <string>^(.+) leaves east riding (.+)\.$</string>
+                    </regexCodeList>
+                    <regexCodePropertyList>
+                        <integer>1</integer>
+                    </regexCodePropertyList>
+                </Trigger>
+                <Trigger isActive="yes" isFolder="no" isTempTrigger="no" isMultiline="no" isPerlSlashGOption="no" isColorizerTrigger="no" isFilterTrigger="no" isSoundTrigger="no" isColorTrigger="no" isColorTriggerFg="no" isColorTriggerBg="no">
+                    <name>leaves west riding</name>
+                    <script>local line = matches[1]
+local direction = &quot;west&quot;
+local label = direction_markers.make_label(&quot;leave&quot;, direction)
+local line_color = direction_markers.line_colors[&quot;leave&quot;]
+selectString(line, 1)
+replace(&quot;&quot;)
+cinsertText(line_color .. matches[2] .. &quot; leaves &quot; .. label .. &quot; riding &quot; .. matches[3] .. &quot;.&quot; .. &quot;&lt;grey&gt;&quot;)</script>
+                    <triggerType>0</triggerType>
+                    <conditonLineDelta>0</conditonLineDelta>
+                    <mStayOpen>0</mStayOpen>
+                    <mCommand></mCommand>
+                    <packageName></packageName>
+                    <mFgColor>#ff0000</mFgColor>
+                    <mBgColor>#ffff00</mBgColor>
+                    <mSoundFile></mSoundFile>
+                    <colorTriggerFgColor>#000000</colorTriggerFgColor>
+                    <colorTriggerBgColor>#000000</colorTriggerBgColor>
+                    <regexCodeList>
+                        <string>^(.+) leaves west riding (.+)\.$</string>
+                    </regexCodeList>
+                    <regexCodePropertyList>
+                        <integer>1</integer>
+                    </regexCodePropertyList>
+                </Trigger>
+                <Trigger isActive="yes" isFolder="no" isTempTrigger="no" isMultiline="no" isPerlSlashGOption="no" isColorizerTrigger="no" isFilterTrigger="no" isSoundTrigger="no" isColorTrigger="no" isColorTriggerFg="no" isColorTriggerBg="no">
+                    <name>leaves up riding</name>
+                    <script>local line = matches[1]
+local direction = &quot;up&quot;
+local label = direction_markers.make_label(&quot;leave&quot;, direction)
+local line_color = direction_markers.line_colors[&quot;leave&quot;]
+selectString(line, 1)
+replace(&quot;&quot;)
+cinsertText(line_color .. matches[2] .. &quot; leaves &quot; .. label .. &quot; riding &quot; .. matches[3] .. &quot;.&quot; .. &quot;&lt;grey&gt;&quot;)</script>
+                    <triggerType>0</triggerType>
+                    <conditonLineDelta>0</conditonLineDelta>
+                    <mStayOpen>0</mStayOpen>
+                    <mCommand></mCommand>
+                    <packageName></packageName>
+                    <mFgColor>#ff0000</mFgColor>
+                    <mBgColor>#ffff00</mBgColor>
+                    <mSoundFile></mSoundFile>
+                    <colorTriggerFgColor>#000000</colorTriggerFgColor>
+                    <colorTriggerBgColor>#000000</colorTriggerBgColor>
+                    <regexCodeList>
+                        <string>^(.+) leaves up riding (.+)\.$</string>
+                    </regexCodeList>
+                    <regexCodePropertyList>
+                        <integer>1</integer>
+                    </regexCodePropertyList>
+                </Trigger>
+                <Trigger isActive="yes" isFolder="no" isTempTrigger="no" isMultiline="no" isPerlSlashGOption="no" isColorizerTrigger="no" isFilterTrigger="no" isSoundTrigger="no" isColorTrigger="no" isColorTriggerFg="no" isColorTriggerBg="no">
+                    <name>leaves down riding</name>
+                    <script>local line = matches[1]
+local direction = &quot;down&quot;
+local label = direction_markers.make_label(&quot;leave&quot;, direction)
+local line_color = direction_markers.line_colors[&quot;leave&quot;]
+selectString(line, 1)
+replace(&quot;&quot;)
+cinsertText(line_color .. matches[2] .. &quot; leaves &quot; .. label .. &quot; riding &quot; .. matches[3] .. &quot;.&quot; .. &quot;&lt;grey&gt;&quot;)</script>
+                    <triggerType>0</triggerType>
+                    <conditonLineDelta>0</conditonLineDelta>
+                    <mStayOpen>0</mStayOpen>
+                    <mCommand></mCommand>
+                    <packageName></packageName>
+                    <mFgColor>#ff0000</mFgColor>
+                    <mBgColor>#ffff00</mBgColor>
+                    <mSoundFile></mSoundFile>
+                    <colorTriggerFgColor>#000000</colorTriggerFgColor>
+                    <colorTriggerBgColor>#000000</colorTriggerBgColor>
+                    <regexCodeList>
+                        <string>^(.+) leaves down riding (.+)\.$</string>
+                    </regexCodeList>
+                    <regexCodePropertyList>
+                        <integer>1</integer>
+                    </regexCodePropertyList>
+                </Trigger>
+                <Trigger isActive="yes" isFolder="no" isTempTrigger="no" isMultiline="no" isPerlSlashGOption="no" isColorizerTrigger="no" isFilterTrigger="no" isSoundTrigger="no" isColorTrigger="no" isColorTriggerFg="no" isColorTriggerBg="no">
+                    <name>leaves north sneaking</name>
+                    <script>local line = matches[1]
+local direction = &quot;north&quot;
+local label = direction_markers.make_label(&quot;leave&quot;, direction)
+local line_color = direction_markers.line_colors[&quot;leave&quot;]
+selectString(line, 1)
+replace(&quot;&quot;)
+cinsertText(line_color .. matches[2] .. &quot; leaves &quot; .. label .. &quot; sneaking &quot; .. &quot;.&quot; .. &quot;&lt;grey&gt;&quot;)</script>
+                    <triggerType>0</triggerType>
+                    <conditonLineDelta>0</conditonLineDelta>
+                    <mStayOpen>0</mStayOpen>
+                    <mCommand></mCommand>
+                    <packageName></packageName>
+                    <mFgColor>#ff0000</mFgColor>
+                    <mBgColor>#ffff00</mBgColor>
+                    <mSoundFile></mSoundFile>
+                    <colorTriggerFgColor>#000000</colorTriggerFgColor>
+                    <colorTriggerBgColor>#000000</colorTriggerBgColor>
+                    <regexCodeList>
+                        <string>^(.+) leaves north sneaking\.$</string>
+                    </regexCodeList>
+                    <regexCodePropertyList>
+                        <integer>1</integer>
+                    </regexCodePropertyList>
+                </Trigger>
+                <Trigger isActive="yes" isFolder="no" isTempTrigger="no" isMultiline="no" isPerlSlashGOption="no" isColorizerTrigger="no" isFilterTrigger="no" isSoundTrigger="no" isColorTrigger="no" isColorTriggerFg="no" isColorTriggerBg="no">
+                    <name>leaves south sneaking</name>
+                    <script>local line = matches[1]
+local direction = &quot;south&quot;
+local label = direction_markers.make_label(&quot;leave&quot;, direction)
+local line_color = direction_markers.line_colors[&quot;leave&quot;]
+selectString(line, 1)
+replace(&quot;&quot;)
+cinsertText(line_color .. matches[2] .. &quot; leaves &quot; .. label .. &quot; sneaking &quot; .. &quot;.&quot; .. &quot;&lt;grey&gt;&quot;)</script>
+                    <triggerType>0</triggerType>
+                    <conditonLineDelta>0</conditonLineDelta>
+                    <mStayOpen>0</mStayOpen>
+                    <mCommand></mCommand>
+                    <packageName></packageName>
+                    <mFgColor>#ff0000</mFgColor>
+                    <mBgColor>#ffff00</mBgColor>
+                    <mSoundFile></mSoundFile>
+                    <colorTriggerFgColor>#000000</colorTriggerFgColor>
+                    <colorTriggerBgColor>#000000</colorTriggerBgColor>
+                    <regexCodeList>
+                        <string>^(.+) leaves south sneaking\.$</string>
+                    </regexCodeList>
+                    <regexCodePropertyList>
+                        <integer>1</integer>
+                    </regexCodePropertyList>
+                </Trigger>
+                <Trigger isActive="yes" isFolder="no" isTempTrigger="no" isMultiline="no" isPerlSlashGOption="no" isColorizerTrigger="no" isFilterTrigger="no" isSoundTrigger="no" isColorTrigger="no" isColorTriggerFg="no" isColorTriggerBg="no">
+                    <name>leaves east sneaking</name>
+                    <script>local line = matches[1]
+local direction = &quot;east&quot;
+local label = direction_markers.make_label(&quot;leave&quot;, direction)
+local line_color = direction_markers.line_colors[&quot;leave&quot;]
+selectString(line, 1)
+replace(&quot;&quot;)
+cinsertText(line_color .. matches[2] .. &quot; leaves &quot; .. label .. &quot; sneaking &quot; .. &quot;.&quot; .. &quot;&lt;grey&gt;&quot;)</script>
+                    <triggerType>0</triggerType>
+                    <conditonLineDelta>0</conditonLineDelta>
+                    <mStayOpen>0</mStayOpen>
+                    <mCommand></mCommand>
+                    <packageName></packageName>
+                    <mFgColor>#ff0000</mFgColor>
+                    <mBgColor>#ffff00</mBgColor>
+                    <mSoundFile></mSoundFile>
+                    <colorTriggerFgColor>#000000</colorTriggerFgColor>
+                    <colorTriggerBgColor>#000000</colorTriggerBgColor>
+                    <regexCodeList>
+                        <string>^(.+) leaves east sneaking\.$</string>
+                    </regexCodeList>
+                    <regexCodePropertyList>
+                        <integer>1</integer>
+                    </regexCodePropertyList>
+                </Trigger>
+                <Trigger isActive="yes" isFolder="no" isTempTrigger="no" isMultiline="no" isPerlSlashGOption="no" isColorizerTrigger="no" isFilterTrigger="no" isSoundTrigger="no" isColorTrigger="no" isColorTriggerFg="no" isColorTriggerBg="no">
+                    <name>leaves west sneaking</name>
+                    <script>local line = matches[1]
+local direction = &quot;west&quot;
+local label = direction_markers.make_label(&quot;leave&quot;, direction)
+local line_color = direction_markers.line_colors[&quot;leave&quot;]
+selectString(line, 1)
+replace(&quot;&quot;)
+cinsertText(line_color .. matches[2] .. &quot; leaves &quot; .. label .. &quot; sneaking &quot; .. &quot;.&quot; .. &quot;&lt;grey&gt;&quot;)</script>
+                    <triggerType>0</triggerType>
+                    <conditonLineDelta>0</conditonLineDelta>
+                    <mStayOpen>0</mStayOpen>
+                    <mCommand></mCommand>
+                    <packageName></packageName>
+                    <mFgColor>#ff0000</mFgColor>
+                    <mBgColor>#ffff00</mBgColor>
+                    <mSoundFile></mSoundFile>
+                    <colorTriggerFgColor>#000000</colorTriggerFgColor>
+                    <colorTriggerBgColor>#000000</colorTriggerBgColor>
+                    <regexCodeList>
+                        <string>^(.+) leaves west sneaking\.$</string>
+                    </regexCodeList>
+                    <regexCodePropertyList>
+                        <integer>1</integer>
+                    </regexCodePropertyList>
+                </Trigger>
+                <Trigger isActive="yes" isFolder="no" isTempTrigger="no" isMultiline="no" isPerlSlashGOption="no" isColorizerTrigger="no" isFilterTrigger="no" isSoundTrigger="no" isColorTrigger="no" isColorTriggerFg="no" isColorTriggerBg="no">
+                    <name>leaves up sneaking</name>
+                    <script>local line = matches[1]
+local direction = &quot;up&quot;
+local label = direction_markers.make_label(&quot;leave&quot;, direction)
+local line_color = direction_markers.line_colors[&quot;leave&quot;]
+selectString(line, 1)
+replace(&quot;&quot;)
+cinsertText(line_color .. matches[2] .. &quot; leaves &quot; .. label .. &quot; sneaking &quot; .. &quot;.&quot; .. &quot;&lt;grey&gt;&quot;)</script>
+                    <triggerType>0</triggerType>
+                    <conditonLineDelta>0</conditonLineDelta>
+                    <mStayOpen>0</mStayOpen>
+                    <mCommand></mCommand>
+                    <packageName></packageName>
+                    <mFgColor>#ff0000</mFgColor>
+                    <mBgColor>#ffff00</mBgColor>
+                    <mSoundFile></mSoundFile>
+                    <colorTriggerFgColor>#000000</colorTriggerFgColor>
+                    <colorTriggerBgColor>#000000</colorTriggerBgColor>
+                    <regexCodeList>
+                        <string>^(.+) leaves up sneaking\.$</string>
+                    </regexCodeList>
+                    <regexCodePropertyList>
+                        <integer>1</integer>
+                    </regexCodePropertyList>
+                </Trigger>
+                <Trigger isActive="yes" isFolder="no" isTempTrigger="no" isMultiline="no" isPerlSlashGOption="no" isColorizerTrigger="no" isFilterTrigger="no" isSoundTrigger="no" isColorTrigger="no" isColorTriggerFg="no" isColorTriggerBg="no">
+                    <name>leaves down sneaking</name>
+                    <script>local line = matches[1]
+local direction = &quot;down&quot;
+local label = direction_markers.make_label(&quot;leave&quot;, direction)
+local line_color = direction_markers.line_colors[&quot;leave&quot;]
+selectString(line, 1)
+replace(&quot;&quot;)
+cinsertText(line_color .. matches[2] .. &quot; leaves &quot; .. label .. &quot; sneaking &quot; .. &quot;.&quot; .. &quot;&lt;grey&gt;&quot;)</script>
+                    <triggerType>0</triggerType>
+                    <conditonLineDelta>0</conditonLineDelta>
+                    <mStayOpen>0</mStayOpen>
+                    <mCommand></mCommand>
+                    <packageName></packageName>
+                    <mFgColor>#ff0000</mFgColor>
+                    <mBgColor>#ffff00</mBgColor>
+                    <mSoundFile></mSoundFile>
+                    <colorTriggerFgColor>#000000</colorTriggerFgColor>
+                    <colorTriggerBgColor>#000000</colorTriggerBgColor>
+                    <regexCodeList>
+                        <string>^(.+) leaves down sneaking\.$</string>
+                    </regexCodeList>
+                    <regexCodePropertyList>
+                        <integer>1</integer>
+                    </regexCodePropertyList>
+                </Trigger>
+                <Trigger isActive="yes" isFolder="no" isTempTrigger="no" isMultiline="no" isPerlSlashGOption="no" isColorizerTrigger="no" isFilterTrigger="no" isSoundTrigger="no" isColorTrigger="no" isColorTriggerFg="no" isColorTriggerBg="no">
+                    <name>has arrived from the north</name>
+                    <script>local line = matches[1]
+local direction = &quot;from the north&quot;
+local label = direction_markers.make_label(&quot;arrive&quot;, direction)
+local line_color = direction_markers.line_colors[&quot;arrive&quot;]
+selectString(line, 1)
+replace(&quot;&quot;)
+cinsertText(line_color .. matches[2] .. &quot; has arrived &quot; .. label .. &quot;.&quot; .. &quot;&lt;grey&gt;&quot;)</script>
+                    <triggerType>0</triggerType>
+                    <conditonLineDelta>0</conditonLineDelta>
+                    <mStayOpen>0</mStayOpen>
+                    <mCommand></mCommand>
+                    <packageName></packageName>
+                    <mFgColor>#ff0000</mFgColor>
+                    <mBgColor>#ffff00</mBgColor>
+                    <mSoundFile></mSoundFile>
+                    <colorTriggerFgColor>#000000</colorTriggerFgColor>
+                    <colorTriggerBgColor>#000000</colorTriggerBgColor>
+                    <regexCodeList>
+                        <string>^(.+) has arrived from the north\.$</string>
+                    </regexCodeList>
+                    <regexCodePropertyList>
+                        <integer>1</integer>
+                    </regexCodePropertyList>
+                </Trigger>
+                <Trigger isActive="yes" isFolder="no" isTempTrigger="no" isMultiline="no" isPerlSlashGOption="no" isColorizerTrigger="no" isFilterTrigger="no" isSoundTrigger="no" isColorTrigger="no" isColorTriggerFg="no" isColorTriggerBg="no">
+                    <name>has arrived from the south</name>
+                    <script>local line = matches[1]
+local direction = &quot;from the south&quot;
+local label = direction_markers.make_label(&quot;arrive&quot;, direction)
+local line_color = direction_markers.line_colors[&quot;arrive&quot;]
+selectString(line, 1)
+replace(&quot;&quot;)
+cinsertText(line_color .. matches[2] .. &quot; has arrived &quot; .. label .. &quot;.&quot; .. &quot;&lt;grey&gt;&quot;)</script>
+                    <triggerType>0</triggerType>
+                    <conditonLineDelta>0</conditonLineDelta>
+                    <mStayOpen>0</mStayOpen>
+                    <mCommand></mCommand>
+                    <packageName></packageName>
+                    <mFgColor>#ff0000</mFgColor>
+                    <mBgColor>#ffff00</mBgColor>
+                    <mSoundFile></mSoundFile>
+                    <colorTriggerFgColor>#000000</colorTriggerFgColor>
+                    <colorTriggerBgColor>#000000</colorTriggerBgColor>
+                    <regexCodeList>
+                        <string>^(.+) has arrived from the south\.$</string>
+                    </regexCodeList>
+                    <regexCodePropertyList>
+                        <integer>1</integer>
+                    </regexCodePropertyList>
+                </Trigger>
+                <Trigger isActive="yes" isFolder="no" isTempTrigger="no" isMultiline="no" isPerlSlashGOption="no" isColorizerTrigger="no" isFilterTrigger="no" isSoundTrigger="no" isColorTrigger="no" isColorTriggerFg="no" isColorTriggerBg="no">
+                    <name>has arrived from the east</name>
+                    <script>local line = matches[1]
+local direction = &quot;from the east&quot;
+local label = direction_markers.make_label(&quot;arrive&quot;, direction)
+local line_color = direction_markers.line_colors[&quot;arrive&quot;]
+selectString(line, 1)
+replace(&quot;&quot;)
+cinsertText(line_color .. matches[2] .. &quot; has arrived &quot; .. label .. &quot;.&quot; .. &quot;&lt;grey&gt;&quot;)</script>
+                    <triggerType>0</triggerType>
+                    <conditonLineDelta>0</conditonLineDelta>
+                    <mStayOpen>0</mStayOpen>
+                    <mCommand></mCommand>
+                    <packageName></packageName>
+                    <mFgColor>#ff0000</mFgColor>
+                    <mBgColor>#ffff00</mBgColor>
+                    <mSoundFile></mSoundFile>
+                    <colorTriggerFgColor>#000000</colorTriggerFgColor>
+                    <colorTriggerBgColor>#000000</colorTriggerBgColor>
+                    <regexCodeList>
+                        <string>^(.+) has arrived from the east\.$</string>
+                    </regexCodeList>
+                    <regexCodePropertyList>
+                        <integer>1</integer>
+                    </regexCodePropertyList>
+                </Trigger>
+                <Trigger isActive="yes" isFolder="no" isTempTrigger="no" isMultiline="no" isPerlSlashGOption="no" isColorizerTrigger="no" isFilterTrigger="no" isSoundTrigger="no" isColorTrigger="no" isColorTriggerFg="no" isColorTriggerBg="no">
+                    <name>has arrived from the west</name>
+                    <script>local line = matches[1]
+local direction = &quot;from the west&quot;
+local label = direction_markers.make_label(&quot;arrive&quot;, direction)
+local line_color = direction_markers.line_colors[&quot;arrive&quot;]
+selectString(line, 1)
+replace(&quot;&quot;)
+cinsertText(line_color .. matches[2] .. &quot; has arrived &quot; .. label .. &quot;.&quot; .. &quot;&lt;grey&gt;&quot;)</script>
+                    <triggerType>0</triggerType>
+                    <conditonLineDelta>0</conditonLineDelta>
+                    <mStayOpen>0</mStayOpen>
+                    <mCommand></mCommand>
+                    <packageName></packageName>
+                    <mFgColor>#ff0000</mFgColor>
+                    <mBgColor>#ffff00</mBgColor>
+                    <mSoundFile></mSoundFile>
+                    <colorTriggerFgColor>#000000</colorTriggerFgColor>
+                    <colorTriggerBgColor>#000000</colorTriggerBgColor>
+                    <regexCodeList>
+                        <string>^(.+) has arrived from the west\.$</string>
+                    </regexCodeList>
+                    <regexCodePropertyList>
+                        <integer>1</integer>
+                    </regexCodePropertyList>
+                </Trigger>
+                <Trigger isActive="yes" isFolder="no" isTempTrigger="no" isMultiline="no" isPerlSlashGOption="no" isColorizerTrigger="no" isFilterTrigger="no" isSoundTrigger="no" isColorTrigger="no" isColorTriggerFg="no" isColorTriggerBg="no">
+                    <name>has arrived from above</name>
+                    <script>local line = matches[1]
+local direction = &quot;from above&quot;
+local label = direction_markers.make_label(&quot;arrive&quot;, direction)
+local line_color = direction_markers.line_colors[&quot;arrive&quot;]
+selectString(line, 1)
+replace(&quot;&quot;)
+cinsertText(line_color .. matches[2] .. &quot; has arrived &quot; .. label .. &quot;.&quot; .. &quot;&lt;grey&gt;&quot;)</script>
+                    <triggerType>0</triggerType>
+                    <conditonLineDelta>0</conditonLineDelta>
+                    <mStayOpen>0</mStayOpen>
+                    <mCommand></mCommand>
+                    <packageName></packageName>
+                    <mFgColor>#ff0000</mFgColor>
+                    <mBgColor>#ffff00</mBgColor>
+                    <mSoundFile></mSoundFile>
+                    <colorTriggerFgColor>#000000</colorTriggerFgColor>
+                    <colorTriggerBgColor>#000000</colorTriggerBgColor>
+                    <regexCodeList>
+                        <string>^(.+) has arrived from above\.$</string>
+                    </regexCodeList>
+                    <regexCodePropertyList>
+                        <integer>1</integer>
+                    </regexCodePropertyList>
+                </Trigger>
+                <Trigger isActive="yes" isFolder="no" isTempTrigger="no" isMultiline="no" isPerlSlashGOption="no" isColorizerTrigger="no" isFilterTrigger="no" isSoundTrigger="no" isColorTrigger="no" isColorTriggerFg="no" isColorTriggerBg="no">
+                    <name>has arrived from below</name>
+                    <script>local line = matches[1]
+local direction = &quot;from below&quot;
+local label = direction_markers.make_label(&quot;arrive&quot;, direction)
+local line_color = direction_markers.line_colors[&quot;arrive&quot;]
+selectString(line, 1)
+replace(&quot;&quot;)
+cinsertText(line_color .. matches[2] .. &quot; has arrived &quot; .. label .. &quot;.&quot; .. &quot;&lt;grey&gt;&quot;)</script>
+                    <triggerType>0</triggerType>
+                    <conditonLineDelta>0</conditonLineDelta>
+                    <mStayOpen>0</mStayOpen>
+                    <mCommand></mCommand>
+                    <packageName></packageName>
+                    <mFgColor>#ff0000</mFgColor>
+                    <mBgColor>#ffff00</mBgColor>
+                    <mSoundFile></mSoundFile>
+                    <colorTriggerFgColor>#000000</colorTriggerFgColor>
+                    <colorTriggerBgColor>#000000</colorTriggerBgColor>
+                    <regexCodeList>
+                        <string>^(.+) has arrived from below\.$</string>
+                    </regexCodeList>
+                    <regexCodePropertyList>
+                        <integer>1</integer>
+                    </regexCodePropertyList>
+                </Trigger>
+                <Trigger isActive="yes" isFolder="no" isTempTrigger="no" isMultiline="no" isPerlSlashGOption="no" isColorizerTrigger="no" isFilterTrigger="no" isSoundTrigger="no" isColorTrigger="no" isColorTriggerFg="no" isColorTriggerBg="no">
+                    <name>has arrived from the north riding</name>
+                    <script>local line = matches[1]
+local direction = &quot;from the north&quot;
+local label = direction_markers.make_label(&quot;arrive&quot;, direction)
+local line_color = direction_markers.line_colors[&quot;arrive&quot;]
+selectString(line, 1)
+replace(&quot;&quot;)
+cinsertText(line_color .. matches[2] .. &quot; has arrived &quot; .. label .. &quot; riding &quot; .. matches[3] .. &quot;.&quot; .. &quot;&lt;grey&gt;&quot;)</script>
+                    <triggerType>0</triggerType>
+                    <conditonLineDelta>0</conditonLineDelta>
+                    <mStayOpen>0</mStayOpen>
+                    <mCommand></mCommand>
+                    <packageName></packageName>
+                    <mFgColor>#ff0000</mFgColor>
+                    <mBgColor>#ffff00</mBgColor>
+                    <mSoundFile></mSoundFile>
+                    <colorTriggerFgColor>#000000</colorTriggerFgColor>
+                    <colorTriggerBgColor>#000000</colorTriggerBgColor>
+                    <regexCodeList>
+                        <string>^(.+) has arrived from the north riding (.+)\.$</string>
+                    </regexCodeList>
+                    <regexCodePropertyList>
+                        <integer>1</integer>
+                    </regexCodePropertyList>
+                </Trigger>
+                <Trigger isActive="yes" isFolder="no" isTempTrigger="no" isMultiline="no" isPerlSlashGOption="no" isColorizerTrigger="no" isFilterTrigger="no" isSoundTrigger="no" isColorTrigger="no" isColorTriggerFg="no" isColorTriggerBg="no">
+                    <name>has arrived from the south riding</name>
+                    <script>local line = matches[1]
+local direction = &quot;from the south&quot;
+local label = direction_markers.make_label(&quot;arrive&quot;, direction)
+local line_color = direction_markers.line_colors[&quot;arrive&quot;]
+selectString(line, 1)
+replace(&quot;&quot;)
+cinsertText(line_color .. matches[2] .. &quot; has arrived &quot; .. label .. &quot; riding &quot; .. matches[3] .. &quot;.&quot; .. &quot;&lt;grey&gt;&quot;)</script>
+                    <triggerType>0</triggerType>
+                    <conditonLineDelta>0</conditonLineDelta>
+                    <mStayOpen>0</mStayOpen>
+                    <mCommand></mCommand>
+                    <packageName></packageName>
+                    <mFgColor>#ff0000</mFgColor>
+                    <mBgColor>#ffff00</mBgColor>
+                    <mSoundFile></mSoundFile>
+                    <colorTriggerFgColor>#000000</colorTriggerFgColor>
+                    <colorTriggerBgColor>#000000</colorTriggerBgColor>
+                    <regexCodeList>
+                        <string>^(.+) has arrived from the south riding (.+)\.$</string>
+                    </regexCodeList>
+                    <regexCodePropertyList>
+                        <integer>1</integer>
+                    </regexCodePropertyList>
+                </Trigger>
+                <Trigger isActive="yes" isFolder="no" isTempTrigger="no" isMultiline="no" isPerlSlashGOption="no" isColorizerTrigger="no" isFilterTrigger="no" isSoundTrigger="no" isColorTrigger="no" isColorTriggerFg="no" isColorTriggerBg="no">
+                    <name>has arrived from the east riding</name>
+                    <script>local line = matches[1]
+local direction = &quot;from the east&quot;
+local label = direction_markers.make_label(&quot;arrive&quot;, direction)
+local line_color = direction_markers.line_colors[&quot;arrive&quot;]
+selectString(line, 1)
+replace(&quot;&quot;)
+cinsertText(line_color .. matches[2] .. &quot; has arrived &quot; .. label .. &quot; riding &quot; .. matches[3] .. &quot;.&quot; .. &quot;&lt;grey&gt;&quot;)</script>
+                    <triggerType>0</triggerType>
+                    <conditonLineDelta>0</conditonLineDelta>
+                    <mStayOpen>0</mStayOpen>
+                    <mCommand></mCommand>
+                    <packageName></packageName>
+                    <mFgColor>#ff0000</mFgColor>
+                    <mBgColor>#ffff00</mBgColor>
+                    <mSoundFile></mSoundFile>
+                    <colorTriggerFgColor>#000000</colorTriggerFgColor>
+                    <colorTriggerBgColor>#000000</colorTriggerBgColor>
+                    <regexCodeList>
+                        <string>^(.+) has arrived from the east riding (.+)\.$</string>
+                    </regexCodeList>
+                    <regexCodePropertyList>
+                        <integer>1</integer>
+                    </regexCodePropertyList>
+                </Trigger>
+                <Trigger isActive="yes" isFolder="no" isTempTrigger="no" isMultiline="no" isPerlSlashGOption="no" isColorizerTrigger="no" isFilterTrigger="no" isSoundTrigger="no" isColorTrigger="no" isColorTriggerFg="no" isColorTriggerBg="no">
+                    <name>has arrived from the west riding</name>
+                    <script>local line = matches[1]
+local direction = &quot;from the west&quot;
+local label = direction_markers.make_label(&quot;arrive&quot;, direction)
+local line_color = direction_markers.line_colors[&quot;arrive&quot;]
+selectString(line, 1)
+replace(&quot;&quot;)
+cinsertText(line_color .. matches[2] .. &quot; has arrived &quot; .. label .. &quot; riding &quot; .. matches[3] .. &quot;.&quot; .. &quot;&lt;grey&gt;&quot;)</script>
+                    <triggerType>0</triggerType>
+                    <conditonLineDelta>0</conditonLineDelta>
+                    <mStayOpen>0</mStayOpen>
+                    <mCommand></mCommand>
+                    <packageName></packageName>
+                    <mFgColor>#ff0000</mFgColor>
+                    <mBgColor>#ffff00</mBgColor>
+                    <mSoundFile></mSoundFile>
+                    <colorTriggerFgColor>#000000</colorTriggerFgColor>
+                    <colorTriggerBgColor>#000000</colorTriggerBgColor>
+                    <regexCodeList>
+                        <string>^(.+) has arrived from the west riding (.+)\.$</string>
+                    </regexCodeList>
+                    <regexCodePropertyList>
+                        <integer>1</integer>
+                    </regexCodePropertyList>
+                </Trigger>
+                <Trigger isActive="yes" isFolder="no" isTempTrigger="no" isMultiline="no" isPerlSlashGOption="no" isColorizerTrigger="no" isFilterTrigger="no" isSoundTrigger="no" isColorTrigger="no" isColorTriggerFg="no" isColorTriggerBg="no">
+                    <name>has arrived from above riding</name>
+                    <script>local line = matches[1]
+local direction = &quot;from above&quot;
+local label = direction_markers.make_label(&quot;arrive&quot;, direction)
+local line_color = direction_markers.line_colors[&quot;arrive&quot;]
+selectString(line, 1)
+replace(&quot;&quot;)
+cinsertText(line_color .. matches[2] .. &quot; has arrived &quot; .. label .. &quot; riding &quot; .. matches[3] .. &quot;.&quot; .. &quot;&lt;grey&gt;&quot;)</script>
+                    <triggerType>0</triggerType>
+                    <conditonLineDelta>0</conditonLineDelta>
+                    <mStayOpen>0</mStayOpen>
+                    <mCommand></mCommand>
+                    <packageName></packageName>
+                    <mFgColor>#ff0000</mFgColor>
+                    <mBgColor>#ffff00</mBgColor>
+                    <mSoundFile></mSoundFile>
+                    <colorTriggerFgColor>#000000</colorTriggerFgColor>
+                    <colorTriggerBgColor>#000000</colorTriggerBgColor>
+                    <regexCodeList>
+                        <string>^(.+) has arrived from above riding (.+)\.$</string>
+                    </regexCodeList>
+                    <regexCodePropertyList>
+                        <integer>1</integer>
+                    </regexCodePropertyList>
+                </Trigger>
+                <Trigger isActive="yes" isFolder="no" isTempTrigger="no" isMultiline="no" isPerlSlashGOption="no" isColorizerTrigger="no" isFilterTrigger="no" isSoundTrigger="no" isColorTrigger="no" isColorTriggerFg="no" isColorTriggerBg="no">
+                    <name>has arrived from below riding</name>
+                    <script>local line = matches[1]
+local direction = &quot;from below&quot;
+local label = direction_markers.make_label(&quot;arrive&quot;, direction)
+local line_color = direction_markers.line_colors[&quot;arrive&quot;]
+selectString(line, 1)
+replace(&quot;&quot;)
+cinsertText(line_color .. matches[2] .. &quot; has arrived &quot; .. label .. &quot; riding &quot; .. matches[3] .. &quot;.&quot; .. &quot;&lt;grey&gt;&quot;)</script>
+                    <triggerType>0</triggerType>
+                    <conditonLineDelta>0</conditonLineDelta>
+                    <mStayOpen>0</mStayOpen>
+                    <mCommand></mCommand>
+                    <packageName></packageName>
+                    <mFgColor>#ff0000</mFgColor>
+                    <mBgColor>#ffff00</mBgColor>
+                    <mSoundFile></mSoundFile>
+                    <colorTriggerFgColor>#000000</colorTriggerFgColor>
+                    <colorTriggerBgColor>#000000</colorTriggerBgColor>
+                    <regexCodeList>
+                        <string>^(.+) has arrived from below riding (.+)\.$</string>
+                    </regexCodeList>
+                    <regexCodePropertyList>
+                        <integer>1</integer>
+                    </regexCodePropertyList>
+                </Trigger>
+                <Trigger isActive="yes" isFolder="no" isTempTrigger="no" isMultiline="no" isPerlSlashGOption="no" isColorizerTrigger="no" isFilterTrigger="no" isSoundTrigger="no" isColorTrigger="no" isColorTriggerFg="no" isColorTriggerBg="no">
+                    <name>You flee north</name>
+                    <script>local line = matches[1]
+local direction = &quot;north&quot;
+local label = direction_markers.make_label(&quot;flee&quot;, direction)
+local line_color = direction_markers.line_colors[&quot;flee&quot;]
+selectString(line, 1)
+replace(&quot;&quot;)
+cinsertText(line_color .. &quot;You flee &quot; .. label .. &quot;.&quot; .. &quot;&lt;grey&gt;&quot;)</script>
+                    <triggerType>0</triggerType>
+                    <conditonLineDelta>0</conditonLineDelta>
+                    <mStayOpen>0</mStayOpen>
+                    <mCommand></mCommand>
+                    <packageName></packageName>
+                    <mFgColor>#ff0000</mFgColor>
+                    <mBgColor>#ffff00</mBgColor>
+                    <mSoundFile></mSoundFile>
+                    <colorTriggerFgColor>#000000</colorTriggerFgColor>
+                    <colorTriggerBgColor>#000000</colorTriggerBgColor>
+                    <regexCodeList>
+                        <string>^You flee north\.$</string>
+                    </regexCodeList>
+                    <regexCodePropertyList>
+                        <integer>1</integer>
+                    </regexCodePropertyList>
+                </Trigger>
+                <Trigger isActive="yes" isFolder="no" isTempTrigger="no" isMultiline="no" isPerlSlashGOption="no" isColorizerTrigger="no" isFilterTrigger="no" isSoundTrigger="no" isColorTrigger="no" isColorTriggerFg="no" isColorTriggerBg="no">
+                    <name>You flee south</name>
+                    <script>local line = matches[1]
+local direction = &quot;south&quot;
+local label = direction_markers.make_label(&quot;flee&quot;, direction)
+local line_color = direction_markers.line_colors[&quot;flee&quot;]
+selectString(line, 1)
+replace(&quot;&quot;)
+cinsertText(line_color .. &quot;You flee &quot; .. label .. &quot;.&quot; .. &quot;&lt;grey&gt;&quot;)</script>
+                    <triggerType>0</triggerType>
+                    <conditonLineDelta>0</conditonLineDelta>
+                    <mStayOpen>0</mStayOpen>
+                    <mCommand></mCommand>
+                    <packageName></packageName>
+                    <mFgColor>#ff0000</mFgColor>
+                    <mBgColor>#ffff00</mBgColor>
+                    <mSoundFile></mSoundFile>
+                    <colorTriggerFgColor>#000000</colorTriggerFgColor>
+                    <colorTriggerBgColor>#000000</colorTriggerBgColor>
+                    <regexCodeList>
+                        <string>^You flee south\.$</string>
+                    </regexCodeList>
+                    <regexCodePropertyList>
+                        <integer>1</integer>
+                    </regexCodePropertyList>
+                </Trigger>
+                <Trigger isActive="yes" isFolder="no" isTempTrigger="no" isMultiline="no" isPerlSlashGOption="no" isColorizerTrigger="no" isFilterTrigger="no" isSoundTrigger="no" isColorTrigger="no" isColorTriggerFg="no" isColorTriggerBg="no">
+                    <name>You flee east</name>
+                    <script>local line = matches[1]
+local direction = &quot;east&quot;
+local label = direction_markers.make_label(&quot;flee&quot;, direction)
+local line_color = direction_markers.line_colors[&quot;flee&quot;]
+selectString(line, 1)
+replace(&quot;&quot;)
+cinsertText(line_color .. &quot;You flee &quot; .. label .. &quot;.&quot; .. &quot;&lt;grey&gt;&quot;)</script>
+                    <triggerType>0</triggerType>
+                    <conditonLineDelta>0</conditonLineDelta>
+                    <mStayOpen>0</mStayOpen>
+                    <mCommand></mCommand>
+                    <packageName></packageName>
+                    <mFgColor>#ff0000</mFgColor>
+                    <mBgColor>#ffff00</mBgColor>
+                    <mSoundFile></mSoundFile>
+                    <colorTriggerFgColor>#000000</colorTriggerFgColor>
+                    <colorTriggerBgColor>#000000</colorTriggerBgColor>
+                    <regexCodeList>
+                        <string>^You flee east\.$</string>
+                    </regexCodeList>
+                    <regexCodePropertyList>
+                        <integer>1</integer>
+                    </regexCodePropertyList>
+                </Trigger>
+                <Trigger isActive="yes" isFolder="no" isTempTrigger="no" isMultiline="no" isPerlSlashGOption="no" isColorizerTrigger="no" isFilterTrigger="no" isSoundTrigger="no" isColorTrigger="no" isColorTriggerFg="no" isColorTriggerBg="no">
+                    <name>You flee west</name>
+                    <script>local line = matches[1]
+local direction = &quot;west&quot;
+local label = direction_markers.make_label(&quot;flee&quot;, direction)
+local line_color = direction_markers.line_colors[&quot;flee&quot;]
+selectString(line, 1)
+replace(&quot;&quot;)
+cinsertText(line_color .. &quot;You flee &quot; .. label .. &quot;.&quot; .. &quot;&lt;grey&gt;&quot;)</script>
+                    <triggerType>0</triggerType>
+                    <conditonLineDelta>0</conditonLineDelta>
+                    <mStayOpen>0</mStayOpen>
+                    <mCommand></mCommand>
+                    <packageName></packageName>
+                    <mFgColor>#ff0000</mFgColor>
+                    <mBgColor>#ffff00</mBgColor>
+                    <mSoundFile></mSoundFile>
+                    <colorTriggerFgColor>#000000</colorTriggerFgColor>
+                    <colorTriggerBgColor>#000000</colorTriggerBgColor>
+                    <regexCodeList>
+                        <string>^You flee west\.$</string>
+                    </regexCodeList>
+                    <regexCodePropertyList>
+                        <integer>1</integer>
+                    </regexCodePropertyList>
+                </Trigger>
+                <Trigger isActive="yes" isFolder="no" isTempTrigger="no" isMultiline="no" isPerlSlashGOption="no" isColorizerTrigger="no" isFilterTrigger="no" isSoundTrigger="no" isColorTrigger="no" isColorTriggerFg="no" isColorTriggerBg="no">
+                    <name>You flee up</name>
+                    <script>local line = matches[1]
+local direction = &quot;up&quot;
+local label = direction_markers.make_label(&quot;flee&quot;, direction)
+local line_color = direction_markers.line_colors[&quot;flee&quot;]
+selectString(line, 1)
+replace(&quot;&quot;)
+cinsertText(line_color .. &quot;You flee &quot; .. label .. &quot;.&quot; .. &quot;&lt;grey&gt;&quot;)</script>
+                    <triggerType>0</triggerType>
+                    <conditonLineDelta>0</conditonLineDelta>
+                    <mStayOpen>0</mStayOpen>
+                    <mCommand></mCommand>
+                    <packageName></packageName>
+                    <mFgColor>#ff0000</mFgColor>
+                    <mBgColor>#ffff00</mBgColor>
+                    <mSoundFile></mSoundFile>
+                    <colorTriggerFgColor>#000000</colorTriggerFgColor>
+                    <colorTriggerBgColor>#000000</colorTriggerBgColor>
+                    <regexCodeList>
+                        <string>^You flee up\.$</string>
+                    </regexCodeList>
+                    <regexCodePropertyList>
+                        <integer>1</integer>
+                    </regexCodePropertyList>
+                </Trigger>
+                <Trigger isActive="yes" isFolder="no" isTempTrigger="no" isMultiline="no" isPerlSlashGOption="no" isColorizerTrigger="no" isFilterTrigger="no" isSoundTrigger="no" isColorTrigger="no" isColorTriggerFg="no" isColorTriggerBg="no">
+                    <name>You flee down</name>
+                    <script>local line = matches[1]
+local direction = &quot;down&quot;
+local label = direction_markers.make_label(&quot;flee&quot;, direction)
+local line_color = direction_markers.line_colors[&quot;flee&quot;]
+selectString(line, 1)
+replace(&quot;&quot;)
+cinsertText(line_color .. &quot;You flee &quot; .. label .. &quot;.&quot; .. &quot;&lt;grey&gt;&quot;)</script>
+                    <triggerType>0</triggerType>
+                    <conditonLineDelta>0</conditonLineDelta>
+                    <mStayOpen>0</mStayOpen>
+                    <mCommand></mCommand>
+                    <packageName></packageName>
+                    <mFgColor>#ff0000</mFgColor>
+                    <mBgColor>#ffff00</mBgColor>
+                    <mSoundFile></mSoundFile>
+                    <colorTriggerFgColor>#000000</colorTriggerFgColor>
+                    <colorTriggerBgColor>#000000</colorTriggerBgColor>
+                    <regexCodeList>
+                        <string>^You flee down\.$</string>
+                    </regexCodeList>
+                    <regexCodePropertyList>
+                        <integer>1</integer>
+                    </regexCodePropertyList>
+                </Trigger>
+                <Trigger isActive="yes" isFolder="no" isTempTrigger="no" isMultiline="no" isPerlSlashGOption="no" isColorizerTrigger="no" isFilterTrigger="no" isSoundTrigger="no" isColorTrigger="no" isColorTriggerFg="no" isColorTriggerBg="no">
+                    <name>- a track of leading north done</name>
+                    <script>local line = matches[1]
+local direction = &quot;north&quot;
+local label = direction_markers.make_label(&quot;track&quot;, direction)
+local line_color = direction_markers.line_colors[&quot;track&quot;]
+selectString(line, 1)
+replace(&quot;&quot;)
+cinsertText(line_color .. &quot;   - a track of &quot; .. matches[2] .. &quot; leading &quot; .. label .. &quot; done &quot; .. matches[3] .. &quot;&lt;grey&gt;&quot;)</script>
+                    <triggerType>0</triggerType>
+                    <conditonLineDelta>0</conditonLineDelta>
+                    <mStayOpen>0</mStayOpen>
+                    <mCommand></mCommand>
+                    <packageName></packageName>
+                    <mFgColor>#ff0000</mFgColor>
+                    <mBgColor>#ffff00</mBgColor>
+                    <mSoundFile></mSoundFile>
+                    <colorTriggerFgColor>#000000</colorTriggerFgColor>
+                    <colorTriggerBgColor>#000000</colorTriggerBgColor>
+                    <regexCodeList>
+                        <string>^   - a track of (.+) leading north done (.+)$</string>
+                    </regexCodeList>
+                    <regexCodePropertyList>
+                        <integer>1</integer>
+                    </regexCodePropertyList>
+                </Trigger>
+                <Trigger isActive="yes" isFolder="no" isTempTrigger="no" isMultiline="no" isPerlSlashGOption="no" isColorizerTrigger="no" isFilterTrigger="no" isSoundTrigger="no" isColorTrigger="no" isColorTriggerFg="no" isColorTriggerBg="no">
+                    <name>- a track of leading south done</name>
+                    <script>local line = matches[1]
+local direction = &quot;south&quot;
+local label = direction_markers.make_label(&quot;track&quot;, direction)
+local line_color = direction_markers.line_colors[&quot;track&quot;]
+selectString(line, 1)
+replace(&quot;&quot;)
+cinsertText(line_color .. &quot;   - a track of &quot; .. matches[2] .. &quot; leading &quot; .. label .. &quot; done &quot; .. matches[3] .. &quot;&lt;grey&gt;&quot;)</script>
+                    <triggerType>0</triggerType>
+                    <conditonLineDelta>0</conditonLineDelta>
+                    <mStayOpen>0</mStayOpen>
+                    <mCommand></mCommand>
+                    <packageName></packageName>
+                    <mFgColor>#ff0000</mFgColor>
+                    <mBgColor>#ffff00</mBgColor>
+                    <mSoundFile></mSoundFile>
+                    <colorTriggerFgColor>#000000</colorTriggerFgColor>
+                    <colorTriggerBgColor>#000000</colorTriggerBgColor>
+                    <regexCodeList>
+                        <string>^   - a track of (.+) leading south done (.+)$</string>
+                    </regexCodeList>
+                    <regexCodePropertyList>
+                        <integer>1</integer>
+                    </regexCodePropertyList>
+                </Trigger>
+                <Trigger isActive="yes" isFolder="no" isTempTrigger="no" isMultiline="no" isPerlSlashGOption="no" isColorizerTrigger="no" isFilterTrigger="no" isSoundTrigger="no" isColorTrigger="no" isColorTriggerFg="no" isColorTriggerBg="no">
+                    <name>- a track of leading east done</name>
+                    <script>local line = matches[1]
+local direction = &quot;east&quot;
+local label = direction_markers.make_label(&quot;track&quot;, direction)
+local line_color = direction_markers.line_colors[&quot;track&quot;]
+selectString(line, 1)
+replace(&quot;&quot;)
+cinsertText(line_color .. &quot;   - a track of &quot; .. matches[2] .. &quot; leading &quot; .. label .. &quot; done &quot; .. matches[3] .. &quot;&lt;grey&gt;&quot;)</script>
+                    <triggerType>0</triggerType>
+                    <conditonLineDelta>0</conditonLineDelta>
+                    <mStayOpen>0</mStayOpen>
+                    <mCommand></mCommand>
+                    <packageName></packageName>
+                    <mFgColor>#ff0000</mFgColor>
+                    <mBgColor>#ffff00</mBgColor>
+                    <mSoundFile></mSoundFile>
+                    <colorTriggerFgColor>#000000</colorTriggerFgColor>
+                    <colorTriggerBgColor>#000000</colorTriggerBgColor>
+                    <regexCodeList>
+                        <string>^   - a track of (.+) leading east done (.+)$</string>
+                    </regexCodeList>
+                    <regexCodePropertyList>
+                        <integer>1</integer>
+                    </regexCodePropertyList>
+                </Trigger>
+                <Trigger isActive="yes" isFolder="no" isTempTrigger="no" isMultiline="no" isPerlSlashGOption="no" isColorizerTrigger="no" isFilterTrigger="no" isSoundTrigger="no" isColorTrigger="no" isColorTriggerFg="no" isColorTriggerBg="no">
+                    <name>- a track of leading west done</name>
+                    <script>local line = matches[1]
+local direction = &quot;west&quot;
+local label = direction_markers.make_label(&quot;track&quot;, direction)
+local line_color = direction_markers.line_colors[&quot;track&quot;]
+selectString(line, 1)
+replace(&quot;&quot;)
+cinsertText(line_color .. &quot;   - a track of &quot; .. matches[2] .. &quot; leading &quot; .. label .. &quot; done &quot; .. matches[3] .. &quot;&lt;grey&gt;&quot;)</script>
+                    <triggerType>0</triggerType>
+                    <conditonLineDelta>0</conditonLineDelta>
+                    <mStayOpen>0</mStayOpen>
+                    <mCommand></mCommand>
+                    <packageName></packageName>
+                    <mFgColor>#ff0000</mFgColor>
+                    <mBgColor>#ffff00</mBgColor>
+                    <mSoundFile></mSoundFile>
+                    <colorTriggerFgColor>#000000</colorTriggerFgColor>
+                    <colorTriggerBgColor>#000000</colorTriggerBgColor>
+                    <regexCodeList>
+                        <string>^   - a track of (.+) leading west done (.+)$</string>
+                    </regexCodeList>
+                    <regexCodePropertyList>
+                        <integer>1</integer>
+                    </regexCodePropertyList>
+                </Trigger>
+                <Trigger isActive="yes" isFolder="no" isTempTrigger="no" isMultiline="no" isPerlSlashGOption="no" isColorizerTrigger="no" isFilterTrigger="no" isSoundTrigger="no" isColorTrigger="no" isColorTriggerFg="no" isColorTriggerBg="no">
+                    <name>- a track of leading up done</name>
+                    <script>local line = matches[1]
+local direction = &quot;up&quot;
+local label = direction_markers.make_label(&quot;track&quot;, direction)
+local line_color = direction_markers.line_colors[&quot;track&quot;]
+selectString(line, 1)
+replace(&quot;&quot;)
+cinsertText(line_color .. &quot;   - a track of &quot; .. matches[2] .. &quot; leading &quot; .. label .. &quot; done &quot; .. matches[3] .. &quot;&lt;grey&gt;&quot;)</script>
+                    <triggerType>0</triggerType>
+                    <conditonLineDelta>0</conditonLineDelta>
+                    <mStayOpen>0</mStayOpen>
+                    <mCommand></mCommand>
+                    <packageName></packageName>
+                    <mFgColor>#ff0000</mFgColor>
+                    <mBgColor>#ffff00</mBgColor>
+                    <mSoundFile></mSoundFile>
+                    <colorTriggerFgColor>#000000</colorTriggerFgColor>
+                    <colorTriggerBgColor>#000000</colorTriggerBgColor>
+                    <regexCodeList>
+                        <string>^   - a track of (.+) leading up done (.+)$</string>
+                    </regexCodeList>
+                    <regexCodePropertyList>
+                        <integer>1</integer>
+                    </regexCodePropertyList>
+                </Trigger>
+                <Trigger isActive="yes" isFolder="no" isTempTrigger="no" isMultiline="no" isPerlSlashGOption="no" isColorizerTrigger="no" isFilterTrigger="no" isSoundTrigger="no" isColorTrigger="no" isColorTriggerFg="no" isColorTriggerBg="no">
+                    <name>- a track of leading down done</name>
+                    <script>local line = matches[1]
+local direction = &quot;down&quot;
+local label = direction_markers.make_label(&quot;track&quot;, direction)
+local line_color = direction_markers.line_colors[&quot;track&quot;]
+selectString(line, 1)
+replace(&quot;&quot;)
+cinsertText(line_color .. &quot;   - a track of &quot; .. matches[2] .. &quot; leading &quot; .. label .. &quot; done &quot; .. matches[3] .. &quot;&lt;grey&gt;&quot;)</script>
+                    <triggerType>0</triggerType>
+                    <conditonLineDelta>0</conditonLineDelta>
+                    <mStayOpen>0</mStayOpen>
+                    <mCommand></mCommand>
+                    <packageName></packageName>
+                    <mFgColor>#ff0000</mFgColor>
+                    <mBgColor>#ffff00</mBgColor>
+                    <mSoundFile></mSoundFile>
+                    <colorTriggerFgColor>#000000</colorTriggerFgColor>
+                    <colorTriggerBgColor>#000000</colorTriggerBgColor>
+                    <regexCodeList>
+                        <string>^   - a track of (.+) leading down done (.+)$</string>
+                    </regexCodeList>
+                    <regexCodePropertyList>
+                        <integer>1</integer>
+                    </regexCodePropertyList>
+                </Trigger>
+                <Trigger isActive="yes" isFolder="no" isTempTrigger="no" isMultiline="no" isPerlSlashGOption="no" isColorizerTrigger="no" isFilterTrigger="no" isSoundTrigger="no" isColorTrigger="no" isColorTriggerFg="no" isColorTriggerBg="no">
+                    <name>- a track of coming from the north done</name>
+                    <script>local line = matches[1]
+local direction = &quot;from the north&quot;
+local label = direction_markers.make_label(&quot;track&quot;, direction)
+local line_color = direction_markers.line_colors[&quot;track&quot;]
+selectString(line, 1)
+replace(&quot;&quot;)
+cinsertText(line_color .. &quot;   - a track of &quot; .. matches[2] .. &quot; coming &quot; .. label .. &quot; done &quot; .. matches[3] .. &quot;&lt;grey&gt;&quot;)</script>
+                    <triggerType>0</triggerType>
+                    <conditonLineDelta>0</conditonLineDelta>
+                    <mStayOpen>0</mStayOpen>
+                    <mCommand></mCommand>
+                    <packageName></packageName>
+                    <mFgColor>#ff0000</mFgColor>
+                    <mBgColor>#ffff00</mBgColor>
+                    <mSoundFile></mSoundFile>
+                    <colorTriggerFgColor>#000000</colorTriggerFgColor>
+                    <colorTriggerBgColor>#000000</colorTriggerBgColor>
+                    <regexCodeList>
+                        <string>^   - a track of (.+) coming from the north done (.+)$</string>
+                    </regexCodeList>
+                    <regexCodePropertyList>
+                        <integer>1</integer>
+                    </regexCodePropertyList>
+                </Trigger>
+                <Trigger isActive="yes" isFolder="no" isTempTrigger="no" isMultiline="no" isPerlSlashGOption="no" isColorizerTrigger="no" isFilterTrigger="no" isSoundTrigger="no" isColorTrigger="no" isColorTriggerFg="no" isColorTriggerBg="no">
+                    <name>- a track of coming from the south done</name>
+                    <script>local line = matches[1]
+local direction = &quot;from the south&quot;
+local label = direction_markers.make_label(&quot;track&quot;, direction)
+local line_color = direction_markers.line_colors[&quot;track&quot;]
+selectString(line, 1)
+replace(&quot;&quot;)
+cinsertText(line_color .. &quot;   - a track of &quot; .. matches[2] .. &quot; coming &quot; .. label .. &quot; done &quot; .. matches[3] .. &quot;&lt;grey&gt;&quot;)</script>
+                    <triggerType>0</triggerType>
+                    <conditonLineDelta>0</conditonLineDelta>
+                    <mStayOpen>0</mStayOpen>
+                    <mCommand></mCommand>
+                    <packageName></packageName>
+                    <mFgColor>#ff0000</mFgColor>
+                    <mBgColor>#ffff00</mBgColor>
+                    <mSoundFile></mSoundFile>
+                    <colorTriggerFgColor>#000000</colorTriggerFgColor>
+                    <colorTriggerBgColor>#000000</colorTriggerBgColor>
+                    <regexCodeList>
+                        <string>^   - a track of (.+) coming from the south done (.+)$</string>
+                    </regexCodeList>
+                    <regexCodePropertyList>
+                        <integer>1</integer>
+                    </regexCodePropertyList>
+                </Trigger>
+                <Trigger isActive="yes" isFolder="no" isTempTrigger="no" isMultiline="no" isPerlSlashGOption="no" isColorizerTrigger="no" isFilterTrigger="no" isSoundTrigger="no" isColorTrigger="no" isColorTriggerFg="no" isColorTriggerBg="no">
+                    <name>- a track of coming from the east done</name>
+                    <script>local line = matches[1]
+local direction = &quot;from the east&quot;
+local label = direction_markers.make_label(&quot;track&quot;, direction)
+local line_color = direction_markers.line_colors[&quot;track&quot;]
+selectString(line, 1)
+replace(&quot;&quot;)
+cinsertText(line_color .. &quot;   - a track of &quot; .. matches[2] .. &quot; coming &quot; .. label .. &quot; done &quot; .. matches[3] .. &quot;&lt;grey&gt;&quot;)</script>
+                    <triggerType>0</triggerType>
+                    <conditonLineDelta>0</conditonLineDelta>
+                    <mStayOpen>0</mStayOpen>
+                    <mCommand></mCommand>
+                    <packageName></packageName>
+                    <mFgColor>#ff0000</mFgColor>
+                    <mBgColor>#ffff00</mBgColor>
+                    <mSoundFile></mSoundFile>
+                    <colorTriggerFgColor>#000000</colorTriggerFgColor>
+                    <colorTriggerBgColor>#000000</colorTriggerBgColor>
+                    <regexCodeList>
+                        <string>^   - a track of (.+) coming from the east done (.+)$</string>
+                    </regexCodeList>
+                    <regexCodePropertyList>
+                        <integer>1</integer>
+                    </regexCodePropertyList>
+                </Trigger>
+                <Trigger isActive="yes" isFolder="no" isTempTrigger="no" isMultiline="no" isPerlSlashGOption="no" isColorizerTrigger="no" isFilterTrigger="no" isSoundTrigger="no" isColorTrigger="no" isColorTriggerFg="no" isColorTriggerBg="no">
+                    <name>- a track of coming from the west done</name>
+                    <script>local line = matches[1]
+local direction = &quot;from the west&quot;
+local label = direction_markers.make_label(&quot;track&quot;, direction)
+local line_color = direction_markers.line_colors[&quot;track&quot;]
+selectString(line, 1)
+replace(&quot;&quot;)
+cinsertText(line_color .. &quot;   - a track of &quot; .. matches[2] .. &quot; coming &quot; .. label .. &quot; done &quot; .. matches[3] .. &quot;&lt;grey&gt;&quot;)</script>
+                    <triggerType>0</triggerType>
+                    <conditonLineDelta>0</conditonLineDelta>
+                    <mStayOpen>0</mStayOpen>
+                    <mCommand></mCommand>
+                    <packageName></packageName>
+                    <mFgColor>#ff0000</mFgColor>
+                    <mBgColor>#ffff00</mBgColor>
+                    <mSoundFile></mSoundFile>
+                    <colorTriggerFgColor>#000000</colorTriggerFgColor>
+                    <colorTriggerBgColor>#000000</colorTriggerBgColor>
+                    <regexCodeList>
+                        <string>^   - a track of (.+) coming from the west done (.+)$</string>
+                    </regexCodeList>
+                    <regexCodePropertyList>
+                        <integer>1</integer>
+                    </regexCodePropertyList>
+                </Trigger>
+                <Trigger isActive="yes" isFolder="no" isTempTrigger="no" isMultiline="no" isPerlSlashGOption="no" isColorizerTrigger="no" isFilterTrigger="no" isSoundTrigger="no" isColorTrigger="no" isColorTriggerFg="no" isColorTriggerBg="no">
+                    <name>- a track of coming from above done</name>
+                    <script>local line = matches[1]
+local direction = &quot;from above&quot;
+local label = direction_markers.make_label(&quot;track&quot;, direction)
+local line_color = direction_markers.line_colors[&quot;track&quot;]
+selectString(line, 1)
+replace(&quot;&quot;)
+cinsertText(line_color .. &quot;   - a track of &quot; .. matches[2] .. &quot; coming &quot; .. label .. &quot; done &quot; .. matches[3] .. &quot;&lt;grey&gt;&quot;)</script>
+                    <triggerType>0</triggerType>
+                    <conditonLineDelta>0</conditonLineDelta>
+                    <mStayOpen>0</mStayOpen>
+                    <mCommand></mCommand>
+                    <packageName></packageName>
+                    <mFgColor>#ff0000</mFgColor>
+                    <mBgColor>#ffff00</mBgColor>
+                    <mSoundFile></mSoundFile>
+                    <colorTriggerFgColor>#000000</colorTriggerFgColor>
+                    <colorTriggerBgColor>#000000</colorTriggerBgColor>
+                    <regexCodeList>
+                        <string>^   - a track of (.+) coming from above done (.+)$</string>
+                    </regexCodeList>
+                    <regexCodePropertyList>
+                        <integer>1</integer>
+                    </regexCodePropertyList>
+                </Trigger>
+                <Trigger isActive="yes" isFolder="no" isTempTrigger="no" isMultiline="no" isPerlSlashGOption="no" isColorizerTrigger="no" isFilterTrigger="no" isSoundTrigger="no" isColorTrigger="no" isColorTriggerFg="no" isColorTriggerBg="no">
+                    <name>- a track of coming from below done</name>
+                    <script>local line = matches[1]
+local direction = &quot;from below&quot;
+local label = direction_markers.make_label(&quot;track&quot;, direction)
+local line_color = direction_markers.line_colors[&quot;track&quot;]
+selectString(line, 1)
+replace(&quot;&quot;)
+cinsertText(line_color .. &quot;   - a track of &quot; .. matches[2] .. &quot; coming &quot; .. label .. &quot; done &quot; .. matches[3] .. &quot;&lt;grey&gt;&quot;)</script>
+                    <triggerType>0</triggerType>
+                    <conditonLineDelta>0</conditonLineDelta>
+                    <mStayOpen>0</mStayOpen>
+                    <mCommand></mCommand>
+                    <packageName></packageName>
+                    <mFgColor>#ff0000</mFgColor>
+                    <mBgColor>#ffff00</mBgColor>
+                    <mSoundFile></mSoundFile>
+                    <colorTriggerFgColor>#000000</colorTriggerFgColor>
+                    <colorTriggerBgColor>#000000</colorTriggerBgColor>
+                    <regexCodeList>
+                        <string>^   - a track of (.+) coming from below done (.+)$</string>
+                    </regexCodeList>
+                    <regexCodePropertyList>
+                        <integer>1</integer>
+                    </regexCodePropertyList>
+                </Trigger>
+            </TriggerGroup>
+        </TriggerGroup>
+    </TriggerPackage>
+    <TimerPackage/>
+    <AliasPackage>
+        <AliasGroup isActive="yes" isFolder="yes">
+            <name>MUME</name>
+            <script></script>
+            <command></command>
+            <packageName>current</packageName>
+            <regex></regex>
+            <AliasGroup isActive="yes" isFolder="yes">
+                <name>Direction Markers</name>
+                <script></script>
+                <command></command>
+                <packageName></packageName>
+                <regex></regex>
+                <Alias isActive="yes" isFolder="no">
+                    <name>direction markers make triggers</name>
+                    <script>direction_markers.make_triggers()
+echo(&quot;Ok.\n&quot;)</script>
+                    <command></command>
+                    <packageName></packageName>
+                    <regex>^ *direction *markers *make *triggers *$</regex>
+                </Alias>
+                <Alias isActive="yes" isFolder="no">
+                    <name>direction markers help</name>
+                    <script>echo(direction_markers.help)</script>
+                    <command></command>
+                    <packageName></packageName>
+                    <regex>^ *direction *markers *help *$</regex>
+                </Alias>
+            </AliasGroup>
+        </AliasGroup>
+    </AliasPackage>
+    <ActionPackage/>
+    <ScriptPackage>
+        <ScriptGroup isActive="yes" isFolder="yes">
+            <name>MUME</name>
+            <packageName>current</packageName>
+            <script></script>
+            <eventHandlerList/>
+            <ScriptGroup isActive="yes" isFolder="yes">
+                <name>Direction Markers</name>
+                <packageName></packageName>
+                <script>direction_markers = direction_markers or {}
+
+direction_markers.name = &quot;Direction Markers&quot;
+
+direction_markers.going_directions = {
+	&quot;north&quot;,
+	&quot;south&quot;,
+	&quot;east&quot;,
+	&quot;west&quot;,
+	&quot;up&quot;,
+	&quot;down&quot;,
+}
+
+direction_markers.coming_directions = {
+	&quot;from the north&quot;,
+	&quot;from the south&quot;,
+	&quot;from the east&quot;,
+	&quot;from the west&quot;,
+	&quot;from above&quot;,
+	&quot;from below&quot;,
+}
+
+direction_markers.markers = {
+	[&quot;north&quot;] = &quot;^&quot;,
+	[&quot;south&quot;] = &quot;v&quot;,
+	[&quot;east&quot;] = &quot;&gt;&quot;,
+	[&quot;west&quot;] = &quot;&lt;&quot;,
+	[&quot;up&quot;] = &quot;-&quot;,
+	[&quot;down&quot;] = &quot;x&quot;,
+	[&quot;from the north&quot;] = &quot;^&quot;,
+	[&quot;from the south&quot;] = &quot;v&quot;,
+	[&quot;from the east&quot;] = &quot;&gt;&quot;,
+	[&quot;from the west&quot;] = &quot;&lt;&quot;,
+	[&quot;from above&quot;] = &quot;-&quot;,
+	[&quot;from below&quot;] = &quot;x&quot;,
+}
+
+direction_markers.emphasis = {
+	[&quot;north&quot;] = &quot;NORTH&quot;,
+	[&quot;south&quot;] = &quot;SOUTH&quot;,
+	[&quot;east&quot;] = &quot;EAST&quot;,
+	[&quot;west&quot;] = &quot;WEST&quot;,
+	[&quot;up&quot;] = &quot;UP&quot;,
+	[&quot;down&quot;] = &quot;DOWN&quot;,
+	[&quot;from the north&quot;] = &quot;FROM THE NORTH&quot;,
+	[&quot;from the south&quot;] = &quot;FROM THE SOUTH&quot;,
+	[&quot;from the east&quot;] = &quot;FROM THE EAST&quot;,
+	[&quot;from the west&quot;] = &quot;FROM THE WEST&quot;,
+	[&quot;from above&quot;] = &quot;FROM ABOVE&quot;,
+	[&quot;from below&quot;] = &quot;FROM BELOW&quot;,
+}
+
+direction_markers.colors = {
+	[&quot;leave&quot;] = &quot;&lt;green&gt;&quot;,
+	[&quot;arrive&quot;] = &quot;&lt;green&gt;&quot;,
+	[&quot;flee&quot;] = &quot;&lt;green&gt;&quot;,
+	[&quot;track&quot;] = &quot;&lt;green&gt;&quot;,
+}
+
+direction_markers.line_colors = {
+	[&quot;leave&quot;] = &quot;&lt;grey&gt;&quot;,
+	[&quot;arrive&quot;] = &quot;&lt;grey&gt;&quot;,
+	[&quot;flee&quot;] = &quot;&lt;grey&gt;&quot;,
+	[&quot;track&quot;] = &quot;&lt;grey&gt;&quot;,
+}
+
+direction_markers.repeat_marker = {
+	[&quot;leave&quot;] = 4,
+	[&quot;arrive&quot;] = 2,
+	[&quot;flee&quot;] = 8,
+	[&quot;track&quot;] = 2,
+}
+
+direction_markers.patterns = {
+	{ &quot;leave&quot;, &quot;going&quot;, &quot;&lt;match&gt;&quot;, &quot;leaves&quot;, &quot;&lt;direction&gt;&quot; },
+	{ &quot;leave&quot;, &quot;going&quot;, &quot;&lt;match&gt;&quot;, &quot;leaves&quot;, &quot;&lt;direction&gt;&quot;, &quot;riding&quot;, &quot;&lt;match&gt;&quot; },
+	{ &quot;leave&quot;, &quot;going&quot;, &quot;&lt;match&gt;&quot;, &quot;leaves&quot;, &quot;&lt;direction&gt;&quot;, &quot;sneaking&quot; },
+	{ &quot;arrive&quot;, &quot;coming&quot;, &quot;&lt;match&gt;&quot;, &quot;has arrived&quot;, &quot;&lt;direction&gt;&quot; },
+	{ &quot;arrive&quot;, &quot;coming&quot;, &quot;&lt;match&gt;&quot;, &quot;has arrived&quot;, &quot;&lt;direction&gt;&quot;, &quot;riding&quot;, &quot;&lt;match&gt;&quot; },
+	{ &quot;flee&quot;, &quot;going&quot;, &quot;You flee&quot;, &quot;&lt;direction&gt;&quot; },
+	{ &quot;track&quot;, &quot;going&quot;, &quot;   - a track of&quot;, &quot;&lt;match&gt;&quot;, &quot;leading&quot;, &quot;&lt;direction&gt;&quot;, &quot;done&quot;, &quot;&lt;match&gt;&quot; },
+	{ &quot;track&quot;, &quot;coming&quot;, &quot;   - a track of&quot;, &quot;&lt;match&gt;&quot;, &quot;coming&quot;, &quot;&lt;direction&gt;&quot;, &quot;done&quot;, &quot;&lt;match&gt;&quot; },
+}</script>
+                <eventHandlerList/>
+                <Script isActive="yes" isFolder="no">
+                    <name>README</name>
+                    <packageName></packageName>
+                    <script>direction_markers.help = [[
+Direction Markers
+Author: Octavia
+Version: 1.0
+Changelog:
+- 1.0, 2015-2-10
+  - Initial release.
+
+This highlights all occurrences of directions (north, south, etc.) by surrounding them with special markers, highlighting them, and making them all caps. Most of these effects can be customized from within the script:
+- direction_markers.markers : Edit this to change which characters are used to surround the direction.
+- direction_markers.emphasis : Edit this to change how the directions appear. Default is capitalization.
+- direction_markers.colors : Edit this to change the color of the directions themselves.
+- direction_markers.line_colors : Edit this to change the color of the entire line a direction occurs in.
+- direction_markers.repeat_marker : Edit this to change how many times the marker character is repeated when it is used to surround a direction.
+
+The commands are as follows:
+- direction markers help : Show this message.
+- direction markers make triggers : Regenerate the triggers for replacement. Using this should not be necessary in most cases.
+]]
+
+</script>
+                    <eventHandlerList/>
+                </Script>
+                <Script isActive="yes" isFolder="no">
+                    <name>make_label</name>
+                    <packageName></packageName>
+                    <script>function direction_markers.make_label(type, direction)
+	local marker = direction_markers.make_marker(type, direction)
+	local emphasis = direction_markers.emphasis[direction]
+	local color = direction_markers.colors[type]
+
+	local label
+	if marker ~= &quot;&quot; then
+		label = marker .. &quot; &quot; .. emphasis .. &quot; &quot; .. marker
+	else
+		label = emphasis
+	end
+	label = color .. label .. &quot;&lt;grey&gt;&quot;
+
+	return label
+end</script>
+                    <eventHandlerList/>
+                </Script>
+                <Script isActive="yes" isFolder="no">
+                    <name>make_marker</name>
+                    <packageName></packageName>
+                    <script>function direction_markers.make_marker(type, direction)
+	local repeat_marker = direction_markers.repeat_marker[type]
+	local marker_char = direction_markers.markers[direction]
+
+	local marker = marker_char
+	for index = 1, repeat_marker - 1 do
+		marker = marker .. marker_char
+	end
+
+	return marker
+end</script>
+                    <eventHandlerList/>
+                </Script>
+                <Script isActive="yes" isFolder="no">
+                    <name>make_triggers</name>
+                    <packageName></packageName>
+                    <script>function direction_markers.make_triggers()
+	-- For each pattern
+	for index, pattern in ipairs(direction_markers.patterns) do
+		-- Determine the type of pattern
+		local type = pattern[1]
+
+		-- Pick which type of directions to use
+		local directions
+		if pattern[2] == &quot;going&quot; then
+			directions = direction_markers.going_directions
+		elseif pattern[2] == &quot;coming&quot; then
+			directions = direction_markers.coming_directions
+		else
+			echo(&quot;Direction Markers: Error: Could not determine type of direction.\n&quot;)
+		end
+
+		-- For each direction
+		for direction_index, direction in ipairs(directions) do
+			local name = direction_markers.make_name(pattern, direction)
+			local parent = direction_markers.name
+			local regex = direction_markers.make_regex(pattern, direction, type)
+			local code = direction_markers.make_code(pattern, direction, type)
+
+			--if not exists(name, &quot;trigger&quot;) then
+				permRegexTrigger(name, parent, { regex }, code)
+			--else
+				--echo(&quot;Direction Markers: Error: Could not create trigger '&quot; .. name .. &quot;' since it already exists.\n&quot;)
+			--end
+		end
+	end
+end</script>
+                    <eventHandlerList/>
+                </Script>
+                <Script isActive="yes" isFolder="no">
+                    <name>make_name</name>
+                    <packageName></packageName>
+                    <script>function direction_markers.make_name(pattern, direction)
+	local result = &quot;&quot;
+
+	-- Skip the first two elements in pattern, which define the pattern
+	for index = 3, #pattern do
+		local element = pattern[index]
+		if element == &quot;&lt;direction&gt;&quot; then
+			result = result .. direction .. &quot; &quot;
+		elseif element ~= &quot;&lt;match&gt;&quot; then
+			result = result .. element .. &quot; &quot;
+		end
+	end
+
+	return string.trim(result)
+end</script>
+                    <eventHandlerList/>
+                </Script>
+                <Script isActive="yes" isFolder="no">
+                    <name>make_regex</name>
+                    <packageName></packageName>
+                    <script>function direction_markers.make_regex(pattern, direction, type)
+	result = &quot;^&quot;
+
+	for index = 3, #pattern do
+		local element = pattern[index]
+		if element == &quot;&lt;match&gt;&quot; then
+			result = result .. &quot;(.+) &quot;
+		elseif element == &quot;&lt;direction&gt;&quot; then
+			result = result .. direction .. &quot; &quot;
+		else
+			result = result .. element .. &quot; &quot;
+		end
+	end
+
+	if type ~= &quot;track&quot; then
+		result = string.trim(result) .. &quot;\\.$&quot;
+	else
+		result = string.trim(result) .. &quot;$&quot;
+	end
+
+	return result
+end</script>
+                    <eventHandlerList/>
+                </Script>
+                <Script isActive="yes" isFolder="no">
+                    <name>make_code</name>
+                    <packageName></packageName>
+                    <script>function direction_markers.make_code(pattern, direction, type)
+	local replace_expression = &quot;&quot;
+	local match = 2
+
+	for index = 3, #pattern do
+		local element = pattern[index]
+		if element == &quot;&lt;match&gt;&quot; then
+			replace_expression = replace_expression .. &quot;matches[&quot; .. match .. &quot;]&quot;
+			match = match + 1
+		elseif element == &quot;&lt;direction&gt;&quot; then
+			replace_expression = replace_expression .. &quot;label&quot;
+		else
+			replace_expression = replace_expression .. '&quot;'
+			if index ~= 3 then
+				replace_expression = replace_expression .. &quot; &quot;
+			end
+			replace_expression = replace_expression .. element .. ' &quot;'
+		end
+		if index ~= #pattern then
+			replace_expression = replace_expression .. &quot; .. &quot;
+		else
+			if type ~= &quot;track&quot; then
+				replace_expression = replace_expression .. &quot; .. \&quot;.\&quot;&quot;
+			end
+		end
+	end
+
+	replace_expression = &quot;line_color .. &quot; .. replace_expression .. &quot; .. \&quot;&lt;grey&gt;\&quot;&quot;
+
+	local result = &quot;local line = matches[1]\n&quot;
+	result = result .. &quot;local direction = \&quot;&quot; .. direction .. &quot;\&quot;\n&quot;
+	result = result .. &quot;local label = direction_markers.make_label(\&quot;&quot; .. type .. &quot;\&quot;, direction)\n&quot;
+	result = result .. &quot;local line_color = direction_markers.line_colors[\&quot;&quot; .. type .. &quot;\&quot;]\n&quot;
+	result = result .. &quot;selectString(line, 1)\n&quot;
+	result = result .. &quot;replace(\&quot;\&quot;)\n&quot;
+	result = result .. &quot;cinsertText(&quot; .. replace_expression .. &quot;)&quot;
+	return result
+end
+
+--local line = matches[1]
+--local direction = matches[3]
+
+--local label = direction_markers.make_label(&quot;leave&quot;, direction)
+
+--selectString(line, 1)
+--replace(matches[2] .. &quot; leaves &quot; .. label .. &quot; riding &quot; .. matches[4] .. &quot;.&quot;)</script>
+                    <eventHandlerList/>
+                </Script>
+            </ScriptGroup>
+        </ScriptGroup>
+    </ScriptPackage>
+    <KeyPackage/>
+</MudletPackage>

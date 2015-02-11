@@ -1,0 +1,326 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE MudletPackage>
+<MudletPackage version="1.0">
+    <TriggerPackage>
+        <TriggerGroup isActive="yes" isFolder="yes" isTempTrigger="no" isMultiline="no" isPerlSlashGOption="no" isColorizerTrigger="no" isFilterTrigger="no" isSoundTrigger="no" isColorTrigger="no" isColorTriggerFg="no" isColorTriggerBg="no">
+            <name>MUME</name>
+            <script></script>
+            <triggerType>0</triggerType>
+            <conditonLineDelta>0</conditonLineDelta>
+            <mStayOpen>0</mStayOpen>
+            <mCommand></mCommand>
+            <packageName>current</packageName>
+            <mFgColor>#ff0000</mFgColor>
+            <mBgColor>#ffff00</mBgColor>
+            <mSoundFile></mSoundFile>
+            <colorTriggerFgColor>#000000</colorTriggerFgColor>
+            <colorTriggerBgColor>#000000</colorTriggerBgColor>
+            <regexCodeList/>
+            <regexCodePropertyList/>
+            <TriggerGroup isActive="yes" isFolder="yes" isTempTrigger="no" isMultiline="no" isPerlSlashGOption="no" isColorizerTrigger="no" isFilterTrigger="no" isSoundTrigger="no" isColorTrigger="no" isColorTriggerFg="no" isColorTriggerBg="no">
+                <name>Stat Tracker</name>
+                <script></script>
+                <triggerType>0</triggerType>
+                <conditonLineDelta>0</conditonLineDelta>
+                <mStayOpen>0</mStayOpen>
+                <mCommand></mCommand>
+                <packageName></packageName>
+                <mFgColor>#ff0000</mFgColor>
+                <mBgColor>#ffff00</mBgColor>
+                <mSoundFile></mSoundFile>
+                <colorTriggerFgColor>#000000</colorTriggerFgColor>
+                <colorTriggerBgColor>#000000</colorTriggerBgColor>
+                <regexCodeList/>
+                <regexCodePropertyList/>
+                <Trigger isActive="yes" isFolder="no" isTempTrigger="no" isMultiline="no" isPerlSlashGOption="no" isColorizerTrigger="no" isFilterTrigger="no" isSoundTrigger="no" isColorTrigger="no" isColorTriggerFg="no" isColorTriggerBg="no">
+                    <name>Detect New Session</name>
+                    <script>stat_tracker.reset()</script>
+                    <triggerType>0</triggerType>
+                    <conditonLineDelta>0</conditonLineDelta>
+                    <mStayOpen>0</mStayOpen>
+                    <mCommand></mCommand>
+                    <packageName></packageName>
+                    <mFgColor>#ff0000</mFgColor>
+                    <mBgColor>#ffff00</mBgColor>
+                    <mSoundFile></mSoundFile>
+                    <colorTriggerFgColor>#000000</colorTriggerFgColor>
+                    <colorTriggerBgColor>#000000</colorTriggerBgColor>
+                    <regexCodeList>
+                        <string>Never forget! Try to role-play...</string>
+                    </regexCodeList>
+                    <regexCodePropertyList>
+                        <integer>3</integer>
+                    </regexCodePropertyList>
+                </Trigger>
+                <Trigger isActive="yes" isFolder="no" isTempTrigger="no" isMultiline="no" isPerlSlashGOption="no" isColorizerTrigger="no" isFilterTrigger="no" isSoundTrigger="no" isColorTrigger="no" isColorTriggerFg="no" isColorTriggerBg="no">
+                    <name>Detect XP Gain</name>
+                    <script>expandAlias(&quot;xp&quot;, false)</script>
+                    <triggerType>0</triggerType>
+                    <conditonLineDelta>0</conditonLineDelta>
+                    <mStayOpen>0</mStayOpen>
+                    <mCommand></mCommand>
+                    <packageName></packageName>
+                    <mFgColor>#ff0000</mFgColor>
+                    <mBgColor>#ffff00</mBgColor>
+                    <mSoundFile></mSoundFile>
+                    <colorTriggerFgColor>#000000</colorTriggerFgColor>
+                    <colorTriggerBgColor>#000000</colorTriggerBgColor>
+                    <regexCodeList>
+                        <string>You receive your share of experience.</string>
+                    </regexCodeList>
+                    <regexCodePropertyList>
+                        <integer>3</integer>
+                    </regexCodePropertyList>
+                </Trigger>
+                <Trigger isActive="yes" isFolder="no" isTempTrigger="no" isMultiline="no" isPerlSlashGOption="no" isColorizerTrigger="no" isFilterTrigger="no" isSoundTrigger="no" isColorTrigger="no" isColorTriggerFg="no" isColorTriggerBg="no">
+                    <name>Display XP/TP Gained</name>
+                    <script>-- Remove any commas from the xp
+stat_tracker.current_xp = string.gsub(matches[2], &quot;,&quot;, &quot;&quot;)
+
+if stat_tracker.last_xp then
+	-- Get the difference in experience
+	local difference = stat_tracker.current_xp - stat_tracker.last_xp
+	
+	stat_tracker.session_xp = stat_tracker.session_xp + difference
+
+	if difference ~= 0 then
+		cecho(&quot;\n&lt;cyan&gt;You gained &quot; .. difference .. &quot; xp.&quot;)
+	end
+end
+
+-- Save the current xp as the last xp
+stat_tracker.last_xp = stat_tracker.current_xp
+
+-- Remove any commas from the tp
+stat_tracker.current_tp = string.gsub(matches[3], &quot;,&quot;, &quot;&quot;)
+
+if stat_tracker.last_tp then
+	-- Get the difference in travel points
+	local difference = stat_tracker.current_tp - stat_tracker.last_tp
+	
+	stat_tracker.session_tp = stat_tracker.session_tp + difference	
+
+	if difference ~= 0 then
+		cecho(&quot;\n&lt;cyan&gt;You gained &quot; .. difference .. &quot; tp.&quot;)
+	end
+end
+
+-- Save the current tp as the last tp
+stat_tracker.last_tp = stat_tracker.current_tp</script>
+                    <triggerType>0</triggerType>
+                    <conditonLineDelta>0</conditonLineDelta>
+                    <mStayOpen>0</mStayOpen>
+                    <mCommand></mCommand>
+                    <packageName></packageName>
+                    <mFgColor>#ff0000</mFgColor>
+                    <mBgColor>#ffff00</mBgColor>
+                    <mSoundFile></mSoundFile>
+                    <colorTriggerFgColor>#000000</colorTriggerFgColor>
+                    <colorTriggerBgColor>#000000</colorTriggerBgColor>
+                    <regexCodeList>
+                        <string>^Total: (.+) xp, (.+) tp.</string>
+                    </regexCodeList>
+                    <regexCodePropertyList>
+                        <integer>1</integer>
+                    </regexCodePropertyList>
+                </Trigger>
+                <Trigger isActive="yes" isFolder="no" isTempTrigger="no" isMultiline="no" isPerlSlashGOption="no" isColorizerTrigger="no" isFilterTrigger="no" isSoundTrigger="no" isColorTrigger="no" isColorTriggerFg="no" isColorTriggerBg="no">
+                    <name>Detect Death</name>
+                    <script>expandAlias(&quot;xp&quot;, false)</script>
+                    <triggerType>0</triggerType>
+                    <conditonLineDelta>0</conditonLineDelta>
+                    <mStayOpen>0</mStayOpen>
+                    <mCommand></mCommand>
+                    <packageName></packageName>
+                    <mFgColor>#ff0000</mFgColor>
+                    <mBgColor>#ffff00</mBgColor>
+                    <mSoundFile></mSoundFile>
+                    <colorTriggerFgColor>#000000</colorTriggerFgColor>
+                    <colorTriggerBgColor>#000000</colorTriggerBgColor>
+                    <regexCodeList>
+                        <string>^You are dead! Sorry...$</string>
+                    </regexCodeList>
+                    <regexCodePropertyList>
+                        <integer>1</integer>
+                    </regexCodePropertyList>
+                </Trigger>
+            </TriggerGroup>
+        </TriggerGroup>
+    </TriggerPackage>
+    <TimerPackage/>
+    <AliasPackage>
+        <AliasGroup isActive="yes" isFolder="yes">
+            <name>MUME</name>
+            <script></script>
+            <command></command>
+            <packageName>current</packageName>
+            <regex></regex>
+            <AliasGroup isActive="yes" isFolder="yes">
+                <name>Stat Tracker</name>
+                <script></script>
+                <command></command>
+                <packageName></packageName>
+                <regex></regex>
+                <Alias isActive="yes" isFolder="no">
+                    <name>reset stat tracker (rst)</name>
+                    <script>stat_tracker.reset()
+
+echo(&quot;Reset Stat Tracker.\n&quot;)</script>
+                    <command></command>
+                    <packageName></packageName>
+                    <regex>^ *rst *$</regex>
+                </Alias>
+                <Alias isActive="yes" isFolder="no">
+                    <name>experience (xp)</name>
+                    <script>send(&quot;info Needed: %(%X%) xp, %(%T%) tp.%.Total: %(%x%) xp, %(%t%) tp.&quot;, false)</script>
+                    <command></command>
+                    <packageName></packageName>
+                    <regex>^ *xp *$</regex>
+                </Alias>
+                <Alias isActive="yes" isFolder="no">
+                    <name>experience statistics (xps)</name>
+                    <script>local stats = stat_tracker.calculate_stats()
+
+cecho(&quot;Session: &lt;green&gt;&quot; .. stats[&quot;session_xp&quot;] .. &quot;&lt;grey&gt; xp, &lt;green&gt;&quot; .. stats[&quot;session_tp&quot;] .. &quot;&lt;grey&gt; tp in &lt;cyan&gt;&quot; .. stats[&quot;session_time&quot;] .. &quot;&lt;grey&gt;.\n&quot;)
+cecho(&quot;Per minute: &lt;green&gt;&quot; .. stats[&quot;xp_per_minute&quot;] .. &quot;&lt;grey&gt; xp, &lt;green&gt;&quot; .. stats[&quot;tp_per_minute&quot;] .. &quot;&lt;grey&gt; tp.\n&quot;)
+cecho(&quot;Per hour: &lt;green&gt;&quot; .. stats[&quot;xp_per_hour&quot;] .. &quot;&lt;grey&gt; xp, &lt;green&gt;&quot; .. stats[&quot;tp_per_hour&quot;] .. &quot;&lt;grey&gt; tp.\n&quot;)</script>
+                    <command></command>
+                    <packageName></packageName>
+                    <regex>^ *xps *$</regex>
+                </Alias>
+                <Alias isActive="yes" isFolder="no">
+                    <name>report experience statistics (rxps)</name>
+                    <script>local stats = stat_tracker.calculate_stats()
+
+send(&quot;say Session: &quot; .. stats[&quot;session_xp&quot;] .. &quot; xp, &quot; .. stats[&quot;session_tp&quot;] .. &quot; tp in &quot; .. stats[&quot;session_time&quot;] .. &quot;.&quot;)
+send(&quot;say Per minute: &quot; .. stats[&quot;xp_per_minute&quot;] .. &quot; xp, &quot; .. stats[&quot;tp_per_minute&quot;] .. &quot; tp.&quot;)
+send(&quot;say Per hour: &quot; .. stats[&quot;xp_per_hour&quot;] .. &quot; xp, &quot; .. stats[&quot;tp_per_hour&quot;] .. &quot; tp.&quot;)</script>
+                    <command></command>
+                    <packageName></packageName>
+                    <regex>^ *rxps *$</regex>
+                </Alias>
+                <Alias isActive="yes" isFolder="no">
+                    <name>stat tracker help</name>
+                    <script>echo(stat_tracker.help)</script>
+                    <command></command>
+                    <packageName></packageName>
+                    <regex>^ *stat *tracker *help *$</regex>
+                </Alias>
+            </AliasGroup>
+        </AliasGroup>
+    </AliasPackage>
+    <ActionPackage/>
+    <ScriptPackage>
+        <ScriptGroup isActive="yes" isFolder="yes">
+            <name>MUME</name>
+            <packageName>current</packageName>
+            <script></script>
+            <eventHandlerList/>
+            <ScriptGroup isActive="yes" isFolder="yes">
+                <name>Stat Tracker</name>
+                <packageName></packageName>
+                <script>stat_tracker = stat_tracker or {}</script>
+                <eventHandlerList/>
+                <Script isActive="yes" isFolder="no">
+                    <name>README</name>
+                    <packageName></packageName>
+                    <script>stat_tracker.help = [[
+Stat Tracker
+Author: Octavia
+Version: 1.0
+Changelog:
+- 1.0, 2015-2-10
+  - Initial release.
+
+This package tracks the amount of xp and tp you have gained (or lost!) in a certain period of time (usually the entire session) and reports how much xp and tp you have gained total, per minute, and per hour.
+
+The commands are as follows:
+- stat tracker help : Show this message.
+- rst : Reset Stat Tracker (as if you were starting the session over).
+- xp : Show the amount of xp and tp needed to level.
+- xps : Show the amount of xp and tp gained this session total, per minute, and per hour.
+- rxps : Report (by say) the output xps.
+]]</script>
+                    <eventHandlerList/>
+                </Script>
+                <Script isActive="yes" isFolder="no">
+                    <name>reset</name>
+                    <packageName></packageName>
+                    <script>function stat_tracker.reset()
+	stat_tracker.session_xp = 0
+	stat_tracker.session_tp = 0
+	stat_tracker.last_xp = nil
+	stat_tracker.last_tp = nil
+	stat_tracker.start_time = clock.get_current_time()
+
+	expandAlias(&quot;xp&quot;, false)
+end</script>
+                    <eventHandlerList/>
+                </Script>
+                <Script isActive="yes" isFolder="no">
+                    <name>make_time_pretty</name>
+                    <packageName></packageName>
+                    <script>function stat_tracker.make_time_pretty(elapsed_seconds)
+	local hours = math.floor(elapsed_seconds / 3600)
+	local minutes = math.floor((elapsed_seconds - hours * 3600) / 60)
+	local seconds = math.floor(elapsed_seconds - hours * 3600 - minutes * 60)
+	
+	--if minutes &lt; 10 then
+	--	minutes = &quot;0&quot; .. minutes
+	--end
+
+	--if seconds &lt; 10 then
+	--	seconds = &quot;0&quot; .. seconds
+	--end
+
+	return hours .. &quot;h&quot; .. minutes .. &quot;m&quot; .. seconds .. &quot;s&quot;
+end</script>
+                    <eventHandlerList/>
+                </Script>
+                <Script isActive="yes" isFolder="no">
+                    <name>calculate_stats</name>
+                    <packageName></packageName>
+                    <script>function stat_tracker.calculate_stats()
+	local current_time = stat_tracker.get_time()
+
+	local elapsed_seconds = current_time - stat_tracker.start_time
+	local elapsed_minutes = elapsed_seconds / 60
+	local elapsed_hours = elapsed_seconds / 3600
+
+	local xp_per_minute = math.floor(stat_tracker.session_xp / elapsed_minutes)
+	local tp_per_minute = math.floor(stat_tracker.session_tp / elapsed_minutes)
+
+	local xp_per_hour = math.floor(stat_tracker.session_xp / elapsed_hours)
+	local tp_per_hour = math.floor(stat_tracker.session_tp / elapsed_hours)
+
+	local session_time = stat_tracker.make_time_pretty(elapsed_seconds)
+
+	local result = {
+		[&quot;session_time&quot;] = session_time,
+		[&quot;session_xp&quot;] = stat_tracker.session_xp,
+		[&quot;session_tp&quot;] = stat_tracker.session_tp,
+		[&quot;xp_per_minute&quot;] = xp_per_minute,
+		[&quot;tp_per_minute&quot;] = tp_per_minute,
+		[&quot;xp_per_hour&quot;] = xp_per_hour,
+		[&quot;tp_per_hour&quot;] = tp_per_hour
+	}
+
+	return result
+end</script>
+                    <eventHandlerList/>
+                </Script>
+                <Script isActive="yes" isFolder="no">
+                    <name>get_time</name>
+                    <packageName></packageName>
+                    <script>function stat_tracker.get_time()
+	local current_time_as_string = getTime(true)
+
+	return datetime:parse(current_time_as_string, &quot;%Y.%m.%d %H:%M:%S&quot;, true)
+end</script>
+                    <eventHandlerList/>
+                </Script>
+            </ScriptGroup>
+        </ScriptGroup>
+    </ScriptPackage>
+    <KeyPackage/>
+</MudletPackage>

@@ -3,13 +3,13 @@
 <MudletPackage version="1.0">
     <TriggerPackage>
         <TriggerGroup isActive="yes" isFolder="yes" isTempTrigger="no" isMultiline="no" isPerlSlashGOption="no" isColorizerTrigger="no" isFilterTrigger="no" isSoundTrigger="no" isColorTrigger="no" isColorTriggerFg="no" isColorTriggerBg="no">
-            <name>Clock</name>
+            <name>MUME</name>
             <script></script>
             <triggerType>0</triggerType>
             <conditonLineDelta>0</conditonLineDelta>
             <mStayOpen>0</mStayOpen>
             <mCommand></mCommand>
-            <packageName></packageName>
+            <packageName>current</packageName>
             <mFgColor>#ff0000</mFgColor>
             <mBgColor>#ffff00</mBgColor>
             <mSoundFile></mSoundFile>
@@ -17,9 +17,24 @@
             <colorTriggerBgColor>#000000</colorTriggerBgColor>
             <regexCodeList/>
             <regexCodePropertyList/>
-            <Trigger isActive="yes" isFolder="no" isTempTrigger="no" isMultiline="no" isPerlSlashGOption="no" isColorizerTrigger="no" isFilterTrigger="no" isSoundTrigger="no" isColorTrigger="no" isColorTriggerFg="no" isColorTriggerBg="no">
-                <name>Set Start MUME Moment (Time Part)</name>
-                <script>echo(&quot;\nYou set your clock.&quot;)
+            <TriggerGroup isActive="yes" isFolder="yes" isTempTrigger="no" isMultiline="no" isPerlSlashGOption="no" isColorizerTrigger="no" isFilterTrigger="no" isSoundTrigger="no" isColorTrigger="no" isColorTriggerFg="no" isColorTriggerBg="no">
+                <name>Clock</name>
+                <script></script>
+                <triggerType>0</triggerType>
+                <conditonLineDelta>0</conditonLineDelta>
+                <mStayOpen>0</mStayOpen>
+                <mCommand></mCommand>
+                <packageName></packageName>
+                <mFgColor>#ff0000</mFgColor>
+                <mBgColor>#ffff00</mBgColor>
+                <mSoundFile></mSoundFile>
+                <colorTriggerFgColor>#000000</colorTriggerFgColor>
+                <colorTriggerBgColor>#000000</colorTriggerBgColor>
+                <regexCodeList/>
+                <regexCodePropertyList/>
+                <Trigger isActive="yes" isFolder="no" isTempTrigger="no" isMultiline="no" isPerlSlashGOption="no" isColorizerTrigger="no" isFilterTrigger="no" isSoundTrigger="no" isColorTrigger="no" isColorTriggerFg="no" isColorTriggerBg="no">
+                    <name>Set Start MUME Moment (Time Part)</name>
+                    <script>echo(&quot;\nYou set your clock.&quot;)
 
 clock.is_set = true
 
@@ -36,26 +51,26 @@ enableTrigger(&quot;Set Start MUME Moment (Date Part)&quot;)
 send(&quot;time&quot;, false)
 
 clock.adjust_timer(clock.start_mume_moment.minute)</script>
-                <triggerType>0</triggerType>
-                <conditonLineDelta>0</conditonLineDelta>
-                <mStayOpen>0</mStayOpen>
-                <mCommand></mCommand>
-                <packageName></packageName>
-                <mFgColor>#ff0000</mFgColor>
-                <mBgColor>#ffff00</mBgColor>
-                <mSoundFile></mSoundFile>
-                <colorTriggerFgColor>#000000</colorTriggerFgColor>
-                <colorTriggerBgColor>#000000</colorTriggerBgColor>
-                <regexCodeList>
-                    <string>^The current time is (.+):(.+) (.+)\.$</string>
-                </regexCodeList>
-                <regexCodePropertyList>
-                    <integer>1</integer>
-                </regexCodePropertyList>
-            </Trigger>
-            <Trigger isActive="no" isFolder="no" isTempTrigger="no" isMultiline="no" isPerlSlashGOption="no" isColorizerTrigger="no" isFilterTrigger="no" isSoundTrigger="no" isColorTrigger="no" isColorTriggerFg="no" isColorTriggerBg="no">
-                <name>Set Start MUME Moment (Date Part)</name>
-                <script>-- Store the MUME date part of the starting MUME moment
+                    <triggerType>0</triggerType>
+                    <conditonLineDelta>0</conditonLineDelta>
+                    <mStayOpen>0</mStayOpen>
+                    <mCommand></mCommand>
+                    <packageName></packageName>
+                    <mFgColor>#ff0000</mFgColor>
+                    <mBgColor>#ffff00</mBgColor>
+                    <mSoundFile></mSoundFile>
+                    <colorTriggerFgColor>#000000</colorTriggerFgColor>
+                    <colorTriggerBgColor>#000000</colorTriggerBgColor>
+                    <regexCodeList>
+                        <string>^The current time is (.+):(.+) (.+)\.$</string>
+                    </regexCodeList>
+                    <regexCodePropertyList>
+                        <integer>1</integer>
+                    </regexCodePropertyList>
+                </Trigger>
+                <Trigger isActive="no" isFolder="no" isTempTrigger="no" isMultiline="no" isPerlSlashGOption="no" isColorizerTrigger="no" isFilterTrigger="no" isSoundTrigger="no" isColorTrigger="no" isColorTriggerFg="no" isColorTriggerBg="no">
+                    <name>Set Start MUME Moment (Date Part)</name>
+                    <script>-- Store the MUME date part of the starting MUME moment
 clock.start_mume_moment.year = matches[5]
 clock.start_mume_moment.month = clock.convert_month_name_to_month_number(matches[4])
 clock.start_mume_moment.day = matches[3]
@@ -64,35 +79,47 @@ clock.start_mume_moment.day = matches[3]
 clock.start_mume_time = clock.convert_mume_moment_to_mume_time(clock.start_mume_moment)
 
 disableTrigger(&quot;Set Start MUME Moment (Date Part)&quot;)</script>
-                <triggerType>0</triggerType>
-                <conditonLineDelta>0</conditonLineDelta>
-                <mStayOpen>0</mStayOpen>
-                <mCommand></mCommand>
-                <packageName></packageName>
-                <mFgColor>#ff0000</mFgColor>
-                <mBgColor>#ffff00</mBgColor>
-                <mSoundFile></mSoundFile>
-                <colorTriggerFgColor>#000000</colorTriggerFgColor>
-                <colorTriggerBgColor>#000000</colorTriggerBgColor>
-                <regexCodeList>
-                    <string>^(.+), the (.+).. of (.+), Year (.+) of the Third Age\.$</string>
-                </regexCodeList>
-                <regexCodePropertyList>
-                    <integer>1</integer>
-                </regexCodePropertyList>
-            </Trigger>
+                    <triggerType>0</triggerType>
+                    <conditonLineDelta>0</conditonLineDelta>
+                    <mStayOpen>0</mStayOpen>
+                    <mCommand></mCommand>
+                    <packageName></packageName>
+                    <mFgColor>#ff0000</mFgColor>
+                    <mBgColor>#ffff00</mBgColor>
+                    <mSoundFile></mSoundFile>
+                    <colorTriggerFgColor>#000000</colorTriggerFgColor>
+                    <colorTriggerBgColor>#000000</colorTriggerBgColor>
+                    <regexCodeList>
+                        <string>^(.+), the (.+).. of (.+), Year (.+) of the Third Age\.$</string>
+                    </regexCodeList>
+                    <regexCodePropertyList>
+                        <integer>1</integer>
+                    </regexCodePropertyList>
+                </Trigger>
+            </TriggerGroup>
         </TriggerGroup>
     </TriggerPackage>
     <TimerPackage>
         <TimerGroup isActive="yes" isFolder="yes" isTempTimer="no" isOffsetTimer="no">
-            <name>Clock</name>
+            <name>MUME</name>
             <script></script>
             <command></command>
-            <packageName></packageName>
+            <packageName>current</packageName>
             <time>00:00:00.000</time>
-            <Timer isActive="yes" isFolder="no" isTempTimer="no" isOffsetTimer="no">
-                <name>Display Time and Date</name>
-                <script>if not clock.options.show_time and not clock.options.show_date then
+            <TimerGroup isActive="yes" isFolder="yes" isTempTimer="no" isOffsetTimer="no">
+                <name>Clock</name>
+                <script></script>
+                <command></command>
+                <packageName></packageName>
+                <time>00:00:00.000</time>
+                <Timer isActive="no" isFolder="no" isTempTimer="no" isOffsetTimer="no">
+                    <name>Display Time and Date</name>
+                    <script>if not clock.is_set then
+	disableTimer(&quot;Display Time and Date&quot;)
+	return
+end
+
+if not clock.options.show_time and not clock.options.show_date then
 	disableTimer(&quot;Display Time and Date&quot;)
 	return
 end
@@ -100,40 +127,47 @@ end
 local mume_moment = clock.get_mume_moment()
 clock.display_timer(mume_moment)
 clock.adjust_timer(mume_moment.minute)</script>
-                <command></command>
-                <packageName></packageName>
-                <time>00:01:00.000</time>
-            </Timer>
+                    <command></command>
+                    <packageName></packageName>
+                    <time>00:01:00.000</time>
+                </Timer>
+            </TimerGroup>
         </TimerGroup>
     </TimerPackage>
     <AliasPackage>
         <AliasGroup isActive="yes" isFolder="yes">
-            <name>Clock</name>
+            <name>MUME</name>
             <script></script>
             <command></command>
-            <packageName></packageName>
+            <packageName>current</packageName>
             <regex></regex>
-            <Alias isActive="yes" isFolder="no">
-                <name>check clock (cc)</name>
-                <script>local mume_moment = clock.get_mume_moment()
-
-cecho(clock.display_time(mume_moment, true) .. &quot;\n&quot;)</script>
+            <AliasGroup isActive="yes" isFolder="yes">
+                <name>Clock</name>
+                <script></script>
                 <command></command>
                 <packageName></packageName>
-                <regex>^ *cc *$</regex>
-            </Alias>
-            <Alias isActive="yes" isFolder="no">
-                <name>check time (ct)</name>
-                <script>local mume_moment = clock.get_mume_moment()
+                <regex></regex>
+                <Alias isActive="yes" isFolder="no">
+                    <name>check clock (cc)</name>
+                    <script>local mume_moment = clock.get_mume_moment()
 
 cecho(clock.display_time(mume_moment, true) .. &quot;\n&quot;)</script>
-                <command></command>
-                <packageName></packageName>
-                <regex>^ *ct *$</regex>
-            </Alias>
-            <Alias isActive="yes" isFolder="no">
-                <name>say time (stime)</name>
-                <script>local mume_moment = clock.get_mume_moment()
+                    <command></command>
+                    <packageName></packageName>
+                    <regex>^ *cc *$</regex>
+                </Alias>
+                <Alias isActive="yes" isFolder="no">
+                    <name>check time (ct)</name>
+                    <script>local mume_moment = clock.get_mume_moment()
+
+cecho(clock.display_time(mume_moment, true) .. &quot;\n&quot;)</script>
+                    <command></command>
+                    <packageName></packageName>
+                    <regex>^ *ct *$</regex>
+                </Alias>
+                <Alias isActive="yes" isFolder="no">
+                    <name>say time (stime)</name>
+                    <script>local mume_moment = clock.get_mume_moment()
 local text = clock.display_time(mume_moment, false)
 
 if clock.is_set then
@@ -141,13 +175,13 @@ if clock.is_set then
 else
 	echo(text)
 end</script>
-                <command></command>
-                <packageName></packageName>
-                <regex>^ *stime *$</regex>
-            </Alias>
-            <Alias isActive="yes" isFolder="no">
-                <name>narrate time (ntime)</name>
-                <script>local mume_moment = clock.get_mume_moment()
+                    <command></command>
+                    <packageName></packageName>
+                    <regex>^ *stime *$</regex>
+                </Alias>
+                <Alias isActive="yes" isFolder="no">
+                    <name>narrate time (ntime)</name>
+                    <script>local mume_moment = clock.get_mume_moment()
 local text = clock.display_time(mume_moment, false)
 
 if clock.is_set then
@@ -155,13 +189,13 @@ if clock.is_set then
 else
 	echo(text)
 end</script>
-                <command></command>
-                <packageName></packageName>
-                <regex>^ *ntime *$</regex>
-            </Alias>
-            <Alias isActive="yes" isFolder="no">
-                <name>tell time (ttime &lt;player&gt;)</name>
-                <script>local player = string.trim(matches[2])
+                    <command></command>
+                    <packageName></packageName>
+                    <regex>^ *ntime *$</regex>
+                </Alias>
+                <Alias isActive="yes" isFolder="no">
+                    <name>tell time (ttime &lt;player&gt;)</name>
+                    <script>local player = string.trim(matches[2])
 local mume_moment = clock.get_mume_moment()
 local text = clock.display_time(mume_moment, false)
 
@@ -170,118 +204,209 @@ if clock.is_set then
 else
 	echo(text)
 end</script>
-                <command></command>
-                <packageName></packageName>
-                <regex>^ *ttime +(.+)$</regex>
-            </Alias>
-            <Alias isActive="yes" isFolder="no">
-                <name>check date (cd)</name>
-                <script>local mume_moment = clock.get_mume_moment()
+                    <command></command>
+                    <packageName></packageName>
+                    <regex>^ *ttime +(.+)$</regex>
+                </Alias>
+                <Alias isActive="yes" isFolder="no">
+                    <name>check date (cd)</name>
+                    <script>local mume_moment = clock.get_mume_moment()
 
 cecho(clock.display_date(mume_moment, true) .. &quot;\n&quot;)</script>
-                <command></command>
-                <packageName></packageName>
-                <regex>^ *cd *$</regex>
-            </Alias>
-            <Alias isActive="yes" isFolder="no">
-                <name>unset clock (uclock)</name>
-                <script>echo(&quot;You unset your clock.\n&quot;)
+                    <command></command>
+                    <packageName></packageName>
+                    <regex>^ *cd *$</regex>
+                </Alias>
+                <Alias isActive="yes" isFolder="no">
+                    <name>unset clock (uclock)</name>
+                    <script>echo(&quot;You unset your clock.\n&quot;)
 
 clock.is_set = false
 clock.start_mume_moment = nil
 clock.start_time = nil
 
 disableTimer(&quot;Display Time and Date&quot;)</script>
-                <command></command>
-                <packageName></packageName>
-                <regex>^ *uclock *$</regex>
-            </Alias>
-            <Alias isActive="yes" isFolder="no">
-                <name>clock help</name>
-                <script>echo(clock.help)</script>
-                <command></command>
-                <packageName></packageName>
-                <regex>^ *clock help *$</regex>
-            </Alias>
-            <Alias isActive="yes" isFolder="no">
-                <name>clock show time</name>
-                <script>clock.option.show_time = not clock.option.show_time
+                    <command></command>
+                    <packageName></packageName>
+                    <regex>^ *uclock *$</regex>
+                </Alias>
+                <Alias isActive="yes" isFolder="no">
+                    <name>clock help</name>
+                    <script>echo(clock.help)</script>
+                    <command></command>
+                    <packageName></packageName>
+                    <regex>^ *clock help *$</regex>
+                </Alias>
+                <Alias isActive="yes" isFolder="no">
+                    <name>clock show time</name>
+                    <script>clock.option.show_time = not clock.option.show_time
 
 if clock.option.show_time then
 	echo(&quot;Time will dispay every MUME hour.\n&quot;)
 else
 	echo(&quot;Time will NOT dispay every MUME hour.\n&quot;)
 end</script>
-                <command></command>
-                <packageName></packageName>
-                <regex>^ *clock *show *time *$</regex>
-            </Alias>
-            <Alias isActive="yes" isFolder="no">
-                <name>clock show date</name>
-                <script>clock.option.show_date = not clock.option.show_date
+                    <command></command>
+                    <packageName></packageName>
+                    <regex>^ *clock *show *time *$</regex>
+                </Alias>
+                <Alias isActive="yes" isFolder="no">
+                    <name>clock show date</name>
+                    <script>clock.option.show_date = not clock.option.show_date
 
 if clock.option.show_date then
 	echo(&quot;Date will dispay every MUME hour.\n&quot;)
 else
 	echo(&quot;Date will NOT dispay every MUME hour.\n&quot;)
 end</script>
-                <command></command>
-                <packageName></packageName>
-                <regex>^ *clock *show *date *$</regex>
-            </Alias>
-            <Alias isActive="yes" isFolder="no">
-                <name>clock set highlight &lt;colour&gt;</name>
-                <script>local colour = string.trim(matches[2])
+                    <command></command>
+                    <packageName></packageName>
+                    <regex>^ *clock *show *date *$</regex>
+                </Alias>
+                <Alias isActive="yes" isFolder="no">
+                    <name>clock set highlight &lt;colour&gt;</name>
+                    <script>local colour = string.trim(matches[2])
 
 clock.options.highlight = colour
 
 echo(&quot;Set highlight colour to &quot; .. clock.options.highlight .. &quot;.\n&quot;)</script>
-                <command></command>
-                <packageName></packageName>
-                <regex>^ *clock *set *highlight +(.+)$</regex>
-            </Alias>
-            <Alias isActive="yes" isFolder="no">
-                <name>clock show colours</name>
-                <script>showColors()
+                    <command></command>
+                    <packageName></packageName>
+                    <regex>^ *clock *set *highlight +(.+)$</regex>
+                </Alias>
+                <Alias isActive="yes" isFolder="no">
+                    <name>clock show colours</name>
+                    <script>showColors()
 echo(&quot;Colours must be wrapped by the symbols '&lt;' and '&gt;'!\n&quot;)</script>
-                <command></command>
-                <packageName></packageName>
-                <regex>^clock show colours$</regex>
-            </Alias>
+                    <command></command>
+                    <packageName></packageName>
+                    <regex>^clock show colours$</regex>
+                </Alias>
+            </AliasGroup>
         </AliasGroup>
     </AliasPackage>
     <ActionPackage/>
     <ScriptPackage>
         <ScriptGroup isActive="yes" isFolder="yes">
-            <name>Clock</name>
-            <packageName></packageName>
-            <script>clock = clock or { options = initialize_clock() }</script>
+            <name>MUME</name>
+            <packageName>current</packageName>
+            <script></script>
             <eventHandlerList/>
             <ScriptGroup isActive="yes" isFolder="yes">
-                <name>Time</name>
+                <name>Packages</name>
                 <packageName></packageName>
-                <script></script>
+                <script>packages = packages or { list = {} }</script>
                 <eventHandlerList/>
                 <Script isActive="yes" isFolder="no">
-                    <name>get_time</name>
+                    <name>initialize</name>
                     <packageName></packageName>
-                    <script>function clock.get_time()
+                    <script>function packages.initialize(name, initialize_function)
+	local package = {}
+
+	local dirname = packages.get_folder(name)
+	local filename = packages.get_table(name)
+
+	packages.list[name] = package
+
+	if io.exists(filename) then
+		cecho(&quot;&lt;cyan&gt;[ USER ]  - &lt;grey&gt;Loading &quot; .. name .. &quot; ...\n&quot;)
+
+		table.load(filename, package)
+	else
+		cecho(&quot;&lt;cyan&gt;[ USER ]  - &lt;grey&gt;Initializing &quot; .. name .. &quot; ...\n&quot;)
+
+		packages.mkdir(dirname)
+
+		package.package_name = name
+		package.package_folder = dirname
+		package.package_table = filename
+
+		initialize_function(package)
+	end
+
+	return package
+end</script>
+                    <eventHandlerList/>
+                </Script>
+                <Script isActive="yes" isFolder="no">
+                    <name>get_folder</name>
+                    <packageName></packageName>
+                    <script>function packages.get_folder(name)
+	return getMudletHomeDir() .. &quot;/&quot; .. name
+end</script>
+                    <eventHandlerList/>
+                </Script>
+                <Script isActive="yes" isFolder="no">
+                    <name>get_table</name>
+                    <packageName></packageName>
+                    <script>function packages.get_table(name)
+	local dirname = packages.get_folder(name)
+	return dirname .. &quot;/table.lua&quot;
+end</script>
+                    <eventHandlerList/>
+                </Script>
+                <Script isActive="yes" isFolder="no">
+                    <name>mkdir</name>
+                    <packageName></packageName>
+                    <script>function packages.mkdir(dirname)
+	local replace = string.gsub(dirname, &quot;\\&quot;, &quot;/&quot;)
+	local split = string.split(replace, &quot;/&quot;)
+
+	local path = &quot;&quot;	
+	for index, dir in ipairs(split) do
+		path = path .. dir .. &quot;/&quot;
+		if not io.exists(path) then
+			lfs.mkdir(path)
+		end
+	end
+end</script>
+                    <eventHandlerList/>
+                </Script>
+                <Script isActive="yes" isFolder="no">
+                    <name>packages.save</name>
+                    <packageName></packageName>
+                    <script>function packages.save()
+	for name, package in pairs(packages.list) do
+		cecho(&quot;&lt;cyan&gt;[ USER ]  - &lt;grey&gt;Saving &quot; .. package.package_name .. &quot; ...\n&quot;)
+		packages.mkdir(package.package_folder)
+		table.save(package.package_table, package)
+	end
+end</script>
+                    <eventHandlerList>
+                        <string>sysExitEvent</string>
+                    </eventHandlerList>
+                </Script>
+            </ScriptGroup>
+            <ScriptGroup isActive="yes" isFolder="yes">
+                <name>Clock</name>
+                <packageName></packageName>
+                <script>clock = clock or packages.initialize(&quot;Clock&quot;, initialize_clock)</script>
+                <eventHandlerList/>
+                <ScriptGroup isActive="yes" isFolder="yes">
+                    <name>Time</name>
+                    <packageName></packageName>
+                    <script></script>
+                    <eventHandlerList/>
+                    <Script isActive="yes" isFolder="no">
+                        <name>get_time</name>
+                        <packageName></packageName>
+                        <script>function clock.get_time()
 	local current_time_as_string = getTime(true)
 
 	return datetime:parse(current_time_as_string, &quot;%Y.%m.%d %H:%M:%S&quot;, true)
 end</script>
-                    <eventHandlerList/>
-                </Script>
-            </ScriptGroup>
-            <ScriptGroup isActive="yes" isFolder="yes">
-                <name>MUME Time</name>
-                <packageName></packageName>
-                <script></script>
-                <eventHandlerList/>
-                <Script isActive="yes" isFolder="no">
-                    <name>convert_mume_moment_to_mume_time</name>
+                        <eventHandlerList/>
+                    </Script>
+                </ScriptGroup>
+                <ScriptGroup isActive="yes" isFolder="yes">
+                    <name>MUME Time</name>
                     <packageName></packageName>
-                    <script>function clock.convert_mume_moment_to_mume_time(mume_moment)
+                    <script></script>
+                    <eventHandlerList/>
+                    <Script isActive="yes" isFolder="no">
+                        <name>convert_mume_moment_to_mume_time</name>
+                        <packageName></packageName>
+                        <script>function clock.convert_mume_moment_to_mume_time(mume_moment)
 	-- Calculate years since the start of MUME time
 	local years_since = mume_moment.year - clock.mume_start_year
 
@@ -299,12 +424,12 @@ end</script>
 
 	return year_as_mume_minutes + month_as_mume_minutes + day_as_mume_minutes + time_as_mume_minutes 
 end</script>
-                    <eventHandlerList/>
-                </Script>
-                <Script isActive="yes" isFolder="no">
-                    <name>convert_mume_time_to_mume_minutes</name>
-                    <packageName></packageName>
-                    <script>function clock.convert_mume_time_to_mume_minutes(hour, minute, period)
+                        <eventHandlerList/>
+                    </Script>
+                    <Script isActive="yes" isFolder="no">
+                        <name>convert_mume_time_to_mume_minutes</name>
+                        <packageName></packageName>
+                        <script>function clock.convert_mume_time_to_mume_minutes(hour, minute, period)
 	-- Convert hour to 24-hour
 	local hour24
 	if period == &quot;pm&quot; and hour == 12 then
@@ -319,12 +444,12 @@ end</script>
 
 	return hour24 * clock.minutes_per_hour + minute
 end</script>
-                    <eventHandlerList/>
-                </Script>
-                <Script isActive="yes" isFolder="no">
-                    <name>convert_mume_time_to_mume_moment</name>
-                    <packageName></packageName>
-                    <script>function clock.convert_mume_time_to_mume_moment(mume_time)
+                        <eventHandlerList/>
+                    </Script>
+                    <Script isActive="yes" isFolder="no">
+                        <name>convert_mume_time_to_mume_moment</name>
+                        <packageName></packageName>
+                        <script>function clock.convert_mume_time_to_mume_moment(mume_time)
 	local mume_moment = {}
 
 	-- Year
@@ -362,12 +487,12 @@ end</script>
 
 	return mume_moment
 end</script>
-                    <eventHandlerList/>
-                </Script>
-                <Script isActive="yes" isFolder="no">
-                    <name>convert_mume_minutes_to_hms</name>
-                    <packageName></packageName>
-                    <script>function clock.convert_mume_minutes_to_real_hms(mume_minutes)
+                        <eventHandlerList/>
+                    </Script>
+                    <Script isActive="yes" isFolder="no">
+                        <name>convert_mume_minutes_to_hms</name>
+                        <packageName></packageName>
+                        <script>function clock.convert_mume_minutes_to_real_hms(mume_minutes)
 	local time_as_seconds = mume_minutes
 
 	-- Hours part
@@ -401,12 +526,12 @@ end</script>
 
 	return result
 end</script>
-                    <eventHandlerList/>
-                </Script>
-                <Script isActive="yes" isFolder="no">
-                    <name>get_mume_moment</name>
-                    <packageName></packageName>
-                    <script>function clock.get_mume_moment()
+                        <eventHandlerList/>
+                    </Script>
+                    <Script isActive="yes" isFolder="no">
+                        <name>get_mume_moment</name>
+                        <packageName></packageName>
+                        <script>function clock.get_mume_moment()
 	if not clock.is_set then
 		return nil
 	end
@@ -422,18 +547,18 @@ end</script>
 
 	return mume_moment
 end</script>
-                    <eventHandlerList/>
-                </Script>
-            </ScriptGroup>
-            <ScriptGroup isActive="yes" isFolder="yes">
-                <name>Month</name>
-                <packageName></packageName>
-                <script></script>
-                <eventHandlerList/>
-                <Script isActive="yes" isFolder="no">
-                    <name>Month Data</name>
+                        <eventHandlerList/>
+                    </Script>
+                </ScriptGroup>
+                <ScriptGroup isActive="yes" isFolder="yes">
+                    <name>Month</name>
                     <packageName></packageName>
-                    <script>clock.westron_month_names = {
+                    <script></script>
+                    <eventHandlerList/>
+                    <Script isActive="yes" isFolder="no">
+                        <name>Month Data</name>
+                        <packageName></packageName>
+                        <script>clock.westron_month_names = {
 	[1] = &quot;Afteryule&quot;,
 	[2] = &quot;Solmath&quot;,
 	[3] = &quot;Rethe&quot;,
@@ -552,12 +677,12 @@ clock.dusk_as_minutes = {
 	[11] = 8 * 60 + 12 * 60,
 	[12] = 7 * 60 + 12 * 60,
 }</script>
-                    <eventHandlerList/>
-                </Script>
-                <Script isActive="yes" isFolder="no">
-                    <name>convert_month_name_to_month_number</name>
-                    <packageName></packageName>
-                    <script>function clock.convert_month_name_to_month_number(name)
+                        <eventHandlerList/>
+                    </Script>
+                    <Script isActive="yes" isFolder="no">
+                        <name>convert_month_name_to_month_number</name>
+                        <packageName></packageName>
+                        <script>function clock.convert_month_name_to_month_number(name)
 	local number = clock.westron_month_numbers[name]
 
 	if number == nil then
@@ -570,60 +695,60 @@ clock.dusk_as_minutes = {
 	return number
 end
 </script>
-                    <eventHandlerList/>
-                </Script>
-                <Script isActive="yes" isFolder="no">
-                    <name>convert_month_number_to_month_name</name>
-                    <packageName></packageName>
-                    <script>function clock.convert_month_number_to_month_name(number)
+                        <eventHandlerList/>
+                    </Script>
+                    <Script isActive="yes" isFolder="no">
+                        <name>convert_month_number_to_month_name</name>
+                        <packageName></packageName>
+                        <script>function clock.convert_month_number_to_month_name(number)
 	if clock.use_westron_calendar then
 		return clock.westron_month_names[number]
 	end
 
 	return clock.sindarin_month_names[number]
 end</script>
-                    <eventHandlerList/>
-                </Script>
-                <Script isActive="yes" isFolder="no">
-                    <name>is_last_day_of_month</name>
-                    <packageName></packageName>
-                    <script>function clock.is_last_day_of_month(mume_moment)
+                        <eventHandlerList/>
+                    </Script>
+                    <Script isActive="yes" isFolder="no">
+                        <name>is_last_day_of_month</name>
+                        <packageName></packageName>
+                        <script>function clock.is_last_day_of_month(mume_moment)
 	return mume_moment.day == clock.days_per_month
 end</script>
-                    <eventHandlerList/>
-                </Script>
-            </ScriptGroup>
-            <ScriptGroup isActive="yes" isFolder="yes">
-                <name>Dawn/Dusk</name>
-                <packageName></packageName>
-                <script></script>
-                <eventHandlerList/>
-                <Script isActive="yes" isFolder="no">
-                    <name>get_dawn</name>
+                        <eventHandlerList/>
+                    </Script>
+                </ScriptGroup>
+                <ScriptGroup isActive="yes" isFolder="yes">
+                    <name>Dawn/Dusk</name>
                     <packageName></packageName>
-                    <script>function clock.get_dawn(mume_moment)
+                    <script></script>
+                    <eventHandlerList/>
+                    <Script isActive="yes" isFolder="no">
+                        <name>get_dawn</name>
+                        <packageName></packageName>
+                        <script>function clock.get_dawn(mume_moment)
 	local month = clock.get_effective_month(mume_moment)
 
 	return clock.dawn[month]
 end
 
 </script>
-                    <eventHandlerList/>
-                </Script>
-                <Script isActive="yes" isFolder="no">
-                    <name>get_dusk</name>
-                    <packageName></packageName>
-                    <script>function clock.get_dusk(mume_moment)
+                        <eventHandlerList/>
+                    </Script>
+                    <Script isActive="yes" isFolder="no">
+                        <name>get_dusk</name>
+                        <packageName></packageName>
+                        <script>function clock.get_dusk(mume_moment)
 	local month = clock.get_effective_month(mume_moment)
 
 	return clock.dusk[month]
 end</script>
-                    <eventHandlerList/>
-                </Script>
-                <Script isActive="yes" isFolder="no">
-                    <name>get_time_to_dawn</name>
-                    <packageName></packageName>
-                    <script>function clock.get_time_to_dawn(mume_moment)
+                        <eventHandlerList/>
+                    </Script>
+                    <Script isActive="yes" isFolder="no">
+                        <name>get_time_to_dawn</name>
+                        <packageName></packageName>
+                        <script>function clock.get_time_to_dawn(mume_moment)
 	local minutes_since_12am = clock.convert_mume_time_to_mume_minutes(mume_moment.hour, mume_moment.minute, mume_moment.period)
 	local month = clock.get_effective_month(mume_moment)
 	local dawn = clock.dawn_as_minutes[month]
@@ -636,12 +761,12 @@ end</script>
 
 	return clock.convert_mume_minutes_to_real_hms(time_to_dawn)
 end</script>
-                    <eventHandlerList/>
-                </Script>
-                <Script isActive="yes" isFolder="no">
-                    <name>get_time_to_dusk</name>
-                    <packageName></packageName>
-                    <script>function clock.get_time_to_dusk(mume_moment)
+                        <eventHandlerList/>
+                    </Script>
+                    <Script isActive="yes" isFolder="no">
+                        <name>get_time_to_dusk</name>
+                        <packageName></packageName>
+                        <script>function clock.get_time_to_dusk(mume_moment)
 	local minutes_since_12am = clock.convert_mume_time_to_mume_minutes(mume_moment.hour, mume_moment.minute, mume_moment.period)
 	local month = clock.get_effective_month(mume_moment)
 	local dusk = clock.dusk_as_minutes[month]
@@ -654,34 +779,34 @@ end</script>
 
 	return clock.convert_mume_minutes_to_real_hms(time_to_dusk)
 end</script>
-                    <eventHandlerList/>
-                </Script>
-                <Script isActive="yes" isFolder="no">
-                    <name>dawn_passed</name>
-                    <packageName></packageName>
-                    <script>function clock.dawn_passed(mume_moment)
+                        <eventHandlerList/>
+                    </Script>
+                    <Script isActive="yes" isFolder="no">
+                        <name>dawn_passed</name>
+                        <packageName></packageName>
+                        <script>function clock.dawn_passed(mume_moment)
 	local minutes_since_12am = clock.convert_mume_time_to_mume_minutes(mume_moment.hour, mume_moment.minute, mume_moment.period)
 	local dawn_in_minutes = clock.dawn_as_minutes[mume_moment.month]
 
 	return minutes_since_12am &gt; dawn_in_minutes
 end</script>
-                    <eventHandlerList/>
-                </Script>
-                <Script isActive="yes" isFolder="no">
-                    <name>dusk_passed</name>
-                    <packageName></packageName>
-                    <script>function clock.dusk_passed(mume_moment)
+                        <eventHandlerList/>
+                    </Script>
+                    <Script isActive="yes" isFolder="no">
+                        <name>dusk_passed</name>
+                        <packageName></packageName>
+                        <script>function clock.dusk_passed(mume_moment)
 	local minutes_since_12am = clock.convert_mume_time_to_mume_minutes(mume_moment.hour, mume_moment.minute, mume_moment.period)
 	local dusk_in_minutes = clock.dusk_as_minutes[mume_moment.month]
 
 	return minutes_since_12am &gt; dusk_in_minutes
 end</script>
-                    <eventHandlerList/>
-                </Script>
-                <Script isActive="yes" isFolder="no">
-                    <name>get_effective_month</name>
-                    <packageName></packageName>
-                    <script>function clock.get_effective_month(mume_moment)
+                        <eventHandlerList/>
+                    </Script>
+                    <Script isActive="yes" isFolder="no">
+                        <name>get_effective_month</name>
+                        <packageName></packageName>
+                        <script>function clock.get_effective_month(mume_moment)
 	local month = mume_moment.month
 	
 	if clock.dawn_passed(mume_moment) and
@@ -691,18 +816,18 @@ end</script>
 
 	return month
 end</script>
-                    <eventHandlerList/>
-                </Script>
-            </ScriptGroup>
-            <ScriptGroup isActive="yes" isFolder="yes">
-                <name>Season</name>
-                <packageName></packageName>
-                <script></script>
-                <eventHandlerList/>
-                <Script isActive="yes" isFolder="no">
-                    <name>Season Data</name>
+                        <eventHandlerList/>
+                    </Script>
+                </ScriptGroup>
+                <ScriptGroup isActive="yes" isFolder="yes">
+                    <name>Season</name>
                     <packageName></packageName>
-                    <script>clock.season = {
+                    <script></script>
+                    <eventHandlerList/>
+                    <Script isActive="yes" isFolder="no">
+                        <name>Season Data</name>
+                        <packageName></packageName>
+                        <script>clock.season = {
 	&quot;Winter&quot;,
 	&quot;Winter&quot;,
 	&quot;Winter&quot;,
@@ -731,34 +856,34 @@ clock.month_of_season = {
 	&quot;second&quot;,
 	&quot;third&quot;,
 }</script>
-                    <eventHandlerList/>
-                </Script>
-                <Script isActive="yes" isFolder="no">
-                    <name>get_season</name>
-                    <packageName></packageName>
-                    <script>function clock.get_season(mume_moment)
+                        <eventHandlerList/>
+                    </Script>
+                    <Script isActive="yes" isFolder="no">
+                        <name>get_season</name>
+                        <packageName></packageName>
+                        <script>function clock.get_season(mume_moment)
 	return clock.season[mume_moment.month]
 end</script>
-                    <eventHandlerList/>
-                </Script>
-                <Script isActive="yes" isFolder="no">
-                    <name>get_month_of_season</name>
-                    <packageName></packageName>
-                    <script>function clock.get_month_of_season(mume_moment)
+                        <eventHandlerList/>
+                    </Script>
+                    <Script isActive="yes" isFolder="no">
+                        <name>get_month_of_season</name>
+                        <packageName></packageName>
+                        <script>function clock.get_month_of_season(mume_moment)
 	return clock.month_of_season[mume_moment.month]
 end</script>
-                    <eventHandlerList/>
-                </Script>
-            </ScriptGroup>
-            <ScriptGroup isActive="yes" isFolder="yes">
-                <name>Display</name>
-                <packageName></packageName>
-                <script></script>
-                <eventHandlerList/>
-                <Script isActive="yes" isFolder="no">
-                    <name>display_time</name>
+                        <eventHandlerList/>
+                    </Script>
+                </ScriptGroup>
+                <ScriptGroup isActive="yes" isFolder="yes">
+                    <name>Display</name>
                     <packageName></packageName>
-                    <script>function clock.display_time(mume_moment, use_color)
+                    <script></script>
+                    <eventHandlerList/>
+                    <Script isActive="yes" isFolder="no">
+                        <name>display_time</name>
+                        <packageName></packageName>
+                        <script>function clock.display_time(mume_moment, use_color)
 	if not clock.is_set then
 		return &quot;Your clock is not set.&quot;
 	end
@@ -787,12 +912,12 @@ end</script>
 
 	return result
 end</script>
-                    <eventHandlerList/>
-                </Script>
-                <Script isActive="yes" isFolder="no">
-                    <name>display_date</name>
-                    <packageName></packageName>
-                    <script>function clock.display_date(mume_moment, use_color)
+                        <eventHandlerList/>
+                    </Script>
+                    <Script isActive="yes" isFolder="no">
+                        <name>display_date</name>
+                        <packageName></packageName>
+                        <script>function clock.display_date(mume_moment, use_color)
 	if not clock.is_set then
 		return &quot;Your clock is not set.&quot;
 	end
@@ -813,12 +938,12 @@ end</script>
 
 	return result
 end</script>
-                    <eventHandlerList/>
-                </Script>
-                <Script isActive="yes" isFolder="no">
-                    <name>display_timer</name>
-                    <packageName></packageName>
-                    <script>function clock.display_timer(mume_moment)
+                        <eventHandlerList/>
+                    </Script>
+                    <Script isActive="yes" isFolder="no">
+                        <name>display_timer</name>
+                        <packageName></packageName>
+                        <script>function clock.display_timer(mume_moment)
 	if clock.options.show_time then
 		cecho(clock.display_time(mume_moment, true) .. &quot;\n&quot;)
 	end
@@ -829,12 +954,12 @@ end</script>
 		cecho(clock.display_date(mume_moment, true) .. &quot;\n&quot;)
 	end
 end</script>
-                    <eventHandlerList/>
-                </Script>
-                <Script isActive="yes" isFolder="no">
-                    <name>adjust_timer</name>
-                    <packageName></packageName>
-                    <script>function clock.adjust_timer(minute)
+                        <eventHandlerList/>
+                    </Script>
+                    <Script isActive="yes" isFolder="no">
+                        <name>adjust_timer</name>
+                        <packageName></packageName>
+                        <script>function clock.adjust_timer(minute)
 	-- Enable the timer to show the time and date, but offset it so it appears on the hour
 	if minute ~= 0 then
 		local time_offset = 60 - minute
@@ -842,25 +967,27 @@ end</script>
 		enableTimer(timer)
 	end
 end</script>
-                    <eventHandlerList/>
-                </Script>
-                <Script isActive="yes" isFolder="no">
-                    <name>get_highlight</name>
-                    <packageName></packageName>
-                    <script>function clock.get_highlight()
+                        <eventHandlerList/>
+                    </Script>
+                    <Script isActive="yes" isFolder="no">
+                        <name>get_highlight</name>
+                        <packageName></packageName>
+                        <script>function clock.get_highlight()
 	return &quot;&lt;&quot; .. clock.options.highlight .. &quot;&gt;&quot;
 end</script>
-                    <eventHandlerList/>
-                </Script>
-            </ScriptGroup>
-            <Script isActive="yes" isFolder="no">
-                <name>README</name>
-                <packageName></packageName>
-                <script>clock.help = [[
+                        <eventHandlerList/>
+                    </Script>
+                </ScriptGroup>
+                <Script isActive="yes" isFolder="no">
+                    <name>README</name>
+                    <packageName></packageName>
+                    <script>clock.help = [[
 Clock: Advanced MUME Time
 Author: Octavia
-Version: 1.0
-Changelog
+Version: 1.2
+Changelog:
+- 1.2, 2015-2-10
+  - Automatic loading/saving of clock data. May you never have to look at another clock again!
 - 1.1, 2015-2-7
   - Improved the way options are set.
 - 1.0, 2015-2-3
@@ -884,12 +1011,12 @@ The commands are as follows:
 - clock set highlight : Set the highlight color for data. Use &quot;grey&quot; for no highlight.
 - clock show colours : Display a list of colours for use with the highlight option.
 ]]</script>
-                <eventHandlerList/>
-            </Script>
-            <Script isActive="yes" isFolder="no">
-                <name>Constants</name>
-                <packageName></packageName>
-                <script>clock.mume_start_year = 2850
+                    <eventHandlerList/>
+                </Script>
+                <Script isActive="yes" isFolder="no">
+                    <name>Constants</name>
+                    <packageName></packageName>
+                    <script>clock.mume_start_year = 2850
 
 clock.months_per_year = 12
 
@@ -902,22 +1029,21 @@ clock.minutes_per_hour = 60
 clock.minutes_per_year = clock.days_per_year * clock.hours_per_day * clock.minutes_per_hour
 clock.minutes_per_month = clock.days_per_month * clock.hours_per_day * clock.minutes_per_hour
 clock.minutes_per_day = clock.hours_per_day * clock.minutes_per_hour</script>
-                <eventHandlerList/>
-            </Script>
-            <Script isActive="yes" isFolder="no">
-                <name>initialize_clock</name>
-                <packageName></packageName>
-                <script>function initialize_clock()
-	local options = {}
+                    <eventHandlerList/>
+                </Script>
+                <Script isActive="yes" isFolder="no">
+                    <name>initialize_clock</name>
+                    <packageName></packageName>
+                    <script>function initialize_clock(clock)
+	clock.options = {}
 
-	options.show_time = true
-	options.show_date = true
-	options.highlight = &quot;cyan&quot;
-
-	return options
+	clock.options.show_time = true
+	clock.options.show_date = true
+	clock.options.highlight = &quot;cyan&quot;
 end</script>
-                <eventHandlerList/>
-            </Script>
+                    <eventHandlerList/>
+                </Script>
+            </ScriptGroup>
         </ScriptGroup>
     </ScriptPackage>
     <KeyPackage/>

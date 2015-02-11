@@ -1,0 +1,230 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE MudletPackage>
+<MudletPackage version="1.0">
+    <TriggerPackage>
+        <TriggerGroup isActive="yes" isFolder="yes" isTempTrigger="no" isMultiline="no" isPerlSlashGOption="no" isColorizerTrigger="no" isFilterTrigger="no" isSoundTrigger="no" isColorTrigger="no" isColorTriggerFg="no" isColorTriggerBg="no">
+            <name>MUME</name>
+            <script></script>
+            <triggerType>0</triggerType>
+            <conditonLineDelta>0</conditonLineDelta>
+            <mStayOpen>0</mStayOpen>
+            <mCommand></mCommand>
+            <packageName>current</packageName>
+            <mFgColor>#ff0000</mFgColor>
+            <mBgColor>#ffff00</mBgColor>
+            <mSoundFile></mSoundFile>
+            <colorTriggerFgColor>#000000</colorTriggerFgColor>
+            <colorTriggerBgColor>#000000</colorTriggerBgColor>
+            <regexCodeList/>
+            <regexCodePropertyList/>
+            <TriggerGroup isActive="yes" isFolder="yes" isTempTrigger="no" isMultiline="no" isPerlSlashGOption="no" isColorizerTrigger="no" isFilterTrigger="no" isSoundTrigger="no" isColorTrigger="no" isColorTriggerFg="no" isColorTriggerBg="no">
+                <name>Reply</name>
+                <script></script>
+                <triggerType>0</triggerType>
+                <conditonLineDelta>0</conditonLineDelta>
+                <mStayOpen>0</mStayOpen>
+                <mCommand></mCommand>
+                <packageName></packageName>
+                <mFgColor>#ff0000</mFgColor>
+                <mBgColor>#ffff00</mBgColor>
+                <mSoundFile></mSoundFile>
+                <colorTriggerFgColor>#000000</colorTriggerFgColor>
+                <colorTriggerBgColor>#000000</colorTriggerBgColor>
+                <regexCodeList/>
+                <regexCodePropertyList/>
+                <Trigger isActive="yes" isFolder="no" isTempTrigger="no" isMultiline="no" isPerlSlashGOption="no" isColorizerTrigger="no" isFilterTrigger="no" isSoundTrigger="no" isColorTrigger="no" isColorTriggerFg="no" isColorTriggerBg="no">
+                    <name>Get Player of Last Tell</name>
+                    <script>reply.last_tell = matches[2]</script>
+                    <triggerType>0</triggerType>
+                    <conditonLineDelta>0</conditonLineDelta>
+                    <mStayOpen>0</mStayOpen>
+                    <mCommand></mCommand>
+                    <packageName></packageName>
+                    <mFgColor>#ff0000</mFgColor>
+                    <mBgColor>#ffff00</mBgColor>
+                    <mSoundFile></mSoundFile>
+                    <colorTriggerFgColor>#000000</colorTriggerFgColor>
+                    <colorTriggerBgColor>#000000</colorTriggerBgColor>
+                    <regexCodeList>
+                        <string>^(.+) tells you '(.+)'$</string>
+                    </regexCodeList>
+                    <regexCodePropertyList>
+                        <integer>1</integer>
+                    </regexCodePropertyList>
+                </Trigger>
+                <Trigger isActive="yes" isFolder="no" isTempTrigger="no" isMultiline="no" isPerlSlashGOption="no" isColorizerTrigger="no" isFilterTrigger="no" isSoundTrigger="no" isColorTrigger="no" isColorTriggerFg="no" isColorTriggerBg="no">
+                    <name>Get Player of Last Narrate</name>
+                    <script>reply.last_narrate = matches[2]</script>
+                    <triggerType>0</triggerType>
+                    <conditonLineDelta>0</conditonLineDelta>
+                    <mStayOpen>0</mStayOpen>
+                    <mCommand></mCommand>
+                    <packageName></packageName>
+                    <mFgColor>#ff0000</mFgColor>
+                    <mBgColor>#ffff00</mBgColor>
+                    <mSoundFile></mSoundFile>
+                    <colorTriggerFgColor>#000000</colorTriggerFgColor>
+                    <colorTriggerBgColor>#000000</colorTriggerBgColor>
+                    <regexCodeList>
+                        <string>^(.+) narrates '(.+)'$</string>
+                    </regexCodeList>
+                    <regexCodePropertyList>
+                        <integer>1</integer>
+                    </regexCodePropertyList>
+                </Trigger>
+                <Trigger isActive="yes" isFolder="no" isTempTrigger="no" isMultiline="no" isPerlSlashGOption="no" isColorizerTrigger="no" isFilterTrigger="no" isSoundTrigger="no" isColorTrigger="no" isColorTriggerFg="no" isColorTriggerBg="no">
+                    <name>Get Player of Last Pray</name>
+                    <script>reply.last_pray = matches[2]</script>
+                    <triggerType>0</triggerType>
+                    <conditonLineDelta>0</conditonLineDelta>
+                    <mStayOpen>0</mStayOpen>
+                    <mCommand></mCommand>
+                    <packageName></packageName>
+                    <mFgColor>#ff0000</mFgColor>
+                    <mBgColor>#ffff00</mBgColor>
+                    <mSoundFile></mSoundFile>
+                    <colorTriggerFgColor>#000000</colorTriggerFgColor>
+                    <colorTriggerBgColor>#000000</colorTriggerBgColor>
+                    <regexCodeList>
+                        <string>^(.+) prays '(.+)'$</string>
+                    </regexCodeList>
+                    <regexCodePropertyList>
+                        <integer>1</integer>
+                    </regexCodePropertyList>
+                </Trigger>
+            </TriggerGroup>
+        </TriggerGroup>
+    </TriggerPackage>
+    <TimerPackage/>
+    <AliasPackage>
+        <AliasGroup isActive="yes" isFolder="yes">
+            <name>MUME</name>
+            <script></script>
+            <command></command>
+            <packageName>current</packageName>
+            <regex></regex>
+            <AliasGroup isActive="yes" isFolder="yes">
+                <name>Reply</name>
+                <script></script>
+                <command></command>
+                <packageName></packageName>
+                <regex></regex>
+                <Alias isActive="yes" isFolder="no">
+                    <name>reply to last tell (ret)</name>
+                    <script>if reply.last_tell then
+	reply.reply_target = reply.last_tell
+
+	cecho(&quot;reply (re) now targets &lt;cyan&gt;&quot; .. reply.reply_target .. &quot;&lt;grey&gt;.\n&quot;)
+else
+	echo(&quot;Nobody has told you anything!\n&quot;)
+end</script>
+                    <command></command>
+                    <packageName></packageName>
+                    <regex>^ *ret *$</regex>
+                </Alias>
+                <Alias isActive="yes" isFolder="no">
+                    <name>reply to last narrate (ren)</name>
+                    <script>if reply.last_narrate then
+	reply.reply_target = reply.last_narrate
+
+	cecho(&quot;reply (re) now targets &lt;cyan&gt;&quot; .. reply.reply_target .. &quot;&lt;grey&gt;.\n&quot;)
+else
+	echo(&quot;Nobody has narrated anything!\n&quot;)
+end</script>
+                    <command></command>
+                    <packageName></packageName>
+                    <regex>^ *ren *$</regex>
+                </Alias>
+                <Alias isActive="yes" isFolder="no">
+                    <name>reply to last pray (rep)</name>
+                    <script>if reply.last_pray then
+	reply.reply_target = reply.last_pray
+
+	cecho(&quot;reply (re) now targets &lt;cyan&gt;&quot; .. reply.reply_target .. &quot;&lt;grey&gt;.\n&quot;)
+else
+	echo(&quot;Nobody has prayed anything!\n&quot;)
+end</script>
+                    <command></command>
+                    <packageName></packageName>
+                    <regex>^ *rep *$</regex>
+                </Alias>
+                <Alias isActive="yes" isFolder="no">
+                    <name>reply (re)</name>
+                    <script>if reply.reply_target then
+	send(&quot;tell &quot; .. reply.reply_target .. &quot; &quot; .. matches[2], false)
+else
+	echo(&quot;There's nobody to reply to!\n&quot;)
+end</script>
+                    <command></command>
+                    <packageName></packageName>
+                    <regex>^ *re +(.+)$</regex>
+                </Alias>
+                <Alias isActive="yes" isFolder="no">
+                    <name>reply with pray (rp)</name>
+                    <script>send(&quot;pray &quot; .. reply.reply_target .. &quot; &quot; .. matches[2], false)</script>
+                    <command></command>
+                    <packageName></packageName>
+                    <regex>^ *rep +(.+)$</regex>
+                </Alias>
+                <Alias isActive="yes" isFolder="no">
+                    <name>set reply target (srt)</name>
+                    <script>local target = string.trim(matches[2])
+
+reply.reply_target = target
+cecho(&quot;reply (re) now targets &lt;cyan&gt;&quot; .. reply.reply_target .. &quot;&lt;grey&gt;.\n&quot;)
+</script>
+                    <command></command>
+                    <packageName></packageName>
+                    <regex>^ *srt +(.+)$</regex>
+                </Alias>
+                <Alias isActive="yes" isFolder="no">
+                    <name>reply help</name>
+                    <script>echo(reply.help)</script>
+                    <command></command>
+                    <packageName></packageName>
+                    <regex>^ *reply *help *$</regex>
+                </Alias>
+            </AliasGroup>
+        </AliasGroup>
+    </AliasPackage>
+    <ActionPackage/>
+    <ScriptPackage>
+        <ScriptGroup isActive="yes" isFolder="yes">
+            <name>MUME</name>
+            <packageName>current</packageName>
+            <script></script>
+            <eventHandlerList/>
+            <ScriptGroup isActive="yes" isFolder="yes">
+                <name>Reply</name>
+                <packageName></packageName>
+                <script>reply = reply or {}</script>
+                <eventHandlerList/>
+                <Script isActive="yes" isFolder="no">
+                    <name>README</name>
+                    <packageName></packageName>
+                    <script>reply.help = [[
+Reply
+Author: Octavia
+Version: 1.0
+Changelog:
+- 1.0, 2015-2-10
+  - Initial release.
+
+This package implements a convenient way to reply to people sending you tells. When someone sends you a reply, enter &quot;ret&quot; (reply to tell) to capture their name, and the send them your message with &quot;re&quot; (reply).
+
+The commands are as follows:
+- reply help : Show this message.
+- ret : Target the last person who sent you a tell.
+- rep : Target the last person who prayed.
+- ren : Target the last person who narrated.
+- re &lt;message&gt; : Send the current target a message.
+- rp &lt;message&gt; : (Ainur only) Send the current target a message via pray.
+- srt : Set reply target manually. Useful if you want to send a lot of tells but don't want to type the name over and over.
+]]</script>
+                    <eventHandlerList/>
+                </Script>
+            </ScriptGroup>
+        </ScriptGroup>
+    </ScriptPackage>
+    <KeyPackage/>
+</MudletPackage>

@@ -3,13 +3,13 @@
 <MudletPackage version="1.0">
     <TriggerPackage>
         <TriggerGroup isActive="yes" isFolder="yes" isTempTrigger="no" isMultiline="no" isPerlSlashGOption="no" isColorizerTrigger="no" isFilterTrigger="no" isSoundTrigger="no" isColorTrigger="no" isColorTriggerFg="no" isColorTriggerBg="no">
-            <name>Edit</name>
+            <name>MUME</name>
             <script></script>
             <triggerType>0</triggerType>
             <conditonLineDelta>0</conditonLineDelta>
             <mStayOpen>0</mStayOpen>
             <mCommand></mCommand>
-            <packageName></packageName>
+            <packageName>current</packageName>
             <mFgColor>#ff0000</mFgColor>
             <mBgColor>#ffff00</mBgColor>
             <mSoundFile></mSoundFile>
@@ -17,12 +17,27 @@
             <colorTriggerBgColor>#000000</colorTriggerBgColor>
             <regexCodeList/>
             <regexCodePropertyList/>
-            <Trigger isActive="yes" isFolder="no" isTempTrigger="no" isMultiline="no" isPerlSlashGOption="no" isColorizerTrigger="no" isFilterTrigger="no" isSoundTrigger="no" isColorTrigger="no" isColorTriggerFg="no" isColorTriggerBg="no">
-                <name>Detect Line Editor</name>
-                <script>edit.editing = true
+            <TriggerGroup isActive="yes" isFolder="yes" isTempTrigger="no" isMultiline="no" isPerlSlashGOption="no" isColorizerTrigger="no" isFilterTrigger="no" isSoundTrigger="no" isColorTrigger="no" isColorTriggerFg="no" isColorTriggerBg="no">
+                <name>Edit</name>
+                <script></script>
+                <triggerType>0</triggerType>
+                <conditonLineDelta>0</conditonLineDelta>
+                <mStayOpen>0</mStayOpen>
+                <mCommand></mCommand>
+                <packageName></packageName>
+                <mFgColor>#ff0000</mFgColor>
+                <mBgColor>#ffff00</mBgColor>
+                <mSoundFile></mSoundFile>
+                <colorTriggerFgColor>#000000</colorTriggerFgColor>
+                <colorTriggerBgColor>#000000</colorTriggerBgColor>
+                <regexCodeList/>
+                <regexCodePropertyList/>
+                <Trigger isActive="yes" isFolder="no" isTempTrigger="no" isMultiline="no" isPerlSlashGOption="no" isColorizerTrigger="no" isFilterTrigger="no" isSoundTrigger="no" isColorTrigger="no" isColorTriggerFg="no" isColorTriggerBg="no">
+                    <name>Detect Line Editor</name>
+                    <script>edit.editing = true
 
 -- Build the filename out of the date and description
-edit.filename = &quot;edit-&quot; .. getTime(true, &quot;yyyy.MM.dd.HH.mm.ss&quot;) .. &quot;-&quot; .. edit.description .. &quot;.txt&quot;
+edit.filename = getTime(true, &quot;yyyy.MM.dd.HH.mm.ss&quot;) .. &quot; - &quot; .. edit.description .. &quot;.txt&quot;
 
 -- Fix filename
 edit.filename = string.gsub(edit.filename, &quot;:&quot;, &quot;-&quot;)
@@ -45,103 +60,110 @@ echo(&quot;Mudlet will send MUME your text when you finish editing.\n&quot;)
 local command = &quot;\&quot;&quot; .. edit.options.editor .. &quot;\&quot; \&quot;&quot; .. edit.filename_fullpath .. &quot;\&quot;&quot;
 edit.process = spawn(display, command)
 enableTimer(&quot;Edit: Check Process Closed&quot;)</script>
-                <triggerType>0</triggerType>
-                <conditonLineDelta>0</conditonLineDelta>
-                <mStayOpen>0</mStayOpen>
-                <mCommand></mCommand>
-                <packageName></packageName>
-                <mFgColor>#ff0000</mFgColor>
-                <mBgColor>#ffff00</mBgColor>
-                <mSoundFile></mSoundFile>
-                <colorTriggerFgColor>#000000</colorTriggerFgColor>
-                <colorTriggerBgColor>#000000</colorTriggerBgColor>
-                <regexCodeList>
-                    <string>==&gt;</string>
-                </regexCodeList>
-                <regexCodePropertyList>
-                    <integer>3</integer>
-                </regexCodePropertyList>
-            </Trigger>
-            <Trigger isActive="yes" isFolder="no" isTempTrigger="no" isMultiline="no" isPerlSlashGOption="no" isColorizerTrigger="no" isFilterTrigger="no" isSoundTrigger="no" isColorTrigger="no" isColorTriggerFg="no" isColorTriggerBg="no">
-                <name>Detect Old Text</name>
-                <script>enableTrigger(&quot;Edit: Capture Line&quot;)
+                    <triggerType>0</triggerType>
+                    <conditonLineDelta>0</conditonLineDelta>
+                    <mStayOpen>0</mStayOpen>
+                    <mCommand></mCommand>
+                    <packageName></packageName>
+                    <mFgColor>#ff0000</mFgColor>
+                    <mBgColor>#ffff00</mBgColor>
+                    <mSoundFile></mSoundFile>
+                    <colorTriggerFgColor>#000000</colorTriggerFgColor>
+                    <colorTriggerBgColor>#000000</colorTriggerBgColor>
+                    <regexCodeList>
+                        <string>==&gt;</string>
+                    </regexCodeList>
+                    <regexCodePropertyList>
+                        <integer>3</integer>
+                    </regexCodePropertyList>
+                </Trigger>
+                <Trigger isActive="yes" isFolder="no" isTempTrigger="no" isMultiline="no" isPerlSlashGOption="no" isColorizerTrigger="no" isFilterTrigger="no" isSoundTrigger="no" isColorTrigger="no" isColorTriggerFg="no" isColorTriggerBg="no">
+                    <name>Detect Old Text</name>
+                    <script>enableTrigger(&quot;Edit: Capture Line&quot;)
 
 -- Two lines above the &quot;---&quot; line is the description
 edit.description = getLines(getLineNumber() - 2, getLineNumber() - 1)[1]</script>
-                <triggerType>0</triggerType>
-                <conditonLineDelta>99</conditonLineDelta>
-                <mStayOpen>0</mStayOpen>
-                <mCommand></mCommand>
-                <packageName></packageName>
-                <mFgColor>#ff0000</mFgColor>
-                <mBgColor>#ffff00</mBgColor>
-                <mSoundFile></mSoundFile>
-                <colorTriggerFgColor>#000000</colorTriggerFgColor>
-                <colorTriggerBgColor>#000000</colorTriggerBgColor>
-                <regexCodeList>
-                    <string>-------------------------------------------------------------------------------</string>
-                </regexCodeList>
-                <regexCodePropertyList>
-                    <integer>3</integer>
-                </regexCodePropertyList>
-            </Trigger>
-            <Trigger isActive="yes" isFolder="no" isTempTrigger="no" isMultiline="no" isPerlSlashGOption="no" isColorizerTrigger="no" isFilterTrigger="no" isSoundTrigger="no" isColorTrigger="no" isColorTriggerFg="no" isColorTriggerBg="no">
-                <name>Detect End of Old Text</name>
-                <script>disableTrigger(&quot;Edit: Capture Line&quot;)</script>
-                <triggerType>0</triggerType>
-                <conditonLineDelta>0</conditonLineDelta>
-                <mStayOpen>0</mStayOpen>
-                <mCommand></mCommand>
-                <packageName></packageName>
-                <mFgColor>#ff0000</mFgColor>
-                <mBgColor>#ffff00</mBgColor>
-                <mSoundFile></mSoundFile>
-                <colorTriggerFgColor>#000000</colorTriggerFgColor>
-                <colorTriggerBgColor>#000000</colorTriggerBgColor>
-                <regexCodeList>
-                    <string>==&gt;</string>
-                </regexCodeList>
-                <regexCodePropertyList>
-                    <integer>3</integer>
-                </regexCodePropertyList>
-            </Trigger>
-            <Trigger isActive="no" isFolder="no" isTempTrigger="no" isMultiline="no" isPerlSlashGOption="no" isColorizerTrigger="no" isFilterTrigger="no" isSoundTrigger="no" isColorTrigger="no" isColorTriggerFg="no" isColorTriggerBg="no">
-                <name>Edit: Capture Line</name>
-                <script>-- Capture the old text (stuff between &quot;---&quot; and &quot;==&gt;&quot;)
+                    <triggerType>0</triggerType>
+                    <conditonLineDelta>99</conditonLineDelta>
+                    <mStayOpen>0</mStayOpen>
+                    <mCommand></mCommand>
+                    <packageName></packageName>
+                    <mFgColor>#ff0000</mFgColor>
+                    <mBgColor>#ffff00</mBgColor>
+                    <mSoundFile></mSoundFile>
+                    <colorTriggerFgColor>#000000</colorTriggerFgColor>
+                    <colorTriggerBgColor>#000000</colorTriggerBgColor>
+                    <regexCodeList>
+                        <string>-------------------------------------------------------------------------------</string>
+                    </regexCodeList>
+                    <regexCodePropertyList>
+                        <integer>3</integer>
+                    </regexCodePropertyList>
+                </Trigger>
+                <Trigger isActive="yes" isFolder="no" isTempTrigger="no" isMultiline="no" isPerlSlashGOption="no" isColorizerTrigger="no" isFilterTrigger="no" isSoundTrigger="no" isColorTrigger="no" isColorTriggerFg="no" isColorTriggerBg="no">
+                    <name>Detect End of Old Text</name>
+                    <script>disableTrigger(&quot;Edit: Capture Line&quot;)</script>
+                    <triggerType>0</triggerType>
+                    <conditonLineDelta>0</conditonLineDelta>
+                    <mStayOpen>0</mStayOpen>
+                    <mCommand></mCommand>
+                    <packageName></packageName>
+                    <mFgColor>#ff0000</mFgColor>
+                    <mBgColor>#ffff00</mBgColor>
+                    <mSoundFile></mSoundFile>
+                    <colorTriggerFgColor>#000000</colorTriggerFgColor>
+                    <colorTriggerBgColor>#000000</colorTriggerBgColor>
+                    <regexCodeList>
+                        <string>==&gt;</string>
+                    </regexCodeList>
+                    <regexCodePropertyList>
+                        <integer>3</integer>
+                    </regexCodePropertyList>
+                </Trigger>
+                <Trigger isActive="no" isFolder="no" isTempTrigger="no" isMultiline="no" isPerlSlashGOption="no" isColorizerTrigger="no" isFilterTrigger="no" isSoundTrigger="no" isColorTrigger="no" isColorTriggerFg="no" isColorTriggerBg="no">
+                    <name>Edit: Capture Line</name>
+                    <script>-- Capture the old text (stuff between &quot;---&quot; and &quot;==&gt;&quot;)
 if line ~= &quot;==&gt;&quot; and line ~= &quot;-------------------------------------------------------------------------------&quot; then
 	table.insert(edit.lines, matches[1])
 end</script>
-                <triggerType>0</triggerType>
-                <conditonLineDelta>0</conditonLineDelta>
-                <mStayOpen>0</mStayOpen>
-                <mCommand></mCommand>
-                <packageName></packageName>
-                <mFgColor>#ff0000</mFgColor>
-                <mBgColor>#ffff00</mBgColor>
-                <mSoundFile></mSoundFile>
-                <colorTriggerFgColor>#000000</colorTriggerFgColor>
-                <colorTriggerBgColor>#000000</colorTriggerBgColor>
-                <regexCodeList>
-                    <string>(.+)</string>
-                    <string>^$</string>
-                </regexCodeList>
-                <regexCodePropertyList>
-                    <integer>1</integer>
-                    <integer>1</integer>
-                </regexCodePropertyList>
-            </Trigger>
+                    <triggerType>0</triggerType>
+                    <conditonLineDelta>0</conditonLineDelta>
+                    <mStayOpen>0</mStayOpen>
+                    <mCommand></mCommand>
+                    <packageName></packageName>
+                    <mFgColor>#ff0000</mFgColor>
+                    <mBgColor>#ffff00</mBgColor>
+                    <mSoundFile></mSoundFile>
+                    <colorTriggerFgColor>#000000</colorTriggerFgColor>
+                    <colorTriggerBgColor>#000000</colorTriggerBgColor>
+                    <regexCodeList>
+                        <string>(.+)</string>
+                        <string>^$</string>
+                    </regexCodeList>
+                    <regexCodePropertyList>
+                        <integer>1</integer>
+                        <integer>1</integer>
+                    </regexCodePropertyList>
+                </Trigger>
+            </TriggerGroup>
         </TriggerGroup>
     </TriggerPackage>
     <TimerPackage>
         <TimerGroup isActive="yes" isFolder="yes" isTempTimer="no" isOffsetTimer="no">
-            <name>Edit</name>
+            <name>MUME</name>
             <script></script>
             <command></command>
-            <packageName></packageName>
-            <time>00:00:05.000</time>
-            <Timer isActive="no" isFolder="no" isTempTimer="no" isOffsetTimer="no">
-                <name>Edit: Check Process Closed</name>
-                <script>-- When the editor closes...
+            <packageName>current</packageName>
+            <time>00:00:00.000</time>
+            <TimerGroup isActive="yes" isFolder="yes" isTempTimer="no" isOffsetTimer="no">
+                <name>Edit</name>
+                <script></script>
+                <command></command>
+                <packageName></packageName>
+                <time>00:00:05.000</time>
+                <Timer isActive="no" isFolder="no" isTempTimer="no" isOffsetTimer="no">
+                    <name>Edit: Check Process Closed</name>
+                    <script>-- When the editor closes...
 if not edit.process.isRunning() then
 	echo(&quot;Deleting old message.\n&quot;)
 	for index, line in ipairs(edit.lines) do
@@ -175,86 +197,184 @@ if not edit.process.isRunning() then
 	
 	edit.editing = false
 end</script>
-                <command></command>
-                <packageName></packageName>
-                <time>00:00:01.000</time>
-            </Timer>
+                    <command></command>
+                    <packageName></packageName>
+                    <time>00:00:01.000</time>
+                </Timer>
+            </TimerGroup>
         </TimerGroup>
     </TimerPackage>
     <AliasPackage>
         <AliasGroup isActive="yes" isFolder="yes">
-            <name>Edit</name>
+            <name>MUME</name>
             <script></script>
             <command></command>
-            <packageName></packageName>
+            <packageName>current</packageName>
             <regex></regex>
-            <Alias isActive="yes" isFolder="no">
-                <name>edit help</name>
-                <script>echo(edit.help)</script>
+            <AliasGroup isActive="yes" isFolder="yes">
+                <name>Edit</name>
+                <script></script>
                 <command></command>
                 <packageName></packageName>
-                <regex>^ *edit *help *$</regex>
-            </Alias>
-            <Alias isActive="yes" isFolder="no">
-                <name>edit set editor</name>
-                <script>edit.set_editor()</script>
-                <command></command>
-                <packageName></packageName>
-                <regex>^ *edit *set *editor *$</regex>
-            </Alias>
-            <Alias isActive="yes" isFolder="no">
-                <name>edit set folder</name>
-                <script>edit.set_folder()</script>
-                <command></command>
-                <packageName></packageName>
-                <regex>^ *edit *set *folder *$</regex>
-            </Alias>
-            <Alias isActive="yes" isFolder="no">
-                <name>edit set wrap length &lt;number&gt;</name>
-                <script>edit.wrap_length = matches[2]
+                <regex></regex>
+                <Alias isActive="yes" isFolder="no">
+                    <name>edit help</name>
+                    <script>echo(edit.help)</script>
+                    <command></command>
+                    <packageName></packageName>
+                    <regex>^ *edit *help *$</regex>
+                </Alias>
+                <Alias isActive="yes" isFolder="no">
+                    <name>edit set editor</name>
+                    <script>edit.set_editor()</script>
+                    <command></command>
+                    <packageName></packageName>
+                    <regex>^ *edit *set *editor *$</regex>
+                </Alias>
+                <Alias isActive="yes" isFolder="no">
+                    <name>edit set folder</name>
+                    <script>edit.set_folder()</script>
+                    <command></command>
+                    <packageName></packageName>
+                    <regex>^ *edit *set *folder *$</regex>
+                </Alias>
+                <Alias isActive="yes" isFolder="no">
+                    <name>edit set wrap length &lt;number&gt;</name>
+                    <script>edit.wrap_length = matches[2]
 echo(&quot;Ok.\n&quot;)</script>
-                <command></command>
-                <packageName></packageName>
-                <regex>^ *edit *set *wrap *length +(.+)$</regex>
-            </Alias>
-            <Alias isActive="yes" isFolder="no">
-                <name>edit set wrap on</name>
-                <script>edit.enable_wrap = true
+                    <command></command>
+                    <packageName></packageName>
+                    <regex>^ *edit *set *wrap *length +(.+)$</regex>
+                </Alias>
+                <Alias isActive="yes" isFolder="no">
+                    <name>edit set wrap on</name>
+                    <script>edit.enable_wrap = true
 echo(&quot;Word wrap enabled.\n&quot;)
 </script>
-                <command></command>
-                <packageName></packageName>
-                <regex>^ *edit *set *wrap *on *$</regex>
-            </Alias>
-            <Alias isActive="yes" isFolder="no">
-                <name>edit set wrap off</name>
-                <script>edit.enable_wrap = false
+                    <command></command>
+                    <packageName></packageName>
+                    <regex>^ *edit *set *wrap *on *$</regex>
+                </Alias>
+                <Alias isActive="yes" isFolder="no">
+                    <name>edit set wrap off</name>
+                    <script>edit.enable_wrap = false
 echo(&quot;Word wrap disabled.\n&quot;)
 </script>
-                <command></command>
-                <packageName></packageName>
-                <regex>^ *edit *set *wrap *off *$</regex>
-            </Alias>
+                    <command></command>
+                    <packageName></packageName>
+                    <regex>^ *edit *set *wrap *off *$</regex>
+                </Alias>
+            </AliasGroup>
         </AliasGroup>
     </AliasPackage>
     <ActionPackage/>
     <ScriptPackage>
         <ScriptGroup isActive="yes" isFolder="yes">
-            <name>Edit</name>
-            <packageName></packageName>
-            <script>edit = edit or { options = initialize_edit() }
-
-edit.lines = {}</script>
+            <name>MUME</name>
+            <packageName>current</packageName>
+            <script></script>
             <eventHandlerList/>
             <ScriptGroup isActive="yes" isFolder="yes">
-                <name>Word Wrap</name>
+                <name>Packages</name>
                 <packageName></packageName>
-                <script></script>
+                <script>packages = packages or { list = {} }</script>
                 <eventHandlerList/>
                 <Script isActive="yes" isFolder="no">
-                    <name>wrap</name>
+                    <name>initialize</name>
                     <packageName></packageName>
-                    <script>function edit.wrap(lines)
+                    <script>function packages.initialize(name, initialize_function)
+	local package = {}
+
+	local dirname = packages.get_folder(name)
+	local filename = packages.get_table(name)
+
+	packages.list[name] = package
+
+	if io.exists(filename) then
+		cecho(&quot;&lt;cyan&gt;[ USER ]  - &lt;grey&gt;Loading &quot; .. name .. &quot; ...\n&quot;)
+
+		table.load(filename, package)
+	else
+		cecho(&quot;&lt;cyan&gt;[ USER ]  - &lt;grey&gt;Initializing &quot; .. name .. &quot; ...\n&quot;)
+
+		packages.mkdir(dirname)
+
+		package.package_name = name
+		package.package_folder = dirname
+		package.package_table = filename
+
+		initialize_function(package)
+	end
+
+	return package
+end</script>
+                    <eventHandlerList/>
+                </Script>
+                <Script isActive="yes" isFolder="no">
+                    <name>get_folder</name>
+                    <packageName></packageName>
+                    <script>function packages.get_folder(name)
+	return getMudletHomeDir() .. &quot;/&quot; .. name
+end</script>
+                    <eventHandlerList/>
+                </Script>
+                <Script isActive="yes" isFolder="no">
+                    <name>get_table</name>
+                    <packageName></packageName>
+                    <script>function packages.get_table(name)
+	local dirname = packages.get_folder(name)
+	return dirname .. &quot;/table.lua&quot;
+end</script>
+                    <eventHandlerList/>
+                </Script>
+                <Script isActive="yes" isFolder="no">
+                    <name>mkdir</name>
+                    <packageName></packageName>
+                    <script>function packages.mkdir(dirname)
+	local replace = string.gsub(dirname, &quot;\\&quot;, &quot;/&quot;)
+	local split = string.split(replace, &quot;/&quot;)
+
+	local path = &quot;&quot;	
+	for index, dir in ipairs(split) do
+		path = path .. dir .. &quot;/&quot;
+		if not io.exists(path) then
+			lfs.mkdir(path)
+		end
+	end
+end</script>
+                    <eventHandlerList/>
+                </Script>
+                <Script isActive="yes" isFolder="no">
+                    <name>packages.save</name>
+                    <packageName></packageName>
+                    <script>function packages.save()
+	for name, package in pairs(packages.list) do
+		cecho(&quot;&lt;cyan&gt;[ USER ]  - &lt;grey&gt;Saving &quot; .. package.package_name .. &quot; ...\n&quot;)
+		packages.mkdir(package.package_folder)
+		table.save(package.package_table, package)
+	end
+end</script>
+                    <eventHandlerList>
+                        <string>sysExitEvent</string>
+                    </eventHandlerList>
+                </Script>
+            </ScriptGroup>
+            <ScriptGroup isActive="yes" isFolder="yes">
+                <name>Edit</name>
+                <packageName></packageName>
+                <script>edit = edit or packages.initialize(&quot;Edit&quot;, initialize_edit)
+
+edit.lines = {}</script>
+                <eventHandlerList/>
+                <ScriptGroup isActive="yes" isFolder="yes">
+                    <name>Word Wrap</name>
+                    <packageName></packageName>
+                    <script></script>
+                    <eventHandlerList/>
+                    <Script isActive="yes" isFolder="no">
+                        <name>wrap</name>
+                        <packageName></packageName>
+                        <script>function edit.wrap(lines)
 	-- Split the lines into paragraphs
 	local paragraphs = edit.make_paragraphs(lines)
 	local result = {}
@@ -298,12 +418,12 @@ edit.lines = {}</script>
 
 	return result
 end</script>
-                    <eventHandlerList/>
-                </Script>
-                <Script isActive="yes" isFolder="no">
-                    <name>make_paragraphs</name>
-                    <packageName></packageName>
-                    <script>function edit.make_paragraphs(lines)
+                        <eventHandlerList/>
+                    </Script>
+                    <Script isActive="yes" isFolder="no">
+                        <name>make_paragraphs</name>
+                        <packageName></packageName>
+                        <script>function edit.make_paragraphs(lines)
 	local paragraphs = {}
 	local paragraph = {}
 
@@ -330,12 +450,12 @@ end</script>
 
 	return paragraphs
 end</script>
-                    <eventHandlerList/>
-                </Script>
-                <Script isActive="yes" isFolder="no">
-                    <name>line_is_exempt</name>
-                    <packageName></packageName>
-                    <script>function edit.line_is_exempt(line)
+                        <eventHandlerList/>
+                    </Script>
+                    <Script isActive="yes" isFolder="no">
+                        <name>line_is_exempt</name>
+                        <packageName></packageName>
+                        <script>function edit.line_is_exempt(line)
 	local start_index, end_index = string.find(line, &quot; &quot;)
 
 	if line == &quot;&quot; or start_index == 1 or edit.begins_with_nonletter(line) then
@@ -344,12 +464,12 @@ end</script>
 
 	return false
 end</script>
-                    <eventHandlerList/>
-                </Script>
-                <Script isActive="yes" isFolder="no">
-                    <name>word_split</name>
-                    <packageName></packageName>
-                    <script>function edit.word_split(paragraph)
+                        <eventHandlerList/>
+                    </Script>
+                    <Script isActive="yes" isFolder="no">
+                        <name>word_split</name>
+                        <packageName></packageName>
+                        <script>function edit.word_split(paragraph)
 	local result = {}
 	for index, line in ipairs(paragraph) do
 		local words = string.split(line, &quot; &quot;)
@@ -359,26 +479,28 @@ end</script>
 	end
 	return result
 end</script>
-                    <eventHandlerList/>
-                </Script>
-                <Script isActive="yes" isFolder="no">
-                    <name>begins_with_nonletter</name>
-                    <packageName></packageName>
-                    <script>function edit.begins_with_nonletter(line)
+                        <eventHandlerList/>
+                    </Script>
+                    <Script isActive="yes" isFolder="no">
+                        <name>begins_with_nonletter</name>
+                        <packageName></packageName>
+                        <script>function edit.begins_with_nonletter(line)
 	local char = string.byte(line)
 	return (char &lt; 65 or char &gt; 90) and (char &lt; 97 or char &gt; 122)
 end</script>
-                    <eventHandlerList/>
-                </Script>
-            </ScriptGroup>
-            <Script isActive="yes" isFolder="no">
-                <name>README</name>
-                <packageName></packageName>
-                <script>edit.help = [[
+                        <eventHandlerList/>
+                    </Script>
+                </ScriptGroup>
+                <Script isActive="yes" isFolder="no">
+                    <name>README</name>
+                    <packageName></packageName>
+                    <script>edit.help = [[
 Edit: Local Editing for Mudlet
 Author: Octavia
-Version: 1.1
-Changelog
+Version: 1.2
+Changelog:
+- 1.2, 2015-2-10
+  - Settings now saved across sessions.
 - 1.1, 2015-2-7
   - Added optional word wrap feature.
   - Added file dialogs.
@@ -398,30 +520,28 @@ The commands are as follows:
 - edit set wrap off : Disable word wrap.
 - edit set wrap length &lt;number&gt; : Set the length of a line in word wrap. Defaults to 79, the MUME standard.
 ]]</script>
-                <eventHandlerList/>
-            </Script>
-            <Script isActive="yes" isFolder="no">
-                <name>initialize_edit</name>
-                <packageName></packageName>
-                <script>function initialize_edit()
-	local options = {}
+                    <eventHandlerList/>
+                </Script>
+                <Script isActive="yes" isFolder="no">
+                    <name>initialize_edit</name>
+                    <packageName></packageName>
+                    <script>function initialize_edit(edit)
+	edit.options = {}
 
-	options.editor = [[C:/Windows/notepad.exe]]
+	edit.options.editor = [[C:/Windows/notepad.exe]]
 
-	options.folder = getMudletHomeDir()
+	edit.options.folder = edit.package_folder
 
-	options.enable_wrap = true
+	edit.options.enable_wrap = true
 
-	options.wrap_length = 79
-
-	return options
+	edit.options.wrap_length = 79
 end</script>
-                <eventHandlerList/>
-            </Script>
-            <Script isActive="yes" isFolder="no">
-                <name>set_editor</name>
-                <packageName></packageName>
-                <script>function edit.set_editor()
+                    <eventHandlerList/>
+                </Script>
+                <Script isActive="yes" isFolder="no">
+                    <name>set_editor</name>
+                    <packageName></packageName>
+                    <script>function edit.set_editor()
 	echo(&quot;Current editor: &quot; .. edit.editor .. &quot;\n&quot;)
 	local message = &quot;Select text editor (*.exe):\n&quot;
 
@@ -437,12 +557,12 @@ end</script>
 	end
 
 end</script>
-                <eventHandlerList/>
-            </Script>
-            <Script isActive="yes" isFolder="no">
-                <name>set_folder</name>
-                <packageName></packageName>
-                <script>function edit.set_folder()
+                    <eventHandlerList/>
+                </Script>
+                <Script isActive="yes" isFolder="no">
+                    <name>set_folder</name>
+                    <packageName></packageName>
+                    <script>function edit.set_folder()
 	echo(&quot;Current folder: &quot; .. edit.folder .. &quot;\n&quot;)
 	local message = &quot;Select folder:\n&quot;
 
@@ -458,8 +578,9 @@ end</script>
 	end
 
 end</script>
-                <eventHandlerList/>
-            </Script>
+                    <eventHandlerList/>
+                </Script>
+            </ScriptGroup>
         </ScriptGroup>
     </ScriptPackage>
     <KeyPackage/>
