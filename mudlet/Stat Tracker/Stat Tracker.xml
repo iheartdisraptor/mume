@@ -227,12 +227,14 @@ send(&quot;say Per hour: &quot; .. stats[&quot;xp_per_hour&quot;] .. &quot; xp, 
                     <script>stat_tracker.help = [[
 Stat Tracker
 Author: Octavia
-Version: 1.0
+Version: 1.1
 Changelog:
+- 1.1, 2015-2-11
+  - Fixed bug causing the xps not to work.
 - 1.0, 2015-2-10
   - Initial release.
 
-This package tracks the amount of xp and tp you have gained (or lost!) in a certain period of time (usually the entire session) and reports how much xp and tp you have gained total, per minute, and per hour.
+This package tracks the amount of xp and tp you have gained (or lost!) in a certain period of time (usually the entire session) and reports how much xp and tp you have gained total, per minute, and per hour. In addition, this script will also display the amount of xp gained after killing something or losing a level.
 
 The commands are as follows:
 - stat tracker help : Show this message.
@@ -251,7 +253,7 @@ The commands are as follows:
 	stat_tracker.session_tp = 0
 	stat_tracker.last_xp = nil
 	stat_tracker.last_tp = nil
-	stat_tracker.start_time = clock.get_current_time()
+	stat_tracker.start_time = stat_tracker.get_time()
 
 	expandAlias(&quot;xp&quot;, false)
 end</script>
