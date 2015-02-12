@@ -34,7 +34,18 @@
                 <regexCodePropertyList/>
                 <Trigger isActive="yes" isFolder="no" isTempTrigger="no" isMultiline="no" isPerlSlashGOption="no" isColorizerTrigger="no" isFilterTrigger="no" isSoundTrigger="no" isColorTrigger="no" isColorTriggerFg="no" isColorTriggerBg="no">
                     <name>Get Player of Last Tell</name>
-                    <script>reply.last_tell = matches[2]</script>
+                    <script>reply.last_tell = matches[2]
+
+if reply.options.show_target then
+	if (reply.options.suppress_show_target and reply.last_tell ~= reply.reply_target) or
+		reply.options.suppress_show_target == false then
+		if reply.reply_target ~= nil then
+			cecho(&quot;\nreply (re) currently targets &lt;cyan&gt;&quot; .. reply.reply_target .. &quot;&lt;grey&gt;.\n&quot;)
+		else
+			echo(&quot;\nreply (re) currently targets... nobody!\n&quot;)
+		end
+	end
+end</script>
                     <triggerType>0</triggerType>
                     <conditonLineDelta>0</conditonLineDelta>
                     <mStayOpen>0</mStayOpen>
@@ -46,10 +57,12 @@
                     <colorTriggerFgColor>#000000</colorTriggerFgColor>
                     <colorTriggerBgColor>#000000</colorTriggerBgColor>
                     <regexCodeList>
-                        <string>^(.+) tells you '(.+)'$</string>
+                        <string>^([^']+) tells you '(.+)'$</string>
+                        <string>^([^']+) tells the group '(.+)'$</string>
                     </regexCodeList>
                     <regexCodePropertyList>
                         <integer>1</integer>
+                        <integer>0</integer>
                     </regexCodePropertyList>
                 </Trigger>
                 <Trigger isActive="yes" isFolder="no" isTempTrigger="no" isMultiline="no" isPerlSlashGOption="no" isColorizerTrigger="no" isFilterTrigger="no" isSoundTrigger="no" isColorTrigger="no" isColorTriggerFg="no" isColorTriggerBg="no">
@@ -66,7 +79,7 @@
                     <colorTriggerFgColor>#000000</colorTriggerFgColor>
                     <colorTriggerBgColor>#000000</colorTriggerBgColor>
                     <regexCodeList>
-                        <string>^(.+) narrates '(.+)'$</string>
+                        <string>^([^']+) narrates '(.+)'$</string>
                     </regexCodeList>
                     <regexCodePropertyList>
                         <integer>1</integer>
@@ -86,7 +99,7 @@
                     <colorTriggerFgColor>#000000</colorTriggerFgColor>
                     <colorTriggerBgColor>#000000</colorTriggerBgColor>
                     <regexCodeList>
-                        <string>^(.+) prays '(.+)'$</string>
+                        <string>^([^']+) prays '(.+)'$</string>
                     </regexCodeList>
                     <regexCodePropertyList>
                         <integer>1</integer>
@@ -95,8 +108,38 @@
             </TriggerGroup>
         </TriggerGroup>
     </TriggerPackage>
-    <TimerPackage/>
+    <TimerPackage>
+        <TimerGroup isActive="yes" isFolder="yes" isTempTimer="no" isOffsetTimer="no">
+            <name>Packages</name>
+            <script></script>
+            <command></command>
+            <packageName></packageName>
+            <time>00:00:00.000</time>
+            <Timer isActive="no" isFolder="no" isTempTimer="no" isOffsetTimer="no">
+                <name>Load Packages</name>
+                <script>packages.load()
+disableTimer(&quot;Load Packages&quot;)</script>
+                <command></command>
+                <packageName></packageName>
+                <time>00:00:05.000</time>
+            </Timer>
+        </TimerGroup>
+    </TimerPackage>
     <AliasPackage>
+        <AliasGroup isActive="yes" isFolder="yes">
+            <name>Packages</name>
+            <script></script>
+            <command></command>
+            <packageName></packageName>
+            <regex></regex>
+            <Alias isActive="yes" isFolder="no">
+                <name>packages help</name>
+                <script>echo(packages.help)</script>
+                <command></command>
+                <packageName></packageName>
+                <regex>^ *packages +help *$</regex>
+            </Alias>
+        </AliasGroup>
         <AliasGroup isActive="yes" isFolder="yes">
             <name>MUME</name>
             <script></script>
@@ -109,74 +152,142 @@
                 <command></command>
                 <packageName></packageName>
                 <regex></regex>
-                <Alias isActive="yes" isFolder="no">
-                    <name>reply to last tell (ret)</name>
-                    <script>if reply.last_tell then
+                <AliasGroup isActive="yes" isFolder="yes">
+                    <name>Commands</name>
+                    <script></script>
+                    <command></command>
+                    <packageName></packageName>
+                    <regex></regex>
+                    <Alias isActive="yes" isFolder="no">
+                        <name>reply to last tell (ret)</name>
+                        <script>if reply.last_tell then
 	reply.reply_target = reply.last_tell
 
 	cecho(&quot;reply (re) now targets &lt;cyan&gt;&quot; .. reply.reply_target .. &quot;&lt;grey&gt;.\n&quot;)
 else
 	echo(&quot;Nobody has told you anything!\n&quot;)
 end</script>
-                    <command></command>
-                    <packageName></packageName>
-                    <regex>^ *ret *$</regex>
-                </Alias>
-                <Alias isActive="yes" isFolder="no">
-                    <name>reply to last narrate (ren)</name>
-                    <script>if reply.last_narrate then
+                        <command></command>
+                        <packageName></packageName>
+                        <regex>^ *ret *$</regex>
+                    </Alias>
+                    <Alias isActive="yes" isFolder="no">
+                        <name>reply to last narrate (ren)</name>
+                        <script>if reply.last_narrate then
 	reply.reply_target = reply.last_narrate
 
 	cecho(&quot;reply (re) now targets &lt;cyan&gt;&quot; .. reply.reply_target .. &quot;&lt;grey&gt;.\n&quot;)
 else
 	echo(&quot;Nobody has narrated anything!\n&quot;)
 end</script>
-                    <command></command>
-                    <packageName></packageName>
-                    <regex>^ *ren *$</regex>
-                </Alias>
-                <Alias isActive="yes" isFolder="no">
-                    <name>reply to last pray (rep)</name>
-                    <script>if reply.last_pray then
+                        <command></command>
+                        <packageName></packageName>
+                        <regex>^ *ren *$</regex>
+                    </Alias>
+                    <Alias isActive="yes" isFolder="no">
+                        <name>reply to last pray (rep)</name>
+                        <script>if reply.last_pray then
 	reply.reply_target = reply.last_pray
 
 	cecho(&quot;reply (re) now targets &lt;cyan&gt;&quot; .. reply.reply_target .. &quot;&lt;grey&gt;.\n&quot;)
 else
 	echo(&quot;Nobody has prayed anything!\n&quot;)
 end</script>
-                    <command></command>
-                    <packageName></packageName>
-                    <regex>^ *rep *$</regex>
-                </Alias>
-                <Alias isActive="yes" isFolder="no">
-                    <name>reply (re)</name>
-                    <script>if reply.reply_target then
-	send(&quot;tell &quot; .. reply.reply_target .. &quot; &quot; .. matches[2], false)
+                        <command></command>
+                        <packageName></packageName>
+                        <regex>^ *rep *$</regex>
+                    </Alias>
+                    <Alias isActive="yes" isFolder="no">
+                        <name>reply (re)</name>
+                        <script>if reply.reply_target then
+	send(&quot;tell &quot; .. reply.reply_target .. &quot; &quot; .. matches[2], reply.options.echo)
 else
 	echo(&quot;There's nobody to reply to!\n&quot;)
 end</script>
-                    <command></command>
-                    <packageName></packageName>
-                    <regex>^ *re +(.+)$</regex>
-                </Alias>
-                <Alias isActive="yes" isFolder="no">
-                    <name>reply with pray (rp)</name>
-                    <script>send(&quot;pray &quot; .. reply.reply_target .. &quot; &quot; .. matches[2], false)</script>
-                    <command></command>
-                    <packageName></packageName>
-                    <regex>^ *rep +(.+)$</regex>
-                </Alias>
-                <Alias isActive="yes" isFolder="no">
-                    <name>set reply target (srt)</name>
-                    <script>local target = string.trim(matches[2])
+                        <command></command>
+                        <packageName></packageName>
+                        <regex>^ *re +(.+)$</regex>
+                    </Alias>
+                    <Alias isActive="yes" isFolder="no">
+                        <name>reply with pray (rp)</name>
+                        <script>send(&quot;pray &quot; .. reply.reply_target .. &quot; &quot; .. matches[2], reply.options.echo)</script>
+                        <command></command>
+                        <packageName></packageName>
+                        <regex>^ *rep +(.+)$</regex>
+                    </Alias>
+                    <Alias isActive="yes" isFolder="no">
+                        <name>set reply target (srt)</name>
+                        <script>local target = string.trim(matches[2])
 
 reply.reply_target = target
 cecho(&quot;reply (re) now targets &lt;cyan&gt;&quot; .. reply.reply_target .. &quot;&lt;grey&gt;.\n&quot;)
 </script>
+                        <command></command>
+                        <packageName></packageName>
+                        <regex>^ *srt +(.+)$</regex>
+                    </Alias>
+                    <Alias isActive="yes" isFolder="no">
+                        <name>show reply target (rt)</name>
+                        <script>if reply.reply_target then
+	cecho(&quot;reply (re) currently targets &lt;cyan&gt;&quot; .. reply.reply_target .. &quot;&lt;grey&gt;.\n&quot;)
+else
+	echo(&quot;reply (re) currently targets... nobody!\n&quot;)
+end</script>
+                        <command></command>
+                        <packageName></packageName>
+                        <regex>^ *rt *$</regex>
+                    </Alias>
+                </AliasGroup>
+                <AliasGroup isActive="yes" isFolder="yes">
+                    <name>Options</name>
+                    <script></script>
                     <command></command>
                     <packageName></packageName>
-                    <regex>^ *srt +(.+)$</regex>
-                </Alias>
+                    <regex></regex>
+                    <Alias isActive="yes" isFolder="no">
+                        <name>reply toggle show target</name>
+                        <script>reply.options.show_target = not reply.options.show_target
+
+if reply.options.show_target == false then
+	echo(&quot;When a tell is received, you will no longer be informed who is the current reply target.\n&quot;)
+else
+	echo(&quot;When a tell is received, you will now be informed who is the current reply target.\n&quot;)
+end</script>
+                        <command></command>
+                        <packageName></packageName>
+                        <regex>^ *reply +toggle +show +target *$</regex>
+                    </Alias>
+                    <Alias isActive="yes" isFolder="no">
+                        <name>reply toggle suppress show target</name>
+                        <script>reply.options.suppress_show_target = not reply.options.suppress_show_target
+
+if reply.options.suppress_show_target == false then
+	if reply.options.show_target then
+		echo(&quot;When a tell is received, you will no longer be informed who is the current reply target.\n&quot;)
+	else
+		echo(&quot;Ok.\n&quot;)
+	end
+else
+	if reply.options.show_target then
+		echo(&quot;When a tell is received, you will be informed who is the current reply target if the person who sent you the tell is different from the reply target.\n&quot;)
+	else
+		echo(&quot;Show target must be enabled for this to work.\n&quot;)
+	end
+end</script>
+                        <command></command>
+                        <packageName></packageName>
+                        <regex>^ *reply +toggle +suppress +show +target *$</regex>
+                    </Alias>
+                    <Alias isActive="yes" isFolder="no">
+                        <name>reply toggle echo</name>
+                        <script>reply.options.echo = not reply.options.echo
+
+echo(&quot;Ok.\n&quot;)</script>
+                        <command></command>
+                        <packageName></packageName>
+                        <regex>^ *reply +toggle +echo *$</regex>
+                    </Alias>
+                </AliasGroup>
                 <Alias isActive="yes" isFolder="no">
                     <name>reply help</name>
                     <script>echo(reply.help)</script>
@@ -190,6 +301,177 @@ cecho(&quot;reply (re) now targets &lt;cyan&gt;&quot; .. reply.reply_target .. &
     <ActionPackage/>
     <ScriptPackage>
         <ScriptGroup isActive="yes" isFolder="yes">
+            <name>Packages</name>
+            <packageName></packageName>
+            <script></script>
+            <eventHandlerList/>
+            <ScriptGroup isActive="yes" isFolder="yes">
+                <name>Events</name>
+                <packageName></packageName>
+                <script></script>
+                <eventHandlerList/>
+                <Script isActive="yes" isFolder="no">
+                    <name>packages.load</name>
+                    <packageName></packageName>
+                    <script>function packages.load()
+	for name, package in pairs(packages.list) do
+		packages.load_package(package)
+	end
+end</script>
+                    <eventHandlerList>
+                        <string>sysLoadEvent</string>
+                    </eventHandlerList>
+                </Script>
+                <Script isActive="yes" isFolder="no">
+                    <name>packages.save</name>
+                    <packageName></packageName>
+                    <script>function packages.save()
+	for name, package in pairs(packages.list) do
+		cecho(&quot;&lt;cyan&gt;[ USER ]  - &lt;grey&gt;Saving &quot; .. package.package_name .. &quot; ...\n&quot;)
+		packages.mkdir(package.package_folder)
+		table.save(package.package_table, package)
+	end
+end</script>
+                    <eventHandlerList>
+                        <string>sysExitEvent</string>
+                    </eventHandlerList>
+                </Script>
+                <Script isActive="yes" isFolder="no">
+                    <name>load_package</name>
+                    <packageName></packageName>
+                    <script>function packages.load_package(package)
+	if package.package_loaded then
+		return
+	end
+
+	if io.exists(package.package_table) then
+		cecho(&quot;&lt;cyan&gt;[ USER ]  - &lt;grey&gt;Loading &quot; .. package.package_name .. &quot; ...\n&quot;)
+
+		table.load(package.package_table, package)
+
+		if package.load ~= nil then
+			package.load()
+		end
+	else
+		cecho(&quot;&lt;cyan&gt;[ USER ]  - &lt;grey&gt;Initializing &quot; .. package.package_name .. &quot; ...\n&quot;)
+
+		packages.mkdir(package.package_folder)
+
+		if package.initialize ~= nil then
+			package.initialize()
+		end
+	end
+
+	package.package_loaded = true
+end</script>
+                    <eventHandlerList/>
+                </Script>
+            </ScriptGroup>
+            <ScriptGroup isActive="yes" isFolder="yes">
+                <name>File System</name>
+                <packageName></packageName>
+                <script></script>
+                <eventHandlerList/>
+                <Script isActive="yes" isFolder="no">
+                    <name>mkdir</name>
+                    <packageName></packageName>
+                    <script>function packages.mkdir(dirname)
+	local replace = string.gsub(dirname, &quot;\\&quot;, &quot;/&quot;)
+	local split = string.split(replace, &quot;/&quot;)
+
+	local path = &quot;&quot;	
+	for index, dir in ipairs(split) do
+		path = path .. dir .. &quot;/&quot;
+		if not io.exists(path) then
+			lfs.mkdir(path)
+		end
+	end
+end</script>
+                    <eventHandlerList/>
+                </Script>
+                <Script isActive="yes" isFolder="no">
+                    <name>get_folder</name>
+                    <packageName></packageName>
+                    <script>function packages.get_folder(name)
+	return getMudletHomeDir() .. &quot;/&quot; .. name
+end</script>
+                    <eventHandlerList/>
+                </Script>
+                <Script isActive="yes" isFolder="no">
+                    <name>get_table</name>
+                    <packageName></packageName>
+                    <script>function packages.get_table(name)
+	local dirname = packages.get_folder(name)
+	return dirname .. &quot;/table.lua&quot;
+end</script>
+                    <eventHandlerList/>
+                </Script>
+            </ScriptGroup>
+            <Script isActive="yes" isFolder="no">
+                <name>README</name>
+                <packageName></packageName>
+                <script>packages.help = [[
+Packages: Package Manager
+
+This script helps to manage different packages by providing a mechanism to initialize a package if the package's table doesn't exist in memory or on disk or load the package's table if it exists on disk. The package's folder in the Mudlet profile is automatically created.
+
+To setup a package, use the following line of code:
+
+   my_package = my_package or packages.make(&quot;My Package&quot;)
+
+Next, optionally include the following functions:
+
+   function my_package.initialize()
+      -- Place initialization code here for when table my_package
+      -- does not exist in memory or on disk.
+   end
+
+   function my_package.load()
+      -- Place special code to run after the package table is
+      -- loaded from disk.
+   end
+
+The following variables are created in the package's table:
+- package_name : The name passed to packages.make().
+- package_folder : Path to the package's folder within the user's Mudlet profile.
+- package_table : Path to the package's table file.
+- package_loaded : Whether the package has been loaded. This is managed by the script.
+
+Commands:
+- packages help : Show this message.
+
+Changelog:
+- 1.0, 2015-2-12
+  - Initial release.
+
+Author: Octavia
+]]</script>
+                <eventHandlerList/>
+            </Script>
+            <Script isActive="yes" isFolder="no">
+                <name>make</name>
+                <packageName></packageName>
+                <script>function packages.make(name)
+	local package = {}
+	packages.list[name] = package
+
+	local dirname = packages.get_folder(name)
+	local filename = packages.get_table(name)
+	packages.mkdir(dirname)
+
+	package.package_name = name
+	package.package_folder = dirname
+	package.package_table = filename
+	package.package_loaded = false
+
+	enableTimer(&quot;Load Packages&quot;)
+
+	return package
+end</script>
+                <eventHandlerList/>
+            </Script>
+        </ScriptGroup>
+        <ScriptGroup isActive="yes" isFolder="yes">
             <name>MUME</name>
             <packageName>current</packageName>
             <script></script>
@@ -197,20 +479,15 @@ cecho(&quot;reply (re) now targets &lt;cyan&gt;&quot; .. reply.reply_target .. &
             <ScriptGroup isActive="yes" isFolder="yes">
                 <name>Reply</name>
                 <packageName></packageName>
-                <script>reply = reply or {}</script>
+                <script>reply = reply or packages.make(&quot;Reply&quot;)</script>
                 <eventHandlerList/>
                 <Script isActive="yes" isFolder="no">
                     <name>README</name>
                     <packageName></packageName>
                     <script>reply.help = [[
-Reply
-Author: Octavia
-Version: 1.0
-Changelog:
-- 1.0, 2015-2-10
-  - Initial release.
+Reply: Conversations Made Easy
 
-This package implements a convenient way to reply to people sending you tells. When someone sends you a reply, enter &quot;ret&quot; (reply to tell) to capture their name, and the send them your message with &quot;re&quot; (reply).
+This script implements a convenient way to reply to people sending you tells. When someone sends you a reply, enter &quot;ret&quot; (reply to tell) to capture their name, and the send them your message with &quot;re&quot; (reply).
 
 The commands are as follows:
 - reply help : Show this message.
@@ -220,7 +497,36 @@ The commands are as follows:
 - re &lt;message&gt; : Send the current target a message.
 - rp &lt;message&gt; : (Ainur only) Send the current target a message via pray.
 - srt : Set reply target manually. Useful if you want to send a lot of tells but don't want to type the name over and over.
+- reply toggle show target : Toggle whether to show the current reply target when someone sends you a tell.
+- reply toggle suppress show target : When show target is enabled, this toggles whether to show the current reply target only if the sender of the tell is different from the reply target.
+- reply toggle echo : Toggle whether to echo the tell command when you use reply (re).
+
+Changelog:
+- 1.1, 2015-2-12
+  - Settings now persistent across sessions.
+  - Added optional message to show who is the current reply target when someone tells you something.
+  - Added option for the above message to only show when the reply target is different from the sender.
+  - Added option to echo when reply (re) is used.
+- 1.0, 2015-2-10
+  - Initial release.
+
+Dependencies:
+- Packages
+
+Author: Octavia
 ]]</script>
+                    <eventHandlerList/>
+                </Script>
+                <Script isActive="yes" isFolder="no">
+                    <name>initialize</name>
+                    <packageName></packageName>
+                    <script>function reply.initialize()
+	reply.options = {}
+
+	reply.options.show_target = false
+	reply.options.suppress_show_target = false
+	reply.options.echo = false
+end</script>
                     <eventHandlerList/>
                 </Script>
             </ScriptGroup>
