@@ -1,0 +1,213 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE MudletPackage>
+<MudletPackage version="1.0">
+    <TriggerPackage/>
+    <TimerPackage>
+        <TimerGroup isActive="yes" isFolder="yes" isTempTimer="no" isOffsetTimer="no">
+            <name>Packages</name>
+            <script></script>
+            <command></command>
+            <packageName></packageName>
+            <time>00:00:00.000</time>
+            <Timer isActive="no" isFolder="no" isTempTimer="no" isOffsetTimer="no">
+                <name>Load Packages</name>
+                <script>packages.load()
+disableTimer(&quot;Load Packages&quot;)</script>
+                <command></command>
+                <packageName></packageName>
+                <time>00:00:05.000</time>
+            </Timer>
+        </TimerGroup>
+    </TimerPackage>
+    <AliasPackage>
+        <AliasGroup isActive="yes" isFolder="yes">
+            <name>Packages</name>
+            <script></script>
+            <command></command>
+            <packageName></packageName>
+            <regex></regex>
+            <Alias isActive="yes" isFolder="no">
+                <name>packages help</name>
+                <script>echo(packages.help)</script>
+                <command></command>
+                <packageName></packageName>
+                <regex>^ *packages +help *$</regex>
+            </Alias>
+        </AliasGroup>
+    </AliasPackage>
+    <ActionPackage/>
+    <ScriptPackage>
+        <ScriptGroup isActive="yes" isFolder="yes">
+            <name>Packages</name>
+            <packageName></packageName>
+            <script></script>
+            <eventHandlerList/>
+            <ScriptGroup isActive="yes" isFolder="yes">
+                <name>Events</name>
+                <packageName></packageName>
+                <script></script>
+                <eventHandlerList/>
+                <Script isActive="yes" isFolder="no">
+                    <name>packages.load</name>
+                    <packageName></packageName>
+                    <script>function packages.load()
+	for name, package in pairs(packages.list) do
+		packages.load_package(package)
+	end
+end</script>
+                    <eventHandlerList>
+                        <string>sysLoadEvent</string>
+                    </eventHandlerList>
+                </Script>
+                <Script isActive="yes" isFolder="no">
+                    <name>packages.save</name>
+                    <packageName></packageName>
+                    <script>function packages.save()
+	for name, package in pairs(packages.list) do
+		cecho(&quot;&lt;cyan&gt;[ USER ]  - &lt;grey&gt;Saving &quot; .. package.package_name .. &quot; ...\n&quot;)
+		packages.mkdir(package.package_folder)
+		table.save(package.package_table, package)
+	end
+end</script>
+                    <eventHandlerList>
+                        <string>sysExitEvent</string>
+                    </eventHandlerList>
+                </Script>
+                <Script isActive="yes" isFolder="no">
+                    <name>load_package</name>
+                    <packageName></packageName>
+                    <script>function packages.load_package(package)
+	if package.package_loaded then
+		return
+	end
+
+	if io.exists(package.package_table) then
+		cecho(&quot;&lt;cyan&gt;[ USER ]  - &lt;grey&gt;Loading &quot; .. package.package_name .. &quot; ...\n&quot;)
+
+		table.load(package.package_table, package)
+
+		if package.load ~= nil then
+			package.load()
+		end
+	else
+		cecho(&quot;&lt;cyan&gt;[ USER ]  - &lt;grey&gt;Initializing &quot; .. package.package_name .. &quot; ...\n&quot;)
+
+		packages.mkdir(package.package_folder)
+
+		if package.initialize ~= nil then
+			package.initialize()
+		end
+	end
+
+	package.package_loaded = true
+end</script>
+                    <eventHandlerList/>
+                </Script>
+            </ScriptGroup>
+            <ScriptGroup isActive="yes" isFolder="yes">
+                <name>File System</name>
+                <packageName></packageName>
+                <script></script>
+                <eventHandlerList/>
+                <Script isActive="yes" isFolder="no">
+                    <name>mkdir</name>
+                    <packageName></packageName>
+                    <script>function packages.mkdir(dirname)
+	local replace = string.gsub(dirname, &quot;\\&quot;, &quot;/&quot;)
+	local split = string.split(replace, &quot;/&quot;)
+
+	local path = &quot;&quot;	
+	for index, dir in ipairs(split) do
+		path = path .. dir .. &quot;/&quot;
+		if not io.exists(path) then
+			lfs.mkdir(path)
+		end
+	end
+end</script>
+                    <eventHandlerList/>
+                </Script>
+                <Script isActive="yes" isFolder="no">
+                    <name>get_folder</name>
+                    <packageName></packageName>
+                    <script>function packages.get_folder(name)
+	return getMudletHomeDir() .. &quot;/&quot; .. name
+end</script>
+                    <eventHandlerList/>
+                </Script>
+                <Script isActive="yes" isFolder="no">
+                    <name>get_table</name>
+                    <packageName></packageName>
+                    <script>function packages.get_table(name)
+	local dirname = packages.get_folder(name)
+	return dirname .. &quot;/table.lua&quot;
+end</script>
+                    <eventHandlerList/>
+                </Script>
+            </ScriptGroup>
+            <Script isActive="yes" isFolder="no">
+                <name>README</name>
+                <packageName></packageName>
+                <script>packages.help = [[
+Packages
+
+This script helps to manage different packages by providing a mechanism to initialize a package if the package's table doesn't exist in memory or on disk or load the package's table if it exists on disk. The package's folder in the Mudlet profile is automatically created.
+
+To setup a package, use the following line of code:
+
+   my_package = my_package or packages.make(&quot;My Package&quot;)
+
+Next, optionally include the following functions:
+
+   function my_package.initialize()
+      -- Place initialization code here for when table my_package
+      -- does not exist in memory or on disk.
+   end
+
+   function my_package.load()
+      -- Place special code to run after the package table is
+      -- loaded from disk.
+   end
+
+The following variables are created in the package's table:
+- package_name : The name passed to packages.make().
+- package_folder : Path to the package's folder within the user's Mudlet profile.
+- package_table : Path to the package's table file.
+- package_loaded : Whether the package has been loaded. This is managed by the script.
+
+Commands:
+- packages help : Show this message.
+
+Changelog:
+- 1.0, 2015-2-12
+  - Initial release.
+
+Author: Octavia
+]]</script>
+                <eventHandlerList/>
+            </Script>
+            <Script isActive="yes" isFolder="no">
+                <name>make</name>
+                <packageName></packageName>
+                <script>function packages.make(name)
+	local package = {}
+	packages.list[name] = package
+
+	local dirname = packages.get_folder(name)
+	local filename = packages.get_table(name)
+	packages.mkdir(dirname)
+
+	package.package_name = name
+	package.package_folder = dirname
+	package.package_table = filename
+	package.package_loaded = false
+
+	enableTimer(&quot;Load Packages&quot;)
+
+	return package
+end</script>
+                <eventHandlerList/>
+            </Script>
+        </ScriptGroup>
+    </ScriptPackage>
+    <KeyPackage/>
+</MudletPackage>
