@@ -1694,18 +1694,20 @@ replace(spell .. &quot; (&quot; .. translation .. &quot;)&quot; )</script>
                     <name>README</name>
                     <packageName></packageName>
                     <script>spell_translator.help = [[
-Spell Translations
-Author: Octavia, and thanks to Devastator for the original translations
-Version: 1.0
-Changelog:
-- 1.0, 2015-2-7
-  - Initial release.
+Spell Translator: Understand Strange Incantations
 
 This package contains triggers that translate spells when someone casts and your character doesn't know the spell. If needed, you can regenerate the triggers with the alias &quot;spell translator make triggers&quot;. 
 
 The commands are as follows:
 - spell translator help : Show this message.
 - spell translator make triggers : Recreate the triggers. You must delete the old ones first and recreate the &quot;Spell Translator&quot; group.
+
+Changelog:
+- 1.0, 2015-2-7
+  - Initial release.
+
+Author: Octavia
+Thanks: Devastator for the original translations
 ]]</script>
                     <eventHandlerList/>
                 </Script>
