@@ -45,7 +45,7 @@ clock.start_mume_moment.minute = matches[3]
 clock.start_mume_moment.period = matches[4]
 
 -- Store the current time as UNIX epoch
-clock.start_time = clock.get_time()
+clock.start_time = time.get_time()
 
 enableTrigger(&quot;Set Start MUME Moment (Date Part)&quot;)
 send(&quot;time&quot;, false)
@@ -112,7 +112,7 @@ disableTrigger(&quot;Set Start MUME Moment (Date Part)&quot;)</script>
                 <command></command>
                 <packageName></packageName>
                 <time>00:00:00.000</time>
-                <Timer isActive="no" isFolder="no" isTempTimer="no" isOffsetTimer="no">
+                <Timer isActive="yes" isFolder="no" isTempTimer="no" isOffsetTimer="no">
                     <name>Display Time and Date</name>
                     <script>if not clock.is_set then
 	disableTimer(&quot;Display Time and Date&quot;)
@@ -136,6 +136,20 @@ clock.adjust_timer(mume_moment.minute)</script>
     </TimerPackage>
     <AliasPackage>
         <AliasGroup isActive="yes" isFolder="yes">
+            <name>Packages</name>
+            <script></script>
+            <command></command>
+            <packageName></packageName>
+            <regex></regex>
+            <Alias isActive="yes" isFolder="no">
+                <name>packages help</name>
+                <script>echo(packages.help)</script>
+                <command></command>
+                <packageName></packageName>
+                <regex>^ *packages +help *$</regex>
+            </Alias>
+        </AliasGroup>
+        <AliasGroup isActive="yes" isFolder="yes">
             <name>MUME</name>
             <script></script>
             <command></command>
@@ -147,27 +161,55 @@ clock.adjust_timer(mume_moment.minute)</script>
                 <command></command>
                 <packageName></packageName>
                 <regex></regex>
-                <Alias isActive="yes" isFolder="no">
-                    <name>check clock (cc)</name>
-                    <script>local mume_moment = clock.get_mume_moment()
-
-cecho(clock.display_time(mume_moment, true) .. &quot;\n&quot;)</script>
+                <AliasGroup isActive="yes" isFolder="yes">
+                    <name>Commands</name>
+                    <script></script>
                     <command></command>
                     <packageName></packageName>
-                    <regex>^ *cc *$</regex>
-                </Alias>
-                <Alias isActive="yes" isFolder="no">
-                    <name>check time (ct)</name>
-                    <script>local mume_moment = clock.get_mume_moment()
+                    <regex></regex>
+                    <Alias isActive="yes" isFolder="no">
+                        <name>unset clock (uclock)</name>
+                        <script>echo(&quot;You unset your clock.\n&quot;)
+
+clock.is_set = false
+clock.start_mume_moment = nil
+clock.start_time = nil
+
+disableTimer(&quot;Display Time and Date&quot;)</script>
+                        <command></command>
+                        <packageName></packageName>
+                        <regex>^ *uclock *$</regex>
+                    </Alias>
+                    <Alias isActive="yes" isFolder="no">
+                        <name>check clock (cc)</name>
+                        <script>local mume_moment = clock.get_mume_moment()
 
 cecho(clock.display_time(mume_moment, true) .. &quot;\n&quot;)</script>
-                    <command></command>
-                    <packageName></packageName>
-                    <regex>^ *ct *$</regex>
-                </Alias>
-                <Alias isActive="yes" isFolder="no">
-                    <name>say time (stime)</name>
-                    <script>local mume_moment = clock.get_mume_moment()
+                        <command></command>
+                        <packageName></packageName>
+                        <regex>^ *cc *$</regex>
+                    </Alias>
+                    <Alias isActive="yes" isFolder="no">
+                        <name>check time (ct)</name>
+                        <script>local mume_moment = clock.get_mume_moment()
+
+cecho(clock.display_time(mume_moment, true) .. &quot;\n&quot;)</script>
+                        <command></command>
+                        <packageName></packageName>
+                        <regex>^ *ct *$</regex>
+                    </Alias>
+                    <Alias isActive="yes" isFolder="no">
+                        <name>check date (cd)</name>
+                        <script>local mume_moment = clock.get_mume_moment()
+
+cecho(clock.display_date(mume_moment, true) .. &quot;\n&quot;)</script>
+                        <command></command>
+                        <packageName></packageName>
+                        <regex>^ *cd *$</regex>
+                    </Alias>
+                    <Alias isActive="yes" isFolder="no">
+                        <name>say time (stime)</name>
+                        <script>local mume_moment = clock.get_mume_moment()
 local text = clock.display_time(mume_moment, false)
 
 if clock.is_set then
@@ -175,13 +217,13 @@ if clock.is_set then
 else
 	echo(text)
 end</script>
-                    <command></command>
-                    <packageName></packageName>
-                    <regex>^ *stime *$</regex>
-                </Alias>
-                <Alias isActive="yes" isFolder="no">
-                    <name>narrate time (ntime)</name>
-                    <script>local mume_moment = clock.get_mume_moment()
+                        <command></command>
+                        <packageName></packageName>
+                        <regex>^ *stime *$</regex>
+                    </Alias>
+                    <Alias isActive="yes" isFolder="no">
+                        <name>narrate time (ntime)</name>
+                        <script>local mume_moment = clock.get_mume_moment()
 local text = clock.display_time(mume_moment, false)
 
 if clock.is_set then
@@ -189,13 +231,13 @@ if clock.is_set then
 else
 	echo(text)
 end</script>
-                    <command></command>
-                    <packageName></packageName>
-                    <regex>^ *ntime *$</regex>
-                </Alias>
-                <Alias isActive="yes" isFolder="no">
-                    <name>tell time (ttime &lt;player&gt;)</name>
-                    <script>local player = string.trim(matches[2])
+                        <command></command>
+                        <packageName></packageName>
+                        <regex>^ *ntime *$</regex>
+                    </Alias>
+                    <Alias isActive="yes" isFolder="no">
+                        <name>tell time (ttime &lt;player&gt;)</name>
+                        <script>local player = string.trim(matches[2])
 local mume_moment = clock.get_mume_moment()
 local text = clock.display_time(mume_moment, false)
 
@@ -204,127 +246,204 @@ if clock.is_set then
 else
 	echo(text)
 end</script>
-                    <command></command>
-                    <packageName></packageName>
-                    <regex>^ *ttime +(.+)$</regex>
-                </Alias>
-                <Alias isActive="yes" isFolder="no">
-                    <name>check date (cd)</name>
-                    <script>local mume_moment = clock.get_mume_moment()
+                        <command></command>
+                        <packageName></packageName>
+                        <regex>^ *ttime +(.+)$</regex>
+                    </Alias>
+                    <Alias isActive="yes" isFolder="no">
+                        <name>say date (sdate)</name>
+                        <script>local mume_moment = clock.get_mume_moment()
+local text = clock.display_date(mume_moment, false)
 
-cecho(clock.display_date(mume_moment, true) .. &quot;\n&quot;)</script>
-                    <command></command>
-                    <packageName></packageName>
-                    <regex>^ *cd *$</regex>
-                </Alias>
-                <Alias isActive="yes" isFolder="no">
-                    <name>unset clock (uclock)</name>
-                    <script>echo(&quot;You unset your clock.\n&quot;)
-
-clock.is_set = false
-clock.start_mume_moment = nil
-clock.start_time = nil
-
-disableTimer(&quot;Display Time and Date&quot;)</script>
-                    <command></command>
-                    <packageName></packageName>
-                    <regex>^ *uclock *$</regex>
-                </Alias>
-                <Alias isActive="yes" isFolder="no">
-                    <name>clock help</name>
-                    <script>echo(clock.help)</script>
-                    <command></command>
-                    <packageName></packageName>
-                    <regex>^ *clock help *$</regex>
-                </Alias>
-                <Alias isActive="yes" isFolder="no">
-                    <name>clock show time</name>
-                    <script>clock.option.show_time = not clock.option.show_time
-
-if clock.option.show_time then
-	echo(&quot;Time will dispay every MUME hour.\n&quot;)
+if clock.is_set then
+	send(&quot;say &quot; .. text)
 else
-	echo(&quot;Time will NOT dispay every MUME hour.\n&quot;)
+	echo(text)
 end</script>
+                        <command></command>
+                        <packageName></packageName>
+                        <regex>^ *sdate *$</regex>
+                    </Alias>
+                    <Alias isActive="yes" isFolder="no">
+                        <name>narrate date (ndate)</name>
+                        <script>local mume_moment = clock.get_mume_moment()
+local text = clock.display_date(mume_moment, false)
+
+if clock.is_set then
+	send(&quot;narrate &quot; .. text)
+else
+	echo(text)
+end</script>
+                        <command></command>
+                        <packageName></packageName>
+                        <regex>^ *ndate *$</regex>
+                    </Alias>
+                    <Alias isActive="yes" isFolder="no">
+                        <name>tell date (tdate &lt;player&gt;)</name>
+                        <script>local player = string.trim(matches[2])
+local mume_moment = clock.get_mume_moment()
+local text = clock.display_date(mume_moment, false)
+
+if clock.is_set then
+	send(&quot;tell &quot; .. player .. &quot; &quot; .. text)
+else
+	echo(text)
+end</script>
+                        <command></command>
+                        <packageName></packageName>
+                        <regex>^ *tdate +(.+)$</regex>
+                    </Alias>
+                </AliasGroup>
+                <AliasGroup isActive="yes" isFolder="yes">
+                    <name>Options</name>
+                    <script></script>
                     <command></command>
                     <packageName></packageName>
-                    <regex>^ *clock *show *time *$</regex>
-                </Alias>
-                <Alias isActive="yes" isFolder="no">
-                    <name>clock show date</name>
-                    <script>clock.option.show_date = not clock.option.show_date
+                    <regex></regex>
+                    <Alias isActive="yes" isFolder="no">
+                        <name>clock show colours</name>
+                        <script>showColors()
+echo(&quot;Colours must be wrapped by the symbols '&lt;' and '&gt;'!\n&quot;)</script>
+                        <command></command>
+                        <packageName></packageName>
+                        <regex>^clock show colours$</regex>
+                    </Alias>
+                    <Alias isActive="yes" isFolder="no">
+                        <name>clock set highlight &lt;colour&gt;</name>
+                        <script>local colour = string.trim(matches[2])
+
+clock.options.highlight = colour
+
+echo(&quot;Set highlight colour to &quot; .. clock.options.highlight .. &quot;.\n&quot;)</script>
+                        <command></command>
+                        <packageName></packageName>
+                        <regex>^ *clock *set *highlight +(.+)$</regex>
+                    </Alias>
+                    <Alias isActive="yes" isFolder="no">
+                        <name>clock show date</name>
+                        <script>clock.option.show_date = not clock.option.show_date
 
 if clock.option.show_date then
 	echo(&quot;Date will dispay every MUME hour.\n&quot;)
 else
 	echo(&quot;Date will NOT dispay every MUME hour.\n&quot;)
 end</script>
-                    <command></command>
-                    <packageName></packageName>
-                    <regex>^ *clock *show *date *$</regex>
-                </Alias>
-                <Alias isActive="yes" isFolder="no">
-                    <name>clock set highlight &lt;colour&gt;</name>
-                    <script>local colour = string.trim(matches[2])
+                        <command></command>
+                        <packageName></packageName>
+                        <regex>^ *clock *show *date *$</regex>
+                    </Alias>
+                    <Alias isActive="yes" isFolder="no">
+                        <name>clock show time</name>
+                        <script>clock.option.show_time = not clock.option.show_time
 
-clock.options.highlight = colour
-
-echo(&quot;Set highlight colour to &quot; .. clock.options.highlight .. &quot;.\n&quot;)</script>
-                    <command></command>
-                    <packageName></packageName>
-                    <regex>^ *clock *set *highlight +(.+)$</regex>
-                </Alias>
-                <Alias isActive="yes" isFolder="no">
-                    <name>clock show colours</name>
-                    <script>showColors()
-echo(&quot;Colours must be wrapped by the symbols '&lt;' and '&gt;'!\n&quot;)</script>
-                    <command></command>
-                    <packageName></packageName>
-                    <regex>^clock show colours$</regex>
-                </Alias>
+if clock.option.show_time then
+	echo(&quot;Time will dispay every MUME hour.\n&quot;)
+else
+	echo(&quot;Time will NOT dispay every MUME hour.\n&quot;)
+end</script>
+                        <command></command>
+                        <packageName></packageName>
+                        <regex>^ *clock *show *time *$</regex>
+                    </Alias>
+                    <Alias isActive="yes" isFolder="no">
+                        <name>clock help</name>
+                        <script>echo(clock.help)</script>
+                        <command></command>
+                        <packageName></packageName>
+                        <regex>^ *clock help *$</regex>
+                    </Alias>
+                </AliasGroup>
             </AliasGroup>
         </AliasGroup>
     </AliasPackage>
     <ActionPackage/>
     <ScriptPackage>
         <ScriptGroup isActive="yes" isFolder="yes">
-            <name>MUME</name>
-            <packageName>current</packageName>
+            <name>Packages</name>
+            <packageName></packageName>
             <script></script>
             <eventHandlerList/>
             <ScriptGroup isActive="yes" isFolder="yes">
-                <name>Packages</name>
+                <name>Events</name>
                 <packageName></packageName>
-                <script>packages = packages or { list = {} }</script>
+                <script></script>
                 <eventHandlerList/>
                 <Script isActive="yes" isFolder="no">
-                    <name>initialize</name>
+                    <name>packages.load</name>
                     <packageName></packageName>
-                    <script>function packages.initialize(name, initialize_function)
-	local package = {}
-
-	local dirname = packages.get_folder(name)
-	local filename = packages.get_table(name)
-
-	packages.list[name] = package
-
-	if io.exists(filename) then
-		cecho(&quot;&lt;cyan&gt;[ USER ]  - &lt;grey&gt;Loading &quot; .. name .. &quot; ...\n&quot;)
-
-		table.load(filename, package)
-	else
-		cecho(&quot;&lt;cyan&gt;[ USER ]  - &lt;grey&gt;Initializing &quot; .. name .. &quot; ...\n&quot;)
-
-		packages.mkdir(dirname)
-
-		package.package_name = name
-		package.package_folder = dirname
-		package.package_table = filename
-
-		initialize_function(package)
+                    <script>function packages.load()
+	for name, package in pairs(packages.list) do
+		packages.load_package(package)
+	end
+end</script>
+                    <eventHandlerList>
+                        <string>sysLoadEvent</string>
+                    </eventHandlerList>
+                </Script>
+                <Script isActive="yes" isFolder="no">
+                    <name>packages.save</name>
+                    <packageName></packageName>
+                    <script>function packages.save()
+	for name, package in pairs(packages.list) do
+		cecho(&quot;&lt;cyan&gt;[ USER ]  - &lt;grey&gt;Saving &quot; .. package.package_name .. &quot; ...\n&quot;)
+		packages.mkdir(package.package_folder)
+		table.save(package.package_table, package)
+	end
+end</script>
+                    <eventHandlerList>
+                        <string>sysExitEvent</string>
+                    </eventHandlerList>
+                </Script>
+                <Script isActive="yes" isFolder="no">
+                    <name>load_package</name>
+                    <packageName></packageName>
+                    <script>function packages.load_package(package)
+	if package.package_loaded then
+		return
 	end
 
-	return package
+	if io.exists(package.package_table) then
+		cecho(&quot;&lt;cyan&gt;[ USER ]  - &lt;grey&gt;Loading &quot; .. package.package_name .. &quot; ...\n&quot;)
+
+		table.load(package.package_table, package)
+
+		if package.load ~= nil then
+			package.load()
+		end
+	else
+		cecho(&quot;&lt;cyan&gt;[ USER ]  - &lt;grey&gt;Initializing &quot; .. package.package_name .. &quot; ...\n&quot;)
+
+		packages.mkdir(package.package_folder)
+
+		if package.initialize ~= nil then
+			package.initialize()
+		end
+	end
+
+	package.package_loaded = true
+end</script>
+                    <eventHandlerList/>
+                </Script>
+            </ScriptGroup>
+            <ScriptGroup isActive="yes" isFolder="yes">
+                <name>File System</name>
+                <packageName></packageName>
+                <script></script>
+                <eventHandlerList/>
+                <Script isActive="yes" isFolder="no">
+                    <name>mkdir</name>
+                    <packageName></packageName>
+                    <script>function packages.mkdir(dirname)
+	local replace = string.gsub(dirname, &quot;\\&quot;, &quot;/&quot;)
+	local split = string.split(replace, &quot;/&quot;)
+
+	local path = &quot;&quot;	
+	for index, dir in ipairs(split) do
+		path = path .. dir .. &quot;/&quot;
+		if not io.exists(path) then
+			lfs.mkdir(path)
+		end
+	end
 end</script>
                     <eventHandlerList/>
                 </Script>
@@ -345,59 +464,138 @@ end</script>
 end</script>
                     <eventHandlerList/>
                 </Script>
-                <Script isActive="yes" isFolder="no">
-                    <name>mkdir</name>
-                    <packageName></packageName>
-                    <script>function packages.mkdir(dirname)
-	local replace = string.gsub(dirname, &quot;\\&quot;, &quot;/&quot;)
-	local split = string.split(replace, &quot;/&quot;)
-
-	local path = &quot;&quot;	
-	for index, dir in ipairs(split) do
-		path = path .. dir .. &quot;/&quot;
-		if not io.exists(path) then
-			lfs.mkdir(path)
-		end
-	end
-end</script>
-                    <eventHandlerList/>
-                </Script>
-                <Script isActive="yes" isFolder="no">
-                    <name>packages.save</name>
-                    <packageName></packageName>
-                    <script>function packages.save()
-	for name, package in pairs(packages.list) do
-		cecho(&quot;&lt;cyan&gt;[ USER ]  - &lt;grey&gt;Saving &quot; .. package.package_name .. &quot; ...\n&quot;)
-		packages.mkdir(package.package_folder)
-		table.save(package.package_table, package)
-	end
-end</script>
-                    <eventHandlerList>
-                        <string>sysExitEvent</string>
-                    </eventHandlerList>
-                </Script>
             </ScriptGroup>
-            <ScriptGroup isActive="yes" isFolder="yes">
-                <name>Clock</name>
+            <Script isActive="yes" isFolder="no">
+                <name>README</name>
                 <packageName></packageName>
-                <script>clock = clock or packages.initialize(&quot;Clock&quot;, initialize_clock)</script>
+                <script>packages.help = [[
+Packages: Package Manager
+
+This script helps to manage different packages by providing a mechanism to initialize a package if the package's table doesn't exist in memory or on disk or load the package's table if it exists on disk. The package's folder in the Mudlet profile is automatically created.
+
+To setup a package, use the following line of code:
+
+   my_package = my_package or packages.make(&quot;My Package&quot;)
+
+Next, optionally include the following functions:
+
+   function my_package.initialize()
+      -- Place initialization code here for when table my_package
+      -- does not exist in memory or on disk.
+   end
+
+   function my_package.load()
+      -- Place special code to run after the package table is
+      -- loaded from disk.
+   end
+
+The following variables are created in the package's table:
+- package_name : The name passed to packages.make().
+- package_folder : Path to the package's folder within the user's Mudlet profile.
+- package_table : Path to the package's table file.
+- package_loaded : Whether the package has been loaded. This is managed by the script.
+
+Commands:
+- packages help : Show this message.
+
+Changelog:
+- 1.0, 2015-2-12
+  - Initial release.
+
+Author: Octavia
+]]</script>
                 <eventHandlerList/>
-                <ScriptGroup isActive="yes" isFolder="yes">
-                    <name>Time</name>
-                    <packageName></packageName>
-                    <script></script>
-                    <eventHandlerList/>
-                    <Script isActive="yes" isFolder="no">
-                        <name>get_time</name>
-                        <packageName></packageName>
-                        <script>function clock.get_time()
+            </Script>
+            <Script isActive="yes" isFolder="no">
+                <name>make</name>
+                <packageName></packageName>
+                <script>function packages.make(name)
+	local package = {}
+	packages.list[name] = package
+
+	local dirname = packages.get_folder(name)
+	local filename = packages.get_table(name)
+	packages.mkdir(dirname)
+
+	package.package_name = name
+	package.package_folder = dirname
+	package.package_table = filename
+	package.package_loaded = false
+
+	enableTimer(&quot;Load Packages&quot;)
+
+	return package
+end</script>
+                <eventHandlerList/>
+            </Script>
+        </ScriptGroup>
+        <ScriptGroup isActive="yes" isFolder="yes">
+            <name>Time</name>
+            <packageName></packageName>
+            <script>time = time or {}</script>
+            <eventHandlerList/>
+            <Script isActive="yes" isFolder="no">
+                <name>get_time</name>
+                <packageName></packageName>
+                <script>function time.get_time()
 	local current_time_as_string = getTime(true)
 
 	return datetime:parse(current_time_as_string, &quot;%Y.%m.%d %H:%M:%S&quot;, true)
 end</script>
-                        <eventHandlerList/>
-                    </Script>
-                </ScriptGroup>
+                <eventHandlerList/>
+            </Script>
+            <Script isActive="yes" isFolder="no">
+                <name>convert_seconds_to_hms</name>
+                <packageName></packageName>
+                <script>function time.convert_seconds_to_hms(time_as_seconds, zero)
+	if zero == nil then
+		zero = &quot;now&quot;
+	end
+
+	-- Hours part
+	local hours = math.floor(time_as_seconds / 3600)
+
+	-- Minutes part
+	local time_wo_hours = time_as_seconds - hours * 3600
+	local minutes = math.floor(time_wo_hours / 60)
+
+	-- Seconds part
+	local seconds = time_wo_hours - minutes * 60
+
+	-- Buid result
+	local result = &quot;&quot;
+
+	if hours ~= 0 then
+		result = result .. hours .. &quot;h&quot;
+	end
+
+	if minutes ~= 0 then
+		result = result .. minutes .. &quot;m&quot;
+	end
+
+	if seconds ~= 0 then
+		result = result .. seconds .. &quot;s&quot;
+	end
+
+	if result == &quot;&quot; then
+		result = zero
+	end
+
+	return result
+end</script>
+                <eventHandlerList/>
+            </Script>
+        </ScriptGroup>
+        <ScriptGroup isActive="yes" isFolder="yes">
+            <name>MUME</name>
+            <packageName>current</packageName>
+            <script></script>
+            <eventHandlerList/>
+            <ScriptGroup isActive="yes" isFolder="yes">
+                <name>Clock</name>
+                <packageName></packageName>
+                <script>clock = clock or packages.make(&quot;Clock&quot;)</script>
+                <eventHandlerList/>
                 <ScriptGroup isActive="yes" isFolder="yes">
                     <name>MUME Time</name>
                     <packageName></packageName>
@@ -490,45 +688,6 @@ end</script>
                         <eventHandlerList/>
                     </Script>
                     <Script isActive="yes" isFolder="no">
-                        <name>convert_mume_minutes_to_hms</name>
-                        <packageName></packageName>
-                        <script>function clock.convert_mume_minutes_to_real_hms(mume_minutes)
-	local time_as_seconds = mume_minutes
-
-	-- Hours part
-	local hours = math.floor(time_as_seconds / 3600)
-
-	-- Minutes part
-	local time_wo_hours = time_as_seconds - hours * 3600
-	local minutes = math.floor(time_wo_hours / 60)
-
-	-- Seconds part
-	local seconds = time_wo_hours - minutes * 60
-
-	-- Buid result
-	local result = &quot;&quot;
-
-	if hours ~= 0 then
-		result = result .. hours .. &quot;h&quot;
-	end
-
-	if minutes ~= 0 then
-		result = result .. minutes .. &quot;m&quot;
-	end
-
-	if seconds ~= 0 then
-		result = result .. seconds .. &quot;s&quot;
-	end
-
-	if result == &quot;&quot; then
-		result = &quot;now&quot;
-	end
-
-	return result
-end</script>
-                        <eventHandlerList/>
-                    </Script>
-                    <Script isActive="yes" isFolder="no">
                         <name>get_mume_moment</name>
                         <packageName></packageName>
                         <script>function clock.get_mume_moment()
@@ -537,7 +696,7 @@ end</script>
 	end
 
 	-- Get the number of real seconds since the clock was set
-	local elapsed_seconds = clock.get_time() - clock.start_time
+	local elapsed_seconds = time.get_time() - clock.start_time
 
 	-- Add the elapsed seconds to the start MUME time as MUME minutes
 	local mume_time = clock.start_mume_time + elapsed_seconds
@@ -759,7 +918,7 @@ end</script>
 
 	local time_to_dawn = dawn - minutes_since_12am
 
-	return clock.convert_mume_minutes_to_real_hms(time_to_dawn)
+	return time.convert_seconds_to_hms(time_to_dawn)
 end</script>
                         <eventHandlerList/>
                     </Script>
@@ -777,7 +936,7 @@ end</script>
 
 	local time_to_dusk = dusk - minutes_since_12am
 
-	return clock.convert_mume_minutes_to_real_hms(time_to_dusk)
+	return time.convert_seconds_to_hms(time_to_dusk)
 end</script>
                         <eventHandlerList/>
                     </Script>
@@ -983,19 +1142,10 @@ end</script>
                     <packageName></packageName>
                     <script>clock.help = [[
 Clock: Advanced MUME Time
-Author: Octavia
-Version: 1.2
-Changelog:
-- 1.2, 2015-2-10
-  - Automatic loading/saving of clock data. May you never have to look at another clock again!
-- 1.1, 2015-2-7
-  - Improved the way options are set.
-- 1.0, 2015-2-3
-  - Initial release.
 
-This package tracks the MUME time as well as the MUME date, allowing it to report, in addition to the current time, the dawn and dusk times, the real time to dawn and dusk, the date, and the season. In addition, the clock will optionally let you know every time a minute has passed and keep you informed as to the date and season every 24 minutes.
+This script tracks the MUME time as well as the MUME date, allowing it to report, in addition to the current time, the dawn and dusk times, the real time to dawn and dusk, the date, and the season. In addition, the clock will optionally let you know every time a minute has passed and keep you informed as to the date and season every 24 minutes.
 
-To use this package, simply look at any clock in game. You can then check the time with either 'cc' (check clock) or 'ct' (check time). You may change these aliases as needed in Script Editor &gt; Aliases &gt; Clock.
+To use this script, simply look at any clock in game. You can then check the time with either 'cc' (check clock) or 'ct' (check time). You may change these aliases as needed in Script Editor &gt; Aliases &gt; Clock.
 
 The commands are as follows:
 - clock help : Show this message.
@@ -1005,11 +1155,30 @@ The commands are as follows:
 - stime : Say the time out loud.
 - ntime : Narrate the time.
 - ttime &lt;player&gt; : Tell the time to another player.
+- sdate : Say the date out loud.
+- ndate : Narrate the date.
+- tdate : Tell the date to another player.
 - uclock : Unset the clock.
 - clock show time : Toggle whether to display the time every MUME hour (1 minute).
 - clock show date : Toggle whether to display the date every MUME day (24 minutes).
 - clock set highlight : Set the highlight color for data. Use &quot;grey&quot; for no highlight.
 - clock show colours : Display a list of colours for use with the highlight option.
+
+Changelog:
+- 1.3, 2015-2-12
+  - Added aliases to say date, narrate date, and tell date to another player.
+- 1.2, 2015-2-10
+  - Automatic loading/saving of clock data. May you never have to look at another clock again!
+- 1.1, 2015-2-7
+  - Improved the way options are set.
+- 1.0, 2015-2-3
+  - Initial release.
+
+Dependencies:
+- Time
+- Packages
+
+Author: Octavia
 ]]</script>
                     <eventHandlerList/>
                 </Script>
@@ -1032,9 +1201,9 @@ clock.minutes_per_day = clock.hours_per_day * clock.minutes_per_hour</script>
                     <eventHandlerList/>
                 </Script>
                 <Script isActive="yes" isFolder="no">
-                    <name>initialize_clock</name>
+                    <name>initialize</name>
                     <packageName></packageName>
-                    <script>function initialize_clock(clock)
+                    <script>function clock.initialize()
 	clock.options = {}
 
 	clock.options.show_time = true
