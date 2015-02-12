@@ -4,6 +4,21 @@
     <TriggerPackage/>
     <TimerPackage>
         <TimerGroup isActive="yes" isFolder="yes" isTempTimer="no" isOffsetTimer="no">
+            <name>Packages</name>
+            <script></script>
+            <command></command>
+            <packageName></packageName>
+            <time>00:00:00.000</time>
+            <Timer isActive="no" isFolder="no" isTempTimer="no" isOffsetTimer="no">
+                <name>Load Packages</name>
+                <script>packages.load()
+disableTimer(&quot;Load Packages&quot;)</script>
+                <command></command>
+                <packageName></packageName>
+                <time>00:00:05.000</time>
+            </Timer>
+        </TimerGroup>
+        <TimerGroup isActive="yes" isFolder="yes" isTempTimer="no" isOffsetTimer="no">
             <name>MUME</name>
             <script></script>
             <command></command>
@@ -26,6 +41,20 @@
         </TimerGroup>
     </TimerPackage>
     <AliasPackage>
+        <AliasGroup isActive="yes" isFolder="yes">
+            <name>Packages</name>
+            <script></script>
+            <command></command>
+            <packageName></packageName>
+            <regex></regex>
+            <Alias isActive="yes" isFolder="no">
+                <name>packages help</name>
+                <script>echo(packages.help)</script>
+                <command></command>
+                <packageName></packageName>
+                <regex>^ *packages +help *$</regex>
+            </Alias>
+        </AliasGroup>
         <AliasGroup isActive="yes" isFolder="yes">
             <name>MUME</name>
             <script></script>
@@ -97,43 +126,91 @@ echo(&quot;Ok.\n&quot;)</script>
     <ActionPackage/>
     <ScriptPackage>
         <ScriptGroup isActive="yes" isFolder="yes">
-            <name>MUME</name>
-            <packageName>current</packageName>
+            <name>Packages</name>
+            <packageName></packageName>
             <script></script>
             <eventHandlerList/>
             <ScriptGroup isActive="yes" isFolder="yes">
-                <name>Packages</name>
+                <name>Events</name>
                 <packageName></packageName>
-                <script>packages = packages or { list = {} }</script>
+                <script></script>
                 <eventHandlerList/>
                 <Script isActive="yes" isFolder="no">
-                    <name>initialize</name>
+                    <name>packages.load</name>
                     <packageName></packageName>
-                    <script>function packages.initialize(name, initialize_function)
-	local package = {}
-
-	local dirname = packages.get_folder(name)
-	local filename = packages.get_table(name)
-
-	packages.list[name] = package
-
-	if io.exists(filename) then
-		cecho(&quot;&lt;cyan&gt;[ USER ]  - &lt;grey&gt;Loading &quot; .. name .. &quot; ...\n&quot;)
-
-		table.load(filename, package)
-	else
-		cecho(&quot;&lt;cyan&gt;[ USER ]  - &lt;grey&gt;Initializing &quot; .. name .. &quot; ...\n&quot;)
-
-		packages.mkdir(dirname)
-
-		package.package_name = name
-		package.package_folder = dirname
-		package.package_table = filename
-
-		initialize_function(package)
+                    <script>function packages.load()
+	for name, package in pairs(packages.list) do
+		packages.load_package(package)
+	end
+end</script>
+                    <eventHandlerList>
+                        <string>sysLoadEvent</string>
+                    </eventHandlerList>
+                </Script>
+                <Script isActive="yes" isFolder="no">
+                    <name>packages.save</name>
+                    <packageName></packageName>
+                    <script>function packages.save()
+	for name, package in pairs(packages.list) do
+		cecho(&quot;&lt;cyan&gt;[ USER ]  - &lt;grey&gt;Saving &quot; .. package.package_name .. &quot; ...\n&quot;)
+		packages.mkdir(package.package_folder)
+		table.save(package.package_table, package)
+	end
+end</script>
+                    <eventHandlerList>
+                        <string>sysExitEvent</string>
+                    </eventHandlerList>
+                </Script>
+                <Script isActive="yes" isFolder="no">
+                    <name>load_package</name>
+                    <packageName></packageName>
+                    <script>function packages.load_package(package)
+	if package.package_loaded then
+		return
 	end
 
-	return package
+	if io.exists(package.package_table) then
+		cecho(&quot;&lt;cyan&gt;[ USER ]  - &lt;grey&gt;Loading &quot; .. package.package_name .. &quot; ...\n&quot;)
+
+		table.load(package.package_table, package)
+
+		if package.load ~= nil then
+			package.load()
+		end
+	else
+		cecho(&quot;&lt;cyan&gt;[ USER ]  - &lt;grey&gt;Initializing &quot; .. package.package_name .. &quot; ...\n&quot;)
+
+		packages.mkdir(package.package_folder)
+
+		if package.initialize ~= nil then
+			package.initialize()
+		end
+	end
+
+	package.package_loaded = true
+end</script>
+                    <eventHandlerList/>
+                </Script>
+            </ScriptGroup>
+            <ScriptGroup isActive="yes" isFolder="yes">
+                <name>File System</name>
+                <packageName></packageName>
+                <script></script>
+                <eventHandlerList/>
+                <Script isActive="yes" isFolder="no">
+                    <name>mkdir</name>
+                    <packageName></packageName>
+                    <script>function packages.mkdir(dirname)
+	local replace = string.gsub(dirname, &quot;\\&quot;, &quot;/&quot;)
+	local split = string.split(replace, &quot;/&quot;)
+
+	local path = &quot;&quot;	
+	for index, dir in ipairs(split) do
+		path = path .. dir .. &quot;/&quot;
+		if not io.exists(path) then
+			lfs.mkdir(path)
+		end
+	end
 end</script>
                     <eventHandlerList/>
                 </Script>
@@ -154,98 +231,105 @@ end</script>
 end</script>
                     <eventHandlerList/>
                 </Script>
-                <Script isActive="yes" isFolder="no">
-                    <name>mkdir</name>
-                    <packageName></packageName>
-                    <script>function packages.mkdir(dirname)
-	local replace = string.gsub(dirname, &quot;\\&quot;, &quot;/&quot;)
-	local split = string.split(replace, &quot;/&quot;)
-
-	local path = &quot;&quot;	
-	for index, dir in ipairs(split) do
-		path = path .. dir .. &quot;/&quot;
-		if not io.exists(path) then
-			lfs.mkdir(path)
-		end
-	end
-end</script>
-                    <eventHandlerList/>
-                </Script>
-                <Script isActive="yes" isFolder="no">
-                    <name>packages.save</name>
-                    <packageName></packageName>
-                    <script>function packages.save()
-	for name, package in pairs(packages.list) do
-		cecho(&quot;&lt;cyan&gt;[ USER ]  - &lt;grey&gt;Saving &quot; .. package.package_name .. &quot; ...\n&quot;)
-		packages.mkdir(package.package_folder)
-		table.save(package.package_table, package)
-	end
-end</script>
-                    <eventHandlerList>
-                        <string>sysExitEvent</string>
-                    </eventHandlerList>
-                </Script>
             </ScriptGroup>
+            <Script isActive="yes" isFolder="no">
+                <name>README</name>
+                <packageName></packageName>
+                <script>packages.help = [[
+Packages: Package Manager
+
+This script helps to manage different packages by providing a mechanism to initialize a package if the package's table doesn't exist in memory or on disk or load the package's table if it exists on disk. The package's folder in the Mudlet profile is automatically created.
+
+To setup a package, use the following line of code:
+
+   my_package = my_package or packages.make(&quot;My Package&quot;)
+
+Next, optionally include the following functions:
+
+   function my_package.initialize()
+      -- Place initialization code here for when table my_package
+      -- does not exist in memory or on disk.
+   end
+
+   function my_package.load()
+      -- Place special code to run after the package table is
+      -- loaded from disk.
+   end
+
+The following variables are created in the package's table:
+- package_name : The name passed to packages.make().
+- package_folder : Path to the package's folder within the user's Mudlet profile.
+- package_table : Path to the package's table file.
+- package_loaded : Whether the package has been loaded. This is managed by the script.
+
+Commands:
+- packages help : Show this message.
+
+Changelog:
+- 1.0, 2015-2-12
+  - Initial release.
+
+Author: Octavia
+]]</script>
+                <eventHandlerList/>
+            </Script>
+            <Script isActive="yes" isFolder="no">
+                <name>make</name>
+                <packageName></packageName>
+                <script>function packages.make(name)
+	local package = {}
+	packages.list[name] = package
+
+	local dirname = packages.get_folder(name)
+	local filename = packages.get_table(name)
+	packages.mkdir(dirname)
+
+	package.package_name = name
+	package.package_folder = dirname
+	package.package_table = filename
+	package.package_loaded = false
+
+	enableTimer(&quot;Load Packages&quot;)
+
+	return package
+end</script>
+                <eventHandlerList/>
+            </Script>
+        </ScriptGroup>
+        <ScriptGroup isActive="yes" isFolder="yes">
+            <name>MUME</name>
+            <packageName>current</packageName>
+            <script></script>
+            <eventHandlerList/>
             <ScriptGroup isActive="yes" isFolder="yes">
                 <name>Random Runes</name>
                 <packageName></packageName>
-                <script>random_runes = random_runes or packages.initialize(&quot;Random Runes&quot;, initialize_random_runes)
+                <script>random_runes = random_runes or packages.make(&quot;Random Runes&quot;)
 
-random_runes.count = 5
-
-random_runes.local_filename = getMudletHomeDir() .. &quot;/random_runes.html&quot;
-random_runes.address = &quot;http://www.elvenrunes.de/cgi-bin/logs/guest.m?start=0&amp;omode=&amp;caller=1&amp;typ=&quot;
-
-random_runes.garbage = {
-	&quot;&quot;,
-	&quot; &quot;,
-	&quot;&amp;nbsp&quot;,
-	&quot;logs&quot;,
-	&quot;Name&quot;,
-	&quot;Number of entries&quot;,
-	&quot;RandomRunes:&quot;,
-	&quot;Random Runes is &quot;,
-	&quot;not for logs&quot;,
-	&quot; A { text-decoration: none; color: black;} A:hover {text-decoration: underline; color: #006633}&quot;,
-	&quot;! If you want to post a log, even a short one, please upload it to one of the log sections!&quot;,
-}</script>
+</script>
                 <eventHandlerList/>
-                <Script isActive="yes" isFolder="no">
-                    <name>README</name>
+                <ScriptGroup isActive="yes" isFolder="yes">
+                    <name>Download</name>
                     <packageName></packageName>
-                    <script>random_runes.help = [[
-Random Runes
-Author: Octavia
-Version: 1.0
-Changelog:
-- 1.0, 2015-2-10
-  - Initial release.
-
-This package downloads and displays Random Runes from Elven Runes (elvenrunes.com), a Tolkien and MUME fansite. There is also a timer included that regularly checks for new Random Runes and displays them (default every 30 minutes, see Timers in the Script Editor to change this).
-
-The commands are as follows:
-- random runes help : Show this message.
-- random runes set max &lt;number&gt; : Set the maximum number of messages to display at a time when checking for new runes.
-- random runes set count &lt;number&gt; : Set the default number of messages to display when showing runes maually (rr).
-- random runes set colour &lt;colour&gt; : Set the colour to use when displaying runes.
-- random runes show colours : Show the available colours.
-- rr : Download and display Random Runes.
-- rr &lt;number&gt; : Show the given number of runes.
-]]</script>
+                    <script>-------------------------------------------------
+--         Put your Lua functions here.        --
+--                                             --
+-- Note that you can also use external Scripts --
+-------------------------------------------------
+</script>
                     <eventHandlerList/>
-                </Script>
-                <Script isActive="yes" isFolder="no">
-                    <name>download</name>
-                    <packageName></packageName>
-                    <script>function random_runes.download()
+                    <Script isActive="yes" isFolder="no">
+                        <name>download</name>
+                        <packageName></packageName>
+                        <script>function random_runes.download()
 	downloadFile(random_runes.local_filename, random_runes.address)
 end</script>
-                    <eventHandlerList/>
-                </Script>
-                <Script isActive="yes" isFolder="no">
-                    <name>random_runes.parse</name>
-                    <packageName></packageName>
-                    <script>function random_runes.parse(_, filename)
+                        <eventHandlerList/>
+                    </Script>
+                    <Script isActive="yes" isFolder="no">
+                        <name>random_runes.parse</name>
+                        <packageName></packageName>
+                        <script>function random_runes.parse(_, filename)
 	local lines = {}
 	for line in io.lines(filename) do
 		line = string.gsub(line, &quot;&lt;.-&gt;&quot;, &quot;\n&quot;)
@@ -287,16 +371,78 @@ end</script>
 	end
 	os.remove(filename)
 end</script>
-                    <eventHandlerList>
-                        <string>sysDownloadDone</string>
-                    </eventHandlerList>
-                </Script>
-                <Script isActive="yes" isFolder="no">
-                    <name>show</name>
+                        <eventHandlerList>
+                            <string>sysDownloadDone</string>
+                        </eventHandlerList>
+                    </Script>
+                    <Script isActive="yes" isFolder="no">
+                        <name>is_garbage</name>
+                        <packageName></packageName>
+                        <script>function random_runes.is_garbage(line)
+	for index, garbage in ipairs(random_runes.garbage) do
+		if line == garbage then
+			return true
+		end
+	end
+
+	return false
+end</script>
+                        <eventHandlerList/>
+                    </Script>
+                    <Script isActive="yes" isFolder="no">
+                        <name>download_and_show</name>
+                        <packageName></packageName>
+                        <script>function random_runes.download_and_show()
+	random_runes.show_runes = true
+	random_runes.download()
+end</script>
+                        <eventHandlerList/>
+                    </Script>
+                </ScriptGroup>
+                <ScriptGroup isActive="yes" isFolder="yes">
+                    <name>Display</name>
                     <packageName></packageName>
-                    <script>function random_runes.show(count)
+                    <script>-------------------------------------------------
+--         Put your Lua functions here.        --
+--                                             --
+-- Note that you can also use external Scripts --
+-------------------------------------------------
+</script>
+                    <eventHandlerList/>
+                    <Script isActive="yes" isFolder="no">
+                        <name>diff</name>
+                        <packageName></packageName>
+                        <script>function random_runes.diff(current, last)
+	for last_index, last_rune in ipairs(last) do
+		for index, rune in ipairs(current) do
+			if random_runes.runes_equal(rune, last_rune) then
+				return index - 1
+			end
+		end
+	end
+	return #current
+end</script>
+                        <eventHandlerList/>
+                    </Script>
+                    <Script isActive="yes" isFolder="no">
+                        <name>runes_equal</name>
+                        <packageName></packageName>
+                        <script>function random_runes.runes_equal(left, right)
+	for left_index, left_line in ipairs(left) do
+		if left_line ~= right[left_index] then
+			return false
+		end
+	end
+	return true
+end</script>
+                        <eventHandlerList/>
+                    </Script>
+                    <Script isActive="yes" isFolder="no">
+                        <name>show</name>
+                        <packageName></packageName>
+                        <script>function random_runes.show(count)
 	local colour = &quot;&lt;&quot; .. random_runes.colour .. &quot;&gt;&quot;
-	cecho(colour .. &quot;Showing &quot; .. count .. &quot; entries:&lt;grey&gt;\n\n&quot;)
+	cecho(colour .. &quot;Showing &quot; .. count .. &quot; runes:&lt;grey&gt;\n\n&quot;)
 	for index = 1, count do
 		local rune = random_runes.random_runes[count - index + 1]
 		cecho(colour .. rune[1] .. &quot; &quot; .. rune[2] .. &quot;&lt;grey&gt;\n&quot;)
@@ -310,65 +456,67 @@ end</script>
 		end
 	end
 end</script>
-                    <eventHandlerList/>
-                </Script>
+                        <eventHandlerList/>
+                    </Script>
+                </ScriptGroup>
                 <Script isActive="yes" isFolder="no">
-                    <name>is_garbage</name>
+                    <name>README</name>
                     <packageName></packageName>
-                    <script>function random_runes.is_garbage(line)
-	for index, garbage in ipairs(random_runes.garbage) do
-		if line == garbage then
-			return true
-		end
-	end
+                    <script>random_runes.help = [[
+Random Runes: Elven Runes in Your Client
 
-	return false
-end</script>
+This script downloads and displays Random Runes from Elven Runes (elvenrunes.com), a Tolkien and MUME fansite. There is also a timer included that regularly checks for new Random Runes and displays them (default every 30 minutes, see Timers in the Script Editor to change this).
+
+The commands are as follows:
+- random runes help : Show this message.
+- random runes set max &lt;number&gt; : Set the maximum number of messages to display at a time when checking for new runes.
+- random runes set count &lt;number&gt; : Set the default number of messages to display when showing runes maually (rr).
+- random runes set colour &lt;colour&gt; : Set the colour to use when displaying runes.
+- random runes show colours : Show the available colours.
+- rr : Download and display Random Runes.
+- rr &lt;number&gt; : Show the given number of runes.
+
+Changelog:
+- 1.1, 2015-2-12
+  - Fixed incomplete initialization when loading for the first time.
+- 1.0, 2015-2-10
+  - Initial release.
+
+Dependencies:
+- Packages
+
+Author: Octavia
+]]</script>
                     <eventHandlerList/>
                 </Script>
                 <Script isActive="yes" isFolder="no">
-                    <name>download_and_show</name>
+                    <name>Constants</name>
                     <packageName></packageName>
-                    <script>function random_runes.download_and_show()
-	random_runes.show_runes = true
-	random_runes.download()
-end</script>
+                    <script>random_runes.local_filename = getMudletHomeDir() .. &quot;/random_runes.html&quot;
+random_runes.address = &quot;http://www.elvenrunes.de/cgi-bin/logs/guest.m?start=0&amp;omode=&amp;caller=1&amp;typ=&quot;
+
+random_runes.garbage = {
+	&quot;&quot;,
+	&quot; &quot;,
+	&quot;&amp;nbsp&quot;,
+	&quot;logs&quot;,
+	&quot;Name&quot;,
+	&quot;Number of entries&quot;,
+	&quot;RandomRunes:&quot;,
+	&quot;Random Runes is &quot;,
+	&quot;not for logs&quot;,
+	&quot; A { text-decoration: none; color: black;} A:hover {text-decoration: underline; color: #006633}&quot;,
+	&quot;! If you want to post a log, even a short one, please upload it to one of the log sections!&quot;,
+}</script>
                     <eventHandlerList/>
                 </Script>
                 <Script isActive="yes" isFolder="no">
-                    <name>diff</name>
+                    <name>initialize</name>
                     <packageName></packageName>
-                    <script>function random_runes.diff(current, last)
-	for last_index, last_rune in ipairs(last) do
-		for index, rune in ipairs(current) do
-			if random_runes.runes_equal(rune, last_rune) then
-				return index - 1
-			end
-		end
-	end
-	return #current
-end</script>
-                    <eventHandlerList/>
-                </Script>
-                <Script isActive="yes" isFolder="no">
-                    <name>runes_equal</name>
-                    <packageName></packageName>
-                    <script>function random_runes.runes_equal(left, right)
-	for left_index, left_line in ipairs(left) do
-		if left_line ~= right[left_index] then
-			return false
-		end
-	end
-	return true
-end</script>
-                    <eventHandlerList/>
-                </Script>
-                <Script isActive="yes" isFolder="no">
-                    <name>initialize_random_runes</name>
-                    <packageName></packageName>
-                    <script>function initialize_random_runes(random_runes)
+                    <script>function random_runes.initialize()
 	random_runes.colour = &quot;yellow&quot;
 
+	random_runes.count = 5
 	random_runes.default_count = 5
 
 	random_runes.max = 5
