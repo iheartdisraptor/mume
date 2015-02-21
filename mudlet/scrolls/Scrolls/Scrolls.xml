@@ -1,0 +1,286 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE MudletPackage>
+<MudletPackage version="1.0">
+    <TriggerPackage/>
+    <TimerPackage>
+        <TimerGroup isActive="yes" isFolder="yes" isTempTimer="no" isOffsetTimer="no">
+            <name>Scrolls</name>
+            <script></script>
+            <command></command>
+            <packageName></packageName>
+            <time>00:00:00.000</time>
+            <Timer isActive="no" isFolder="no" isTempTimer="no" isOffsetTimer="no">
+                <name>Load Scrolls</name>
+                <script>scrolls.reliquary.load()
+disableTimer(&quot;Load Scrolls&quot;)</script>
+                <command></command>
+                <packageName></packageName>
+                <time>00:00:02.000</time>
+            </Timer>
+        </TimerGroup>
+    </TimerPackage>
+    <AliasPackage>
+        <AliasGroup isActive="yes" isFolder="yes">
+            <name>Scrolls</name>
+            <script></script>
+            <command></command>
+            <packageName></packageName>
+            <regex></regex>
+            <Alias isActive="yes" isFolder="no">
+                <name>scrolls help</name>
+                <script>scrolls:show_help()</script>
+                <command></command>
+                <packageName></packageName>
+                <regex>^ *scrolls +help *$</regex>
+            </Alias>
+            <Alias isActive="yes" isFolder="no">
+                <name>scrolls help &lt;name&gt;</name>
+                <script>local name = string.trim(matches[2])
+scrolls:show_help(name)</script>
+                <command></command>
+                <packageName></packageName>
+                <regex>^ *scrolls +help +(.+) *$</regex>
+            </Alias>
+            <Alias isActive="yes" isFolder="no">
+                <name>scrolls list</name>
+                <script>scrolls:show_list()</script>
+                <command></command>
+                <packageName></packageName>
+                <regex>^ *scrolls +list *$</regex>
+            </Alias>
+            <Alias isActive="yes" isFolder="no">
+                <name>scrolls search &lt;query&gt;</name>
+                <script>local query = string.trim(matches[2])
+scrolls:search(query)</script>
+                <command></command>
+                <packageName></packageName>
+                <regex>^ *scrolls +search +(.+) *$</regex>
+            </Alias>
+            <Alias isActive="yes" isFolder="no">
+                <name>scrolls install &lt;name&gt;</name>
+                <script>local name = string.trim(matches[2])
+scrolls:install(name)</script>
+                <command></command>
+                <packageName></packageName>
+                <regex>^ *scrolls +install +(.+) *$</regex>
+            </Alias>
+            <Alias isActive="yes" isFolder="no">
+                <name>scrolls update</name>
+                <script>scrolls:update_all()</script>
+                <command></command>
+                <packageName></packageName>
+                <regex>^ *scrolls +update *$</regex>
+            </Alias>
+            <Alias isActive="yes" isFolder="no">
+                <name>scrolls update &lt;name&gt;</name>
+                <script>local name = string.trim(matches[2])
+scrolls:update(name)</script>
+                <command></command>
+                <packageName></packageName>
+                <regex>^ *scrolls +update +(.+) *$</regex>
+            </Alias>
+            <Alias isActive="yes" isFolder="no">
+                <name>scrolls remove &lt;name&gt;</name>
+                <script>local name = string.trim(matches[2])
+scrolls:remove(name)</script>
+                <command></command>
+                <packageName></packageName>
+                <regex>^ *scrolls +remove +(.+) *$</regex>
+            </Alias>
+            <Alias isActive="yes" isFolder="no">
+                <name>scrolls save</name>
+                <script>scrolls:save_all()</script>
+                <command></command>
+                <packageName></packageName>
+                <regex>^ *scrolls +save *$</regex>
+            </Alias>
+            <Alias isActive="yes" isFolder="no">
+                <name>scrolls save &lt;name&gt;</name>
+                <script>local name = string.trim(matches[2])
+scrolls:save(name)</script>
+                <command></command>
+                <packageName></packageName>
+                <regex>^ *scrolls +save +(.+) *$</regex>
+            </Alias>
+            <Alias isActive="yes" isFolder="no">
+                <name>scrolls load</name>
+                <script>scrolls:load_all()</script>
+                <command></command>
+                <packageName></packageName>
+                <regex>^ *scrolls +load *$</regex>
+            </Alias>
+            <Alias isActive="yes" isFolder="no">
+                <name>scrolls load &lt;name&gt;</name>
+                <script>local name = string.trim(matches[2])
+scrolls:load(name)</script>
+                <command></command>
+                <packageName></packageName>
+                <regex>^ *scrolls +load +(.+) *$</regex>
+            </Alias>
+            <Alias isActive="yes" isFolder="no">
+                <name>scrolls reset</name>
+                <script>scrolls:reset_all()</script>
+                <command></command>
+                <packageName></packageName>
+                <regex>^ *scrolls +reset *$</regex>
+            </Alias>
+            <Alias isActive="yes" isFolder="no">
+                <name>scrolls reset &lt;name&gt;</name>
+                <script>local name = string.trim(matches[2])
+scrolls:reset(name)</script>
+                <command></command>
+                <packageName></packageName>
+                <regex>^ *scrolls +reset +(.+) *$</regex>
+            </Alias>
+            <Alias isActive="yes" isFolder="no">
+                <name>scrolls alias &lt;pattern&gt; &lt;command&gt;</name>
+                <script>scrolls.make_alias(matches[2], matches[3], false)</script>
+                <command></command>
+                <packageName></packageName>
+                <regex>^ *scrolls alias +([^ ]+) +(.+)$</regex>
+            </Alias>
+            <Alias isActive="yes" isFolder="no">
+                <name>scrolls codex</name>
+                <script>scrolls:show_codex()</script>
+                <command></command>
+                <packageName></packageName>
+                <regex>^ *scrolls +codex *$</regex>
+            </Alias>
+            <Alias isActive="yes" isFolder="no">
+                <name>scrolls codex add &lt;url&gt;</name>
+                <script>local url = string.trim(matches[2])
+scrolls:add_codex(url)</script>
+                <command></command>
+                <packageName></packageName>
+                <regex>^ *scrolls +codex +add +(.+) *$</regex>
+            </Alias>
+            <Alias isActive="yes" isFolder="no">
+                <name>scrolls codex download</name>
+                <script>scrolls:download_codexes()</script>
+                <command></command>
+                <packageName></packageName>
+                <regex>^ *scrolls +codex +download *$</regex>
+            </Alias>
+            <Alias isActive="yes" isFolder="no">
+                <name>scrolls codex copy &lt;name&gt;</name>
+                <script>local name = string.trim(matches[2])
+scrolls:copy_to_codex(name)</script>
+                <command></command>
+                <packageName></packageName>
+                <regex>^ *scrolls +codex +copy +(.+) *$</regex>
+            </Alias>
+            <Alias isActive="yes" isFolder="no">
+                <name>scrolls codex save</name>
+                <script>scrolls:save_codex()</script>
+                <command></command>
+                <packageName></packageName>
+                <regex>^ *scrolls +codex +save *$</regex>
+            </Alias>
+            <Alias isActive="yes" isFolder="no">
+                <name>scrolls codex clear</name>
+                <script>scrolls:clear_codex()</script>
+                <command></command>
+                <packageName></packageName>
+                <regex>^ *scrolls +codex +clear *$</regex>
+            </Alias>
+        </AliasGroup>
+    </AliasPackage>
+    <ActionPackage/>
+    <ScriptPackage>
+        <ScriptGroup isActive="yes" isFolder="yes">
+            <name>Scrolls</name>
+            <packageName></packageName>
+            <script></script>
+            <eventHandlerList/>
+            <Script isActive="yes" isFolder="no">
+                <name>bootstrap</name>
+                <packageName></packageName>
+                <script>bootstrap = bootstrap or {}
+
+function bootstrap.append_path(path, new_path)
+	-- new_path can be a table of paths
+	if type(new_path) == &quot;table&quot; then
+		for index, individual_path in pairs(new_path) do
+			path = bootstrap.append_path(path, individual_path)
+		end
+
+		return path
+	end
+
+	-- Replace any ?'s with literal ?'s since we're about to use
+	-- new_path as a search pattern and ? is a special pattern character.
+	local new_path_find = string.gsub(new_path, &quot;%?&quot;, &quot;%%%?&quot;)
+
+	-- See if the new path is already in the path, and if not add it
+	if path:find(new_path_find) == nil then
+		path = new_path .. &quot;;&quot; .. path
+	end
+
+	return path
+end
+
+function bootstrap.register(name)
+	local base = getMudletHomeDir() .. &quot;/&quot; .. name .. &quot;/&quot;
+
+	local dll_paths = {
+		base .. &quot;?.dll&quot;,
+		base .. &quot;lua/?.dll&quot;,
+	}
+
+	local lua_paths = {
+		base .. &quot;?.lua&quot;,
+		base .. &quot;lua/?.lua&quot;,
+	}
+
+	package.cpath = bootstrap.append_path(package.cpath, dll_paths)
+	package.path = bootstrap.append_path(package.path, lua_paths)
+end
+
+function bootstrap.require(name, reload)
+	-- Enable the package to be reloaded
+	if reload then
+		package.loaded[name] = nil
+		_G[name] = nil
+	end
+
+	-- Load the package and return the result
+	require(name)
+	return _G[name]
+end</script>
+                <eventHandlerList/>
+            </Script>
+            <Script isActive="yes" isFolder="no">
+                <name>lunit</name>
+                <packageName></packageName>
+                <script>bootstrap.register(&quot;Bootstrap&quot;)
+
+bootstrap.require(&quot;lunit&quot;)
+
+lunit.loadrunner(&quot;mudlet-console&quot;)
+
+function lunit.mudlet_testcase(module)
+	lunit.testcase(module)
+	lunit.run()
+end</script>
+                <eventHandlerList/>
+            </Script>
+            <Script isActive="yes" isFolder="no">
+                <name>scrolls</name>
+                <packageName></packageName>
+                <script>bootstrap.register(&quot;Scrolls&quot;)
+
+scrolls = bootstrap.require(&quot;scrolls&quot;, true)</script>
+                <eventHandlerList/>
+            </Script>
+            <Script isActive="yes" isFolder="no">
+                <name>test_scrolls</name>
+                <packageName></packageName>
+                <script>test_scrolls = bootstrap.require(&quot;test_scrolls&quot;, true)
+
+lunit.testcase(test_scrolls)</script>
+                <eventHandlerList/>
+            </Script>
+        </ScriptGroup>
+    </ScriptPackage>
+    <KeyPackage/>
+</MudletPackage>

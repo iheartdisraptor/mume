@@ -1,0 +1,249 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE MudletPackage>
+<MudletPackage version="1.0">
+    <TriggerPackage>
+        <TriggerGroup isActive="yes" isFolder="yes" isTempTrigger="no" isMultiline="no" isPerlSlashGOption="no" isColorizerTrigger="no" isFilterTrigger="no" isSoundTrigger="no" isColorTrigger="no" isColorTriggerFg="no" isColorTriggerBg="no">
+            <name>Clock</name>
+            <script></script>
+            <triggerType>0</triggerType>
+            <conditonLineDelta>0</conditonLineDelta>
+            <mStayOpen>0</mStayOpen>
+            <mCommand></mCommand>
+            <packageName></packageName>
+            <mFgColor>#ff0000</mFgColor>
+            <mBgColor>#ffff00</mBgColor>
+            <mSoundFile></mSoundFile>
+            <colorTriggerFgColor>#000000</colorTriggerFgColor>
+            <colorTriggerBgColor>#000000</colorTriggerBgColor>
+            <regexCodeList/>
+            <regexCodePropertyList/>
+            <Trigger isActive="yes" isFolder="no" isTempTrigger="no" isMultiline="no" isPerlSlashGOption="no" isColorizerTrigger="no" isFilterTrigger="no" isSoundTrigger="no" isColorTrigger="no" isColorTriggerFg="no" isColorTriggerBg="no">
+                <name>Set Start MUME Moment (Time Part)</name>
+                <script>echo(&quot;\nCLICK! You set your clock.&quot;)
+
+local data = clock.scroll.data
+
+data.is_set = true
+
+-- Store the curret MUME time for the time part of the start MUME moment
+data.start_mume_moment = {
+	hour = matches[2],
+	minute = matches[3],
+	period = matches[4],
+}
+
+-- Store the current time as UNIX epoch
+data.start_time = time.get_time()
+
+enableTrigger(&quot;Set Start MUME Moment (Date Part)&quot;)
+send(&quot;time&quot;, false)
+
+clock.adjust_timer(data.start_mume_moment.minute)</script>
+                <triggerType>0</triggerType>
+                <conditonLineDelta>0</conditonLineDelta>
+                <mStayOpen>0</mStayOpen>
+                <mCommand></mCommand>
+                <packageName></packageName>
+                <mFgColor>#ff0000</mFgColor>
+                <mBgColor>#ffff00</mBgColor>
+                <mSoundFile></mSoundFile>
+                <colorTriggerFgColor>#000000</colorTriggerFgColor>
+                <colorTriggerBgColor>#000000</colorTriggerBgColor>
+                <regexCodeList>
+                    <string>^The current time is (.+):(.+) (.+)\.$</string>
+                </regexCodeList>
+                <regexCodePropertyList>
+                    <integer>1</integer>
+                </regexCodePropertyList>
+            </Trigger>
+            <Trigger isActive="no" isFolder="no" isTempTrigger="no" isMultiline="no" isPerlSlashGOption="no" isColorizerTrigger="no" isFilterTrigger="no" isSoundTrigger="no" isColorTrigger="no" isColorTriggerFg="no" isColorTriggerBg="no">
+                <name>Set Start MUME Moment (Date Part)</name>
+                <script>local data = clock.scroll.data
+
+-- Store the MUME date part of the starting MUME moment
+data.start_mume_moment.year = matches[5]
+data.start_mume_moment.month = clock.convert_month_name_to_month_number(matches[4])
+data.start_mume_moment.day = matches[3]
+
+-- Convert start MUME moment to MUME time since the beginning
+data.start_mume_time = clock.convert_mume_moment_to_mume_time(data.start_mume_moment)
+
+disableTrigger(&quot;Set Start MUME Moment (Date Part)&quot;)</script>
+                <triggerType>0</triggerType>
+                <conditonLineDelta>0</conditonLineDelta>
+                <mStayOpen>0</mStayOpen>
+                <mCommand></mCommand>
+                <packageName></packageName>
+                <mFgColor>#ff0000</mFgColor>
+                <mBgColor>#ffff00</mBgColor>
+                <mSoundFile></mSoundFile>
+                <colorTriggerFgColor>#000000</colorTriggerFgColor>
+                <colorTriggerBgColor>#000000</colorTriggerBgColor>
+                <regexCodeList>
+                    <string>^(.+), the (.+).. of (.+), Year (.+) of the Third Age\.$</string>
+                </regexCodeList>
+                <regexCodePropertyList>
+                    <integer>1</integer>
+                </regexCodePropertyList>
+            </Trigger>
+        </TriggerGroup>
+    </TriggerPackage>
+    <TimerPackage>
+        <TimerGroup isActive="yes" isFolder="yes" isTempTimer="no" isOffsetTimer="no">
+            <name>Clock</name>
+            <script></script>
+            <command></command>
+            <packageName></packageName>
+            <time>00:00:00.000</time>
+            <Timer isActive="yes" isFolder="no" isTempTimer="no" isOffsetTimer="no">
+                <name>Display Time and Date</name>
+                <script>local data = clock.scroll.data
+
+if not data.is_set then
+	disableTimer(&quot;Display Time and Date&quot;)
+	return
+end
+
+if not data.options.show_time and not data.options.show_date then
+	disableTimer(&quot;Display Time and Date&quot;)
+	return
+end
+
+local mume_moment = clock.get_mume_moment()
+clock.display_timer(mume_moment)
+clock.adjust_timer(mume_moment.minute)</script>
+                <command></command>
+                <packageName></packageName>
+                <time>00:01:00.000</time>
+            </Timer>
+        </TimerGroup>
+    </TimerPackage>
+    <AliasPackage>
+        <AliasGroup isActive="yes" isFolder="yes">
+            <name>Clock</name>
+            <script></script>
+            <command></command>
+            <packageName></packageName>
+            <regex></regex>
+            <Alias isActive="yes" isFolder="no">
+                <name>clock help</name>
+                <script>clock:show_help()</script>
+                <command></command>
+                <packageName></packageName>
+                <regex>^ *clock +help *$</regex>
+            </Alias>
+            <Alias isActive="yes" isFolder="no">
+                <name>clock time</name>
+                <script>clock:show_time()</script>
+                <command></command>
+                <packageName></packageName>
+                <regex>^ *clock +time *$</regex>
+            </Alias>
+            <Alias isActive="yes" isFolder="no">
+                <name>clock date</name>
+                <script>clock:show_date()</script>
+                <command></command>
+                <packageName></packageName>
+                <regex>^ *clock +date *$</regex>
+            </Alias>
+            <Alias isActive="yes" isFolder="no">
+                <name>clock time say</name>
+                <script>clock:say_time()</script>
+                <command></command>
+                <packageName></packageName>
+                <regex>^ *clock +time +say *$</regex>
+            </Alias>
+            <Alias isActive="yes" isFolder="no">
+                <name>clock time narrate</name>
+                <script>clock:narrate_time()</script>
+                <command></command>
+                <packageName></packageName>
+                <regex>^ *clock +time +narrate *$</regex>
+            </Alias>
+            <Alias isActive="yes" isFolder="no">
+                <name>clock time tell &lt;player&gt;</name>
+                <script>local player = string.trim(matches[2])
+clock:tell_time(player)</script>
+                <command></command>
+                <packageName></packageName>
+                <regex>^ *clock +time +tell +(.+) *$</regex>
+            </Alias>
+            <Alias isActive="yes" isFolder="no">
+                <name>clock date say</name>
+                <script>clock:say_date()</script>
+                <command></command>
+                <packageName></packageName>
+                <regex>^ *clock +date +say *$</regex>
+            </Alias>
+            <Alias isActive="yes" isFolder="no">
+                <name>clock date narrate</name>
+                <script>clock:narrate_date()</script>
+                <command></command>
+                <packageName></packageName>
+                <regex>^ *clock +date +narrate *$</regex>
+            </Alias>
+            <Alias isActive="yes" isFolder="no">
+                <name>clock date tell &lt;player&gt;</name>
+                <script>local player = string.trim(matches[2])
+clock:tell_date(player)</script>
+                <command></command>
+                <packageName></packageName>
+                <regex>^ *clock +date +tell +(.+) *$</regex>
+            </Alias>
+            <Alias isActive="yes" isFolder="no">
+                <name>clock unset</name>
+                <script>clock:unset()</script>
+                <command></command>
+                <packageName></packageName>
+                <regex>^ *clock +unset *$</regex>
+            </Alias>
+            <Alias isActive="yes" isFolder="no">
+                <name>clock toggle show time</name>
+                <script>clock:toggle_show_time()</script>
+                <command></command>
+                <packageName></packageName>
+                <regex>^ *clock +toggle +show +time *$</regex>
+            </Alias>
+            <Alias isActive="yes" isFolder="no">
+                <name>clock toggle show date</name>
+                <script>clock:toggle_show_date()</script>
+                <command></command>
+                <packageName></packageName>
+                <regex>^ *clock +toggle +show +date *$</regex>
+            </Alias>
+            <Alias isActive="yes" isFolder="no">
+                <name>clock highlight &lt;color&gt;</name>
+                <script>local color = string.trim(matches[2])
+clock:set_highlight(color)</script>
+                <command></command>
+                <packageName></packageName>
+                <regex>^ *clock +highlight +(.+) *$</regex>
+            </Alias>
+            <Alias isActive="yes" isFolder="no">
+                <name>clock colors</name>
+                <script>showColors()</script>
+                <command></command>
+                <packageName></packageName>
+                <regex>^ *clock +colors *$</regex>
+            </Alias>
+        </AliasGroup>
+    </AliasPackage>
+    <ActionPackage/>
+    <ScriptPackage>
+        <ScriptGroup isActive="yes" isFolder="yes">
+            <name>Clock</name>
+            <packageName></packageName>
+            <script></script>
+            <eventHandlerList/>
+            <Script isActive="yes" isFolder="no">
+                <name>clock</name>
+                <packageName></packageName>
+                <script>bootstrap.register(&quot;Clock&quot;)
+
+clock = bootstrap.require(&quot;clock&quot;, true)</script>
+                <eventHandlerList/>
+            </Script>
+        </ScriptGroup>
+    </ScriptPackage>
+    <KeyPackage/>
+</MudletPackage>

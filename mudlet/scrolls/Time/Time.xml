@@ -1,0 +1,75 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE MudletPackage>
+<MudletPackage version="1.0">
+    <TriggerPackage/>
+    <TimerPackage/>
+    <AliasPackage/>
+    <ActionPackage/>
+    <ScriptPackage>
+        <ScriptGroup isActive="yes" isFolder="yes">
+            <name>Time</name>
+            <packageName></packageName>
+            <script>time = scrolls:make(&quot;Time&quot;)
+
+function time.get_time()
+	local current_time_as_string = getTime(true)
+
+	return datetime:parse(current_time_as_string, &quot;%Y.%m.%d %H:%M:%S&quot;, true)
+end
+
+function time.convert_seconds_to_hms(time_as_seconds, zero)
+	if zero == nil then
+		zero = &quot;now&quot;
+	end
+
+	-- Hours part
+	local hours = math.floor(time_as_seconds / 3600)
+
+	-- Minutes part
+	local time_wo_hours = time_as_seconds - hours * 3600
+	local minutes = math.floor(time_wo_hours / 60)
+
+	-- Seconds part
+	local seconds = time_wo_hours - minutes * 60
+
+	-- Build result
+
+	local result = &quot;&quot;
+
+	if hours ~= 0 then
+		result = result .. hours .. &quot;h&quot;
+	end
+
+	if minutes ~= 0 then
+		result = result .. minutes .. &quot;m&quot;
+	end
+
+	if seconds ~= 0 then
+		result = result .. seconds .. &quot;s&quot;
+	end
+
+	if result == &quot;&quot; then
+		result = zero
+	end
+
+	return result
+end
+
+function time.scroll:initialize()
+	self.version = &quot;1.0&quot;
+
+	self.url = &quot;https://github.com/iheartdisraptor/mume/raw/master/mudlet/scrolls/Time.zip&quot;
+
+	self.subtitle = &quot;Basic Time Functions&quot;
+
+	self:add_help(&quot;This scroll contains basic functions for working with time.&quot;)
+
+	self:add_change(&quot;2015-2-13&quot;, { &quot;Initial release.&quot; })
+
+	self:add_author(&quot;Octavia&quot;)
+end</script>
+            <eventHandlerList/>
+        </ScriptGroup>
+    </ScriptPackage>
+    <KeyPackage/>
+</MudletPackage>
